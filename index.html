@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b6e4f">
+  <meta name="description" content="Traductor criollo haitiano (kreyòl) ↔ español latino para estudiantes y profesores: escribe, dicta, escucha, frases rápidas y vocabulario.">
+  <title>Kreyòl ↔ Español Latino</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="bandera" aria-hidden="true">
+      <span class="franja azul"></span>
+      <span class="franja roja"></span>
+    </div>
+    <div class="titulos">
+      <h1>Kreyòl ↔ Español</h1>
+      <p>Criollo haitiano y español latino · hablado o escrito</p>
+    </div>
+  </header>
+
+  <main>
+    <button id="btnEmergencia" class="boton emergencia" type="button">&#128680; Emergencia · Ijans</button>
+
+    <section class="tarjeta entrada" aria-label="Traducción">
+      <div class="toggle-direccion" role="group" aria-label="Dirección de traducción">
+        <button id="btnDirHT" class="activo" type="button">Kreyòl → Español</button>
+        <button id="btnDirES" type="button">Español → Kreyòl</button>
+      </div>
+
+      <div class="barra-etiqueta">
+        <span id="chipOrigen" class="chip chip-origen">Criollo haitiano</span>
+        <div class="controles-entrada">
+          <button id="btnLeerOrigen" class="boton-icono" type="button" aria-label="Escuchar el texto de entrada" title="Escuchar entrada">&#128266;</button>
+          <button id="btnLimpiar" class="boton-icono" type="button" aria-label="Limpiar texto" title="Limpiar">&#128465;</button>
+        </div>
+      </div>
+      <textarea id="textoOrigen" rows="4" placeholder="Escribe o dicta en criollo haitiano…" spellcheck="false"></textarea>
+      <div class="barra-acciones">
+        <button id="btnEscuchar" class="boton principal" type="button" disabled>
+          <span class="micro">&#127908;</span> Escuchar
+        </button>
+        <button id="btnTraducir" class="boton secundario" type="button">Traducir</button>
+      </div>
+      <p id="estadoVoz" class="estado oculto" role="status"></p>
+
+      <div class="fila-voz">
+        <label for="selectVoz">Voz de lectura:</label>
+        <select id="selectVoz"></select>
+        <button id="btnProbarVoz" class="boton pequeno" type="button" title="Probar la voz elegida">Probar</button>
+      </div>
+    </section>
+
+    <section class="tarjeta conversacion" aria-label="Modo conversación">
+      <div class="barra-etiqueta">
+        <h2>Modo conversación</h2>
+        <span class="chip chip-ayuda">Toca y habla</span>
+      </div>
+      <div class="conversacion-botones">
+        <button id="btnConvHT" class="boton conversacion kreyol" type="button">
+          <span class="micro">&#127908;</span> Kreyòl
+        </button>
+        <button id="btnConvES" class="boton conversacion espanol" type="button">
+          <span class="micro">&#127908;</span> Español
+        </button>
+      </div>
+      <p class="aviso">Cada quien toca su idioma y habla. La frase se traduce y se escucha sola.</p>
+    </section>
+
+    <section class="tarjeta salida" aria-label="Salida" id="seccionSalida" hidden>
+      <div class="barra-etiqueta">
+        <span id="chipDestino" class="chip chip-destino">Español latino</span>
+        <div class="controles-entrada">
+          <button id="btnLeerDestino" class="boton-icono" type="button" aria-label="Escuchar la traducción" title="Escuchar traducción">&#128266;</button>
+          <button id="btnCopiar" class="boton-icono" type="button" aria-label="Copiar traducción" title="Copiar">&#128203;</button>
+          <button id="btnFavorito" class="boton-icono" type="button" aria-label="Guardar como favorita" title="Guardar favorita">&#9733;</button>
+        </div>
+      </div>
+      <p id="textoDestino" class="traduccion" lang="es"></p>
+      <p id="avisoNeutral" class="aviso oculto">Traducción normalizada a español neutro/latino.</p>
+      <p id="avisoInverso" class="aviso oculto">Traducción al criollo con motor gratuito: útil para frases cortas, puede variar en frases largas.</p>
+    </section>
+
+    <section class="tarjeta frases" aria-label="Frases rápidas">
+      <div class="barra-etiqueta"><h2>Frases rápidas</h2></div>
+      <div id="categoriasFrases" class="categorias"></div>
+      <div id="listaFrases" class="lista-frases"></div>
+    </section>
+
+    <section class="tarjeta vocabulario" aria-label="Vocabulario">
+      <div class="barra-etiqueta"><h2>Vocabulario</h2></div>
+      <div id="categoriasVocab" class="categorias"></div>
+      <div id="gridVocab" class="grid-vocab"></div>
+      <p class="aviso">Toca una tarjeta para traducirla. Usa los aud&#237;fonos para escuchar cada palabra.</p>
+    </section>
+
+    <section class="tarjeta historial" aria-label="Historial">
+      <div class="barra-etiqueta">
+        <h2>Historial</h2>
+        <div class="controles-entrada">
+          <button id="btnImportar" class="boton pequeno" type="button" title="Recibir datos desde otro dispositivo">Importar</button>
+          <button id="btnCompartirQR" class="boton pequeno" type="button" title="Compartir datos por QR">Compartir QR</button>
+          <button id="btnExportar" class="boton pequeno" type="button" title="Exportar datos para futura app Android">Exportar</button>
+          <button id="btnBorrarHistorial" class="boton-icono" type="button" aria-label="Borrar historial" title="Borrar historial">&#128465;</button>
+        </div>
+      </div>
+      <ul id="listaHistorial" class="lista"></ul>
+      <p id="historialVacio" class="vacio">Todavía no hay traducciones.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Traducción en línea (MyMemory) y voz natural gratuita. El historial se guarda en este dispositivo y puedes exportarlo para una futura app Android.</p>
+  </footer>
+
+  <div id="modalEmergencia" class="modal-overlay oculto" role="dialog" aria-modal="true" aria-label="Emergencia">
+    <div class="modal-caja emergencia-caja">
+      <div class="modal-cabecera">
+        <h2>&#128680; Emergencia · Ijans</h2>
+        <button class="boton-cerrar" type="button" aria-label="Cerrar">&#10005;</button>
+      </div>
+      <p class="aviso">Muestra estas frases a quien te pueda ayudar. Toca el aud&#237;fono para que se escuchen.</p>
+      <div id="listaEmergencia" class="lista-emergencia"></div>
+    </div>
+  </div>
+
+  <div id="modalQR" class="modal-overlay oculto" role="dialog" aria-modal="true" aria-label="Compartir por QR">
+    <div class="modal-caja">
+      <div class="modal-cabecera">
+        <h2>Compartir por QR</h2>
+        <button class="boton-cerrar" type="button" aria-label="Cerrar">&#10005;</button>
+      </div>
+      <p class="aviso">Escanea este c&#243;digo con el celular o copia los datos para pegarlos en "Importar" del otro dispositivo.</p>
+      <div id="contenedorQR" class="qr-contenedor"></div>
+      <div class="modal-acciones">
+        <button id="btnCopiarJSON" class="boton secundario" type="button">Copiar datos</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalImportar" class="modal-overlay oculto" role="dialog" aria-modal="true" aria-label="Importar datos">
+    <div class="modal-caja">
+      <div class="modal-cabecera">
+        <h2>Importar datos</h2>
+        <button class="boton-cerrar" type="button" aria-label="Cerrar">&#10005;</button>
+      </div>
+      <p class="aviso">Pega aqu&#237; el JSON copiado desde otro dispositivo (o escaneado con el QR).</p>
+      <textarea id="textoImportar" class="area-importar" rows="6" placeholder='{"app":"traductor-kreyol-es", …}' spellcheck="false"></textarea>
+      <div class="modal-acciones">
+        <button id="btnConfirmarImportar" class="boton secundario" type="button">Importar</button>
+      </div>
+      <p id="resultadoImportar" class="estado oculto"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
