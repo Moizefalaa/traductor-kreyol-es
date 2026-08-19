@@ -335,27 +335,30 @@
     estadoVoz.classList.remove("error");
   }
 
-  function traducir() {
-    var texto = origen.value.trim();
-    if (!texto) {
-      origen.focus();
-      return;
-    }
+  function traducirConGoogle(texto) {
+    var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" +
+      idiomaOrigen() + "&tl=" + idiomaDestino() + "&dt=t&q=" + encodeURIComponent(texto);
+    return fetch(url)
+      .then(function (resp) {
+        if (!resp.ok) throw new Error("HTTP " + resp.status);
+        return resp.json();
+      })
+      .then(function (datos) {
+        var segmentos = datos && datos[0];
+        if (!Array.isArray(segmentos) || !segmentos.length) {
+          throw new Error("Respuesta vacía");
+        }
+        var t = segmentos.map(function (s) { return (s && s[0]) || ""; }).join("");
+        if (!t || t === texto) throw new Error("Sin traducción");
+        return t;
+      });
+  }
 
-    if (!navigator.onLine) {
-      mostrarError("Sin conexión: la traducción en línea no está disponible. Revisa tu internet.");
-      return;
-    }
-
-    btnTraducir.disabled = true;
-    btnTraducir.textContent = "Traduciendo…";
-    limpiarError();
-
+  function traducirConMyMemory(texto) {
     var url = "https://api.mymemory.translated.net/get?q=" +
       encodeURIComponent(texto) +
       "&langpair=" + idiomaOrigen() + "%7C" + idiomaDestino();
-
-    fetch(url)
+    return fetch(url)
       .then(function (resp) {
         if (!resp.ok) throw new Error("HTTP " + resp.status);
         return resp.json();
@@ -363,27 +366,85 @@
       .then(function (datos) {
         var traducido = (datos.responseData && datos.responseData.translatedText) || "";
         if (traducido === "QUERY LENGTH LIMIT EXCEEDED. MAX ALLOWED QUERY : 500 CHARS") {
-          throw new Error("El texto supera los 500 caracteres permitidos por la API gratuita.");
+          throw new Error("El texto supera los 500 caracteres permitidos.");
         }
-        if (!traducido) {
-          throw new Error("No se obtuvo traducción.");
-        }
-        var resultado = traducido;
-        var normalizado = false;
-        if (esSalidaEspañol()) {
-          var norm = aEspanolLatino(traducido);
-          resultado = norm.texto;
-          normalizado = norm.normalizado;
-        }
-        destino.textContent = resultado;
-        avisoNeutral.classList.toggle("oculto", !normalizado);
-        avisoInverso.classList.toggle("oculto", esSalidaEspañol());
-        seccionSalida.hidden = false;
+        if (!traducido) throw new Error("Sin traducción");
+        return traducido;
+      });
+  }
 
-        ultimaTraduccion = agregarTraduccion(texto, resultado, normalizado);
-        btnFavorito.classList.toggle("activo", false);
-        seccionSalida.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      })
+  function normalizarClave(texto) {
+    return texto.trim().toLowerCase().replace(/\s+/g, " ").replace(/[.!?…]+$/, "");
+  }
+
+  function construirDiccionario() {
+    var d = {};
+    function agregar(ht, es) {
+      if (!ht || !es) return;
+      d[normalizarClave(ht)] = { ht: ht, es: es };
+      d[normalizarClave(es)] = { ht: ht, es: es };
+    }
+    FRASES_RAPIDAS.forEach(function (g) { g.frases.forEach(function (f) { agregar(f.ht, f.es); }); });
+    FRASES_EMERGENCIA.forEach(function (f) { agregar(f.ht, f.es); });
+    VOCABULARIO.forEach(function (g) { g.items.forEach(function (i) { agregar(i.ht, i.es); }); });
+    return d;
+  }
+
+  var DICCIONARIO = construirDiccionario();
+
+  function buscarEnDiccionario(texto) {
+    var par = DICCIONARIO[normalizarClave(texto)];
+    if (!par) return null;
+    return esSalidaEspañol() ? par.es : par.ht;
+  }
+
+  function mostrarResultado(traducido) {
+    var resultado = traducido;
+    var normalizado = false;
+    if (esSalidaEspañol()) {
+      var norm = aEspanolLatino(traducido);
+      resultado = norm.texto;
+      normalizado = norm.normalizado;
+    }
+    destino.textContent = resultado;
+    avisoNeutral.classList.toggle("oculto", !normalizado);
+    avisoInverso.classList.toggle("oculto", esSalidaEspañol());
+    seccionSalida.hidden = false;
+
+    ultimaTraduccion = agregarTraduccion(origen.value.trim(), resultado, normalizado);
+    btnFavorito.classList.toggle("activo", false);
+    seccionSalida.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  function traducir() {
+    var texto = origen.value.trim();
+    if (!texto) {
+      origen.focus();
+      return;
+    }
+
+    btnTraducir.disabled = true;
+    btnTraducir.textContent = "Traduciendo…";
+    limpiarError();
+
+    var local = buscarEnDiccionario(texto);
+    if (local) {
+      mostrarResultado(local);
+      btnTraducir.disabled = false;
+      btnTraducir.textContent = "Traducir";
+      return;
+    }
+
+    if (!navigator.onLine) {
+      btnTraducir.disabled = false;
+      btnTraducir.textContent = "Traducir";
+      mostrarError("Sin conexión: la traducción en línea no está disponible. Revisa tu internet.");
+      return;
+    }
+
+    traducirConGoogle(texto)
+      .catch(function () { return traducirConMyMemory(texto); })
+      .then(mostrarResultado)
       .catch(function (err) {
         mostrarError("No se pudo traducir: " + err.message);
       })
