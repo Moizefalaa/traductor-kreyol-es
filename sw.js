@@ -1,4 +1,4 @@
-var CACHE = "kreol-es-v6";
+var CACHE = "kreol-es-v7";
 var ARCHIVOS = [
   "./",
   "./index.html",
@@ -30,6 +30,12 @@ self.addEventListener("activate", function (evento) {
       return self.clients.claim();
     })
   );
+});
+
+self.addEventListener("message", function (evento) {
+  if (evento.data && evento.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
 });
 
 self.addEventListener("fetch", function (evento) {

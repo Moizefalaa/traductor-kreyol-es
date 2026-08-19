@@ -23,6 +23,11 @@
     </div>
   </header>
 
+  <div id="bannerActualizar" class="banner-actualizar oculto" role="status">
+    <span>Hay una nueva versión de la app disponible.</span>
+    <button id="btnActualizar" type="button">Actualizar ahora</button>
+  </div>
+
   <main>
     <button id="btnEmergencia" class="boton emergencia" type="button">&#128680; Emergencia · Ijans</button>
 
@@ -114,7 +119,8 @@
   </main>
 
   <footer>
-    <p>Traducción en línea (MyMemory) y voz natural gratuita. El historial se guarda en este dispositivo y puedes exportarlo para una futura app Android.</p>
+    <p>Traducción en línea (Google con respaldo MyMemory) y voz natural gratuita. El historial se guarda en este dispositivo.<br>
+    <span id="versionApp" class="version"></span></p>
   </footer>
 
   <div id="modalEmergencia" class="modal-overlay oculto" role="dialog" aria-modal="true" aria-label="Emergencia">

@@ -478,3 +478,37 @@ footer {
 .resultado-importar.error { color: var(--rojo); }
 
 .modal-overlay.oculto { display: none; }
+
+.banner-actualizar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 720px;
+  margin: 12px auto 0;
+  padding: 10px 14px;
+  background: #e3f2ee;
+  border: 1px solid #b9d9cf;
+  border-radius: 12px;
+  font-size: .9rem;
+  color: var(--verde-oscuro);
+  flex-wrap: wrap;
+}
+
+.banner-actualizar button {
+  border: none;
+  background: var(--verde);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: .85rem;
+  cursor: pointer;
+}
+
+.banner-actualizar button:hover { filter: brightness(1.08); }
+
+.version {
+  font-size: .72rem;
+  color: var(--texto-suave);
+}
