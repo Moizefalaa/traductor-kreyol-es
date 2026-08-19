@@ -1,4 +1,4 @@
-var CACHE = "kreol-es-v4";
+var CACHE = "kreol-es-v5";
 var ARCHIVOS = [
   "./",
   "./index.html",
@@ -38,18 +38,19 @@ self.addEventListener("fetch", function (evento) {
   var url = new URL(evento.request.url);
   if (url.origin === location.origin) {
     evento.respondWith(
-      caches.match(evento.request).then(function (enCache) {
-        if (enCache) return enCache;
-        return fetch(evento.request).then(function (respuesta) {
-          if (respuesta && respuesta.ok) {
-            var clon = respuesta.clone();
-            caches.open(CACHE).then(function (cache) { cache.put(evento.request, clon); });
-          }
-          return respuesta;
-        }).catch(function () {
+      fetch(evento.request).then(function (respuesta) {
+        if (respuesta && respuesta.ok) {
+          var clon = respuesta.clone();
+          caches.open(CACHE).then(function (cache) { cache.put(evento.request, clon); });
+        }
+        return respuesta;
+      }).catch(function () {
+        return caches.match(evento.request).then(function (enCache) {
+          if (enCache) return enCache;
           if (evento.request.mode === "navigate") {
             return caches.match("./index.html");
           }
+          return new Response("Sin conexión", { status: 503, statusText: "Sin conexión" });
         });
       })
     );
