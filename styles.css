@@ -476,3 +476,5 @@ footer {
 
 .resultado-importar.ok { color: var(--verde); }
 .resultado-importar.error { color: var(--rojo); }
+
+.modal-overlay.oculto { display: none; }
