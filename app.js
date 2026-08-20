@@ -5,7 +5,7 @@
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v16";
+  var VERSION = "v17";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -1265,12 +1265,6 @@
   }
 
   if ("serviceWorker" in navigator) {
-    var refrescando = false;
-    navigator.serviceWorker.addEventListener("controllerchange", function () {
-      if (refrescando) return;
-      refrescando = true;
-      window.location.reload();
-    });
     navigator.serviceWorker.register("sw.js").then(function (reg) {
       if (navigator.serviceWorker.controller) {
         reg.addEventListener("updatefound", function () {
@@ -1288,6 +1282,20 @@
     });
   }
 
+  function limpiarCacheYRecargar() {
+    function recargar() { window.location.reload(); }
+    if (!("caches" in window) || !navigator.onLine) {
+      recargar();
+      return;
+    }
+    caches.keys()
+      .then(function (claves) {
+        return Promise.all(claves.map(function (c) { return caches.delete(c); }));
+      })
+      .catch(function () {})
+      .then(recargar);
+  }
+
   function mostrarBannerActualizacion(reg) {
     var banner = document.getElementById("bannerActualizar");
     var btn = document.getElementById("btnActualizar");
@@ -1296,7 +1304,7 @@
       if (reg.waiting) {
         try { reg.waiting.postMessage({ type: "SKIP_WAITING" }); } catch (e) {}
       }
-      window.location.reload();
+      limpiarCacheYRecargar();
     });
   }
 
