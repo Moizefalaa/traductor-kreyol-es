@@ -7,7 +7,7 @@
   var CLAVE_TEMA = "kreolEs_tema_v1";
   var CLAVE_PALETA = "kreolEs_paleta_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v22";
+  var VERSION = "v23";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -1388,20 +1388,25 @@
 
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then(function (reg) {
-      if (navigator.serviceWorker.controller) {
-        reg.addEventListener("updatefound", function () {
-          var nuevo = reg.installing;
-          if (!nuevo) return;
-          nuevo.addEventListener("statechange", function () {
-            if (nuevo.state === "installed") {
-              mostrarBannerActualizacion(reg);
-            }
-          });
-        });
-      }
+      comprobarActualizacion(reg);
     }).catch(function (e) {
       console.warn("Service worker no registrado", e);
     });
+  }
+
+  function comprobarActualizacion(reg) {
+    fetch("version.txt?v=" + Date.now(), { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("Sin version.txt");
+        return r.text();
+      })
+      .then(function (txt) {
+        var servidor = (txt || "").trim().toLowerCase();
+        if (servidor && servidor !== VERSION.toLowerCase()) {
+          mostrarBannerActualizacion(reg);
+        }
+      })
+      .catch(function () {});
   }
 
   function limpiarCacheYRecargar() {
@@ -1425,6 +1430,7 @@
     var btn = document.getElementById("btnActualizar");
     banner.classList.remove("oculto");
     btn.addEventListener("click", function () {
+      banner.classList.add("oculto");
       if (reg.waiting) {
         try { reg.waiting.postMessage({ type: "SKIP_WAITING" }); } catch (e) {}
       }
