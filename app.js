@@ -5,7 +5,7 @@
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v8";
+  var VERSION = "v9";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -132,7 +132,26 @@
     { ht: "Ki lè ou fini?", es: "¿A qué hora terminas?" },
     { ht: "Mwen ap vini", es: "Voy para allá" },
     { ht: "Èske m ka rantre?", es: "¿Puedo entrar?" },
-    { ht: "Mwen bezwen travay", es: "Necesito trabajo" }
+    { ht: "Mwen bezwen travay", es: "Necesito trabajo" },
+    { ht: "Yo te fè tout travay sa yo nan lannwit paske yo te fèt ak lasi!", es: "Tenían que hacer todo su trabajo por las noches. ¡Porque eran niños de cera!" },
+    { ht: "Yo pran lasi, yo fonn lasi a enpi yo fè'l tounen yon zwazo.", es: "Tomaron los restos de cera derretida y le dieron la forma de un ave." },
+    { ht: "Frè li avèti'l …", es: "Sus hermanos le advirtieron que no lo hiciera…" },
+    { ht: "Mayo sa a gwo.", es: "Este suéter es grande." },
+    { ht: "Bèl ti kouvèti manman an ki te pandye sou yon klou shire an de tibout.", es: "La manta tan preciada de Simbegwire que había quedado enganchada en un clavo, se rasgó en dos." },
+    { ht: "Kilè wap tounen manman ?", es: "Madre, ¿cuándo regresarás?" },
+    { ht: "Mwen leve enpi mwen fè dife.", es: "Despierto y enciendo el fuego." },
+    { ht: "Mwen fann bwadife.", es: "Corto la leña." },
+    { ht: "Enpi ….", es: "Hasta que…" },
+    { ht: "Dife kwit manje.", es: "El fuego cocina." },
+    { ht: "Dife bèl.", es: "El fuego es maravilloso." },
+    { ht: "Hi han?", es: "¿Hiaaa?" },
+    { ht: "Li mete kò li tankou yon boul enpi li tonbe dòmi ajite.", es: "Se enroscó como una pelota y se quedó dormido." },
+    { ht: "Lap rele « Achte fig mwen yo…", es: "Sigue gritando, \"¡Compren mis plátanos!" },
+    { ht: "Li pati kouri sou vye pye an.", es: "Aunque se torció el tobillo, cojeó lo más rápido que pudo para poder escapar." },
+    { ht: "Li goute nan tout fwi yo enpi lo manje anpil nan yo.", es: "Prueba toda la fruta." },
+    { ht: "Mwen ta vle ke ou ale chache yon ti manje la?", es: "Ojalá vayas pronto a buscar comida" },
+    { ht: "Chen an kase tèt tounen epi yo pa janm wè li ankò.", es: "El perro se fue corriendo y nunca nadie lo ha visto aparecerse de nuevo." },
+    { ht: "Gingile kouri desann pyebwa anvan Leyopa a bay li yon kout pat.", es: "Antes de que el leopardo pudiera atacar a Gingile, él bajó muy rápidamente del árbol." }
   ];
 
   var VOCABULARIO = [
