@@ -123,5 +123,15 @@
     "tasaError": 0.04,
     "regresion": false,
     "deltaTasa": -0.44
+  },
+  {
+    "fecha": "2026-08-20T04:34:54.723Z",
+    "total": 1180,
+    "ok": 140,
+    "duda": 989,
+    "error": 51,
+    "red": 0,
+    "cubierta": 34,
+    "tasaError": 0.04
   }
 ]

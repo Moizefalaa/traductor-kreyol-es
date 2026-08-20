@@ -507,6 +507,7 @@ module.exports = {
   traducirConMyMemory: traducirConMyMemory,
   corregidaPara: corregidaPara,
   dividirEnOraciones: dividirEnOraciones,
+  verificar: verificar,
   verificarOracion: verificarOracion,
   verificarTexto: verificarTexto
 };
