@@ -5,7 +5,7 @@
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v18";
+  var VERSION = "v19";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -1300,7 +1300,7 @@
   }
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js").then(function (reg) {
+    navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then(function (reg) {
       if (navigator.serviceWorker.controller) {
         reg.addEventListener("updatefound", function () {
           var nuevo = reg.installing;
@@ -1318,7 +1318,9 @@
   }
 
   function limpiarCacheYRecargar() {
-    function recargar() { window.location.reload(); }
+    function recargar() {
+      window.location.replace(location.origin + location.pathname + "?v=" + VERSION);
+    }
     if (!("caches" in window) || !navigator.onLine) {
       recargar();
       return;
