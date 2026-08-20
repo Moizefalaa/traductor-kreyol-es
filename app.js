@@ -5,7 +5,7 @@
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v14";
+  var VERSION = "v15";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -160,7 +160,18 @@
     { ht: "Poukisa ou mare figi ou konsa?", es: "¿Por qué ha decaído tu semblante?" },
     { ht: "Li move, li mare figi l' byen mare.", es: "Estaba muy enojado, y su semblante decayó." },
     { ht: "W'ap tounen yon vakabon k'ap plede mache toupatou sou latè san rete.", es: "Andarás errante y vagabundo por la tierra, sin descanso." },
-    { ht: "M'ap tounen yon vakabon k'ap plede mache toupatou sou latè san rete.", es: "Andaré errante y vagabundo por la tierra, sin descanso." }
+    { ht: "M'ap tounen yon vakabon k'ap plede mache toupatou sou latè san rete.", es: "Andaré errante y vagabundo por la tierra, sin descanso." },
+    { ht: "Adan te gen santrantan (130 an) lè li vin gen yon pitit gason ki te sanble avè l' tèt koupe, li rele l' Sèt.", es: "Adán tenía ciento treinta años cuando tuvo un hijo que se parecía exactamente a él, y lo llamó Set." },
+    { ht: "Apre nesans Enòk, Sèt viv witsansetan (807 an).", es: "Después del nacimiento de Enós, Set vivió ochocientos siete años." },
+    { ht: "Apre nesans Kenan, Enòk viv witsankenzan (815 an).", es: "Después del nacimiento de Cainán, Enós vivió ochocientos quince años." },
+    { ht: "Lè Kenan mouri, li te gen nèfsandizan (910 an).", es: "Cuando Cainán murió, tenía novecientos diez años." },
+    { ht: "Malaleyèl te gen swasannsenkan lè li vin gen yon pitit gason yo rele Jerèd.", es: "Mahalaleel tenía sesenta y cinco años cuando tuvo un hijo llamado Jared." },
+    { ht: "Jerèd te gen sanswanndezan (162 an) lè li vin gen yon pitit gason yo rele Enòk.", es: "Jared tenía ciento sesenta y dos años cuando tuvo un hijo llamado Enoc." },
+    { ht: "Lè Jerèd mouri, li te gen nèfsanswasanndezan (962 an).", es: "Cuando Jared murió, tenía novecientos sesenta y dos años." },
+    { ht: "Enòk te gen swasannsenkan lè li vin gen yon pitit gason yo rele Metouchela.", es: "Enoc tenía sesenta y cinco años cuando tuvo un hijo llamado Matusalén." },
+    { ht: "Apre nesans Lemèk, Metouchela viv sètsankatrevendezan (782 an).", es: "Después del nacimiento de Lamec, Matusalén vivió setecientos ochenta y dos años." },
+    { ht: "Li te gen twasanswasannsenkan (365 an) lè l' disparèt, paske Bondye te pran l' avè l'.", es: "Tenía trescientos sesenta y cinco años cuando desapareció, porque Dios se lo llevó consigo." },
+    { ht: "Lemèk te gen sankatrevendezan (182 an) lè li vin gen yon pitit gason.", es: "Lamec tenía ciento ochenta y dos años cuando tuvo un hijo." }
   ];
 
   var VOCABULARIO = [
