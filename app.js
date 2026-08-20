@@ -5,7 +5,7 @@
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v9";
+  var VERSION = "v10";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -415,6 +415,14 @@
     return texto.trim().toLowerCase().replace(/\s+/g, " ").replace(/[.!?…]+$/, "");
   }
 
+  function dividirEnOraciones(texto) {
+    var limpio = (texto || "").replace(/\s+/g, " ").trim();
+    if (!limpio) return [];
+    return (limpio.match(/[^.!?…]+[.!?…]+|[^.!?…]+$/g) || [limpio])
+      .map(function (t) { return t.trim(); })
+      .filter(Boolean);
+  }
+
   function construirDiccionario() {
     var d = {};
     function agregar(ht, es) {
@@ -481,6 +489,8 @@
       return;
     }
 
+    if (traducirTextoLargo()) return;
+
     traducirConGoogle(texto)
       .catch(function () { return traducirConMyMemory(texto); })
       .then(mostrarResultado)
@@ -491,6 +501,33 @@
         btnTraducir.disabled = false;
         btnTraducir.textContent = "Traducir";
       });
+  }
+
+  function traducirTextoLargo() {
+    var texto = origen.value.trim();
+    var oraciones = dividirEnOraciones(texto);
+    if (oraciones.length <= 1) return false;
+
+    var promesas = oraciones.map(function (oracion) {
+      var local = buscarEnDiccionario(oracion);
+      if (local) return Promise.resolve(local);
+      if (!navigator.onLine) {
+        return Promise.reject(new Error("Sin conexión: la traducción en línea no está disponible."));
+      }
+      return traducirConGoogle(oracion)
+        .catch(function () { return traducirConMyMemory(oracion); });
+    });
+
+    Promise.all(promesas)
+      .then(function (traducidas) { mostrarResultado(traducidas.join(" ")); })
+      .catch(function (err) {
+        mostrarError("No se pudo traducir el texto: " + err.message);
+      })
+      .finally(function () {
+        btnTraducir.disabled = false;
+        btnTraducir.textContent = "Traducir";
+      });
+    return true;
   }
 
   function configurarVoz() {
