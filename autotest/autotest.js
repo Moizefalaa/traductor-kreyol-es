@@ -489,7 +489,24 @@ async function main() {
   }
 }
 
-main().catch(function (e) {
-  console.error("Falló el autotest:", e);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(function (e) {
+    console.error("Falló el autotest:", e);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  leerJson: leerJson,
+  escribirJson: escribirJson,
+  limpiar: limpiar,
+  similitud: similitud,
+  nivelDeSimilitud: nivelDeSimilitud,
+  agendarGoogle: agendarGoogle,
+  traducirConGoogle: traducirConGoogle,
+  traducirConMyMemory: traducirConMyMemory,
+  corregidaPara: corregidaPara,
+  dividirEnOraciones: dividirEnOraciones,
+  verificarOracion: verificarOracion,
+  verificarTexto: verificarTexto
+};
