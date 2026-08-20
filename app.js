@@ -5,7 +5,7 @@
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v13";
+  var VERSION = "v14";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -155,7 +155,12 @@
     { ht: "Chè l' se chè mwen.", es: "Su carne es mi carne." },
     { ht: "Premye branch lan te rele Pichon.", es: "La primera rama se llamaba Pisón." },
     { ht: "Tè a va kale tout kalite pikan ak pengwen ba ou.", es: "La tierra te producirá espinos y cardos." },
-    { ht: "Se swe kouraj ou ki pou fè ou mete yon moso pen nan bouch ou jouk lè wa tounen nan tè kote ou soti a.", es: "Con el sudor de tu frente comerás el pan hasta que vuelvas a la tierra de donde saliste." }
+    { ht: "Se swe kouraj ou ki pou fè ou mete yon moso pen nan bouch ou jouk lè wa tounen nan tè kote ou soti a.", es: "Con el sudor de tu frente comerás el pan hasta que vuelvas a la tierra de donde saliste." },
+    { ht: "Poukisa ou move konsa?", es: "¿Por qué estás tan enojado?" },
+    { ht: "Poukisa ou mare figi ou konsa?", es: "¿Por qué ha decaído tu semblante?" },
+    { ht: "Li move, li mare figi l' byen mare.", es: "Estaba muy enojado, y su semblante decayó." },
+    { ht: "W'ap tounen yon vakabon k'ap plede mache toupatou sou latè san rete.", es: "Andarás errante y vagabundo por la tierra, sin descanso." },
+    { ht: "M'ap tounen yon vakabon k'ap plede mache toupatou sou latè san rete.", es: "Andaré errante y vagabundo por la tierra, sin descanso." }
   ];
 
   var VOCABULARIO = [

@@ -1,40 +1,217 @@
 [
-  { "ht": "Bonjou", "es": "Buenos días", "motivo": "El motor devuelve 'Hola'." },
-  { "ht": "Mwen pè", "es": "Tengo miedo", "motivo": "El motor devuelve 'Me temo que'." },
-  { "ht": "padon", "es": "perdón", "motivo": "El motor devuelve 'Lo siento'." },
-  { "ht": "tablo", "es": "pizarra", "motivo": "El motor devuelve 'mesa'." },
-  { "ht": "pwofesè", "es": "profesor", "motivo": "El motor devuelve 'maestro'." },
-  { "ht": "Mwen fatige", "es": "Estoy cansada", "motivo": "Género femenino (frase del aula)." },
-  { "ht": "Mwen blese", "es": "Estoy herida", "motivo": "Género femenino (frase del aula)." },
-  { "ht": "Mwen kontan", "es": "Estoy contenta", "motivo": "Frase curada del aula." },
-  { "ht": "Mwen rele…", "es": "Me llamo…", "motivo": "El motor devuelve 'Yo lo llamo…'." },
-  { "ht": "Kote pwofesè a?", "es": "¿Dónde está el profesor?", "motivo": "El motor devuelve 'maestro'." },
-  { "ht": "Mwen ta renmen ale lakay mwen", "es": "Quisiera ir a mi casa", "motivo": "El roundtrip cambia 'mi casa' por 'tu casa'." },
-  { "ht": "Ki lè ou fini?", "es": "¿A qué hora terminas?", "motivo": "El motor devuelve pasado 'cuando terminaste'." },
-  { "ht": "Mwen ap vini", "es": "Voy para allá", "motivo": "El motor devuelve 'ya voy', cambia el sentido." },
-  { "ht": "Èske m ka rantre?", "es": "¿Puedo entrar?", "motivo": "El motor devuelve '¿Puedo unirme?'." },
-  { "ht": "Mwen bezwen travay", "es": "Necesito trabajo", "motivo": "El motor devuelve 'necesito trabajar' (verbo, no sustantivo)." },
-  { "ht": "Yo te fè tout travay sa yo nan lannwit paske yo te fèt ak lasi!", "es": "Tenían que hacer todo su trabajo por las noches. ¡Porque eran niños de cera!", "motivo": "'lasi' (cera) mal traducido como 'celosía'." },
-  { "ht": "Yo pran lasi, yo fonn lasi a enpi yo fè'l tounen yon zwazo.", "es": "Tomaron los restos de cera derretida y le dieron la forma de un ave.", "motivo": "'lasi' (cera) mal traducido como 'red'." },
-  { "ht": "Frè li avèti'l …", "es": "Sus hermanos le advirtieron que no lo hiciera…", "motivo": "La traducción del cuento usa plural." },
-  { "ht": "Mayo sa a gwo.", "es": "Este suéter es grande.", "motivo": "El motor devuelve 'Esta camisa es genial' ('gwo'=grande)." },
-  { "ht": "Bèl ti kouvèti manman an ki te pandye sou yon klou shire an de tibout.", "es": "La manta tan preciada de Simbegwire que había quedado enganchada en un clavo, se rasgó en dos.", "motivo": "El motor interpreta 'klou shire an' como 'clavo de condado en dos patas'." },
-  { "ht": "Kilè wap tounen manman ?", "es": "Madre, ¿cuándo regresarás?", "motivo": "El motor devuelve '¿Cuándo vas a ser madre?'." },
-  { "ht": "Mwen leve enpi mwen fè dife.", "es": "Despierto y enciendo el fuego.", "motivo": "El motor devuelve 'Levanté mi maldad y encendí fuego'." },
-  { "ht": "Mwen fann bwadife.", "es": "Corto la leña.", "motivo": "El motor devuelve 'Estoy loco' ('bwadife'=leña)." },
-  { "ht": "Enpi ….", "es": "Hasta que…", "motivo": "El motor devuelve 'Malvado…'." },
-  { "ht": "Dife kwit manje.", "es": "El fuego cocina.", "motivo": "El motor devuelve 'Cocinar al fuego'." },
-  { "ht": "Dife bèl.", "es": "El fuego es maravilloso.", "motivo": "El motor devuelve 'Hermoso fuego' (sin verbo)." },
-  { "ht": "Hi han?", "es": "¿Hiaaa?", "motivo": "El motor lee 'Hi han' como inglés y devuelve 'Hola han'." },
-  { "ht": "Li mete kò li tankou yon boul enpi li tonbe dòmi ajite.", "es": "Se enroscó como una pelota y se quedó dormido.", "motivo": "El motor devuelve 'pelota impía'." },
-  { "ht": "Lap rele « Achte fig mwen yo…", "es": "Sigue gritando, \"¡Compren mis plátanos!", "motivo": "'fig' en kreyòl es plátano; el motor devuelve 'higos'." },
-  { "ht": "Li pati kouri sou vye pye an.", "es": "Aunque se torció el tobillo, cojeó lo más rápido que pudo para poder escapar.", "motivo": "El motor devuelve 'Empezó a correr con el pie viejo'." },
-  { "ht": "Li goute nan tout fwi yo enpi lo manje anpil nan yo.", "es": "Prueba toda la fruta.", "motivo": "El motor inserta 'impuras'." },
-  { "ht": "Mwen ta vle ke ou ale chache yon ti manje la?", "es": "Ojalá vayas pronto a buscar comida", "motivo": "El motor convierte la frase en pregunta." },
-  { "ht": "Chen an kase tèt tounen epi yo pa janm wè li ankò.", "es": "El perro se fue corriendo y nunca nadie lo ha visto aparecerse de nuevo.", "motivo": "El motor devuelve 'reaccionó bruscamente'." },
-  { "ht": "Gingile kouri desann pyebwa anvan Leyopa a bay li yon kout pat.", "es": "Antes de que el leopardo pudiera atacar a Gingile, él bajó muy rápidamente del árbol.", "motivo": "El motor traduce 'kout pat' como 'palmadita'." },
-  { "ht": "Chè l' se chè mwen.", "es": "Su carne es mi carne.", "motivo": "El motor confunde 'chè' (carne) con 'chère' (querida)." },
-  { "ht": "Premye branch lan te rele Pichon.", "es": "La primera rama se llamaba Pisón.", "motivo": "El motor traduce 'branch' (de río) como 'sucursal'." },
-  { "ht": "Tè a va kale tout kalite pikan ak pengwen ba ou.", "es": "La tierra te producirá espinos y cardos.", "motivo": "El motor traduce 'pengwen' (cardos) como 'pingüinos'." },
-  { "ht": "Se swe kouraj ou ki pou fè ou mete yon moso pen nan bouch ou jouk lè wa tounen nan tè kote ou soti a.", "es": "Con el sudor de tu frente comerás el pan hasta que vuelvas a la tierra de donde saliste.", "motivo": "El motor lee 'wa' (tú) como 'rey' y 'kouraj' como 'valentía'." }
+  {
+    "ht": "Bonjou",
+    "es": "Buenos días",
+    "motivo": "El motor devuelve 'Hola'."
+  },
+  {
+    "ht": "Mwen pè",
+    "es": "Tengo miedo",
+    "motivo": "El motor devuelve 'Me temo que'."
+  },
+  {
+    "ht": "padon",
+    "es": "perdón",
+    "motivo": "El motor devuelve 'Lo siento'."
+  },
+  {
+    "ht": "tablo",
+    "es": "pizarra",
+    "motivo": "El motor devuelve 'mesa'."
+  },
+  {
+    "ht": "pwofesè",
+    "es": "profesor",
+    "motivo": "El motor devuelve 'maestro'."
+  },
+  {
+    "ht": "Mwen fatige",
+    "es": "Estoy cansada",
+    "motivo": "Género femenino (frase del aula)."
+  },
+  {
+    "ht": "Mwen blese",
+    "es": "Estoy herida",
+    "motivo": "Género femenino (frase del aula)."
+  },
+  {
+    "ht": "Mwen kontan",
+    "es": "Estoy contenta",
+    "motivo": "Frase curada del aula."
+  },
+  {
+    "ht": "Mwen rele…",
+    "es": "Me llamo…",
+    "motivo": "El motor devuelve 'Yo lo llamo…'."
+  },
+  {
+    "ht": "Kote pwofesè a?",
+    "es": "¿Dónde está el profesor?",
+    "motivo": "El motor devuelve 'maestro'."
+  },
+  {
+    "ht": "Mwen ta renmen ale lakay mwen",
+    "es": "Quisiera ir a mi casa",
+    "motivo": "El roundtrip cambia 'mi casa' por 'tu casa'."
+  },
+  {
+    "ht": "Ki lè ou fini?",
+    "es": "¿A qué hora terminas?",
+    "motivo": "El motor devuelve pasado 'cuando terminaste'."
+  },
+  {
+    "ht": "Mwen ap vini",
+    "es": "Voy para allá",
+    "motivo": "El motor devuelve 'ya voy', cambia el sentido."
+  },
+  {
+    "ht": "Èske m ka rantre?",
+    "es": "¿Puedo entrar?",
+    "motivo": "El motor devuelve '¿Puedo unirme?'."
+  },
+  {
+    "ht": "Mwen bezwen travay",
+    "es": "Necesito trabajo",
+    "motivo": "El motor devuelve 'necesito trabajar' (verbo, no sustantivo)."
+  },
+  {
+    "ht": "Yo te fè tout travay sa yo nan lannwit paske yo te fèt ak lasi!",
+    "es": "Tenían que hacer todo su trabajo por las noches. ¡Porque eran niños de cera!",
+    "motivo": "'lasi' (cera) mal traducido como 'celosía'."
+  },
+  {
+    "ht": "Yo pran lasi, yo fonn lasi a enpi yo fè'l tounen yon zwazo.",
+    "es": "Tomaron los restos de cera derretida y le dieron la forma de un ave.",
+    "motivo": "'lasi' (cera) mal traducido como 'red'."
+  },
+  {
+    "ht": "Frè li avèti'l …",
+    "es": "Sus hermanos le advirtieron que no lo hiciera…",
+    "motivo": "La traducción del cuento usa plural."
+  },
+  {
+    "ht": "Mayo sa a gwo.",
+    "es": "Este suéter es grande.",
+    "motivo": "El motor devuelve 'Esta camisa es genial' ('gwo'=grande)."
+  },
+  {
+    "ht": "Bèl ti kouvèti manman an ki te pandye sou yon klou shire an de tibout.",
+    "es": "La manta tan preciada de Simbegwire que había quedado enganchada en un clavo, se rasgó en dos.",
+    "motivo": "El motor interpreta 'klou shire an' como 'clavo de condado en dos patas'."
+  },
+  {
+    "ht": "Kilè wap tounen manman ?",
+    "es": "Madre, ¿cuándo regresarás?",
+    "motivo": "El motor devuelve '¿Cuándo vas a ser madre?'."
+  },
+  {
+    "ht": "Mwen leve enpi mwen fè dife.",
+    "es": "Despierto y enciendo el fuego.",
+    "motivo": "El motor devuelve 'Levanté mi maldad y encendí fuego'."
+  },
+  {
+    "ht": "Mwen fann bwadife.",
+    "es": "Corto la leña.",
+    "motivo": "El motor devuelve 'Estoy loco' ('bwadife'=leña)."
+  },
+  {
+    "ht": "Enpi ….",
+    "es": "Hasta que…",
+    "motivo": "El motor devuelve 'Malvado…'."
+  },
+  {
+    "ht": "Dife kwit manje.",
+    "es": "El fuego cocina.",
+    "motivo": "El motor devuelve 'Cocinar al fuego'."
+  },
+  {
+    "ht": "Dife bèl.",
+    "es": "El fuego es maravilloso.",
+    "motivo": "El motor devuelve 'Hermoso fuego' (sin verbo)."
+  },
+  {
+    "ht": "Hi han?",
+    "es": "¿Hiaaa?",
+    "motivo": "El motor lee 'Hi han' como inglés y devuelve 'Hola han'."
+  },
+  {
+    "ht": "Li mete kò li tankou yon boul enpi li tonbe dòmi ajite.",
+    "es": "Se enroscó como una pelota y se quedó dormido.",
+    "motivo": "El motor devuelve 'pelota impía'."
+  },
+  {
+    "ht": "Lap rele « Achte fig mwen yo…",
+    "es": "Sigue gritando, \"¡Compren mis plátanos!",
+    "motivo": "'fig' en kreyòl es plátano; el motor devuelve 'higos'."
+  },
+  {
+    "ht": "Li pati kouri sou vye pye an.",
+    "es": "Aunque se torció el tobillo, cojeó lo más rápido que pudo para poder escapar.",
+    "motivo": "El motor devuelve 'Empezó a correr con el pie viejo'."
+  },
+  {
+    "ht": "Li goute nan tout fwi yo enpi lo manje anpil nan yo.",
+    "es": "Prueba toda la fruta.",
+    "motivo": "El motor inserta 'impuras'."
+  },
+  {
+    "ht": "Mwen ta vle ke ou ale chache yon ti manje la?",
+    "es": "Ojalá vayas pronto a buscar comida",
+    "motivo": "El motor convierte la frase en pregunta."
+  },
+  {
+    "ht": "Chen an kase tèt tounen epi yo pa janm wè li ankò.",
+    "es": "El perro se fue corriendo y nunca nadie lo ha visto aparecerse de nuevo.",
+    "motivo": "El motor devuelve 'reaccionó bruscamente'."
+  },
+  {
+    "ht": "Gingile kouri desann pyebwa anvan Leyopa a bay li yon kout pat.",
+    "es": "Antes de que el leopardo pudiera atacar a Gingile, él bajó muy rápidamente del árbol.",
+    "motivo": "El motor traduce 'kout pat' como 'palmadita'."
+  },
+  {
+    "ht": "Chè l' se chè mwen.",
+    "es": "Su carne es mi carne.",
+    "motivo": "El motor confunde 'chè' (carne) con 'chère' (querida)."
+  },
+  {
+    "ht": "Premye branch lan te rele Pichon.",
+    "es": "La primera rama se llamaba Pisón.",
+    "motivo": "El motor traduce 'branch' (de río) como 'sucursal'."
+  },
+  {
+    "ht": "Tè a va kale tout kalite pikan ak pengwen ba ou.",
+    "es": "La tierra te producirá espinos y cardos.",
+    "motivo": "El motor traduce 'pengwen' (cardos) como 'pingüinos'."
+  },
+  {
+    "ht": "Se swe kouraj ou ki pou fè ou mete yon moso pen nan bouch ou jouk lè wa tounen nan tè kote ou soti a.",
+    "es": "Con el sudor de tu frente comerás el pan hasta que vuelvas a la tierra de donde saliste.",
+    "motivo": "El motor lee 'wa' (tú) como 'rey' y 'kouraj' como 'valentía'."
+  },
+  {
+    "ht": "Poukisa ou move konsa?",
+    "es": "¿Por qué estás tan enojado?",
+    "motivo": "El motor lee 'move' como malo, no como enojado."
+  },
+  {
+    "ht": "Poukisa ou mare figi ou konsa?",
+    "es": "¿Por qué ha decaído tu semblante?",
+    "motivo": "El motor traduce literal 'atar la cara' (mare figi = semblante decaído)."
+  },
+  {
+    "ht": "Li move, li mare figi l' byen mare.",
+    "es": "Estaba muy enojado, y su semblante decayó.",
+    "motivo": "Idioma: mare figi = semblante decaído; el motor dice 'se ató la cara'."
+  },
+  {
+    "ht": "W'ap tounen yon vakabon k'ap plede mache toupatou sou latè san rete.",
+    "es": "Andarás errante y vagabundo por la tierra, sin descanso.",
+    "motivo": "vakabon = errante/vagabundo, no pícaro."
+  },
+  {
+    "ht": "M'ap tounen yon vakabon k'ap plede mache toupatou sou latè san rete.",
+    "es": "Andaré errante y vagabundo por la tierra, sin descanso.",
+    "motivo": "vakabon = errante/vagabundo, no pícaro."
+  }
 ]
