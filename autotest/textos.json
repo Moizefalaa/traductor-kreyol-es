@@ -2158,5 +2158,141 @@
         "es": "Más tarde, Rahim nos pide disculpas. “No volveré a ser tan glotón,” promete. Y todos aceptamos su promesa."
       }
     ]
+  },
+  {
+    "id": "bib-gen1",
+    "titulo": "Jenèz 1 - Kreyasyon an",
+    "tituloEs": "Génesis 1 - La creación",
+    "nivel": 5,
+    "fuente": "Bible Gateway (HCV / RVR1960)",
+    "licencia": "Uso educativo con atribución (HCV: United Bible Societies; RVR1960: Sociedades Bíblicas Unidas, 1960)",
+    "urlHt": "https://www.biblegateway.com/passage/?search=G%C3%A9nesis%201&version=HCV",
+    "urlEs": "https://www.biblegateway.com/passage/?search=G%C3%A9nesis%201&version=RVR1960",
+    "segmentos": [
+      {
+        "ht": "Nan konmansman, Bondye kreye syèl la ak latè a.",
+        "es": "En el principio creó Dios los cielos y la tierra."
+      },
+      {
+        "ht": "Men latè pa t' gen fòm, li pa t' gen anyen sou li. Fènwa te kouvri toupatou. Lespri Bondye t'ap plane sou dlo ki te kouvri tout latè.",
+        "es": "Y la tierra estaba desordenada y vacía, y las tinieblas estaban sobre la faz del abismo, y el Espíritu de Dios se movía sobre la faz de las aguas."
+      },
+      {
+        "ht": "Bondye di. Se pou limyè fèt. Epi limyè te fèt.",
+        "es": "Y dijo Dios: Sea la luz; y fue la luz."
+      },
+      {
+        "ht": "Bondye wè limyè a te bon. Bondye mete limyè a yon bò, li mete fènwa a yon lòt bò.",
+        "es": "Y vio Dios que la luz era buena; y separó Dios la luz de las tinieblas."
+      },
+      {
+        "ht": "Bondye rele limyè a lajounen, li rele fènwa a lannwit. Yon lannwit pase, yon maten rive. Se te premye jou a.",
+        "es": "Y llamó Dios a la luz Día, y a las tinieblas llamó Noche. Y fue la tarde y la mañana un día."
+      },
+      {
+        "ht": "Bondye di ankò. Se pou gen yon vout nan mitan dlo a pou separe dlo a an de.",
+        "es": "Luego dijo Dios: Haya expansión en medio de las aguas, y separe las aguas de las aguas."
+      },
+      {
+        "ht": "Bondye fè vout la separe dlo a an de, yon pati anwo vout la, yon lòt pati anba l'. Se konsa sa te pase.",
+        "es": "E hizo Dios la expansión, y separó las aguas que estaban debajo de la expansión, de las aguas que estaban sobre la expansión. Y fue así."
+      },
+      {
+        "ht": "Bondye rele vout la syèl. Yon lannwit pase, yon maten rive. Se te dezyèm jou a.",
+        "es": "Y llamó Dios a la expansión Cielos. Y fue la tarde y la mañana el día segundo."
+      },
+      {
+        "ht": "Bondye di ankò. Se pou dlo ki anba syèl la sanble yon sèl kote pou kote ki sèk la ka parèt. Se konsa sa te pase.",
+        "es": "Dijo también Dios: Júntense las aguas que están debajo de los cielos en un lugar, y descúbrase lo seco. Y fue así."
+      },
+      {
+        "ht": "Bondye rele kote ki sèk la tè. Li rele pil dlo a lanmè. Bondye gade sa l' te fè a, li wè l' bon.",
+        "es": "Y llamó Dios a lo seco Tierra, y a la reunión de las aguas llamó Mares. Y vio Dios que era bueno."
+      },
+      {
+        "ht": "Bondye di. Se pou tè a pouse tout kalite plant: zèb, plant ki bay grenn, pyebwa ki bay fwi ak tout grenn yo. Se konsa sa te pase.",
+        "es": "Después dijo Dios: Produzca la tierra hierba verde, hierba que dé semilla; árbol de fruto que dé fruto según su género, que su semilla esté en él, sobre la tierra. Y fue así."
+      },
+      {
+        "ht": "Tè a pouse tout kalite plant: zèb, plant ki bay grenn, pyebwa ki bay fwi ak tout grenn yo. Bondye gade sa l' te fè a, li wè l' bon.",
+        "es": "Produjo, pues, la tierra hierba verde, hierba que da semilla según su naturaleza, y árbol que da fruto, cuya semilla está en él, según su género. Y vio Dios que era bueno."
+      },
+      {
+        "ht": "Yon lannwit pase, yon maten rive. Se te twazyèm jou a.",
+        "es": "Y fue la tarde y la mañana el día tercero."
+      },
+      {
+        "ht": "Bondye di ankò. Se pou limyè parèt nan syèl la pou separe lajounen ak lannwit. Y'a sèvi pou make jou yo, lanne yo ak sezon yo.",
+        "es": "Dijo luego Dios: Haya lumbreras en la expansión de los cielos para separar el día de la noche; y sirvan de señales para las estaciones, para días y años,"
+      },
+      {
+        "ht": "Y'a sèvi limyè nan syèl la pou klere tout latè a. Se konsa sa te pase.",
+        "es": "y sean por lumbreras en la expansión de los cielos para alumbrar sobre la tierra. Y fue así."
+      },
+      {
+        "ht": "Bondye fè de gwo limyè, pi gwo a pou kòmande sou lajounen, pi piti a pou kòmande sou lannwit. Li fè zetwal yo tou.",
+        "es": "E hizo Dios las dos grandes lumbreras; la lumbrera mayor para que señorease en el día, y la lumbrera menor para que señorease en la noche; hizo también las estrellas."
+      },
+      {
+        "ht": "Li mete yo nan syèl la pou klere latè a,",
+        "es": "Y las puso Dios en la expansión de los cielos para alumbrar sobre la tierra,"
+      },
+      {
+        "ht": "pou kòmande sou lajounen ak sou lannwit, pou separe limyè ak fènwa. Bondye gade sa l' te fè a, li wè l' bon.",
+        "es": "y para señorear en el día y en la noche, y para separar la luz de las tinieblas. Y vio Dios que era bueno."
+      },
+      {
+        "ht": "Yon lannwit pase, yon maten rive. Se te katriyèm jou a.",
+        "es": "Y fue la tarde y la mañana el día cuarto."
+      },
+      {
+        "ht": "Bondye di ankò. Se pou dlo yo kale anpil anpil bèt vivan. Se pou zwazo vole nan syèl la anwo tè a. Se konsa sa te pase.",
+        "es": "Dijo Dios: Produzcan las aguas seres vivientes, y aves que vuelen sobre la tierra, en la abierta expansión de los cielos."
+      },
+      {
+        "ht": "Bondye kreye gwo bèt lanmè yo, tout kalite bèt vivan k'ap naje nan dlo ansanm ak tout kalite zwazo. Bondye gade sa l' te fè a, li wè l' bon.",
+        "es": "Y creó Dios los grandes monstruos marinos, y todo ser viviente que se mueve, que las aguas produjeron según su género, y toda ave alada según su especie. Y vio Dios que era bueno."
+      },
+      {
+        "ht": "Bondye beni yo, li di. Fè pitit, fè anpil anpil pitit, plen dlo lanmè a. Se pou zwazo yo fè anpil anpil pitit tout sou tè a.",
+        "es": "Y Dios los bendijo, diciendo: Fructificad y multiplicaos, y llenad las aguas en los mares, y multiplíquense las aves en la tierra."
+      },
+      {
+        "ht": "Yon lannwit pase, yon maten rive. Se te senkyèm jou a.",
+        "es": "Y fue la tarde y la mañana el día quinto."
+      },
+      {
+        "ht": "Bondye di ankò. Se pou tè a kale tout kalite bèt vivan, bèt yo gade, bèt ki trennen sou vant, bèt nan bwa. Se konsa sa te pase.",
+        "es": "Luego dijo Dios: Produzca la tierra seres vivientes según su género, bestias y serpientes y animales de la tierra según su especie. Y fue así."
+      },
+      {
+        "ht": "Bondye fè tout kalite bèt, bèt nan bwa, bèt yo gade, bèt ki trennen sou vant. Li gade sa l' te fè a, li wè l' bon.",
+        "es": "E hizo Dios animales de la tierra según su género, y ganado según su género, y todo animal que se arrastra sobre la tierra según su especie. Y vio Dios que era bueno."
+      },
+      {
+        "ht": "Bondye di ankò. Ann fè moun. N'ap fè l' pòtre ak nou, pou li sanble ak nou. La gen pouvwa sou pwason ki nan lanmè yo, sou zwazo ki nan syèl la, sou tout bèt yo gade, sou tout latè, sou tout bèt nan bwa, sou tout bèt ki trennen sou vant sou tè a.",
+        "es": "Entonces dijo Dios: Hagamos al hombre a nuestra imagen, conforme a nuestra semejanza; y señoree en los peces del mar, en las aves de los cielos, en las bestias, en toda la tierra, y en todo animal que se arrastra sobre la tierra."
+      },
+      {
+        "ht": "Bondye kreye moun. Li fè l' pòtre ak li. Li kreye yo gason ak fi.",
+        "es": "Y creó Dios al hombre a su imagen, a imagen de Dios lo creó; varón y hembra los creó."
+      },
+      {
+        "ht": "Li ba yo benediksyon, li di. Fè pitit, fè anpil anpil pitit mete sou tè a. Donte tè a. Mwen ban nou pouvwa sou pwason ki nan lanmè, sou zwazo ki nan syèl la, ak sou tout bèt vivan k'ap mache sou tè a.",
+        "es": "Y los bendijo Dios, y les dijo: Fructificad y multiplicaos; llenad la tierra, y sojuzgadla, y señoread en los peces del mar, en las aves de los cielos, y en todas las bestias que se mueven sobre la tierra."
+      },
+      {
+        "ht": "Bondye di. Gade. Mwen ban nou tout kalite plant ki bay grenn ak tout kalite pyebwa ki bay fwi ak grenn pou nou manje.",
+        "es": "Y dijo Dios: He aquí que os he dado toda planta que da semilla, que está sobre toda la tierra, y todo árbol en que hay fruto y que da semilla; os serán para comer."
+      },
+      {
+        "ht": "Men, tout bèt ki sou tè a, tout zwazo ki nan syèl la, tout bèt ki trennen sou vant, wi tout bèt vivan, m'ap ba yo zèb vèt pou yo manje. Se konsa sa te pase.",
+        "es": "Y a toda bestia de la tierra, y a todas las aves de los cielos, y a todo lo que se arrastra sobre la tierra, en que hay vida, toda planta verde les será para comer. Y fue así."
+      },
+      {
+        "ht": "Bondye gade sa l' te fè a, li wè l' bon nèt. Yon lannwit pase, yon maten rive. Se te sizyèm jou a.",
+        "es": "Y vio Dios todo lo que había hecho, y he aquí que era bueno en gran manera. Y fue la tarde y la mañana el día sexto."
+      }
+    ]
   }
 ]
