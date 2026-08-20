@@ -5,7 +5,7 @@
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v15";
+  var VERSION = "v16";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -171,7 +171,24 @@
     { ht: "Enòk te gen swasannsenkan lè li vin gen yon pitit gason yo rele Metouchela.", es: "Enoc tenía sesenta y cinco años cuando tuvo un hijo llamado Matusalén." },
     { ht: "Apre nesans Lemèk, Metouchela viv sètsankatrevendezan (782 an).", es: "Después del nacimiento de Lamec, Matusalén vivió setecientos ochenta y dos años." },
     { ht: "Li te gen twasanswasannsenkan (365 an) lè l' disparèt, paske Bondye te pran l' avè l'.", es: "Tenía trescientos sesenta y cinco años cuando desapareció, porque Dios se lo llevó consigo." },
-    { ht: "Lemèk te gen sankatrevendezan (182 an) lè li vin gen yon pitit gason.", es: "Lamec tenía ciento ochenta y dos años cuando tuvo un hijo." }
+    { ht: "Lemèk te gen sankatrevendezan (182 an) lè li vin gen yon pitit gason.", es: "Lamec tenía ciento ochenta y dos años cuando tuvo un hijo." },
+    { ht: "Ofiyamezi, yo kòmanse santi yo byen san manman an.", es: "Poco a poco, empezaron a sentirse bien sin la madre." },
+    { ht: "Enpi li pa te kapab wè plant yo nan fè nwa a.", es: "Entonces ya no podía ver las plantas en la oscuridad." },
+    { ht: "Enpi, li deside kite Andiswa jwe.", es: "Entonces decidió dejar jugar a Andiswa." },
+    { ht: "Andiswa ranmase bou lanak pye li, li tonbe kouri ak boul lan nan direksyhon filè an.", es: "Andiswa recogió el balón con el pie y echó a correr con él hacia la portería." },
+    { ht: "Sou wout la yo travèse mòn ak plantasyon enpi yo kwaze bèt sovaj.", es: "En el camino atravesaron montañas y plantaciones, y se cruzaron con animales salvajes." },
+    { ht: "Ti gason yo te regrèt anpil deske yo te pase Vuzi nan jwèt.", es: "Los chicos lamentaron mucho haberse burlado de Vusi." },
+    { ht: "Enpi li gen fòs.", es: "Y es poderoso." },
+    { ht: "Lè’m louvri pòt la, mwen pran yo gwo lodè fig mi.", es: "Cuando abrí la puerta, sentí el fuerte aroma de los plátanos maduros." },
+    { ht: "Yon madanm deside achte yon rejim fig nan men Tom.", es: "Una mujer decidió comprarle a Tom un racimo de plátanos." },
+    { ht: "” enpi gwo flanm kòmanse boule plim Ipo.", es: "Entonces una gran llama comenzó a quemar las plumas de Ipo." },
+    { ht: "Men se mwen ki fè tout travay la enpi ki pran tout piki yo.", es: "¡Pero soy yo quien hace todo el trabajo y quien recibe todas las picaduras!" },
+    { ht: "Lè yal rekòlte myèl yo toujou kite pigwo mòso a pour Gid siwo myèl la.", es: "Cuando van a recolectar miel, siempre dejan la parte más grande para el Pájaro Miel." },
+    { ht: "Eg lan te blije mache byen lwen pou’l jwenn manje.", es: "El Águila tuvo que caminar muy lejos para encontrar comida." },
+    { ht: "Nan prese li te manke yon branch, li ateri ak yon gwo bwi enpi li foule pye li.", es: "En su prisa, falló en una rama, aterrizó con un gran ruido y se torció el pie." },
+    { ht: "Tom ap mache ak yon panyen fig sou tèt li.", es: "Tom camina con una cesta de plátanos en la cabeza." },
+    { ht: "Achte fig mwen yo.", es: "¡Compren mis plátanos!" },
+    { ht: "Tom pral vann fig li yo nan mache a.", es: "Tom venderá sus plátanos en el mercado." }
   ];
 
   var VOCABULARIO = [

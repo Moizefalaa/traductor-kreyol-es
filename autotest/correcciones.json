@@ -268,5 +268,90 @@
     "ht": "Lemèk te gen sankatrevendezan (182 an) lè li vin gen yon pitit gason.",
     "es": "Lamec tenía ciento ochenta y dos años cuando tuvo un hijo.",
     "motivo": "El motor lee 182 como 192."
+  },
+  {
+    "ht": "Ofiyamezi, yo kòmanse santi yo byen san manman an.",
+    "es": "Poco a poco, empezaron a sentirse bien sin la madre.",
+    "motivo": "El motor deja 'Ofiyamezi' (poco a poco) como nombre propio."
+  },
+  {
+    "ht": "Enpi li pa te kapab wè plant yo nan fè nwa a.",
+    "es": "Entonces ya no podía ver las plantas en la oscuridad.",
+    "motivo": "El motor lee 'Enpi' (y entonces) como el nombre 'Impi'."
+  },
+  {
+    "ht": "Enpi, li deside kite Andiswa jwe.",
+    "es": "Entonces decidió dejar jugar a Andiswa.",
+    "motivo": "El motor lee 'Enpi' (y entonces) como el nombre 'Impi'."
+  },
+  {
+    "ht": "Andiswa ranmase bou lanak pye li, li tonbe kouri ak boul lan nan direksyhon filè an.",
+    "es": "Andiswa recogió el balón con el pie y echó a correr con él hacia la portería.",
+    "motivo": "El motor lee 'boul lan ak pye li' como 'la punta del pie'."
+  },
+  {
+    "ht": "Sou wout la yo travèse mòn ak plantasyon enpi yo kwaze bèt sovaj.",
+    "es": "En el camino atravesaron montañas y plantaciones, y se cruzaron con animales salvajes.",
+    "motivo": "El motor traduce 'enpi' (y) como 'impías'."
+  },
+  {
+    "ht": "Ti gason yo te regrèt anpil deske yo te pase Vuzi nan jwèt.",
+    "es": "Los chicos lamentaron mucho haberse burlado de Vusi.",
+    "motivo": "El motor lee 'pase nan jwèt' (burlarse) como 'perderse el partido'."
+  },
+  {
+    "ht": "Enpi li gen fòs.",
+    "es": "Y es poderoso.",
+    "motivo": "El motor traduce 'Enpi li' (y él) como 'Su impiedad'."
+  },
+  {
+    "ht": "Lè’m louvri pòt la, mwen pran yo gwo lodè fig mi.",
+    "es": "Cuando abrí la puerta, sentí el fuerte aroma de los plátanos maduros.",
+    "motivo": "El motor lee 'pran yon gwo lodè' (sentir aroma) como 'tomar un pedido' y 'fig' como 'higo'."
+  },
+  {
+    "ht": "Yon madanm deside achte yon rejim fig nan men Tom.",
+    "es": "Una mujer decidió comprarle a Tom un racimo de plátanos.",
+    "motivo": "El motor traduce 'rejim fig' (racimo de plátanos) como 'dieta de higos'."
+  },
+  {
+    "ht": "” enpi gwo flanm kòmanse boule plim Ipo.",
+    "es": "Entonces una gran llama comenzó a quemar las plumas de Ipo.",
+    "motivo": "El motor lee 'enpi' como 'imperi'."
+  },
+  {
+    "ht": "Men se mwen ki fè tout travay la enpi ki pran tout piki yo.",
+    "es": "¡Pero soy yo quien hace todo el trabajo y quien recibe todas las picaduras!",
+    "motivo": "El motor lee 'pran tout piki yo' (recibir todas las picaduras) como 'hacer todas las fotos'."
+  },
+  {
+    "ht": "Lè yal rekòlte myèl yo toujou kite pigwo mòso a pour Gid siwo myèl la.",
+    "es": "Cuando van a recolectar miel, siempre dejan la parte más grande para el Pájaro Miel.",
+    "motivo": "El motor lee 'pi gwo mòso a' (la parte más grande) como 'el registro' y 'pou Gid siwo myèl la' como 'para la Guía de Miel'."
+  },
+  {
+    "ht": "Eg lan te blije mache byen lwen pou’l jwenn manje.",
+    "es": "El Águila tuvo que caminar muy lejos para encontrar comida.",
+    "motivo": "El motor traduce 'Eg' (Águila) como 'oveja'."
+  },
+  {
+    "ht": "Nan prese li te manke yon branch, li ateri ak yon gwo bwi enpi li foule pye li.",
+    "es": "En su prisa, falló en una rama, aterrizó con un gran ruido y se torció el pie.",
+    "motivo": "El motor lee 'bwi' (ruido) como 'impío' y 'foule pye' (torcer el pie) como 'aplastarse el pie'."
+  },
+  {
+    "ht": "Tom ap mache ak yon panyen fig sou tèt li.",
+    "es": "Tom camina con una cesta de plátanos en la cabeza.",
+    "motivo": "El motor traduce 'fig' (plátano) como 'higo'."
+  },
+  {
+    "ht": "Achte fig mwen yo.",
+    "es": "¡Compren mis plátanos!",
+    "motivo": "El motor traduce 'fig' (plátano) como 'higo'."
+  },
+  {
+    "ht": "Tom pral vann fig li yo nan mache a.",
+    "es": "Tom venderá sus plátanos en el mercado.",
+    "motivo": "El motor traduce 'fig' (plátano) como 'higo'."
   }
 ]
