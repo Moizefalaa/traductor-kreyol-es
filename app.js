@@ -7,7 +7,7 @@
   var CLAVE_TEMA = "kreolEs_tema_v1";
   var CLAVE_PALETA = "kreolEs_paleta_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v21";
+  var VERSION = "v22";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -636,26 +636,45 @@
 
   function puntajeVoz(v) {
     var nombre = (v.name || "").toLowerCase();
-    var lang = (v.lang || "").toLowerCase();
-    var puntos = 1;
-    if (/natural|neural|online|premium/.test(nombre)) puntos += 3;
+    var puntos = 0;
+    if (/natural|neural|online|premium|enhanced/.test(nombre)) puntos += 4;
     if (/google/.test(nombre)) puntos += 2;
-    if (lang.indexOf("es") === 0 || lang.indexOf("ht") === 0) puntos += 1;
+    if (/microsoft|iona|nuance/.test(nombre)) puntos += 1;
     return puntos;
+  }
+
+  function ordenLengua(lang) {
+    var l = (lang || "").toLowerCase();
+    if (l.indexOf("ht") === 0) return 0;
+    if (l.indexOf("es-mx") === 0) return 1;
+    if (l.indexOf("es-us") === 0) return 2;
+    if (l.indexOf("es-419") === 0) return 3;
+    if (l.indexOf("es-es") === 0) return 4;
+    if (l.indexOf("es") === 0) return 5;
+    if (l.indexOf("fr-ca") === 0) return 6;
+    if (l.indexOf("fr") === 0) return 7;
+    return 8;
   }
 
   function mejorVozPara(langObjetivo) {
     var voces = cargarVocesSistema();
-    var pre = langObjetivo;
+    var objetivo = (langObjetivo || "").toLowerCase();
+    var esPreferida = objetivo === "es";
     var candidatas = voces.filter(function (v) {
-      return v.lang.toLowerCase().indexOf(pre) === 0;
+      var l = (v.lang || "").toLowerCase();
+      if (esPreferida) return l.indexOf("es") === 0;
+      return l.indexOf("ht") === 0 || l.indexOf("fr") === 0;
     });
-    if (!candidatas.length && (langObjetivo === "ht" || langObjetivo === "es")) {
+    if (!candidatas.length && !esPreferida) {
       candidatas = voces.filter(function (v) {
-        return v.lang.toLowerCase().indexOf(langObjetivo) === 0;
+        return (v.lang || "").toLowerCase().indexOf("es") === 0;
       });
     }
-    candidatas.sort(function (a, b) { return puntajeVoz(b) - puntajeVoz(a); });
+    candidatas.sort(function (a, b) {
+      var diff = ordenLengua(a.lang) - ordenLengua(b.lang);
+      if (diff !== 0) return diff;
+      return puntajeVoz(b) - puntajeVoz(a);
+    });
     return candidatas[0] || null;
   }
 
@@ -663,19 +682,27 @@
     var voces = cargarVocesSistema();
     var eleccion = localStorage.getItem(CLAVE_VOZ) || "auto";
     selectVoz.innerHTML = "";
-    var opciones = [["auto", "Auto (voz natural en línea)"], ["google", "Voz en línea (Google)"]];
+    var opciones = [["auto", "Auto (mejor voz disponible)"], ["google", "Voz en línea (Google)"]];
 
     var unicas = {};
     voces.forEach(function (v) {
       var lang = v.lang.toLowerCase();
-      if ((lang.indexOf("es") === 0 || lang.indexOf("ht") === 0) && !unicas[v.name]) {
+      if ((lang.indexOf("es") === 0 || lang.indexOf("ht") === 0 || lang.indexOf("fr") === 0) && !unicas[v.name]) {
         unicas[v.name] = v;
       }
     });
     var sistema = Object.keys(unicas).map(function (nombre) { return unicas[nombre]; });
-    sistema.sort(function (a, b) { return puntajeVoz(b) - puntajeVoz(a); });
+    sistema.sort(function (a, b) {
+      var diff = ordenLengua(a.lang) - ordenLengua(b.lang);
+      if (diff !== 0) return diff;
+      return puntajeVoz(b) - puntajeVoz(a);
+    });
     sistema.forEach(function (v) {
-      opciones.push(["sys|" + v.name, "Sistema: " + v.name + " (" + v.lang + ")"]);
+      var lang = v.lang.toLowerCase();
+      var nota = "";
+      if (lang.indexOf("ht") === 0) nota = " · criollo";
+      else if (lang.indexOf("fr") === 0) nota = " · útil para criollo";
+      opciones.push(["sys|" + v.name, "Sistema: " + v.name + " (" + v.lang + ")" + nota]);
     });
 
     opciones.forEach(function (par) {
