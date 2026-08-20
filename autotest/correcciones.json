@@ -16,5 +16,21 @@
   { "ht": "Mwen bezwen travay", "es": "Necesito trabajo", "motivo": "El motor devuelve 'necesito trabajar' (verbo, no sustantivo)." },
   { "ht": "Yo te fè tout travay sa yo nan lannwit paske yo te fèt ak lasi!", "es": "Tenían que hacer todo su trabajo por las noches. ¡Porque eran niños de cera!", "motivo": "'lasi' (cera) mal traducido como 'celosía'." },
   { "ht": "Yo pran lasi, yo fonn lasi a enpi yo fè'l tounen yon zwazo.", "es": "Tomaron los restos de cera derretida y le dieron la forma de un ave.", "motivo": "'lasi' (cera) mal traducido como 'red'." },
-  { "ht": "Frè li avèti'l …", "es": "Sus hermanos le advirtieron que no lo hiciera…", "motivo": "La traducción del cuento usa plural." }
+  { "ht": "Frè li avèti'l …", "es": "Sus hermanos le advirtieron que no lo hiciera…", "motivo": "La traducción del cuento usa plural." },
+  { "ht": "Mayo sa a gwo.", "es": "Este suéter es grande.", "motivo": "El motor devuelve 'Esta camisa es genial' ('gwo'=grande)." },
+  { "ht": "Bèl ti kouvèti manman an ki te pandye sou yon klou shire an de tibout.", "es": "La manta tan preciada de Simbegwire que había quedado enganchada en un clavo, se rasgó en dos.", "motivo": "El motor interpreta 'klou shire an' como 'clavo de condado en dos patas'." },
+  { "ht": "Kilè wap tounen manman ?", "es": "Madre, ¿cuándo regresarás?", "motivo": "El motor devuelve '¿Cuándo vas a ser madre?'." },
+  { "ht": "Mwen leve enpi mwen fè dife.", "es": "Despierto y enciendo el fuego.", "motivo": "El motor devuelve 'Levanté mi maldad y encendí fuego'." },
+  { "ht": "Mwen fann bwadife.", "es": "Corto la leña.", "motivo": "El motor devuelve 'Estoy loco' ('bwadife'=leña)." },
+  { "ht": "Enpi ….", "es": "Hasta que…", "motivo": "El motor devuelve 'Malvado…'." },
+  { "ht": "Dife kwit manje.", "es": "El fuego cocina.", "motivo": "El motor devuelve 'Cocinar al fuego'." },
+  { "ht": "Dife bèl.", "es": "El fuego es maravilloso.", "motivo": "El motor devuelve 'Hermoso fuego' (sin verbo)." },
+  { "ht": "Hi han?", "es": "¿Hiaaa?", "motivo": "El motor lee 'Hi han' como inglés y devuelve 'Hola han'." },
+  { "ht": "Li mete kò li tankou yon boul enpi li tonbe dòmi ajite.", "es": "Se enroscó como una pelota y se quedó dormido.", "motivo": "El motor devuelve 'pelota impía'." },
+  { "ht": "Lap rele « Achte fig mwen yo…", "es": "Sigue gritando, \"¡Compren mis plátanos!", "motivo": "'fig' en kreyòl es plátano; el motor devuelve 'higos'." },
+  { "ht": "Li pati kouri sou vye pye an.", "es": "Aunque se torció el tobillo, cojeó lo más rápido que pudo para poder escapar.", "motivo": "El motor devuelve 'Empezó a correr con el pie viejo'." },
+  { "ht": "Li goute nan tout fwi yo enpi lo manje anpil nan yo.", "es": "Prueba toda la fruta.", "motivo": "El motor inserta 'impuras'." },
+  { "ht": "Mwen ta vle ke ou ale chache yon ti manje la?", "es": "Ojalá vayas pronto a buscar comida", "motivo": "El motor convierte la frase en pregunta." },
+  { "ht": "Chen an kase tèt tounen epi yo pa janm wè li ankò.", "es": "El perro se fue corriendo y nunca nadie lo ha visto aparecerse de nuevo.", "motivo": "El motor devuelve 'reaccionó bruscamente'." },
+  { "ht": "Gingile kouri desann pyebwa anvan Leyopa a bay li yon kout pat.", "es": "Antes de que el leopardo pudiera atacar a Gingile, él bajó muy rápidamente del árbol.", "motivo": "El motor traduce 'kout pat' como 'palmadita'." }
 ]

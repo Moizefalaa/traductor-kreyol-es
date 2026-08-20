@@ -101,5 +101,27 @@
     "tasaError": 0,
     "regresion": false,
     "deltaTasa": -0.03
+  },
+  {
+    "fecha": "2026-08-20T02:18:34.661Z",
+    "total": 1116,
+    "ok": 130,
+    "duda": 445,
+    "error": 541,
+    "red": 0,
+    "cubierta": 21,
+    "tasaError": 0.48
+  },
+  {
+    "fecha": "2026-08-20T02:44:20.796Z",
+    "total": 1116,
+    "ok": 143,
+    "duda": 924,
+    "error": 49,
+    "red": 0,
+    "cubierta": 37,
+    "tasaError": 0.04,
+    "regresion": false,
+    "deltaTasa": -0.44
   }
 ]

@@ -256,8 +256,19 @@ async function verificarOracion(idBase, titulo, nivel, ht, es, correcciones) {
     return fila;
   }
 
+  if (fila.tipo === "texto" && !(fila.esEsperado || "").trim()) {
+    fila.veredicto = "duda";
+    fila.estado = "sin-referencia";
+    return fila;
+  }
+
   if (fila.nivelDirecto === "distinto") {
-    fila.veredicto = "error";
+    if (fila.tipo === "texto" && (fila.simRoundtrip || 0) >= UMBRAL_SENTIDO) {
+      fila.veredicto = "duda";
+      fila.estado = "parafraseo";
+    } else {
+      fila.veredicto = "error";
+    }
   } else if (fila.nivelDirecto === "parecido" || fila.nivelRoundtrip !== "exacto") {
     fila.veredicto = "duda";
   }
@@ -341,23 +352,47 @@ function imprimirResumen(resumen) {
 }
 
 function imprimirErrores(filas) {
-  const problemas = filas.filter(function (f) {
-    return f.estado !== "red" && f.veredicto !== "ok";
+  const errores = filas.filter(function (f) {
+    return f.estado !== "red" && f.veredicto === "error";
   });
-  if (!problemas.length) return;
-  console.log("\nCANDIDATOS A REVISION");
-  problemas.forEach(function (f) {
-    const origen = f.tipo === "texto" ? "[" + f.titulo + ", nivel " + f.nivel + "] " : "";
-    console.log("- [" + f.veredicto.toUpperCase() + "] " + origen + f.id + "  " + f.ht);
-    console.log("    esperado: " + f.esEsperado);
-    console.log("    google:   " + f.google);
-    if (f.roundtrip) console.log("    roundtrip (" + f.ht + "): " + f.roundtrip);
-    if (f.desacuerdo && f.mymemory) console.log("    mymemory: " + f.mymemory);
-    if (f.corregida) console.log("    (corregida por correcciones.json)");
+  const dudas = filas.filter(function (f) {
+    return f.estado !== "red" && f.veredicto === "duda";
   });
+  const porEstado = {};
+  dudas.forEach(function (f) {
+    const k = f.estado || "duda";
+    porEstado[k] = (porEstado[k] || 0) + 1;
+  });
+
+  if (errores.length) {
+    console.log("\nERRORES (" + errores.length + ") - candidatos a corregir");
+    errores.forEach(function (f) {
+      const origen = f.tipo === "texto" ? "[" + f.titulo + ", nivel " + f.nivel + "] " : "";
+      console.log("- " + origen + f.id + "  " + f.ht);
+      console.log("    esperado: " + f.esEsperado);
+      console.log("    google:   " + f.google);
+      if (f.roundtrip) console.log("    roundtrip (" + f.ht + "): " + f.roundtrip);
+      if (f.corregida) console.log("    (corregida por correcciones.json)");
+    });
+  }
+
+  if (dudas.length) {
+    const detalle = Object.keys(porEstado).map(function (k) {
+      return k + ": " + porEstado[k];
+    }).join(", ");
+    console.log("\nDUDAS (" + dudas.length + ") - revisar solo las sospechosas [" + detalle + "]");
+    dudas.slice(0, 30).forEach(function (f) {
+      const origen = f.tipo === "texto" ? "[" + f.titulo + ", nivel " + f.nivel + "] " : "";
+      console.log("- " + origen + f.id + "  " + f.ht);
+      console.log("    esperado: " + f.esEsperado);
+      console.log("    google:   " + f.google);
+    });
+    if (dudas.length > 30) console.log("  … y " + (dudas.length - 30) + " dudas más (ver reporte en reportes/).");
+  }
 }
 
 const UMBRAL_REGRESION = 0.02;
+const UMBRAL_SENTIDO = 0.6;
 
 function compararConAnterior(actual, anterior) {
   if (!anterior) return { comparable: false, motivo: "primera corrida" };

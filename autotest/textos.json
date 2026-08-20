@@ -1,5 +1,2165 @@
 [
   {
+    "id": "0001",
+    "titulo": "Yon gason ki wo anpil",
+    "tituloEs": "Un hombre muy alto",
+    "nivel": 2,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0001/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0001/",
+    "segmentos": [
+      {
+        "ht": "Wou li twò kout.",
+        "es": "Su azadón era demasiado corto."
+      },
+      {
+        "ht": "Pòt lakay li te twò ba.",
+        "es": "Su puerta era demasiado baja."
+      },
+      {
+        "ht": "Kabann li te twò kout.",
+        "es": "Su cama era demasiado corta."
+      },
+      {
+        "ht": "Bisiklèt li te twò piti.",
+        "es": "Su bicicleta era demasiado baja."
+      },
+      {
+        "ht": "Gason sa a te wo anpil.",
+        "es": "¡Este hombre era demasiado alto!"
+      },
+      {
+        "ht": "Li fè yon lò manch pou wou li.",
+        "es": "Hizo un palo muy largo para el azadón."
+      },
+      {
+        "ht": "Li fè pòt lakay li pi gran.",
+        "es": "Hizo marcos muy altos para las puertas."
+      },
+      {
+        "ht": "Li fè yon gwo kabann.",
+        "es": "Hizo una cama muy larga."
+      },
+      {
+        "ht": "Li achte yon bisiklèt ki wo anpil.",
+        "es": "Se compró una bicicleta muy alta."
+      },
+      {
+        "ht": "Li chita sou yon chèz ki wo enpi li manje ak yon fouchèt ki long anpil.",
+        "es": "Se sentó en una silla muy alta y comió con un tenedor muy largo."
+      },
+      {
+        "ht": "Li kite lakay li pou lal rete nan yon gwo rakbwa kote li viv plizyè lane.",
+        "es": "Se fue de su casa para vivir en un bosque grande y vivió por muchos años."
+      }
+    ]
+  },
+  {
+    "id": "0002",
+    "titulo": "Gade bèt yo",
+    "tituloEs": "Mira a los animales",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0002/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0002/",
+    "segmentos": [
+      {
+        "ht": "Gade bèt yo.",
+        "es": "Mira a los animales."
+      },
+      {
+        "ht": "Bèf la di ” Moh”.",
+        "es": "La vaca dice, “Muu.”"
+      },
+      {
+        "ht": "Kabrit la di ” Bèè, bèè”.",
+        "es": "La cabra dice, “Be, be.”"
+      },
+      {
+        "ht": "Chwal la di ” Hiiii”.",
+        "es": "El caballo dice, “Hin.”"
+      },
+      {
+        "ht": "Kochon an di “Gwen, gwen”.",
+        "es": "El cerdo dice, “Oink-oink.”"
+      },
+      {
+        "ht": "Poul lan di ” Kòt, kòt”.",
+        "es": "La gallina dice, “Cló-cló.”"
+      },
+      {
+        "ht": "chen an di ” Wouf”.",
+        "es": "El perro dice, “Guau.”"
+      },
+      {
+        "ht": "Kiltivatè an di ” Shiiii”.",
+        "es": "El granjero dice, “¡Chsss!”"
+      }
+    ]
+  },
+  {
+    "id": "0003",
+    "titulo": "Rad lekòl",
+    "tituloEs": "Ropa de escuela",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0003/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0003/",
+    "segmentos": [
+      {
+        "ht": "Rad sa a twò long.",
+        "es": "Este vestido es largo."
+      },
+      {
+        "ht": "Mayo sa a gwo.",
+        "es": "Este suéter es grande."
+      },
+      {
+        "ht": "Valiz sa a gwo.",
+        "es": "Este bolso es grande."
+      },
+      {
+        "ht": "Sentiwon sa a …",
+        "es": "Este cinturón es…"
+      },
+      {
+        "ht": "Chapo sa a piti.",
+        "es": "Este sombrero es pequeño."
+      },
+      {
+        "ht": "Chosèt sa yo twò kout.",
+        "es": "Los calcetines son cortos."
+      },
+      {
+        "ht": "Men soulye sa yo nèf …",
+        "es": "Pero estos zapatos son nuevos."
+      },
+      {
+        "ht": "… yo bon pou mwen.",
+        "es": "… Me quedan bien."
+      }
+    ]
+  },
+  {
+    "id": "0004",
+    "titulo": "Yon kabrit, yon chen ak yon bèf",
+    "tituloEs": "La Cabra, el Perro y la Vaca",
+    "nivel": 2,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0004/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0004/",
+    "segmentos": [
+      {
+        "ht": "Yon kabrit, yon chen ak yon bèf te bon zanmi. Yon jou yo pran yon taksi pou yal flannen.",
+        "es": "La Cabra, el Perro y la Vaca eran muy buenos amigos. Un día se fueron de viaje en un taxi."
+      },
+      {
+        "ht": "Lè yo rive kote yo prale, chofè a mande yo peye pri transpò an. Bèf la peye transpò pa li.",
+        "es": "Al finalizar el viaje, el chofer les pidió que pagaran sus pasajes. La Vaca pagó su pasaje."
+      },
+      {
+        "ht": "Chen an peye yon ti kras anplis paske li pat gen lajan egzat lan.",
+        "es": "El Perro pagó un poco más, porque no tenía la cantidad de dinero exacta."
+      },
+      {
+        "ht": "Lè chofè an ta pral remèt li nan lajan an li wè kabrit lan ki tonbe kouri san li pa peye.",
+        "es": "El chofer estaba a punto de darle el vuelto al Perro, cuando la Cabra se arrancó sin pagar nada."
+      },
+      {
+        "ht": "Chofè an pat kontan ditou. Li pati san li pa remèt chen an rest lajan an.",
+        "es": "El chofer estaba muy enojado. Se fue sin darle el cambio al Perro."
+      },
+      {
+        "ht": "Se pou sa a, jis jounen jodya a chen an kouri deyè chak machin li wè paske lap chache chofè a ki dwe li yon lajan.",
+        "es": "Debido a esto, hasta el día de hoy, el Perro corre detrás del carro para mirar adentro y encontrar al chofer que le debe su vuelto."
+      },
+      {
+        "ht": "Kabrit lan kouri sove chak fwa li wè yon machin. Li pè pou’ l pa ale nan prizon akòz lajan li dwe an.",
+        "es": "La cabra huye cuando escucha el sonido de un carro. Ella tiene miedo de ser arrestada por no haber pagado su pasaje."
+      },
+      {
+        "ht": "Bèf lan li menm pa gen pwoblèm lè li wè yon machin. Li pran tan li pou li travèse lari a kè pòpòz paske li konnen ke li peye tout pri transpò a.",
+        "es": "Y la vaca no se molesta cuando un carro se acerca, incluso se toma su tiempo para cruzar la calle, porque ella sabe que pagó su pasaje completo."
+      }
+    ]
+  },
+  {
+    "id": "0006",
+    "titulo": "Anansi ak Lasajès",
+    "tituloEs": "Anansi y la sabiduría",
+    "nivel": 3,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0006/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0006/",
+    "segmentos": [
+      {
+        "ht": "Nan tan lontan, moun yo pate konn fè anyen. Yo pate konnen kijan pou yo fè jaden, trese pay oswa fè zoutil fè. Bondye Nyame ki nan syèl la te gen anpil anpil lasajès. Li te kenbe tout sajès sa nan yon po tè kwit.",
+        "es": "Hace mucho, mucho tiempo la gente no sabía nada. No sabían cómo cultivar, o cómo tejer tela, o cómo hacer herramientas de hierro. El dios Nyame arriba en el cielo tenía toda la sabiduría del mundo. La mantenía guardada en una vasija de barro."
+      },
+      {
+        "ht": "Yon jou Nyame deside ke lap bay Anansi po lasajès sa a. Chak fwa Anansi te gade anndan po tè kwit lan li te aprann yon lòt bagay. Ala yon bèl bagay!",
+        "es": "Un día, Nyame decidió darle la vasija de sabiduría a Anansi. Cada vez que Anansi se asomaba y miraba dentro de la vasija de barro, aprendía algo nuevo. ¡Qué impresionante!"
+      },
+      {
+        "ht": "Anansi ki te yon moun egoyis di tèt li « Mwen pral sere po sa a sou tèt gwo pyebwa sa a konsa lap rete pou mwen sèl!” Li file yon kòd byen long nan po tè kwit la epi li mare li sou vant li. Li kòmanse grenpe pyebwa a. Men li te difisil pou’l monte pyebwa a paske po an tap bat sou jenou’l toutan.",
+        "es": "El codicioso Anansi pensó, “voy a guardar la vasija en la copa de un árbol muy alto. ¡Y será sólo mía!” Hiló un hilo largo, envolvió con él la vasija de barro, y lo ató a su cintura. Empezó a trepar el árbol. Pero se le hacía muy difícil trepar el árbol con la vasija constantemente pegándole en las rodillas."
+      },
+      {
+        "ht": "Pandan toutan sa a, ti gason Anansi te kanpe anba pyebwa a lap gade : « Li pa ta pi fasil si’w te mare po sa a sou do ou pito ». Anansi eseye mete po lasajès la sou do’l epi li te pi fasil toutbon.",
+        "es": "Mientras tanto, el hijo pequeño de Anansi lo miraba desde abajo y le dijo, “¿No sería más fácil trepar si te ataras la vasija a tu espalda?” Anansi ató la vasija llena de sabiduría a su espalda y, efectivamente, fue mucho más fácil."
+      },
+      {
+        "ht": "Nan yon titan Anansi rive sou tèt pyebwa a. Li kanpe enpi li di tèt li « Mwen te kwè ke se mwen sèl ki te gen tout lasajès epi men pitit gason’m nan gen plis lasajès pase mwen ! ». Anansi te tèlman fache sou bagay sa a ke li jete po tè kwit la atè a.",
+        "es": "En un instante logró llegar a la copa del árbol. Pero entonces se detuvo a pensar: “Se supone que yo soy quien tiene toda la sabiduría, ¡pero mi hijo fue más listo que yo!” Anansi se enojó tanto que lanzó la vasija desde lo alto del árbol."
+      },
+      {
+        "ht": "Po an krase tibout enpi tout moun jwenn mòso ladan’l. Se lè sa a ke moun yo aprann fè jaden, trese pay, fè zouti fè ak tout lòt bagay ke moun konn fè koulyè a.",
+        "es": "Quedó hecha pedazos en el suelo. La sabiduría quedó libre y disponible para todos. Y así fue cómo la gente supo cultivar, tejer, hacer herramientas de hierro, y muchas otras cosas más."
+      }
+    ]
+  },
+  {
+    "id": "0008",
+    "titulo": "Kisa wap fè",
+    "tituloEs": "¿Qué estás haciendo?",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0008/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0008/",
+    "segmentos": [
+      {
+        "ht": "Map chante",
+        "es": "Estoy cantando."
+      },
+      {
+        "ht": "Lap fè siy ak men’l",
+        "es": "Está despidiéndose."
+      },
+      {
+        "ht": "Map bat men mwen",
+        "es": "Estoy aplaudiendo."
+      },
+      {
+        "ht": "Lap detire",
+        "es": "Está estirándose."
+      },
+      {
+        "ht": "Lap rele yon moun",
+        "es": "Está llamando."
+      },
+      {
+        "ht": "Map reponn",
+        "es": "Estoy respondiendo."
+      },
+      {
+        "ht": "Lap koute",
+        "es": "Está escuchando."
+      },
+      {
+        "ht": "Kisa wap fè?",
+        "es": "¿Qué estás haciendo?"
+      }
+    ]
+  },
+  {
+    "id": "0009",
+    "titulo": "Kote chat mwen?",
+    "tituloEs": "¿Dónde está mi gato?",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0009/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0009/",
+    "segmentos": [
+      {
+        "ht": "Kote chat mwen?",
+        "es": "¿Dónde está mi gato?"
+      },
+      {
+        "ht": "Eske li anban kabann lan?",
+        "es": "¿Estará debajo de la cama?"
+      },
+      {
+        "ht": "Eske li sou tèt bifèt lan?",
+        "es": "¿Estará encima del armario?"
+      },
+      {
+        "ht": "Eske li deyè fotèy lan?",
+        "es": "¿Estará detrás del sofá?"
+      },
+      {
+        "ht": "Eske li akote poubèl lan?",
+        "es": "¿Estará al lado del bote de basura?"
+      },
+      {
+        "ht": "Eske li anndan panyen an?",
+        "es": "¿Estará dentro de la cesta?"
+      },
+      {
+        "ht": "Eske li deyò?",
+        "es": "¿Estará afuera de la casa?"
+      },
+      {
+        "ht": "Men li!",
+        "es": "¡Aquí está!"
+      }
+    ]
+  },
+  {
+    "id": "0027",
+    "titulo": "Desizyon",
+    "tituloEs": "La decisión",
+    "nivel": 2,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0027/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0027/",
+    "segmentos": [
+      {
+        "ht": "Kominote kote’m rete an gen anpil pwoblèm … Nou blije kanpe nan yon liy byen long pou nou pran dlo nan yon grenn tiyo.",
+        "es": "Mi pueblo tenía muchos problemas. Hacíamos una larga fila para recolectar agua de una llave."
+      },
+      {
+        "ht": "Se lòt moun ki bannou manje.",
+        "es": "Esperábamos la comida que otros donaban."
+      },
+      {
+        "ht": "Nou fèmen kay nou bonè paske nou pè vòlè.",
+        "es": "Cerrábamos con llave nuestras casas temprano por los ladrones."
+      },
+      {
+        "ht": "Anpil timoun kite lekòl.",
+        "es": "Muchos niños abandonaban la escuela."
+      },
+      {
+        "ht": "Ti jèn fi yo ap travay kòm sèvant nan lòt kominote.",
+        "es": "Las chicas jóvenes trabajaban como sirvientas en otros pueblos."
+      },
+      {
+        "ht": "Ti gason yo ap flannen nan kominote a pandan ke lòt ap travay nan jaden moun.",
+        "es": "Los chicos jóvenes daban vueltas en el pueblo mientras otros trabajaban en granjas."
+      },
+      {
+        "ht": "Lè gen van, papye fatra al koke sou pyebwa ak nan lantiraj yo.",
+        "es": "Cuando el viento soplaba, residuos de papel quedaban colgando en los árboles y cercas."
+      },
+      {
+        "ht": "Moun te konn blese ak vè kase ke lòt moun jete atè a.",
+        "es": "La gente se cortaba con vidrios rotos que habían sido tirados descuidadamente."
+      },
+      {
+        "ht": "Enpi yon jou tiyo an pat gen dlo ladan’l ankò. Tout bokit te vid.",
+        "es": "Hasta que un día, las llaves se secaron y nuestros contenedores quedaron vacíos."
+      },
+      {
+        "ht": "Papa’m deside ale kay chak moun pou’l mande yo vini nan reyinyon kap òganize nan kominote a.",
+        "es": "Mi padre recorrió todas las casas pidiéndole a la gente que asistiera a una reunión en la villa."
+      },
+      {
+        "ht": "Moun yo chita anba yon gwo pyebwa pou yo koute sa kap di.",
+        "es": "La gente se reunió debajo de un árbol grande para escuchar."
+      },
+      {
+        "ht": "Papa’m kanpe pou li di “Nou bezwen mete tèt nou ansanm pou nou jwenn solisyon nan pwoblèm nou yo.”",
+        "es": "Mi padre se puso de pie y dijo, “Necesitamos trabajar juntos para resolver nuestros problemas.”"
+      },
+      {
+        "ht": "Jima, yon ti gason wit lane ki te chita sou yon branch pyebwa di “Mwen kapab ede nan netwaye.”",
+        "es": "Juma, quien tenía ocho años y estaba sentado en un tronco de un árbol, gritó, “¡Yo puedo ayudar limpiando!”"
+      },
+      {
+        "ht": "Yon fi leve pou’l di “Fi yo kapab ede nan fè jaden.”",
+        "es": "Una mujer dijo, “Las mujeres pueden reunirse conmigo para cultivar alimentos.”"
+      },
+      {
+        "ht": "Yon gason leve pou’l di: “Gason yo kapab fouye yon pwi.”",
+        "es": "Otro hombre se puso de pie y dijo, “Los hombres construiremos un pozo.”"
+      },
+      {
+        "ht": "Nou tout di nan menm moman an “Nou dwe chanje lavi nou.” Depi jou sa a nou mete tèt nou ansanm pou nou jwenn solisyon nan pwoblèm nou yo.",
+        "es": "Todos juntos gritamos a una voz, “Nosotros debemos cambiar nuestras vidas.” Y desde ese día, todos trabajamos juntos para solucionar nuestros problemas."
+      }
+    ]
+  },
+  {
+    "id": "0030",
+    "titulo": "Santiman",
+    "tituloEs": "Sentimientos",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0030/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0030/",
+    "segmentos": [
+      {
+        "ht": "Mwen santi anpil bagay nan kè mwen.",
+        "es": "Mi corazón siente muchas cosas."
+      },
+      {
+        "ht": "Mwen santi’m kontan lè grann mwen rakonte nou istwa leswa.",
+        "es": "Me siento feliz cuando mi abuelita me cuenta cuentos en las tardes."
+      },
+      {
+        "ht": "Kè mwen leje lè map jwe ak ti zanmi mwen yo.",
+        "es": "Me siento chistosa cuando juego con mis amigos."
+      },
+      {
+        "ht": "Mwen santi’m pa bon lè papa’m di li pa gen lajan.",
+        "es": "Me siento mal cuando mi papá me dice que no tiene dinero."
+      },
+      {
+        "ht": "Mwen santi ke manman mwen renmen’m lè li kenbe’m nan bra li.",
+        "es": "Me siento querida cuando mi mamá me da un abrazo."
+      }
+    ]
+  },
+  {
+    "id": "0052",
+    "titulo": "Simbegwire",
+    "tituloEs": "Simbegwire",
+    "nivel": 5,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0052/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0052/",
+    "segmentos": [
+      {
+        "ht": "Lè manman Simbegwire mouri, Simbegwire te tris anpil. Papa’l fè tout sa li te kapab pou’l okipe piti fi li. Ofiyamezi, yo kòmanse santi yo byen san manman an. Chak maten, yo chita ansanm pou yo pale sou kisa ka pwal pase nan jounen jodya. chak swa, yo fè manje ansanm. Lè yo finn lave asyèt yo, papa Simbegwire ede li fè devwa li.",
+        "es": "Cuando la madre de Simbegwire murió, ella estaba muy triste. El padre de Simbegwire hizo lo mejor que pudo para cuidar de su hija. Lentamente, aprendieron a ser felices de nuevo, sin la madre de Simbegwire. Cada mañana, se sentaban y hablaban sobre el siguiente día. Cada tarde, hacían la cena juntos. Luego, lavaban los platos y el padre de Simbegwire la ayudaba con sus tareas."
+      },
+      {
+        "ht": "Yon jou, papa Simbgewire tounen lakay li pita pase anvan. Li mande Simbgerwire « Ki kote ou ye pitit mwen an? ». Simbgerwire kouri al jwenn papa li. Men, Simbgerwire kanpe lè li wè papa li tap kenbe men yon madanm. Papa a di li ak yon souri « Mwen ta renmen ou rankontre yon moun espesyal, pitit mwen an. Moun sa a se Anita »",
+        "es": "Un día, el padre de Simbegwire llegó a casa más tarde de lo usual. “¿Dónde estás mi niña?” él preguntó. Simbegwire corrió hacia su padre, y quedó inmóvil cuando vio que él estaba tomado de la mano con una mujer. “Quiero que conozcas a alguien muy especial, mi niña. Ella es Anita,” dijo sonriendo."
+      },
+      {
+        "ht": "Anita di li « Bonjou Simbegwire, papa ou pale’m anpil de ou ». Men, Anita pas janm souri ni pa janm kenbe li. Papa Simbegwire te gen kè kontan. Li di ke yo twa ta pral viv byen ansanm “Pitit mwen an, mwen ta byen kontan si Anita ta manman ou.",
+        "es": "“Hola Simbegwire, tu padre me ha contado mucho sobre ti,” dijo Anita. Pero no le sonrió ni tomó de la mano. El padre de Simbegwire estaba feliz y emocionado. Él habló sobre los tres viviendo juntos, y cuán bueno eso sería. “Mi niña, espero que aceptes a Anita como tu madre,” él dijo."
+      },
+      {
+        "ht": "Lavi Simbegwire kòmanse chanje. Li pa te gen tan ankò pou li chita ak papa li chak maten. Anita te bay si tan travay pou li fè nan kay la ke li te bouke anpil epi li pat kapab fè devwa li nan aswè. Lè li finn manje, lale dirèk nan kabann li. Sèl ti konfò li se te kouvèti koulè a ke manman’l te fè pou li. Papa Simbegwire pa wè ke pitit fi li te tris.",
+        "es": "La vida de Simbegwire cambió. Ya no tenía tiempo para sentarse con su padre por las mañanas. Anita le dio muchas tareas domésticas que la agotaban demasiado para hacer sus tareas escolares por las tardes. Ella se iba directo a su cama después de cenar. Su único consuelo era su manta colorida que su madre le regaló. El padre de Simbegwire no parecía notar que su hija estaba triste."
+      },
+      {
+        "ht": "Kèk tan apre, papa Simbegwire anonse ke li te gen pou vwayaje pou yon titan. « Mwen gen pou’m vwayaje pou travay mwen men mwen konnen ke tout bagay pral pase byen ». Figi Simbegwire vinn byen tris men papa a pa janm wè anyen.",
+        "es": "Después de varios meses, el padre de Simbegwire les dijo que él estaría fuera de casa por un tiempo. “Tengo que viajar por mi trabajo,” él dijo. “Pero sé que ustedes se cuidarán la una a la otra.” Simbegwire puso cara de decepción, pero su padre no la notó. Anita no dijo nada. Ella tampoco estaba contenta."
+      },
+      {
+        "ht": "Sitiyasyon vin pi mal pou Simbegwire. Si li pat fin travay li nan kay la oswa si li te plenyen, Anita te konn bat li. Lè pou manje, madanm nan manje pifò nan manje a enpi li kite ti kras pou Simbegwire. Chak nwit, Simbegwire kriye nan kouvèti manman li.",
+        "es": "Las cosas se pusieron peores para Simbegwire. Si no terminaba sus tareas de la casa, o si se quejaba, Anita la golpeaba. Y a la hora de la cena, la mujer se comía la mayor parte de la comida, dejando sólo las sobras para Simbegwire. Cada noche, Simbegwire lloraba hasta quedarse dormida, abrazando la manta de su madre."
+      },
+      {
+        "ht": "Yon maten, Simbegwire leve ta. Anita rele byen fò « Paresèz ! ». Li rale Simbegwire sòti nan kabann li. Bèl ti kouvèti manman an ki te pandye sou yon klou shire an de tibout.",
+        "es": "Una mañana, Simbegwire se atrasó en levantarse. “¡Qué niña más floja!” Anita le gritó. Ella la tiró fuera de la cama. La manta tan preciada de Simbegwire que había quedado enganchada en un clavo, se rasgó en dos."
+      },
+      {
+        "ht": "Lè sa a Simbegwire te boulvèse anpil. Li deside sove nan kay la. Li pran kouvèti chire an, li pran manje avèk li epi li kite kay la. Li swiv wout papa li te pran.",
+        "es": "Simbegwire estaba muy enfadada. Ella decidió irse de su casa. Tomó los pedazos de la manta de su madre, empacó un poco de comida y se fue de casa. Siguió el mismo camino que su padre había tomado."
+      },
+      {
+        "ht": "Lè soley la kouche li grenpe yon pyebwa ki a kote yon ti dlo epi li fè yon kabann ak branch pyebwa a. Pandan lap kòmanse dòmi li tonbe chante ” Manman, manman, manman, ou kite’m. Ou ale epi ou pa janm tounen. Papa pa renmen’m ankò. Kilè wap tounen manman ? Ou kite’m. »",
+        "es": "Cuando atardeció, Simbegwire se trepó a un árbol muy alto que estaba cerca de un riachuelo e hizo una cama en sus ramas. Mientras se quedaba dormida, ella cantaba: “Maamá, maamá, maamá, me abandonaste. Me abandonaste y nunca regresaste. Mi padre ya no me ama. Madre, ¿cuándo regresarás? Me abandonaste.”"
+      },
+      {
+        "ht": "Demen maten, Simbegwire rechante menm chante an. Lè medam yo rive nan basen an pou lave rad yo, yo tande yon chante tris kap sòti nan gwo pyebwa a. Nan kòmansman, yo te kwè ke se bwi fey yo epi yo kontinye travay yo. Men yonn nan yo kanpe pou koute chante an ak anpil atansyon.",
+        "es": "A la mañana siguiente, Simbegwire cantó una vez más. Cuando unas mujeres vinieron a lavar sus ropas en el riachuelo, escucharon la triste canción que venía de lo alto del árbol. Pensaron que sólo era el viento moviendo las hojas, y siguieron con su trabajo. Pero una de las mujeres le puso más atención a la canción."
+      },
+      {
+        "ht": "Madanm sa a voye je’l nan pyebwa a epi li wè ti fi a ak mòso kouvèti koulè a. Li rele “Simbegwire, pitit frè mwen!”. Lòt medam yo kanpe lave pou yo ede Simbegwire desann pyebwa a. Matant li kòmanse bo li ak eseye konsole’l.",
+        "es": "Esta mujer miró hacia arriba del árbol. Cuando vio a la niña con su manta en pedazos, gritó, “¡Simbegwire, la hija de mi hermano!” Las otras mujeres dejaron de lavar y ayudaron a Simbegwire a bajar del árbol. Su tía la abrazó y trató de consolarla."
+      },
+      {
+        "ht": "Matant Simbegwire mennen li lakay li. Li bay Simbegwire yon plat manje cho epi li mete’l dòmi nan kabann ak kouvèti manman li. Lè lannwit rive, Simbegwire tonbe dòmi kriye. Men kriye an fwa sa a se kriye kè kontan. Li konnen ke matant li ta pral okipe li.",
+        "es": "La tía de Simbegwire la llevó a su casa. Le dio de comer, y la acomodó en la cama con la manta de su madre. Esa noche, Simbegwire lloraba mientras se quedaba dormida. Pero eran lágrimas de alegría. Sabía que su tía cuidaría de ella."
+      },
+      {
+        "ht": "Lè papa Simbegwire tounen lakay li, li jwenn chanb pitit fi li vid. Li mande madanm li ak kè lou « Kisa ki pase, Anita ? ». Madanm li eksplike’l ke Simbegwire kouri ale. Li di « Mwen te vle ke li rekspete’m men mwen kwè ke’m te twò di avèk li ». Papa Simbegwire soti nan kay la, lale nan direksyon basen an kote sè li rete pou’l mande li si li te wè Simbegwire.",
+        "es": "Cuando el padre de Simbegwire regresó a casa, encontró su habitación vacía. “¿Qué ocurrió, Anita?” él preguntó con gran tristeza. La mujer le dijo que Simbegwire había huido de casa. “Quería que me respetara,” ella dijo. “Pero quizás fui muy estricta.” El padre de Simbegwire salió de la casa y caminó con dirección hacia el riachuelo. Siguió caminando hasta la villa de su hermana para preguntarle por Simbegwire."
+      },
+      {
+        "ht": "Simbegwire tap jwe ak kouzen li yo lè li wè papa li ap vin byen lwen. Li te pè ke papa a te fache kidonk li kouri al kache anndan kay la. Men, papa a al jwenn li pou’l li di, “Simbegwire, ou te jwenn yon manman pafè pou tèt ou. Yon moun ki renmen ou ak konprann ou. Mwen fyè de ou menm, mwen renmen ou.” Yo te dakò ke Simbegwire ta rete ak matant li osi lontan ke li te vle.",
+        "es": "Simbegwire estaba jugando con sus primos cuando vio a su padre de lejos. Ella tenía miedo de que estuviera enfadado, así que corrió a esconderse. Pero su padre la siguió y le dijo, “Simbegwire, has encontrado a la madre perfecta para ti. Una madre que te ama y te entiende. Estoy orgulloso de ti y te amo.” Los dos estaban de acuerdo en que Simbegwire podía quedarse con su tía el tiempo que quisiera."
+      },
+      {
+        "ht": "Papa a kontinye vini wè li chak jou. Yon jou li vini ak Anita. Anita lonje men bay Simbegwire enpi li di « Mwen regrèt anpil, tifi, mwen pat gen rezon ». Li mande Simbegwire « eske wap kite’m esese yon lòt fwa ankò?». Simbegwire gade papa’l anpil. Li te sispèk men ti pa ti pa lale kote Anita epi li pase de ti bra li nan ren Anita.",
+        "es": "Su padre la visitaba todos los días. Con el paso del tiempo, él llevó a Anita. Ella tomó la mando de Simbegwire. “Lo siento mucho pequeñita, me equivoqué,” le dijo. “¿Me darías otra oportunidad?” Simbegwire volteó a mirar a su padre, quien lucía preocupado. Entonces, ella se acercó a Anita lentamente y la abrazó."
+      },
+      {
+        "ht": "Lòt semen nan, Anita envite Simbegwire ak kouzen li yo ak matant li vin manje lakay li. Se te yon bèl fèt ! Anita te pare tout manje Simbegwire re renmen enpi tout moun manje vant deboutenen. Apre sa a, timoun yo ale jwe pandan granmoun you rete pale. Simbegwire te gen kè kontan. Li deside tounen lakay li byen vit pou li viv ak papa e ak bèlmè li.",
+        "es": "A la semana siguiente, Anita invitó a Simbegwire, a sus primos y a su tía, a cenar en su casa. ¡Qué gran festín! Anita cocinó todas las comidas favoritas de Simbegwire, y todos comieron hasta quedar satisfechos. Luego, los niños jugaron y los adultos charlaron. Simbegwire se sentía feliz y valiente. Ella había decidido que pronto, muy pronto, regresaría a casa para vivir con su padre y su madrastra."
+      }
+    ]
+  },
+  {
+    "id": "0066",
+    "titulo": "Nozibèl ak twa cheve li yo",
+    "tituloEs": "Nozibele y sus tres cabellos",
+    "nivel": 3,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0066/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0066/",
+    "segmentos": [
+      {
+        "ht": "Nan tan lontan, twa ti fi tal chache bwa nan yon rakbwa.",
+        "es": "Hace mucho tiempo, tres chicas salieron a buscar leña."
+      },
+      {
+        "ht": "Te fè cho anpil jou sa a kidonk timoun yo desann nan rivyè a pou yal benyen. Yo jwe, yo voye dlo yonn so lòt, yo naje, yo amize yo nan dlo an.",
+        "es": "Hacía mucho calor, así que fueron a nadar al río. Jugaron, chapotearon, y nadaron en el agua."
+      },
+      {
+        "ht": "Briskeman, yo reyalize ke te kòmanse fè ta. Yo depeche yo tounen nan vilaj yo.",
+        "es": "De repente, se dieron cuenta que era tarde. Corrieron hacia la villa."
+      },
+      {
+        "ht": "Lè yo prèske rive, Nozibèl pase men li nan kou li enpi li wè ke li te bliye chenn li! Li mande zanmi li yo “Tanpri tounen avè’m ‘!”. Men zanmi yo reponn ke li te twò ta.",
+        "es": "Cuando estaban cerca de casa, Nozibele se tocó el cuello y se dio cuenta que había olvidado su collar. “¡Por favor, acompáñenme a buscarlo!” ella les rogó a sus amigas. Pero sus amigas le dijeron que ya era muy tarde."
+      },
+      {
+        "ht": "Se konsa Nozibèl tounen larivyè a pou kont li. Li jwenn chenn li enpi li kouri pou’l ale lakay li. Men li pèdi nan mitan wout lan paske te fè nwa anpil.",
+        "es": "Así que Nozibele regresó sola al río. Encontró su collar y se apresuró para regresar a casa. Pero se perdió en la oscuridad."
+      },
+      {
+        "ht": "Pi lwen, li wè yon ti limyè kap klere yon ajoupa. Li kouri nan direksyon an enpi li frape sou pòt la.",
+        "es": "A la distancia veía una luz que venía de una choza. Corrió hacia ella y tocó a la puerta."
+      },
+      {
+        "ht": "Li pa janm sezi konsa lè li wè se te yon chen ki louvri pòt la. Chen an mande’l “Ki sa ou bezwen?” Mwen pèdi sou wout mwen, mwen bezwen yon kote pou’m dòmi”, “Antre oswa map mòde ou!” chen an di li. Se konsa, Nozibèl antre nan ajoupa a.",
+        "es": "Para su sorpresa, un perro abrió la puerta y le preguntó, “¿Qué quieres?” “Estoy perdida y necesito un lugar para dormir,” respondió Nozibele. “¡Pasa si no te morderé!” dijo el perro. Así que Nozibele pasó."
+      },
+      {
+        "ht": "Apre sa a, chen an di li “kwit yon manje pou mwen!” Nozibèl reponn “Men, mwen pa janm kwit manje pou chen” “Kwit oswa map mòde ou!”. Se konsa, Nozibèl kwit manje pou chen an.",
+        "es": "Luego el perro dijo, “¡Cocina para mí!” “Pero nunca he cocinado para un perro antes,” ella le contestó. “¡Cocina, o te muerdo!” dijo el perro. Así que Nozibele cocinó un poco de comida para el perro."
+      },
+      {
+        "ht": "Apre sa a, chen an di li “Fè kabann nan pou mwen!” Nozibèl reponn, “Mwen pa janm fè kabann pou chen.” “Fè kabann lan oswa map mòde ou!”. Se konsa, Nozibèl fè kabann pou chen an.",
+        "es": "Luego el perro dijo, “¡Haz la cama para mí!” Nozibele respondió, “Nunca he hecho la cama de un perro.” “¡Hazla, o te muerdo!” dijo el perro. Así que Nozibele hizo la cama."
+      },
+      {
+        "ht": "Chak jou Nozibèl te gen pou’l kwit manje, pou’l bale, pou’l lave pou chen an. Yon jou, chen an di Nozibèl “Nozibèl, mwen gen pou’m al wè kèk zanmi. Bale kay la, kwit manje an enpi lave bagay yo anvan mwen tounen. ”",
+        "es": "Ella tenía que cocinar, barrer y lavar todos los días para el perro. Hasta que un día el perro le dijo, “Nozibele, hoy tengo que ir a ver a unos amigos. Barre la casa, prepara comida y lava mis cosas antes de que regrese.”"
+      },
+      {
+        "ht": "Touswit kè chen an pati, Nozibèl pran twa cheve nan tèt li. Li mete yon grenn cheve anba kabann lan, yonn dèyè pòt la, ak yon nan chodyè a. Apre sa a, li kouri al lakay li.",
+        "es": "Tan pronto como el perro se fue, Nozibele se sacó tres cabellos de su cabeza y puso un cabello debajo de la cama, otro detrás de la puerta y uno en el corral. Después corrió a casa tan rápido como pudo."
+      },
+      {
+        "ht": "Lè chen an tounen li chache Nozibèl “Nozibèl, ki kote ou ye?” “Mwen isit anba kabann lan,” premye cheve a reponn. “Mwen isit dèyè pòt la,” dezyèm cheve an reponn. “Mwen isit nan chodyè a” twazyèm cheve an reponn.",
+        "es": "Cuando el perro regresó a casa, comenzó a buscar a Nozibele. “¡Nozibele, ¿dónde estás?!” el gritaba. “Aquí estoy, debajo de la cama,” dijo el primer cabello. “Estoy aquí, detrás de la puerta,” dijo el segundo cabello. “Estoy aquí, en el corral,” dijo el tercero."
+      },
+      {
+        "ht": "Lè sa a, chen an konprann ke Nozibèl tap pase’l nan tenten. Chen an pran kouri jis li rive nan vilaj la. Men, frè Nozibèl tap tann li ak gwo baton nan men yo. Chen an kase tèt tounen epi yo pa janm wè li ankò.",
+        "es": "Entonces el perro se dio cuenta que Nozibele lo había engañado. El perro corrió, corrió y corrió hacia la villa. Pero los hermanos de Nozibele estaban esperándolo con palos grandes. El perro se fue corriendo y nunca nadie lo ha visto aparecerse de nuevo."
+      }
+    ]
+  },
+  {
+    "id": "0067",
+    "titulo": "Kizin",
+    "tituloEs": "Cocinando",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0067/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0067/",
+    "segmentos": [
+      {
+        "ht": "Map kale pòmdetè yo.",
+        "es": "Pelo las papas."
+      },
+      {
+        "ht": "Map rache yon chou.",
+        "es": "Corto el repollo."
+      },
+      {
+        "ht": "Map graje karòt yo.",
+        "es": "Rallo las zanahorias."
+      },
+      {
+        "ht": "Map lave pwa yo.",
+        "es": "Lavo los frijoles."
+      },
+      {
+        "ht": "Map koupe yon berejèn.",
+        "es": "Corto la calabaza."
+      },
+      {
+        "ht": "Map rache yon epina.",
+        "es": "Pico la espinaca."
+      },
+      {
+        "ht": "Manman’m ap koupe zonyon yo.",
+        "es": "Mi mamá trocea las cebollas."
+      },
+      {
+        "ht": "Zonyon fè’m kriye lè yo kale yo.",
+        "es": "Las cebollas me hacen llorar cuando las cortan."
+      }
+    ]
+  },
+  {
+    "id": "0072",
+    "titulo": "Vanjans gid siwo myèl la",
+    "tituloEs": "La venganza del Pájaro Miel",
+    "nivel": 4,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0072/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0072/",
+    "segmentos": [
+      {
+        "ht": "Sa a se istwa Ngede, yon gid siwo myèl, ak yon jenn gason visye ke yo rele Gingile. Yon jou pandan Gingile al lachas li tande yon apèl Ngede. Bouch Gingile kòmanse koule dlo lè li sonje siwo myèl la. Li kanpe pou’l koute pi byen, li chache jis li wè zwazo a sou pyebwa a sou tèt li. “Chitik-chitik-chitik,” ti zwazo an tap chante. Li kontinye vole sou lòt pyebwa a “Chitik, chitik, chitik,” li kanpe tanzantan pou’l gade si Gingile tap swiv li.",
+        "es": "Esta es la historia de Ngede, el Pájaro Miel, y un jovencito avaro llamado Gingile. Un día, mientras Gingile estaba cazando, escuchó el canto de Ngede. A Gingile comenzó a hacérsele agua la boca al pensar en la miel. Se detuvo para escuchar con atención hasta encontrar al pájaro miel que estaba en las ramas del árbol justo encima de su cabeza. “Chitik-chitik-chitik,” cantó el pequeño pájaro mientras volaba de un árbol al árbol. “Chitik-chitik-chitik,” cantaba el Pájaro Miel, haciendo pausas de vez en cuando para asegurarse de que Gingile lo siguiera."
+      },
+      {
+        "ht": "Apre yon demi èdtan, yo rive pre yon gwo pye fig frans. Ngede sote san gade dèyè sou branch yo. Lè fini li rete sou yon grenn branch epi li balanse tèt li tankou si lap di, “Men li! Vini non! Vini kounyè a, kisa kap pran konsa a ?” Gingile pat kapab wè anyen anba pyebwa a men li fè Ngede konfyans.",
+        "es": "Después de media hora, llegaron a una higuera gigante. Ngede brincaba locamente entre las ramas. Luego, se posó en una rama e inclinó su cabeza hacia Gingile diciéndole, “¡Aquí está! ¡Ven ahora! ¿Por qué tardas tanto?” Gingile no podía ver ninguna abeja desde abajo del árbol, pero decidió confiar en Ngede."
+      },
+      {
+        "ht": "Se konsa Gingile depoze fizil lachas li anba pyebwa a, li rasanble kèk ti mòso branch enpi li limen yon ti dife. Lè dife an byen pran, li mete yon frenn byen long nan mitan dife a. Tout moun konnen ke bwa sa a fè anpil lafimen lè lap boule. Nedge kòmanse grenpe pyebwa a ak baton lafimen an nan dan li.",
+        "es": "Así que Gingile puso su lanza de caza en el suelo, juntó unas cuantas ramas secas e hizo una pequeña fogata. Cuando el fuego estaba alto, puso un palo largo y seco en medio del fuego. Esta madera era conocida por producir mucho humo. Luego, comenzó a trepar el árbol sujetando la parte no quemada del palo con sus dientes."
+      },
+      {
+        "ht": "Nan yon ti moman, li kòmanse tande bwi zèl gèp yo kap travay. Yo rantre soti nan yon trou ki nan kò pyebwa a – nich yo. Lè Gingile rive tou pre li kòmanse balanse baton lafimen nan trou pyebwa a. Gèp yo kouri soti men yo te fache anpil. Yo vole ale paske yo pat renmen lafimen an - men anvan sa a yo pike Gingile byen fò!",
+        "es": "Dentro de poco tiempo escuchó el fuerte zumbido de unas abejas. Estaban entrando y saliendo de un agujero en el tronco del árbol – su colmena. Cuando Gingile llegó hasta la colmena, puso la parte quemada de la rama en el agujero. Las abejas salieron rápidamente del agujero muy enfadadas, picaron a Gingile y se alejaron volando del humo que tanto odiaban."
+      },
+      {
+        "ht": "Lè gèp yo fin sòti, Gingile mete men’l anndan nich la. Li pran yon pengn pou’l retire gwo ponyen siwo myèl rich ak tout grès blan anndan li. Li mete peny an ak prekosyon nan bèg ka ke li te gen sou zepòl li enpi li kòmanse redesann pyebwa a.",
+        "es": "Cuando las abejas ya no estaban, Gingile metió sus manos en la colmena y tomó el panal lleno de miel y larvas gordas. Luego, lo puso en su bolso y comenzó a bajar del árbol."
+      },
+      {
+        "ht": "Ngede tap swiv ak anpil atansyon tout sa Gingile tap fè. Li tap tann ke Ngede bay li yon gwo mòso siwo myèl gra a enpi pou’l ta di li mèsi. Ngede desann branch yo rapid rapid jis li rive tou pre atè a. Lè Gingile rive anba nèt, Ngede te kanpe sou yon wòch tou pre lap tann rekonpans li.",
+        "es": "Ansiosamente Ngede observaba todo lo que Gingile hacía. Estaba esperando que dejara un pedazo grande del panal como muestra de agradecimiento. Ngede volaba de rama en rama, cada vez más cerca del suelo. Finalmente, Gingile bajó de la higuera y Ngede se posó en una roca cerca del joven a esperar su recompensa."
+      },
+      {
+        "ht": "Men, Gingile etenn dife a, li ranmase frenn li epi li kòmanse mache pou’l ale lakay li san’l pa okipe zwazo a. Ngede byen fache tonbe rele “VIK-torr! VIK-torrr!” Gingile kanpe, li gade ti zwazo a enpi li pete ri “Ou vle yon ti siwo myèl zanmi mwen? Ha! Men se mwen ki fè tout travay la enpi ki pran tout piki yo. Poukisa pou’m ta ba ou menm yon ti kras nan bèl siwo myèl sa a?” Enpi, li kontinye mache. Ngede te fache serye! Se pa konsa pou yo boule avèk li! Li deside pran vanjans li sou Gingile.",
+        "es": "Pero Gingile apagó la fogata, tomó su lanza y empezó a caminar hacia su casa, ignorando completamente al Pájaro Miel. Ngede gritaba muy furiosamente, “¡Piii-trrr! ¡Piii-trrr!” Gingile se detuvo, miró al Pájaro Miel y comenzó a reírse fuerte. “¡Amiguito! ¿Quieres miel, ah? ¡Ja! Yo hice todo el trabajo para conseguirla y, además, quedé todo picado. ¿Por qué debería compartir esta dulce y rica miel contigo?” y se alejó. ¡Ngede estaba furioso! ¡Esta no era forma de agradecerle! Pero, se vengaría."
+      },
+      {
+        "ht": "Yon jou, plizyè semèn pita, Gingile tande yon lòt apèl Ngede pou siwo myèl. Li sonje bon gou siwo myèl la enpi li swiv ti zwazo a yon lòt fwa ankò. Lè ti zwazo a fin mennen Gingile nan rebò rakbwa a, Ngede kanpe pou’l pran yon ti repo anba yon pye pikan. “Ah, gen lè se la nich la ye” Gingil byen vit fè ti dife epi li kòmanse grenpe pyebwa a ak branch lafimen an nan dan li. Ngede chita lap gade.",
+        "es": "Un día, después de varias semanas, Gingile escuchó el canto de Ngede nuevamente. Él recordó lo deliciosa que era esa miel y con entusiasmo siguió el canto del Pájaro Miel. Después de un largo viaje por el borde del bosque, Ngede se detuvo a descansar bajo una acacia de copa plana. “Ah,” pensó Gingile. “El panal de abejas debe estar en este árbol.” Entonces, rápidamente hizo su fogata y comenzó a trepar el árbol con la rama quemada entre sus dientes. Ngede se sentó y miró todo atentamente."
+      },
+      {
+        "ht": "Pandan Gingile ap grenpe lap mande tèt li poukisa li pa tande bwi zèl gèp yo kap travay. “Petèt nich la nan fon pyebwa a,” li vin reflechi. Li monte sou yon lòt branch men olye nich la li jwenn bappoubap ak yon leyopa! Leyopa a pat kontan paske li tap dòmi lè yo vin deranje li. Li plise je’l enpi li louvri bouch li byen gran pou’l montre gwosè ak lajè dan li.",
+        "es": "Mientras trepaba, Gingile se preguntaba por qué no escuchaba el zumbido de las abejas. “Quizás, el panal está bien escondido en el árbol,” él pensó. Al llegar a la siguiente rama, se encontró con un leopardo. El leopardo estaba muy enojado porque Gingile lo despertó de su siesta. Lo miró de manera amenazadora y abrió su boca para mostrarle sus dientes grandes y filosos."
+      },
+      {
+        "ht": "Gingile kouri desann pyebwa anvan Leyopa a bay li yon kout pat. Nan prese li te manke yon branch, li ateri ak yon gwo bwi enpi li foule pye li. Li pati kouri sou vye pye an. Chans pou li leyopa a te gen dòmi nan je’l. Se konsa gid siwo myèl la pran vanjans li. Gingile aprann leson li.",
+        "es": "Antes de que el leopardo pudiera atacar a Gingile, él bajó muy rápidamente del árbol. Tan rápidamente que no vio una rama y cayó dándose un batacazo en el suelo. Aunque se torció el tobillo, cojeó lo más rápido que pudo para poder escapar. Afortunadamente, el leopardo aún tenía mucho sueño, así que no lo persiguió. Ngede, el Pájaro Miel, se vengó. Y Gingile aprendió una valiosa lección."
+      },
+      {
+        "ht": "Kidonk, lè pitit Gingile tande istwa Ngede a yo respete ti zwazo a. Lè yal rekòlte myèl yo toujou kite pigwo mòso a pour Gid siwo myèl la.",
+        "es": "Y así, cuando los hijos de Gingile escuchen la historia de Ngede, ellos lo respetarán. Cuando sea que les toque recolectar miel, se asegurarán de dejarles la parte más grande del panal de abejas a los Pájaros Miel."
+      }
+    ]
+  },
+  {
+    "id": "0087",
+    "titulo": "Mwen renmen li!",
+    "tituloEs": "¡Me gusta leer!",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0087/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0087/",
+    "segmentos": [
+      {
+        "ht": "Mwen renmen li.",
+        "es": "Me gusta leer."
+      },
+      {
+        "ht": "Pouki moun mwen pral li la a ?",
+        "es": "¿Para quién puedo leer?"
+      },
+      {
+        "ht": "Ti sè’m ap dòmi.",
+        "es": "Mi hermana está durmiendo."
+      },
+      {
+        "ht": "Pouki moun mwen pral li la a?",
+        "es": "¿Para quién puedo leer?"
+      },
+      {
+        "ht": "Manman’m ak grann mwen okipe.",
+        "es": "Mi madre y mi abuela están ocupadas."
+      },
+      {
+        "ht": "Pouki moun mwen pral li la a?",
+        "es": "¿Para quién puedo leer?"
+      },
+      {
+        "ht": "Papa’m ak granpapa’m okipe.",
+        "es": "Mi padre y mi abuelo están ocupados."
+      },
+      {
+        "ht": "Pouki moun mwen pral li la a? Mwen kapab li ….pou tèt mwen!",
+        "es": "¿Para quién puedo leer? ¡Puedo leer para mí mismo!"
+      }
+    ]
+  },
+  {
+    "id": "0089",
+    "titulo": "Khalai ap pale ak plant",
+    "tituloEs": "Khalai le habla a las plantas",
+    "nivel": 2,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0089/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0089/",
+    "segmentos": [
+      {
+        "ht": "Ti fi sa a rele Khalai. Li gen sèt lane. Nan lang li, Lubukusu, Non li vle di ‘sa ki bon an’.",
+        "es": "Ella es Khalai. Tiene siete años. Su nombre significa “bondadosa” en su idioma llamado Lubukusu."
+      },
+      {
+        "ht": "Nan maten, lè Khalai leve li pale ak pye zoranj lan. “Tanpri pye zoranj, vin byen gwo pou’w bannou anpil zoranj mi.”",
+        "es": "Khalai despierta y le habla a los naranjos. “Por favor naranjos crezcan mucho para que nos den muchas naranjas maduras.”"
+      },
+      {
+        "ht": "Sou wout li lè li pral lekòl li pale ak zèb yo “Tanpri grandi, vin pi vèt epi pa mouri.”",
+        "es": "Khalai le habla al pasto mientras camina a su escuela. “Por favor pasto, crece muy verde y nunca te seques.”"
+      },
+      {
+        "ht": "Sou wout li lè li pral lekòl li pale ak zèb yo “Tanpri grandi, vin pi vèt epi pa mouri.”",
+        "es": "Khalai pasa frente a unas flores silvestres. “Por favor flores, sigan floreciendo para ponerlas en mi cabello.”"
+      },
+      {
+        "ht": "Nan lekòl la, Khalai pale ak pye bwa a ki nan mitan lakou a. “Tanpri pyebwa, blaye bèl branch ou yo pou nou ka chita anba lonbraj ou.”",
+        "es": "En la escuela, Khalai le habla a un árbol que está en medio del recinto. “Por favor árbol, crece con ramas muy grandes para que podamos leer bajo tu sombra.”"
+      },
+      {
+        "ht": "Khalai pale ak lantiraj lekòl la. “Tanpri grandi ak fòs pou’w anpeche move moun rantre nan lakou lekòl la.”",
+        "es": "Khalai le habla a la cerca de arbustos que rodea su escuela. “Por favor, crece muy fuerte para que detengas a la gente mala que quiera entrar.”"
+      },
+      {
+        "ht": "Lè Khalai tounen lakay li apre lekòl, l ale wè pyebwa zoranj la. “Èske zoranj ou yo mi?” Khalai mande li.",
+        "es": "Cuando Khalai vuelve a casa, ella visita al naranjo y le pregunta: “¿Están listas tus naranjas?”"
+      },
+      {
+        "ht": "Khalai te byen kontrarye men li di pye zoranj lan “Zoranj ou yo vèt toujou. Men map tounen wè ou demen nan maten…petèt wa gen zoranj mi pou mwen!”",
+        "es": "“Las naranjas aún se ven verdes,” dice Khalai. “Nos vemos mañana, naranjo,” Khalai continúa. “¡Quizás, mañana tendrás una naranja lista y madura para mí!”"
+      }
+    ]
+  },
+  {
+    "id": "0095",
+    "titulo": "Zama se yon pakèt moun",
+    "tituloEs": "¡Zama es genial!",
+    "nivel": 2,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0095/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0095/",
+    "segmentos": [
+      {
+        "ht": "Ti frè’m leve ta. Mwen leve bonè paske’m se yon pakèt moun!",
+        "es": "Mi hermano pequeño se despierta muy tarde. Yo despierto temprano, ¡porque soy genial!"
+      },
+      {
+        "ht": "Se mwen ki kite solèy lan rantre nan kay la.",
+        "es": "Yo soy la que deja que la luz del sol entre a nuestra casa."
+      },
+      {
+        "ht": "Manman’m konn di’m “Ou se zetwal maten’m nan”.",
+        "es": "“Eres mi estrella mañanera,” dice mamá."
+      },
+      {
+        "ht": "Mwen fè twalèt mwen pou kònt mwen. Mwen pa bezwen moun pou ede’m.",
+        "es": "Me aseo sola y no necesito ayuda."
+      },
+      {
+        "ht": "Mwen fè twalèt mwen ak dlo frèt enpi savon ble santifò.",
+        "es": "Puedo soportar el agua fría y el jabón azul apestoso."
+      },
+      {
+        "ht": "Manman’m fè’m sonje, “Pa bliye dan ou.” Mwen reponn li “Jamè, mwen pap janm bliye!”.",
+        "es": "Mamá me dice, “No te olvides de los dientes.” Yo le respondo, “¡Nunca los olvido!”"
+      },
+      {
+        "ht": "Apre sa a, mwen abiye pou kont mwen. Mwen di manman’m « Mwen granmoun koulyè a »",
+        "es": "Después de mi aseo, saludo a mi abuelo y a mi tía, y les deseo que tengan un buen día."
+      },
+      {
+        "ht": "Lè’m fin fè twalèt mwen, mal salye granpapa’m ak matant mwen pou’m di yo bonjou.",
+        "es": "Luego, me visto, “Ahora soy grande, mamá,” le digo."
+      },
+      {
+        "ht": "Mwen kapab boutonnen rad mwen ak mare soulye’m pou kont mwen.",
+        "es": "Puedo abotonarme y abrochar mis zapatos."
+      },
+      {
+        "ht": "Enpi, mal rakonte ti frè mwen tout istwa sou lekòl lan.",
+        "es": "Y me aseguro que mi hermano pequeño sepa todas las noticias de la escuela."
+      },
+      {
+        "ht": "Nan klas la, mwen fè tout sam kapab pou mwen sòti pwemye.",
+        "es": "En clases, doy lo mejor de mí en todos los sentidos."
+      },
+      {
+        "ht": "Mwen fè tout bagay sa yo chak jou men sam pito fè nan tout se jwe… jwe… jwe!",
+        "es": "Todos los días hago estas cosas buenas. Pero lo que más me gusta hacer es ¡jugar, jugar y jugar!"
+      }
+    ]
+  },
+  {
+    "id": "0110",
+    "titulo": "Yon ti grenn: Istwa Wangari Maathai",
+    "tituloEs": "Una pequeña semilla: la historia de Wangari Maathai",
+    "nivel": 3,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0110/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0110/",
+    "segmentos": [
+      {
+        "ht": "Nan yon ti vilaj ki sou pant mòn Kenya nan Lès Afrik, yon ti fi tap travay nan jaden an ak manman’l. Yo te rele li Wangari.",
+        "es": "En una aldea ubicada en la cuesta del Monte Kenia en África del Este, una niña pequeña trabajaba en los campos con su madre. Su nombre era Wangari."
+      },
+      {
+        "ht": "Wangari te renmen rete deyò anpil. Nan jaden fanmi li, li te fè twou ak manchèt pou’l plante ti grenn nan tè a.",
+        "es": "A Wangari le encantaba estar afuera. En el huerto de su familia, ella separaba la tierra con su machete y plantaba pequeñas semillas en la tierra tibia."
+      },
+      {
+        "ht": "Lè li pipito a se pandan lajounen lè solèy la fin kouche. Wangari konnen fòke li tounen lakay anvan fè twò nwa. Enpi li pa te kapab wè plant yo nan fè nwa a. Pou’l tounen lakay li, fòke li te pase nan yon ti santye, nan yon jaden ak akote yon rivyè.",
+        "es": "Su momento favorito del día era justo después del anochecer. Cuando se ponía muy oscuro y no podía mirar las plantas. Entonces era cuando Wangari sabía que debía regresar a casa. Ella caminaba por los senderos angostos del campo, cruzando los ríos que estaban en su camino."
+      },
+      {
+        "ht": "Wangari te yon timoun entèlijan ki te anvi ale lekòl. Men, manman’l ak papa li te vle ke li rete nan lakay la pou’l ede yo. Lè Wangari gen sètan, pi gran frè li mande manman ak papa’l pou yo voye Wangari lekòl.",
+        "es": "Wangari era una niña astuta y no podía esperar para ir a la escuela. Pero su madre y padre querían que ella se quedara para ayudarlos con los quehaceres del hogar. Cuando cumplió siete años, su hermano mayor convenció a sus padres para que ella fuera a la escuela."
+      },
+      {
+        "ht": "Li te renmen aprann! Wangari te aprann piplis chak jou, chak fwa li louvri yon liv. Li te travay tèlman byen lekòl la ke li te resevwa yon envitasyon pou’l al etidye nan Etazini. Wangari te kontan anpil! Li te vle aprann anpil bagay lòt bò dlo an.",
+        "es": "¡A ella le gusta aprender! Wangari aprende muy rápido con cada libro que lee. A ella le iba tan bien en la escuela que la invitaron a estudiar en Estados Unidos. ¡Wangari estaba muy entusiasmada! Ella quería aprender más acerca del mundo."
+      },
+      {
+        "ht": "Nan inivèsite Ameriken an, Wangari aprann anpil lòt bagay. Li etidye sou tout kalite plant ak kijan yo grandi. Enpi, li vin sonje kote li sòti, kijan li grandi, lè li te konn jwe ak frè li nan lonbraj anba pyebwa nan bèl rakbwa Kenya.",
+        "es": "En la universidad americana, Wangari aprendió muchas cosas nuevas. Ella estudió sobre las plantas y cómo ellas crecen. Y recordó cómo ella creció: jugando con su hermano bajo la sombra de árboles hermosos en los bosques de Kenia."
+      },
+      {
+        "ht": "Plis li aprann plis li santi ke li renmen moun Kenya yo. Li te vle wè pèp li lib ak kontan. Plis li aprann, plis li sonje lakay li nan peyi Lafrik.",
+        "es": "Mientras más aprendía, más se daba cuenta de que le encantaba la gente de Kenia. Ella quería que ellos fueran felices y libres. Mientras más aprendía, más recordaba su casa en África."
+      },
+      {
+        "ht": "Lè li fini lekòl la, li tounen Kenya. Men, peyi’l te chanje. Peyi a te kouvri ak gwo plantasyon. Fanm yo pa te jwenn bwa pou yo fè manje. Moun yo te pòv, timoun yo te grangou toutan.",
+        "es": "Al finalizar sus estudios, regresó a Kenia. Pero su país había cambiado. Habían granjas enormes que atravesaban todo el territorio. Las mujeres no tenían madera para hacer fogatas para cocinar. La gente era pobre y los niños tenían hambre."
+      },
+      {
+        "ht": "Wangari te konnen sa pou’l fè. Li aprann medam yo kijan pou yo simen grenn atè pou yo plante pyebwa. Medam yo vann pyebwa yo enpi yo ede fanmi yo ak lajan an yo fè. Medam yo te kontan anpil. Wangari te fè yo santi yo endepandan ak pifò.",
+        "es": "Wangari sabía qué hacer. Les enseñó a las mujeres a plantar árboles con semillas. Las mujeres vendían los árboles y usaban aquel dinero para cuidar a sus familias. Las mujeres estaban muy contentas. Wangari las había ayudado a sentirse poderosas y fuertes."
+      },
+      {
+        "ht": "Piti piti pyebwa yo grandi yo tounen rakbwa enpi dlo rivyè an kòmanse koule ankò. Mesaj Wangari travèse tout Lafrik. Jounen jodya, anpi anpil pyebwa pouse akòz ti grenn Wangari yo.",
+        "es": "Con el paso del tiempo, los árboles nuevos siguieron creciendo hacia el bosque, y los ríos comenzaron a fluir nuevamente. El mensaje de Wangari se difundió por toda África. Hoy en día, millones de árboles han crecido gracias a las semillas de Wangari."
+      },
+      {
+        "ht": "Wangari te travay di. Tout moun lòt bò dlo tande pale de Wangari. Li resevwa yon pri entènasyonal ke yo rele pri Nobèl pou lapè. Wangari se pwemye fanm Afriken ki te resevwa yon pri konsa.",
+        "es": "Wangari había trabajado muy duro. La gente de alrededor del mundo lo notó, y le otorgaron un premio famoso. Se llama Premio Nobel de la Paz ella fue la primera mujer africana en recibirlo."
+      },
+      {
+        "ht": "Wangari mouri nan lane 2011 men nou sonje li chak fwa nou wè yon bèl pyebwa.",
+        "es": "Wangari murió el año 2011, pero la podemos recordar cada vez que miramos un hermoso árbol."
+      }
+    ]
+  },
+  {
+    "id": "0111",
+    "titulo": "Poukisa Ipopotam pa gen plim sou kò yo",
+    "tituloEs": "¿Por qué los hipopótamos no tienen pelo?",
+    "nivel": 2,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0111/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0111/",
+    "segmentos": [
+      {
+        "ht": "Yon jou, Lapen tap mache bò yon rivyè.",
+        "es": "Un día, el Conejo estaba caminando por la ribera."
+      },
+      {
+        "ht": "Ipo te la tou, li tap flannen enpi li tap chache bèl zèb vèt.",
+        "es": "El Hipopótamo estaba allí también, paseando y comiendo un poco de césped verde y rico."
+      },
+      {
+        "ht": "Ipo pat wè Lapen, li mache sou pye li san’l pa konnen. Lapen tonbe rele “Anmwey Ipo ! Ou pa wè ou fèk pile’m?”",
+        "es": "El Hipopótamo no vio que el Conejo estaba allí y le pisó su patita sin querer. El Conejo empezó a gritarle, “¡Oye Hipopótamo! ¿Acaso no puedes ver que estás pisando mi patita?”"
+      },
+      {
+        "ht": "Ipo eskize li bò kote Lapen. Li di li “Eskize’m, mwen pate wè ou, tanpri padonnen’m!” Men, Lapen pa koute’l, li tonbe rele pifò “Ou fè eskprè! Yon jou, wap wè! Wap peye sa a!”",
+        "es": "El Hipopótamo le pidió disculpas al Conejo: “Lo siento mucho. No te vi. ¡Por favor, perdóname!” Pero el Conejo no le creyó y le dijo, “¡Lo hiciste a propósito! ¡Ya verás que algún día pagarás por esto!”"
+      },
+      {
+        "ht": "Lapen ale jwenn dife pou’l di li, “Ale mete dife sou Ipo lè li soti nan dlo a pou’l manje zèb … Li pile’m!” Dife an reponn, “Pa gen pwoblèm Lapen, zanmi mwen, mwen pral fè sa ou mande mwen la a”.",
+        "es": "El Conejo fue a buscar al Fuego y le dijo, “Anda y quema al Hipopótamo cuando salga del agua y vaya a comer césped. ¡Me pisó!” El Fuego le respondió, “No hay problema, amigo Conejo. Haré exactamente lo que me pides.”"
+      },
+      {
+        "ht": "Yon lòt lè, Ipo tap manje zèb byen lwen bò rivyè a. Dife pete Woush!” enpi gwo flanm kòmanse boule plim Ipo.",
+        "es": "Más tarde, El Hipopótamo estaba comiendo césped lejos del río cuando, “¡Zuum!” El Fuego estalló en llamas y las llamas le quemaron el pelo al Hipopótamo."
+      },
+      {
+        "ht": "Ipo pete kriye, li kouri nan dlo a. Tout plim sou tèt li te gen tan boule. Ipo kontinye kriye, “tout plim tèt mwen boule nan dife a! Bèl plim sa yo ‘!”",
+        "es": "El Hipopótamo comenzó a llorar y corrió directo al agua. Todo su pelo se quemó. El Hipopótamo siguió llorando, “¡Mi pelo se quemó en el fuego! ¡Mi pelo no está! ¡Mi hermoso pelo!”"
+      },
+      {
+        "ht": "Ipo pete kriye, li kouri nan dlo a. Tout plim sou tèt li te gen tan boule. Ipo kontinye kriye, “tout plim tèt mwen boule nan dife a! Bèl plim sa yo ‘!”",
+        "es": "El Conejo estaba muy feliz de que el pelo del Hipopótamo se había quemado. Y hasta el día de hoy, por miedo al fuego, el Hipopótamo nunca se aleja del agua."
+      }
+    ]
+  },
+  {
+    "id": "0112",
+    "titulo": "Kò mwen",
+    "tituloEs": "Mi cuerpo",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0112/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0112/",
+    "segmentos": [
+      {
+        "ht": "Mwen kapab kouri avèk li.",
+        "es": "Con él puedo correr."
+      },
+      {
+        "ht": "Mwen kapab sote avèk li.",
+        "es": "Con él puedo brincar."
+      },
+      {
+        "ht": "Mwen kapab danse avèk li.",
+        "es": "Con él puedo bailar."
+      },
+      {
+        "ht": "Mwen kapab naje avèk li.",
+        "es": "Con él puedo nadar."
+      },
+      {
+        "ht": "Mwen kapab sote kòd avèk li.",
+        "es": "Con él puedo saltar."
+      },
+      {
+        "ht": "Mwen kapab choute avèk li.",
+        "es": "Con él puedo patear."
+      },
+      {
+        "ht": "Mwen kapab chape avèk li.",
+        "es": "Con él puedo escapar."
+      },
+      {
+        "ht": "Men mwen pap janm kapap vole avèk li.",
+        "es": "Pero con él, nunca podré volar."
+      }
+    ]
+  },
+  {
+    "id": "0120",
+    "titulo": "Cheve",
+    "tituloEs": "El pelo",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0120/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0120/",
+    "segmentos": [
+      {
+        "ht": "Tili gen cheve kout.",
+        "es": "Thuli tiene el pelo corto."
+      },
+      {
+        "ht": "Ana gen cheve long.",
+        "es": "Anna tiene el pelo largo."
+      },
+      {
+        "ht": "Cheve Kati pi long.",
+        "es": "Cathy es la que tiene el pelo más largo."
+      },
+      {
+        "ht": "Zama trese cheve’l.",
+        "es": "Zama se ha trenzado el pelo."
+      },
+      {
+        "ht": "Baba gen bab.",
+        "es": "Baba tiene barba."
+      },
+      {
+        "ht": "Zanèl penyen cheve’l.",
+        "es": "Zanele se ha peinado el pelo."
+      },
+      {
+        "ht": "Tabo koupe cheve’l.",
+        "es": "Thabo se ha cortado el pelo."
+      },
+      {
+        "ht": "Tenba raze tèt li.",
+        "es": "Themba se ha rapado el pelo."
+      }
+    ]
+  },
+  {
+    "id": "0129",
+    "titulo": "Yon ti frè parese",
+    "tituloEs": "El hermanito perezoso",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0129/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0129/",
+    "segmentos": [
+      {
+        "ht": "Mwen leve enpi mwen fè dife.",
+        "es": "Despierto y enciendo el fuego."
+      },
+      {
+        "ht": "Mwen bouyi dlo.",
+        "es": "Hiervo un poco de agua."
+      },
+      {
+        "ht": "Mwen fann bwadife.",
+        "es": "Corto la leña."
+      },
+      {
+        "ht": "Mwen brase mamit la.",
+        "es": "Revuelvo la olla."
+      },
+      {
+        "ht": "Mwen bale atè a.",
+        "es": "Barro el piso."
+      },
+      {
+        "ht": "Men lave asyèt yo.",
+        "es": "Lavo los platos."
+      },
+      {
+        "ht": "Poukisa map travay di konsa....lè ti frè’m nan se jwe lap jwe?",
+        "es": "¿Por qué trabajo tan duro… …mientras mi hermano está ocupado jugando?"
+      }
+    ]
+  },
+  {
+    "id": "0141",
+    "titulo": "Poul ak Annipye",
+    "tituloEs": "El Pollo y el Milpiés",
+    "nivel": 3,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0141/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0141/",
+    "segmentos": [
+      {
+        "ht": "Poul ak Annipye te zanmi. Men yo te toujou nan konpetisyon yonn ak lòt. Yon jou yo deside jwe foutbòl pou wè kiyès ki pifò.",
+        "es": "Pollo y Milpiés eran amigos. Pero siempre competían. Un día, decidieron jugar fútbol para ver quién jugaba mejor."
+      },
+      {
+        "ht": "Yo ale sou teren foutbòl enpi yo kòmanse jwe. Poul la te rapid men Annipye te pi rapid toujou. Poul la choute boul la byen lwen men Annipye choute’l pi lwen toujou. Poul la kòmanse fache.",
+        "es": "Fueron a la cancha de fútbol y comenzaron a jugar. El Pollo era rápido, pero Milpiés era mucho más rápido. El Pollo pateaba lejos el balón, pero Milpiés lo pateaba aún más lejos. Así que el Pollo se empezó a enojar."
+      },
+      {
+        "ht": "Yo deside ale nan penalite. Annipye te gadyen bi nan pwemye tou a. Poul la bay yon gòl. Koulyè a se Poul la ki gadyen bi an.",
+        "es": "Decidieron hacer un lanzamiento de penal. Milpiés fue el primer portero y el Pollo anotó sólo un gol. Enseguida le tocó al Pollo ser portero."
+      },
+      {
+        "ht": "Annipye choute boul la enpi li bay yon gòl. Annipye bay yon lòt gòl. Annipye kouri ak boul la nan pye’l enpi li bay yon twazyèm gòl. Nan total, Annipye bay senk gòl.",
+        "es": "Milpiés lanzó el balón y anotó un gol. Milpiés dribló el balón y anotó. Milpiés cabeceó el balón y anotó. Milpiés anotó cinco goles."
+      },
+      {
+        "ht": "Poul la tèlman fache ke li pèdi. Li pa renmen pèdi. Annipye tonbe ri lè li wè zanmi li an fache.",
+        "es": "El Pollo estaba furioso por haber perdido. Era un mal perdedor. Milpiés se empezó a reír porque su amigo estaba armando un escándalo."
+      },
+      {
+        "ht": "Poul lan te si tèlman fache ke li louvri bèk li li pou’l vale Annipye.",
+        "es": "El Pollo estaba tan enfadado que con su pico abierto se tragó a Milpiés."
+      },
+      {
+        "ht": "Pandan poul lan tap mache pou ale lakay li, li kwaze ak manman Annipye. Manman an mande li “Ou pa wè pitit mwen an?” Poul la pa reponn anyen. Manman Annipye vin sispèk yon bagay.",
+        "es": "Camino a casa, el Pollo se encontró con la Mamá Milpiés. Y ella le preguntó, “¿Has visto a mi hijo?” El Pollo no le respondió nada y Mamá Milpiés se empezó a preocupar."
+      },
+      {
+        "ht": "Se konsa, manman Annipye tande yon ti vwa kap di. “Ede’m manman!”. Manman an vire tèt li tout bò pou’l tande kote vwa sa a te sòti. Vwa a te soti anndan vant poul la.",
+        "es": "Luego, Mamá Milpiés escuchó una pequeña vocecita. “¡Ayúdame, mamá!” gritaba la vocecita. Mamá Milpiés miró para todos lados tratando de escuchar atentamente. La vocecita venía del interior del Pollo."
+      },
+      {
+        "ht": "Manman Annipye rele byen fò, “Sèvi ak pouvwa ou genyen an pitit mwen!”. Annipye yo gen pouvwa degaje move lodè ak move gou. Poul la kòmanse pa santi’l byen.",
+        "es": "Mamá Milpiés gritó, “¡Usa tus poderes especiales, hijo mío!” Los Milpiés pueden producir un olor muy desagradable con un sabor terrible. El Pollo comenzó a sentirse enfermo."
+      },
+      {
+        "ht": "Li kòmanse rann gaz, li krache, li ekstènye enpi li touse…touse…touse. Annipye te gen move gou!",
+        "es": "El Pollo eructó. Luego, tragaba y escupía. Después, estornudaba y tosía. ¡El Milpiés era asqueroso!"
+      },
+      {
+        "ht": "Poul la tèlman touse ke Annipye sòti nan vant li. Manman Annipye ak pitit li ranpe al kache anba yon pyebwa.",
+        "es": "El Pollo tosió y tosió hasta que Milpiés logró salir de su estómago. Mamá Milpiés y su hijo treparon un árbol muy rápidamente para esconderse del Pollo."
+      },
+      {
+        "ht": "Depi jou sa a, poul ak annipye enmi.",
+        "es": "Desde ese instante, los pollos y los milpiés fueron enemigos."
+      }
+    ]
+  },
+  {
+    "id": "0156",
+    "titulo": "Yon kwokodil ki te grangou",
+    "tituloEs": "El cocodrilo hambriento",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0156/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0156/",
+    "segmentos": [
+      {
+        "ht": "Yon lè yon kwokodil te grangou anpil.",
+        "es": "Había una vez un cocodrilo que tenía mucha hambre."
+      },
+      {
+        "ht": "Li chache manje san’l pa fè bwi, tou dousman. Enpi ….",
+        "es": "Buscaba comida muy lenta y silenciosamente. Hasta que…"
+      },
+      {
+        "ht": "POW!!! Kwokodil lan atake!",
+        "es": "¡¡¡Zas!!! ¡El cocodrilo ataca!"
+      },
+      {
+        "ht": "Apre sa a, li pat grangou ankò enpi li kontan.",
+        "es": "Después de eso, ya no tiene hambre, y está muy contento."
+      },
+      {
+        "ht": "Jis li grangou yon lòt fwa ankò.",
+        "es": "Hasta que le vuelve a dar hambre otra vez."
+      }
+    ]
+  },
+  {
+    "id": "0158",
+    "titulo": "Poul ak Eg",
+    "tituloEs": "La Gallina y el Águila",
+    "nivel": 3,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0158/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0158/",
+    "segmentos": [
+      {
+        "ht": "Nan tan lontan, yon poul ak yon èg te zanmi. Yo te viv anpè ak tout lòt zwazo yo. Men, yo pa te kapab vole.",
+        "es": "Hace mucho tiempo, la Gallina y el Águila eran amigos. Vivían en paz con todas las otras aves. Ninguna de ellas podía volar."
+      },
+      {
+        "ht": "Yon jou, peyi a te nan grangou. Eg lan te blije mache byen lwen pou’l jwenn manje. Lè li tounen li te bouke anpil”. Li di tèt li: « Fòke mwen jwenn yon lòt jan pou’m vwayaje!”.",
+        "es": "Un día, la hambruna llegó y el Águila tuvo que caminar muy lejos en búsqueda de comida. Regresó muy cansada. “¡Tiene que haber una forma más fácil de viajar!” dijo el Águila."
+      },
+      {
+        "ht": "Apre yon bon nwit dòmi, poul la leve ak yon bèl lide. Li rasanble tout plim zanmi zwazo yo ki te tonbe atè : “Annou koud tout ansanm sou nou… petèt na kapab vwayaje pi fasil.”",
+        "es": "Luego de un sueño reparador, la Gallina tuvo una idea brillante. Empezó a recoger las plumas que sus amigas aves soltaban. “Cosamos las plumas por encima de las nuestras”, dijo. “Quizás así sea más fácil viajar.”"
+      },
+      {
+        "ht": "Eg lan te sèl ki te gen zegwi, se konsa li kòmanse koud an premye. Li fè de bèl zèl pou tèt li enpi li vole byen wo sou poul la. Poul la prete zegwi a men li vin fatige koud. Li depoze zegwi a nan yon bol enpi lale nan kizin nan pou’l fè manje pou pitit li yo.",
+        "es": "El Águila era la única que tenía una aguja en la aldea, así que ella empezó a coser primero. Se hizo un par de alas muy lindas y voló mucho más alto que la Gallina. La Gallina se consiguió la aguja para empezar a coser sus alas, pero se cansó antes de terminarlas. Dejó la aguja encima del armario y se fue a preparar algo de comida para sus hijos."
+      },
+      {
+        "ht": "Lòt zwazo yo te wè Eg tap vole byen wo. Yo mande poul la si yo te ka prete zegwi a tou pou yo fè zèl pou tèt yo. Se konsa tout zwazo kòmanse vole nan syèl la.",
+        "es": "Pero las otras aves habían visto al Águila irse volando lejos, así que le pidieron a la Gallina que les prestara la aguja para hacerse alas también. Y pronto, el cielo estaba cubierto de muchas aves volando."
+      },
+      {
+        "ht": "Lè dènye zwazo a remèt zegwi la, Poul lan pate la. Timoun yo pran zegwi a, yo kòmanse jwe ak li. Lè yo bouke yo kite’l sou sab la.",
+        "es": "Cuando la última ave fue a entregar la aguja prestada, la Gallina no estaba en casa. Así que los hijos de la Gallina tomaron la aguja para jugar con ella. Cuando se cansaron de jugar, dejaron la aguja en la tierra."
+      },
+      {
+        "ht": "Pita nan apremidi, Eg la tounen. Li mande kote zegwi la pou’l ranje kèk plim ki te dekole nan vwayaj li. Poul la gade nan bol la, li gade nan kizin nan, li gade nan lakou a men li pa janm jwenn zegwi a.",
+        "es": "Más tarde, el Águila volvió. Pidió la aguja para coser algunas plumas que se le habían caído durante su viaje. La Gallina fue a buscarla en el armario y no estaba. Buscó en la cocina y en el patio, pero la aguja no aparecía. No estaba en ningún lugar."
+      },
+      {
+        "ht": "“Tanpri ban mwen yon lòt jou ankò” poul la mande. “Apre sa a, wap kapab ranje zèl ou pou’w ale chache manje ankò.” “Map ba ou yon grenn jou sèlman” Eg la reponn. “Si ou pa ka jwenn zegwi a ou pral blije ban mwen yonn nan ti poul ou yo kòm pèman.”",
+        "es": "“Sólo dame un día para encontrar la aguja,” la Gallina le rogó al Águila. “Para que puedas arreglar tus alas y volar en búsqueda de comida.” “Un solo día,” dijo el Águila. “Si no encuentras la aguja en un día, tendrás que regalarme uno de tus pollitos como pago.”"
+      },
+      {
+        "ht": "Lè Eg la vini nan lòt jou ki vini, li jwenn Poul la ap grate sab la men zegwi pate la. Se konsa ke Eg lan vole byen ba pou li pran yonn nan ti poul yo. Li pati avèk ti poul lan. Depi jou sa a, chak fwa Eg parèt li wè poul lan af fouye sab lan pou’l chache zegwi a.",
+        "es": "Cuando el Águila regresó al día siguiente, vio que la Gallina estaba arañando la tierra, pero la aguja no estaba. Así que el Águila voló muy rápido hacia dónde estaban los pollitos, agarró a uno de ellos y se lo llevó lejos. Después de eso, el Águila siempre encontraba a la Gallina arañando la tierra con sus patas para encontrar la aguja."
+      },
+      {
+        "ht": "Lè poul lan wè lombraj zèl Eg la ap tonbe li kouri pran timoun li yo “soti sou teren vid sa a” Timoun yo reponn: “Nou konnen! N’ap kouri.”",
+        "es": "Y cuando aparece la sombra de las alas del Águila en la tierra, la Gallina les ordena a sus pollitos: “Aléjense del suelo seco y descubierto.” Y ellos le contestan: “No somos tontos, saldremos corriendo.”"
+      }
+    ]
+  },
+  {
+    "id": "0201",
+    "titulo": "Timoun bourik la",
+    "tituloEs": "El Niño Burro",
+    "nivel": 3,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0201/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0201/",
+    "segmentos": [
+      {
+        "ht": "Se te yon ti fi ki te wè an premye yon fòm dwòl nan distans lan.",
+        "es": "Una niña pequeña fue la primera en ver una figura misteriosa a lo lejos."
+      },
+      {
+        "ht": "Plis fòm nan tap vanse plis li wè ke se yon madanm gwo vant anpil kap mache sou yo.",
+        "es": "Mientras la figura se acercaba, la niña se dio cuenta que era una mujer embarazada a punto de dar a luz."
+      },
+      {
+        "ht": "Ti fi a te timid men li te brav tou, li proche pi pre madanm nan. Moun yo ki te avèk li deside “Fòke nou kenbe li avèk nou,” Nou pral mete’l ak pitit li nan sekirite.”",
+        "es": "Tímida pero valientemente, la pequeña niña se acercó a la mujer. “Tenemos que cuidar de ella,” decidieron los familiares de la niña pequeña. “Ella y su bebé estarán a salvo con nosotros”."
+      },
+      {
+        "ht": "Madanm nan kòmanse gen tranche. “Pouse!” “Pote kouvèti!” “Dlo!” “Pouuuuusssssee !!!”",
+        "es": "Al poco tiempo, el bebé empezó a nacer. “¡Puja!” “¡Traigan mantas!” “¡Agua!” “¡¡¡Puuuuujjjjjaaa!!!”"
+      },
+      {
+        "ht": "Men lè yo wè ti bebe a, yo tout sezi “Yon bourik?”",
+        "es": "Pero cuando vieron al recién nacido, todos se llevaron una gran sorpresa. “¡¿Un burro?!”"
+      },
+      {
+        "ht": "Moun yo kòmanse diskite. “Nou te di nou tap kenbe manman an ak tout pitit li an sekirite kidonk se sa nou pral fè”. Men kèk lòt moun di “Bagay sa a pral bannou devenn!”",
+        "es": "Todos empezaron a discutir. “Prometimos que cuidaríamos de la madre y su hijo, y eso es lo que haremos,” decían algunos. “¡Pero ellos nos van a traer mala suerte!” decían otros."
+      },
+      {
+        "ht": "Se konsa, manman an vin jwenn li pou kont li ankò. Li pate konnen kisa pou’l te fè ak pitit dwòl sa a, kisa pou’l fè ak tèt li.",
+        "es": "Y así fue como la madre volvió a quedar sola otra vez. Se preguntaba qué hacer con este extraño bebé. Se preguntaba qué hacer consigo misma."
+      },
+      {
+        "ht": "Li reyalize finalman ke se pitit li e ke li se manman an.",
+        "es": "Pero finalmente tuvo que aceptar que ese era su bebé y que ella era su madre."
+      },
+      {
+        "ht": "Si pitit la pate grandi sa pa ta yon pwoblèm men pitit lan kòmanse grandi, grandi jis li pa te kapab rete sou do manman’l ankò. Malgre tout sa li fè li pat kapab aji tankou yon moun. Manman an te fatige ak tris toutan. Gen defwa li fè timoun lan travay tankou yon bèt.",
+        "es": "Si el niño se hubiera quedado del mismo tamaño, todo habría sido diferente. Pero el niño burro creció y creció hasta que su madre no pudo cargarlo más en su espalda. Y no importaba cuánto lo intentase, el niño burro no lograba comportarse como un niño humano. Su madre se la pasaba cansada y frustrada. A veces ella le ordenaba hacer trabajo de animales."
+      },
+      {
+        "ht": "Bourik lan kòmanse fache. Li pat ka fè yon pa kita yon pa nago. Yon jou, li te si tèlman fache ke li jete manman’l atè anba kout pye.",
+        "es": "Burro sentía cada vez más confusión y rabia. Que no podía hacer esto, que no podía hacer aquello. Que él no podía ser esto ni aquello. Un día se puso tan furioso que botó a su madre al suelo de una patada."
+      },
+      {
+        "ht": "Bourik la vin wont sa’l fè a enpi li tonbe kouri, kouri, kouri.",
+        "es": "Burro se sintió lleno de vergüenza. Corrió tan rápido y lejos como pudo."
+      },
+      {
+        "ht": "Lannwit tonbe, bourik la pèdi. “Hi han?” li di tou ba nan fè nwa a. “Hi han” li tande vwa li ap repete. Li te pou kont li. Li mete kò li tankou yon boul enpi li tonbe dòmi ajite.",
+        "es": "Cuando dejó de correr, ya era de noche y Burro estaba perdido. “¿Hiaaa?” susurró en la oscuridad. “¿Hiaaa?” le respondió su eco. Estaba solo. Se acurrucó y cayó rendido en un sueño profundo e intranquilo."
+      },
+      {
+        "ht": "Lè li leve li wè yon mesye dwòl kap fikse li. Li gade granmoun nan nan je enpi li kòmanse santi yon ti espwa.",
+        "es": "Cuando Burro despertó, había un extraño anciano mirándolo. Burro le miró a los ojos y comenzó a sentir una chispa de esperanza."
+      },
+      {
+        "ht": "Bourik lan ale rete kay granmoun nan ki aprann li plizyè jan pou li degaje’l viv. Bourik lan koute, li aprann e li fè sa granmoun nan di li. Yonn ede lòt enpi yo ri ansanm.",
+        "es": "Burro se fue a vivir con el anciano, quien le enseñó muchas formas diferentes de sobrevivir. Burro escuchaba y aprendía, y lo mismo hacía el anciano. Se ayudaban y reían juntos."
+      },
+      {
+        "ht": "Yon maten, granmoun nan mande bourik la pou li pote’l sou tèt yon mòn.",
+        "es": "Una mañana, el anciano le pidió a Burro que lo llevara hasta la cima de una montaña."
+      },
+      {
+        "ht": "Granmoun lan ak bourik lan tonbe dòmi sou tèt mòn sa a. Bourik lan reve ke manman’l te malad, li tap rele li. Lè li leve …",
+        "es": "Se quedaron dormidos más arriba de las nubes. Burro soñó que su madre estaba enferma y que lo llamaba. Y cuando despertó…"
+      },
+      {
+        "ht": "… nyaj yo te disparèt ansanm ak granmoun lan.",
+        "es": "…las nubes habían desaparecido junto con su amigo, el anciano."
+      },
+      {
+        "ht": "Kidonk, Bourik la te konnen sa pou’l te fè.",
+        "es": "Burro finalmente se dio cuenta de lo que tenía que hacer."
+      },
+      {
+        "ht": "Li jwenn manman li kite pou kont li ak anpil lapenn. Yo gade yon lòt nan grenn je pandan yon bon moman enpi manman louvri de bra li pou’l akeyi pitit li.",
+        "es": "Burro encontró a su madre, sola y llorando por su hijo perdido. Se quedaron mirándose a los ojos por largo tiempo. Luego se abrazaron muy apretadamente."
+      },
+      {
+        "ht": "Bourik la ak manman’l grandi ansanm enpi piti piti lòt moun nan fanmi an vin kòmanse viv nan zòn la.",
+        "es": "El hijo burro y su madre ya llevan tiempo creciendo juntos y han aprendido a convivir. Lentamente, otras familias se han instalado a vivir cerca de ellos."
+      }
+    ]
+  },
+  {
+    "id": "0210",
+    "titulo": "Tingi ak bèf yo",
+    "tituloEs": "Tingi y las vacas",
+    "nivel": 2,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0210/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0210/",
+    "segmentos": [
+      {
+        "ht": "Tingi te rete kay grann li.",
+        "es": "Tingi vivía con su abuela."
+      },
+      {
+        "ht": "Li te okipe bèf yo ak grann li.",
+        "es": "Cuidaba a las vacas con ella."
+      },
+      {
+        "ht": "Yon jou sòlda parèt.",
+        "es": "Un día llegaron los soldados."
+      },
+      {
+        "ht": "Yo pran tout bèf yo.",
+        "es": "Se llevaron las vacas."
+      },
+      {
+        "ht": "Tingi ak grann li sove al kache.",
+        "es": "Tingi y su abuela huyeron para esconderse."
+      },
+      {
+        "ht": "Yo rete kache nan bwa yo jis lannwit rive.",
+        "es": "Se escondieron en el monte hasta la noche."
+      },
+      {
+        "ht": "Enpi sòlda yo tounen.",
+        "es": "Pero los soldados regresaron."
+      },
+      {
+        "ht": "Grann Tingi kouvri kò yo ak fèy bwa.",
+        "es": "La abuela tomó a Tingi y lo escondió debajo de las hojas."
+      },
+      {
+        "ht": "Yonn nan sòlda yo mache sou Tingi, men Tingi pa rele.",
+        "es": "Uno de los soldados puso su pie directamente sobre él, pero Tingi se quedó en silencio."
+      },
+      {
+        "ht": "Lè danje a fini Tingi ak grann li leve.",
+        "es": "Cuando estuvieron a salvo, Tingi y su abuela salieron."
+      },
+      {
+        "ht": "Yo tounen lakay yo san yo pa fè bwi.",
+        "es": "Se escabulleron a casa muy tranquilamente."
+      }
+    ]
+  },
+  {
+    "id": "0231",
+    "titulo": "Liv meteo",
+    "tituloEs": "El libro del clima",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0231/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0231/",
+    "segmentos": [
+      {
+        "ht": "Tan an sèk.",
+        "es": "Está seco."
+      },
+      {
+        "ht": "Soley la cho.",
+        "es": "El sol es caliente."
+      },
+      {
+        "ht": "Gen van.",
+        "es": "Hay viento."
+      },
+      {
+        "ht": "Gen nywaj.",
+        "es": "Está nublado."
+      },
+      {
+        "ht": "Fè frèt.",
+        "es": "Hace frío."
+      },
+      {
+        "ht": "Gen lapli.",
+        "es": "Está lloviendo."
+      },
+      {
+        "ht": "Gen loraj.",
+        "es": "Hay truenos."
+      },
+      {
+        "ht": "Mwen wè yon lakansyèl.",
+        "es": "Veo un arco iris."
+      }
+    ]
+  },
+  {
+    "id": "0234",
+    "titulo": "Andiswa gwo jwèz foutbòl",
+    "tituloEs": "Andiswa, la estrella de fútbol",
+    "nivel": 2,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0234/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0234/",
+    "segmentos": [
+      {
+        "ht": "Andiswa tap gade ti gason yo ap jwe foutbòl. Li te anvi jwe avèk yo tou. Li mande yo si li te kapab pratike ak yo.",
+        "es": "Andiswa miraba a los chicos jugar fútbol. Ella deseaba ser parte del equipo. Le preguntó al entrenador si podía entrenar con ellos."
+      },
+      {
+        "ht": "Antrenè a mete de men nan ren li pou’l di ” Nan lekòl sa a, se sèl ti gason ki jwe foutbòl”.",
+        "es": "El entrenador puso sus manos en la cintura y le respondió: “En esta escuela, sólo los chicos pueden jugar al fútbol”."
+      },
+      {
+        "ht": "Ti gason yo voye’l al jwe nètbòl. Yo di li ke jwèt nètbòl se pou fi tandiske foutbòl se pou ti gason. Andiswa pate kontan.",
+        "es": "Los chicos le dijeron que fuera a jugar nétbol. Le dijeron que el nétbol es para chicas y el fútbol para chicos. Andiswa se enojó."
+      },
+      {
+        "ht": "Lekòl lan te gen yon gwo match foutbòl jou kap vini an. Antrenè a te gen enkyetid paske pibon jwè li te malad, li pa te kapab jwe.",
+        "es": "Al día siguiente, la escuela tenía un partido de fútbol muy importante. El entrenador estaba preocupado porque su mejor jugador se enfermó y no podía jugar."
+      },
+      {
+        "ht": "Andiswa kouri al jwenn antrenè an pou li mande’l si te kapab ranplase jwè sa a. Antrenè a pat konn sa pou’l te fè. Enpi, li deside kite Andiswa jwe.",
+        "es": "Andiswa corrió hacia el entrenador y le suplicó que la dejara jugar. El entrenador no estaba seguro de qué hacer. Pero decidió que Andiswa se uniera al equipo."
+      },
+      {
+        "ht": "Match lan te difisil anpil. Nan mitan match lan okenn moun poko te bay yon gòl.",
+        "es": "Fue un juego difícil. Para el medio tiempo, ninguno de los equipos había anotado un gol."
+      },
+      {
+        "ht": "Nan dezyèm mitan an, yon ti gason pase boul lan bay Andiswa. Andiswa ranmase bou lanak pye li, li tonbe kouri ak boul lan nan direksyhon filè an. Li shoute boul la … li bay yon gòl.",
+        "es": "Durante la segunda mitad del partido, uno de los chicos le dio un pase a Andiswa. Ella corrió rápidamente hacia la portería contraria. Pateó el balón con fuerza y anotó un gol."
+      },
+      {
+        "ht": "Foul lan leve kanpe pou’l bat bravo. Depi lè sa a, ti fi kapab jwe foutbòl nan lekòl sa a.",
+        "es": "El público gritaba de alegría. Desde ese día, a las chicas se les permitió jugar fútbol en la escuela."
+      }
+    ]
+  },
+  {
+    "id": "0243",
+    "titulo": "Vakans kay grann nou",
+    "tituloEs": "De vacaciones con la abuela",
+    "nivel": 4,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0243/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0243/",
+    "segmentos": [
+      {
+        "ht": "Odongo ak Apiyo te rete lavil ak papa yo. Yo tap tann vakans yo ak anpil enpasyans. Se pa sèlman paske lekòl la te fèmen men tou paske yo te anvi wè grann yo. Grann yo te rete nan yon ti vilaj pechè akote yon gwo basen.",
+        "es": "Odongo y Apiyo vivían en la ciudad con su padre. Esperaban con ansias sus vacaciones. No sólo porque cerraban la escuela, sino porque iban a visitar a su abuela. Ella vivía en una aldea de pescadores cerca de un gran lago."
+      },
+      {
+        "ht": "Odongo ak Apiyo te kontan yo ta pral wè grann yo ankò. Jou lannwit sa sa yo fè malèt yo enpi yo pare pou vwayaj byen long sa a. Yo pate kapab dòmi, yo chita pale tout lannwit lan sou vakans yo.",
+        "es": "Odongo y Apiyo estaban emocionados con la idea de visitar de nuevo a su abuela. La noche antes del viaje, empacaron sus cosas y dejaron todo listo para irse a la aldea. No pudieron dormir y se quedaron toda la noche hablando sobre sus vacaciones."
+      },
+      {
+        "ht": "Byen bonè nan maten, yale nan machin papa yo jis nan vilaj kote grann yo rete. Sou wout la yo travèse mòn ak plantasyon enpi yo kwaze bèt sovaj. Yo konte kantite machin yo wè. Yo chante.",
+        "es": "Temprano a la mañana siguiente, salieron de viaje a la aldea en el auto de su padre. Pasaron por las montañas y vieron animales salvajes y plantaciones de té. Contaron autos y cantaron canciones."
+      },
+      {
+        "ht": "Apre yon titan, timoun yo bouke, yo tonbe dòmi.",
+        "es": "Al poco tiempo, se cansaron y se quedaron dormidos."
+      },
+      {
+        "ht": "Lè yo rive papa a reveye Odongo ak Apiyo. Yo jwenn grann yo, Nyar-Kanyada, kouche atè lap dòmi sou yon nat anba yon pyebwa. Nyar-Kanyada vle di “pitit fi pèp Kanyada la » nan lang Luo. Nyar-Kanyada se te yon bèl fanm ak yon bèl karaktè.",
+        "es": "El padre despertó a Odongo y Apiyo cuando llegaron a la aldea. Se encontraron a su abuela, Nyar-Kanyada, descansando con una manta debajo de un árbol. Nyar-Kanyada significa “hija de la gente de Kanyada” en el idioma Luo. La abuela era una mujer fuerte y hermosa."
+      },
+      {
+        "ht": "Nyar-Kanyada akeyi yo lakay li enpi li danse ak chante ak yo tèlman kè’l te kontan. Pitit pitit li yo te kontan bay li kado yo te pote pou li. Odongo di “Louvri pa’m anvan ». Apiyo di « Non, se pa’m pou’w louvri anvan!».",
+        "es": "Nyar-Kanyada les dio la bienvenida a su casa, bailando y cantando de alegría. Sus nietos estaban ansiosos por entregarle los regalos que le trajeron de la ciudad. “Abre mi regalo primero,” dijo Odongo. “¡No, mi regalo primero!” dijo Apiyo."
+      },
+      {
+        "ht": "Lè li fin louvri kado yo, Nyar-Kanyada beni pitit pitit li yo selon lakoutim.",
+        "es": "Después de abrir los regalos, Nyar-Kanyada le dio la bendición tradicional a sus nietos."
+      },
+      {
+        "ht": "Apre sa a, Odongo ak Apiyo al jwe deyò. Yo kouri dèyè papiyon ak zwazo.",
+        "es": "Después, Odongo y Apiyo salieron a jugar. Persiguieron mariposas y aves."
+      },
+      {
+        "ht": "Yo grenpe pyebwa, yo benyen nan dlo basen an.",
+        "es": "Escalaron árboles y chapotearon en el lago."
+      },
+      {
+        "ht": "Lè kòmanse fè nwa, yo tounen lakay grann yo pou yo manje men yo tonbe dòmi anvan yo fin manje!",
+        "es": "Cuando oscureció, volvieron a la casa a cenar. ¡Se estaban quedando dormidos antes de terminar de comer!"
+      },
+      {
+        "ht": "Demen, papa a tounen lavil li kite timoun you ak grann yo.",
+        "es": "Al día siguiente, el padre de los niños se fue de vuelta a la ciudad y los dejó con Nyar-Kanyada."
+      },
+      {
+        "ht": "Odongo ak Apiyo ede grann yo ak kèk ti travay nan kay la. Yo chache dlo ak bwa pou fè dife. Yo pran ze poul yo ak ti pwa vèt nan jaden a.",
+        "es": "Odongo y Apiyo ayudaron a su abuela con las tareas del hogar. Fueron a buscar agua y leña. Recolectaron los huevos de las gallinas y recolectaron verduras de la huerta."
+      },
+      {
+        "ht": "Nyar-Kanyada aprann timoun yo prepare ugali pou manje ak bouyon. Li montre yo tou kijan pou yo fè diri kokoye pou manje ak pwason boukannen.",
+        "es": "Nyar-Kanyada le enseñó a sus nietos a hacer ugali para comer con estofado. Les enseñó a hacer arroz con coco para comerlo con pescado asado."
+      },
+      {
+        "ht": "Yon maten, Odongo mennen bèf grann li nan savann pou yo manje. Yo kwaze ak vwazen an ki se yon abitan. Vwazen an te fache anpil ak Odongo. Li menase’l lap kenbe bèf yo paske yo tap manje jaden li yo. Depi jou sa a, ti gason an pa janm mennen bèf yo la ankò pou li pa gen pwoblèm.",
+        "es": "Una mañana, Odongo llevó a las vacas de su abuela a pastar. Pero las vacas entraron en la granja de un vecino. El vecino se enojó con Odongo. Lo amenazó con quedarse con las vacas por haberse comido sus cultivos. Después de ese día, Odongo se aseguró que las vacas no se volvieran a meter en problemas."
+      },
+      {
+        "ht": "Yon lòt jou, timoun yo ale nan mache ak Nyar-Kanyada. Li te gen yon bak pou’l vann legim, sik ak savon. Apiyo te renmen bay kliyan yo pri machandiz yo. Odongo te renmen mete yo nan sache.",
+        "es": "Otro día, los niños fueron al mercado con Nyar-Kanyada. Ella tenía un puesto para vender vegetales, azúcar y jabón. A Apiyo le gustaba decirle a los clientes cuánto costaban los productos. Odongo empacaba los productos para los clientes."
+      },
+      {
+        "ht": "Nan fen jounen an yo bwè te chai ansanm. Yo ede grann nan konte lajan li fè pou lajounen an.",
+        "es": "Al final del día, tomaban té juntos. Le ayudaban a su abuela a contar cuánto dinero había ganado."
+      },
+      {
+        "ht": "Men, fen vakans ap vini. Fòke timoun yo tounen lavil la. Nyar-Kanyada bay Odongo yon kap ak Apiyo yon chanday. Li mete manje nan valiz yo pou vwayaj la.",
+        "es": "Pero las vacaciones se terminaron muy rápido y los niños tuvieron que regresar a la ciudad. Nyar-Kanyada le regaló una gorra a Odongo y un chaleco a Apiyo. Luego les empacó comida para su viaje de vuelta a casa."
+      },
+      {
+        "ht": "Lè papa yo vin chache yo, yo pa te vle ale. Timoun yo mande pou Nyar-Kanyada vini abite lavil ak yo. Men, Nyar-Kanyada souri, li di yo “Mwen twò granmoun kounyè a pou’m ale lavil. Map tann nou isit nan vilaj mwen.”",
+        "es": "Cuando su padre vino a recogerlos, no querían irse. Los niños le suplicaron a Nyar-Kanyada que se fuera con ellos a la ciudad. Ella sonrió y les dijo: “Estoy muy vieja para la ciudad. Estaré esperándolos cuando vuelvan a mi aldea otra vez.”"
+      },
+      {
+        "ht": "Odongo ak Apiyo bo grann yo byen fò pou di orevwa.",
+        "es": "Odongo y Apiyo le dieron un abrazo muy apretado y le dijeron adiós."
+      },
+      {
+        "ht": "Lè Odongo ak Apiyo tounen lekòl la yo rakonte zanmi yo kijan lavi a nan vilaj la ye. Gen kèk nan yo ki kwè ke lavil la bon tou. Gen lòt ki santi ke vilaj la pi bon toujou. Men, pi fò nan yo te dakò ke Odongo ak Apiyo gen yon pakèt granmanman!",
+        "es": "Cuando Odongo y Apiyo volvieron a la escuela, le hablaron a sus amigos acerca de la vida en la aldea. Algunos niños opinaron que la vida en la ciudad era buena. Otros opinaron que la aldea era mejor. ¡Pero lo más importante es que todos opinaron que Odongo y Apiyo tenían una abuela maravillosa!"
+      }
+    ]
+  },
+  {
+    "id": "0262",
+    "titulo": "Magozwe",
+    "tituloEs": "Magozwe",
+    "nivel": 5,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0262/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0262/",
+    "segmentos": [
+      {
+        "ht": "Nan yon gwo vil Nairobi, yon gwoup ti gason tap dòmi nan lari a. Yo pate gen kay. Yo pran chak jou jan li vini a. Yon maten, ti gason yo tap roule mat yo apre yo te fin dòmi atè nan fè frèt la. Pou yo chofe kò yo yo te limen yon dife ak fatra. Pami gwoup ti gason sa yo te gen yon yo te rele Magozwe. Se li ki te pi piti a.",
+        "es": "En la ajetreada ciudad de Nairobi, lejos de la apacible vida hogareña, vivía un grupo de jóvenes mendigos. Vivían el día a día como si no hubiera futuro. Una mañana, los chicos estaban empacando sus mantas después de dormir en la fría calle. Prendieron una fogata con basura para espantar el frío. Uno de los jóvenes del grupo era Magozwe. Era el más joven."
+      },
+      {
+        "ht": "Lè paran Magozwe mouri, li te gen sèlman senkan. Li tal viv ak tonton li men mesye sa a pat okipe’l menm. Li pat bay Magozwe ase manje. Li fè ti gason an travay di anpil.",
+        "es": "Cuando los padres de Magozwe murieron, él sólo tenía cinco años de edad. Se fue a vivir con su tío. Pero Magozwe no le importaba a ese hombre. No le daba suficiente comida. Y lo hacía trabajar muy duro."
+      },
+      {
+        "ht": "Lè paran Magozwe mouri, li te gen sèlman senkan. Li tal viv ak tonton li men mesye sa a pat okipe’l menm. Li pat bay Magozwe ase manje. Li fè ti gason an travay di anpil.",
+        "es": "Si Magozwe se quejaba o hacía preguntas, su tío le daba una golpiza. Cuando Magozwe le preguntó si podía ir a la escuela, su tío lo golpeó y le dijo, “eres demasiado estúpido para aprender”. Después de tres años de vivir así, Magozwe se escapó de la casa de su tío. Empezó a vivir en la calle."
+      },
+      {
+        "ht": "Lavi nan lari a te difisil anpil paske ti gason yo pase pifò nan tan yo ap chache manje chak jou. Kèk fwa yo arete yo oswa yo bat yo. Lè yo te malad yo pat jwenn moun pou ede yo. Gwoup lan te viv ak ti lajan yo te ba yo kòm charite ak nan vann plastik ak kalite bagay pou resiklaj. Lavi a te pi difisil toujou akòz goumen nan gwoup rival ki te vle kontwole kèk pati nan vil la.",
+        "es": "La vida en la calle era difícil y muchos de los niños tenían dificultades para conseguir comida día a día. Algunas veces los arrestaban, otras veces les daban golpizas. Cuando se enfermaban, no tenían quién los ayudara. El grupo de jóvenes dependía de lo poco que recibían mendigando, de la venta de plásticos y del reciclaje. La vida era aun más difícil por las peleas con grupos rivales que querían tener el control de ciertas partes de la ciudad."
+      },
+      {
+        "ht": "Yon jou pandan ke Magozwe tap chache manje nan poubèl lari a, li jwenn yon vye liv istwa. Li retire salte sou liv la enpi li mete liv la nan valiz li. Chak jou apre sa a li pran ti liv lan pou’l gade foto yo. Li pat konn li.",
+        "es": "Un día, Magozwe estaba escarbando los basureros y encontró un libro de cuentos viejo y destrozado. Le quitó el polvo y lo guardó en su bolsa. Todos los días, sacaba el libro y miraba las ilustraciones. Pero no sabía cómo leer las palabras."
+      },
+      {
+        "ht": "Foto yo te rakonte istwa yon ti gason ki te grandi enpi ki te tounen yon pilòt. Magozwe te konn rete lap reve ke li tou se te yon pilòt. Pafwa, li te kwè ke se istwa li ki liv lan tap rakonte.",
+        "es": "Las ilustraciones contaban la historia de un chico que creció y se convirtió en piloto. Magozwe fantaseaba con ser piloto. A veces, se imaginaba que él era el chico de la historia."
+      },
+      {
+        "ht": "Te fè frèt anpil yon jou men Magozwe rete kanpe sou bò wout la lap mande charite. Yon nonm vin kote li. “Alo, mwen se Toma.” “Mwen travay tou pre isit la, yon kote ou kapab jwenn bagay pou w manje”. Li lonje dwèt li sou yon kay jòn ak twa ble. “Mwen ta vle ke ou ale chache yon ti manje la?” li di li. Magozwe gade mesye a, li gade kay la enpi li reponn “Petèt”. Magozwe kontinye wout li.",
+        "es": "Hacía frío y Magozwe estaba mendigando en la calle. Un hombre se le acercó. “Hola, soy Thomas. Trabajo cerca de aquí, en un lugar donde podemos darte comida,” dijo el hombre. Apuntaba hacia una casa amarilla con techo azul. “Ojalá vayas pronto a buscar comida” le dijo. Magozwe miró al hombre, y después miró la casa. “Quizá”, dijo, y se fue."
+      },
+      {
+        "ht": "Pandan kèk mwa, ti gason yo vin abitye wè Toma nan zònn nan. Li te renmen pale ak moun, sitou ak moun ki viv nan katye an. Toma koute istwa lavi moun yo. Li te serye ak pasyan, li pa janm malelve ni derespektan. Kèk nan ti gason yo te kòmanse ale nan kay jòn ak ble a pou manje nan mitan jounen an.",
+        "es": "Con el paso de los meses, los jóvenes mendigos se acostumbraron a la presencia de Thomas. Él disfrutaba hablar con la gente, especialmente con los mendigos. Thomas escuchaba las historias de sus vidas. Era serio y paciente, y nunca maleducado ni irrespetuoso. Algunos de los chicos empezaron a ir a la casa amarilla y azul a buscar comida al mediodía."
+      },
+      {
+        "ht": "Magozwe te chita sou twotwa a lap gade foto nan liv la lè Toma vin chita bò kote li. “Kisa istwa sa ye?” li mande Magozwe. “Se istwa yon ti gason ki tounen yon pilòt,” Magozwe reponn. “Kijan ti gason sa a rele?” Toma mande “Mwen pa konnen, mwen pa konn li,” Magozwe reponn byen ba.",
+        "es": "Magozwe estaba sentado en la calle mirando su libro cuando Thomas vino y se sentó a su lado. “¿De qué trata la historia?” preguntó Thomas. “Trata sobre un chico que se convierte en piloto,” respondió Magozwe. “¿Cómo se llama el niño?” preguntó Thomas. “No sé porque no sé leer,” dijo Magozwe en voz baja."
+      },
+      {
+        "ht": "Magozwe kòmanse rakonte pwòp istwa li bay Toma. Li pale de tonton li, li rakonte poukisa li te sove. Toma pat pale anpil, li pa di Magozwe kisa pou’l fè men li toujou koute ak anpil atansyon. Pafwa yo te konn pale pandan yo tap manje nan kay ak do ble a.",
+        "es": "Cuando volvieron a reunirse, Magozwe le relató la historia de su vida a Thomas. Le habló de su tío y de por qué huyó de esa casa. Thomas no hablaba mucho, y no le decía a Magozwe qué hacer, pero siempre le escuchaba con atención. Algunas veces conversaban mientras comían en la casa del techo azul."
+      },
+      {
+        "ht": "Lè Magozwe gen dizan, Toma ba li yon lòt liv istwa. Se te istwa yon ti gason nan yon vilaj ki te vin yon gwo jwè foutbòl popilè. Toma li istwa a pou Magozwe anpil fwa, li di li, “Mwen kwè ke li lè li tan pou’w ale lekòl pou’w aprann li. Kisa ou panse » Toma eksplike li te li konnen yon kote kote timoun ka rete enpi ale lekòl.",
+        "es": "Cuando Magozwe cumplió alrededor de diez años, Thomas le regaló un nuevo libro de cuentos. Era la historia de un niño de una aldea que creció y se convirtió en un famoso jugador de fútbol. Thomas le leyó esa historia a Magozwe en muchas ocasiones, hasta que un día le dijo, “Creo que ya es tiempo que vayas a la escuela y aprendas a leer. ¿Qué te parece?” Thomas le explicó que conocía un lugar donde los niños podían vivir e ir a la escuela."
+      },
+      {
+        "ht": "Magozwe reflechi sou kote sa a, ak sou lekòl la. Li di tèt li « si tonton’m te gen rezon lè li di’m ke mwen twò bèt pou’m aprann yon bagay? Si yo kale li nan kote sa a? Li te pè. “Petèt li miyò pou li si li rete vivan nan lari a”.",
+        "es": "Magozwe pensó en este nuevo lugar y en ir a la escuela. Pero, ¿y si su tío tenía razón y era demasiado estúpido para aprender? ¿Y si volvían a darle golpizas en este nuevo lugar? Magozwe sintió miedo. “Quizá sea mejor seguir viviendo en la calle,” pensó."
+      },
+      {
+        "ht": "Li te pataje laperèz li yo ak Toma. Apre yon tan, Toma vin asire ti gason an ke lavi li tap miyò nan kote sa a.",
+        "es": "Magozwe le habló de sus miedos a Thomas. Con el paso del tiempo, Thomas pudo asegurarle al chico que su vida iba a ser mejor en ese nuevo lugar."
+      },
+      {
+        "ht": "Se konsa, Magozwe al rete nan yon kay ak twa vèt la. Li pataje chanm li ak de lòt ti gason. Te gen antotal dis timoun ansanm ak tant Cissy ak mari li, twa chen, yon chat, ak yon kabrit granmoun ki te rete nan kay sa a.",
+        "es": "Y así fue como Magozwe se fue a vivir a una habitación en una casa con techo verde. Compartía su habitación con otros dos chicos. Había un total de diez chicos viviendo en esa casa. Vivían junto a la tía Cissy y su esposo, tres perros, un gato y una vieja cabra."
+      },
+      {
+        "ht": "Magozwe kòmanse lekòl men sa te difisil anpil. Li te gen anpil bagay pou li ratrape. Pafwa li pa te vle rete men li vin sonje istwa pilòt la ak jwè foutbòl la. Li fè tankou yo, li kenbe fò.",
+        "es": "Magozwe empezó a ir a la escuela y fue difícil. Tenía mucho con qué ponerse al día. Muchas veces quiso rendirse. Pero pensaba en el piloto y en el jugador de fútbol de los libros. Al igual que ellos, Magozwe no se rindió."
+      },
+      {
+        "ht": "Magozwe te chita nan lakou kay vèt la enpi li tap li yon liv istwa lekòl la. Toma vin wè li, li te chita bò kote l. “Kisa istwa sa ye la?” Toma mande li “Se istwa yon ti gason ki tounen yon pwofesè,” Magozwe reponn. “Ki non ti gason sa a?” Toma mande li. “Non li se Magozwe,” li reponn ak yon souri.",
+        "es": "Magozwe estaba sentado en el patio de la casa del techo verde, leyendo un libro de cuentos de su escuela. Thomas se le acercó y se sentó junto a él. “¿De qué trata la historia?” preguntó Thomas. “Trata sobre un chico que se convierte en profesor,” respondió Magozwe. “¿Cómo se llama el chico?” preguntó Thomas. “Su nombre es Magozwe,” dijo Magozwe sonriendo."
+      }
+    ]
+  },
+  {
+    "id": "0271",
+    "titulo": "De",
+    "tituloEs": "Dos",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0271/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0271/",
+    "segmentos": [
+      {
+        "ht": "De ti men pou kenbe.",
+        "es": "Dos pequeñas manos para sostener."
+      },
+      {
+        "ht": "De ti pye pou choute.",
+        "es": "Dos pequeños pies para patear."
+      },
+      {
+        "ht": "De ti je pou wè.",
+        "es": "Dos pequeños ojos para ver."
+      },
+      {
+        "ht": "De ti zorey pou koute.",
+        "es": "Dos pequeños oídos para escuchar."
+      },
+      {
+        "ht": "Enpi, de ti bra pour RENMEN!",
+        "es": "¡Y dos brazos amorosos para ABRAZAR!"
+      }
+    ]
+  },
+  {
+    "id": "0291",
+    "titulo": "Kisa sè Vuzi pral di",
+    "tituloEs": "Lo que la hermana de Vusi dijo",
+    "nivel": 4,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0291/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0291/",
+    "segmentos": [
+      {
+        "ht": "Yon maten byen bonè, grann Vuzi rele li, “Vuzi, tanpri, pote ze sa yo bay manman ou pou mwen. Li vle fè yon gwo gato pou maryaj sè ou. ”",
+        "es": "Temprano en la mañana, la abuelita de Vusi le dijo, “Vusi, por favor, lleva este huevo a tus padres. Ellos quieren hacer un pastel muy grande para la boda de tu hermana.”"
+      },
+      {
+        "ht": "Pandan Vuzi ap mache pou lale kay paran li yo li rankontre de ti gason ki tap keyi fwi. Yonn nan ti gason yo pran ze yo nan men Vuzi enpi li voye yo sou yon pyebwa. Ze yo kraze.",
+        "es": "Cuando iba hacia la casa de sus padre, Vusi se encontró con dos chicos recogiendo frutas. Uno de los chicos le quitó el huevo a Vusi y lo lanzó a un árbol. El huevo se quebró."
+      },
+      {
+        "ht": "Sa ou fè la a? “Vuzi di li « Ze sa yo se te pou yon gato maryaj sè’m nan. Ki sa sè’m nan pral di si pa gen gato nan maryaj li?",
+        "es": "“¡¿Qué acabas de hacer?!” Vusi le gritó. “Ese huevo era para hacer el pastel de boda de mi hermana. ¿Qué dirá mi hermana cuando sepa que no habrá pastel de boda?”"
+      },
+      {
+        "ht": "Ti gason yo te regrèt anpil deske yo te pase Vuzi nan jwèt. “Nou pa ka fè anyen pou gato a koulyè a, men nou kapab ba ou yon baton pou sè ou ” Vuzi kontinye wout li.",
+        "es": "Los chicos se disculparon por lo ocurrido. “No te podemos ayudar con la pastel, pero este palo para caminar es un regalo para tu hermana,” uno de los chicos dijo. Luego, Vusi siguió caminando."
+      },
+      {
+        "ht": "Sou wout la, li jwenn ak de gason ki tap konstwi yon kay. Mesye yo mande li “Èske ou ka bannou baton solid sa a ? » Men, baton an pate solid kont…li kase.",
+        "es": "Mientras caminaba, se encontró con dos hombres que estaban construyendo una casa. “¿Nos dejarías usar ese fuerte palo?” uno de los hombres preguntó. Pero el palo no era lo suficientemente fuerte para trabajos de construcción, así que se quebró."
+      },
+      {
+        "ht": "“Sa nou fè la a? Vuzi mande pandan lap kriye. “Baton sa a se te yon kado pou sè’m nan. Ti gason yo ki tap ranmase fwi banm li paske yo te kraze ze pou fè gato sè’m nan. Kounyè a, pa gen ze, pa gen gato, pa gen kado. Kisa sè’m pral di?",
+        "es": "“¿Qué acabas de hacer?” Vusi gritó. “Ese palo era un regalo para mi hermana. Los recolectores de fruta me lo dieron porque rompieron el huevo para el pastel de boda de mi hermana. Ahora, ni huevo, ni pastel, ni regalo habrá para su boda. ¡¿Qué dirá mi hermana?!”"
+      },
+      {
+        "ht": "Bòs mason yo te regrèt anpil “Nou pa kapab fè anyen pou gato a, men nou kapab ba ou zèb pou sè ou”. Vuzi kontinye wout li.",
+        "es": "Los constructores se disculparon por haber roto el palo. “No te podemos ayudar con la pastel, pero aquí tienes un poco de paja para tu hermana,” uno de ellos dijo. Y así, Vusi continuó caminando."
+      },
+      {
+        "ht": "Sou wout la, Vuzi wè yon abitan ak bèf li. Bèf la di « A la bèl zèb, ou ka banm yon ti kras ladan’l ? ». Men zèb la te tèlman bon ke bèf la manje tout !",
+        "es": "Ahora Vusi se encontró con un granjero y una vaca. “¡Qué deliciosa paja! ¿Puedo comer un poquito?” la vaca preguntó. Pero la paja estaba tan rica que la vaca se la comió toda."
+      },
+      {
+        "ht": "« Sa pou’m fè? Vuzi mand li. “zèb sa a se te yon kado pou sè m nan. Bòs mason yo kap knostwi yon kay ban mwen yo paske yo te kase baton ti gason kap ranmase fwi yo te banm. Ti gason sa yo te banm baton an paske yo te kraze ze ki pou te fè gato sè m nan. Gato a te pou maryaj sè m nan men kounlè a pa gen ze, pa gen gato, pa gen kado. Kisa sè’m pral di? ”",
+        "es": "“¿Qué acabas de hacer?” Vusi gritó. “Esa paja era un regalo para mi hermana. Los constructores me la dieron porque rompieron el palo de los recolectores de fruta. Los recolectores de fruta me regalaron el palo porque quebraron el huevo para el pastel de boda de mi hermana. Ahora, ni huevo, ni pastel, ni regalo habrá para su boda. ¡¿Qué dirá mi hermana?!”"
+      },
+      {
+        "ht": "Bèf la te regrèt ke li te visye konsa. Abitan an deside voye bèf la ak Vuzi kòm kado pou sè li. Vizu kontinye wout li.",
+        "es": "La vaca se disculpó por haber sido glotona. El granjero decidió regalarle la vaca a Vusi como un obsequio para la boda de su hermana. Y así pues, Vusi siguió caminando con la vaca."
+      },
+      {
+        "ht": "Men lè manje an vin rive, bèf la chape pou’l tounen lakay mèt li. Vuzi pèdi chemen li enpi li rive ta nan maryaj sè’l. Envite yo te kòmanse ap manje.",
+        "es": "Pero la vaca se arrancó corriendo de vuelta donde el granjero a la hora de cenar. Vusi se perdió y llegó muy tarde a la boda de su hermana. Los invitados ya estaban comiendo."
+      },
+      {
+        "ht": "“Kisa pou’m fè? Vuzi mande “Bèf la se te yon kado abitan an te bay pou ranplase zèb yo ke bòs mason yo te banm paske yo te kase baton an ke ti gason yo ki tap ranmase fwi yo te banm pou ranplase ze yo ke yo te kase pou fè gato a. Gato a se te pou maryaj la. Koulyè a pa gen ze, pa gen gato, pa gen kado. ”",
+        "es": "“¿Qué puedo hacer ahora?” Vusi dijo. “La vaca que se arrancó corriendo era un regalo para sustituir la paja que los constructores me habían regalado. Los constructores me dieron la paja porque rompieron el palo de los recolectores de fruta. Los recolectores de fruta me regalaron el palo porque quebraron el huevo para el pastel de boda de mi hermana. Ahora, ni huevo, ni pastel, ni regalo habrá para la boda.”"
+      },
+      {
+        "ht": "Sè Vuzi vin reflechi sou sitiyasyon an epi li di Vuzi “Vuzi frè mwen, kado yo pa enpòtan pou mwen, gato a pa enpòtan pou mwen. Sa ki pi enpòtan pou mwen se ke tout moun la avèk mwen. Kèm kontan anppil. Kounyè a, al mete bèl rad ou enpi an nou fete jou sa a! Se sa Vusi fè.",
+        "es": "La hermana de Vusi se quedó pensativa por un momento y luego dijo: “Vusi, hermano mío, no me interesan los regalos. ¡Ni siquiera me interesa el pastel de boda! Estamos todos reunidos y felices y yo estoy muy feliz también. ¡Ponte tu ropa elegante y celebremos!” Y así pues, eso fue lo que Vusi hizo."
+      }
+    ]
+  },
+  {
+    "id": "0294",
+    "titulo": "Fig grann mwen",
+    "tituloEs": "Los plátanos de mi abuela",
+    "nivel": 4,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0294/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0294/",
+    "segmentos": [
+      {
+        "ht": "Jaden grann mwen an se bèl bagay, li chaje ak roroli, pitimi, kasav. Men, pi bon nan tout se fig yo. Malgre grann mwen gen anpil pitit pitit, mwen konnen ke se mwen li pi pito. Li fè m vini lakay li toutan. Li rakonte’m ti sekrè li yo men gen yon grenn ladan yo ke li pa janm di’m « se kijan fig li yo mi konsa ».",
+        "es": "El huerto de mi abuela era maravilloso y tenía mucho sorgo, mijo y yuca. Pero lo mejor de todo eran los plátanos. Aunque mi abuela tenía muchos nietos, yo, en secreto, sabía que era su favorita. Me invitaba a su casa muy a menudo. También me contaba muchos secretos. Pero había un secreto que nunca me contó: el lugar donde ella hacía madurar los plátanos."
+      },
+      {
+        "ht": "Yon jou, mwen wè yon gwo panyen pay chita nan solèy lakay grann mwen. Lè’m mande ki sa li ye, li reponn mwen sèlman “Se panyen majik mwen.” Bò kote panyen an, te gen plizyè fèy bannann ke grann mwen tap vire tanzantan. Mwen te anvi konnen sa ki tap pase “Poukisa fèy sa yo, grannn?” Li reponn sèlman “se fèy majik mwen yo.”",
+        "es": "Un día vi un gran canasto de paja que estaba al sol, afuera de la casa de mi abuela. Cuando le pregunté para qué era, sólo me respondió: “Es mi canasto mágico”. Al lado del canasto, habían varias hojas de plátano que mi abuela volteaba de vez en cuando. Yo sentí curiosidad. “¿Para qué son las hojas, abuela?” le pregunté. Ella sólo me respondió: “Son mis hojas mágicas”."
+      },
+      {
+        "ht": "Mwen te renmen gade grann mwen, bannann yo, fèy bannann yo ak panyen an. Men, yon jou grann mwen voye’m al fè yon komisyon bò kote manman mwen “Grann, tanpri, kite’m gade sa wap fè…” Li reponn mwen “Pa fè tèt di pitit, fè jan yo di’w la”. Mwen pran kouri.",
+        "es": "Me pareció muy interesante observar a mi abuela, los plátanos, las hojas de plátano y al gran canasto de paja. Pero mi abuela me ordenó que fuera donde mi madre a hacer un mandado. “Abuela, por favor, déjame mirar cómo preparas…” “No seas testaruda, niña, haz lo que te digo,” insistió. Me fui corriendo."
+      },
+      {
+        "ht": "Lè’m tounen, grann te chita deyò men mwen pa te wè ni panyen an ni bannann yo. “Grann kote panyen an, kote tout bannann yo enpi kote …” Li reponn mwen « yo nan panyen majik mwen! Mwen te desi !",
+        "es": "Cuando regresé, mi abuela estaba sentada afuera pero no tenía el canasto ni los plátanos. “Abuela, ¿dónde está el canasto, dónde están todos los plátanos, y dónde…?” pero solamente me respondió, “Están en mi lugar mágico.” ¡Fue muy decepcionante!"
+      },
+      {
+        "ht": "De jou pita, grann mwen voye’m al chache baton li ki te nan chanm lan. Lè’m louvri pòt la, mwen pran yo gwo lodè fig mi. Panyen majik la te byen kache nan yon kwen chanm nan. Mwen leve’l enpi mwen pran bèl lodè majik la.",
+        "es": "Dos días más tarde, mi abuela me envió a su habitación a buscar su bastón. Apenas abrí la puerta, sentí el fuerte aroma de los plátanos madurando. Dentro de la habitación estaba el gran canasto mágico de paja de mi abuela. Estaba bien escondido bajo una vieja manta. La levanté y olí ese glorioso aroma."
+      },
+      {
+        "ht": "Vwa grann mwen fè’m sote “Ki sa wap fè? Fè vit, pote batonm nan.” Mwen kouri sòti ak baton an. Grann mande’m ‘ “pouki sa wap souri konsa?” se lè sa a ke’m reyalize ke mwen tap souri toujou depi lè mwen te dekouvri panyen majik la.",
+        "es": "Me asusté cuando escuché que mi abuela me llamaba, “¿Qué estás haciendo? Apúrate y tráeme mi bastón.” Me apresuré en llevarle su bastón. “¿Por qué sonríes?” me preguntó mi abuela. Su pregunta me hizo darme cuenta de que yo todavía estaba sonriendo por haber descubierto su lugar mágico."
+      },
+      {
+        "ht": "Nan demen, lè grann mwen vin wè manman’m, mwen kouri ale lakay li pou’m tcheke fig yo ankò. Te gen yon bann nan yo ki te mi. Mwen chwazi yonn ladan yo enpi mwen kache li nan rad mwen an. Lè’m fin kouvri panyen an m’ale dèyè kay la pou’m manje’l byen vit. Mwen poko te janm manje yon fig sikre konsa anvan.",
+        "es": "Al día siguiente, mi abuela vino a visitar a mi madre. En ese momento, corrí a su casa a revisar los plátanos otra vez. Había un montón de plátanos muy maduros. Cogí uno y lo escondí en mi vestido. Después de volver a cubrir el canasto, fui detrás de la casa y me lo comí rápidamente. Era el plátano más dulce que me había comido en toda mi vida."
+      },
+      {
+        "ht": "Demen, pandan grann mwen te nan jaden a ap keyi legim, mwen tounen tou dousman anndan kay la pou’m gade fig yo amkò. Prèske tout te fin mi. Mwen pat ka kenbe ankò, mwen pran yon pakèt ki gen kat ladan’l. Pandan map sòti tou dousman nan pòt la, mwen tande grann mwen ap touse deyò. Mwen reyisi kache fig yo anba rad mwen enpi mwen pase devan’l.",
+        "es": "Al día siguiente, cuando mi abuela estaba en su huerta recolectando vegetales, entré a su casa hurtadillas y revisé los plátanos. Casi todos estaban maduros. No pude evitar coger cuatro. Mientras caminaba de puntitas hacia la salida, escuché a mi abuela toser afuera. Logré esconder los plátanos bajo mi vestido y pasé caminando al lado de ella."
+      },
+      {
+        "ht": "Jou apre sa a, se te jou mache. Grann mwen leve bonè bonè. Li toujou pran fig mi ak kasav pou’l al vann nan mache. Mwen pa ale lakay li jou sa a. Men, mwen pat kapab evite ale lakay twò lontan.",
+        "es": "El día siguiente era día de mercado. Mi abuela se despertó temprano. Ella siempre tomaba los plátanos maduros y la yuca para venderlos en el mercado. Ese día no me apresuré en ir a visitarla. Pero no pude evitarla por mucho tiempo."
+      },
+      {
+        "ht": "Pita nan aswè a, manman’m ak papa’m ak grann mwen rele’m. Mwen te konnen poukisa. Jou sa a mwen te dòmi mal paske mwen te konnen ke’m pa tap janm vòlè ankò ni nan men grann mwen ni nan men granmoun mwen yo ni nan men nenpòt ki lòt moun.",
+        "es": "Más tarde esa noche, me llamaron mi madre, padre y abuela. Yo sabía por qué. Me fui a dormir habiendo aprendido que no podía volver a robar nunca más, ni a mi abuela, ni a mis padres, ni a nadie más."
+      }
+    ]
+  },
+  {
+    "id": "0296",
+    "titulo": "Tom machann fig lan",
+    "tituloEs": "Tom, el vendedor de plátanos",
+    "nivel": 2,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0296/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0296/",
+    "segmentos": [
+      {
+        "ht": "Tom ap mache ak yon panyen fig sou tèt li.",
+        "es": "Tom lleva una cesta de plátanos maduros."
+      },
+      {
+        "ht": "Tom pral vann fig li yo nan mache a.",
+        "es": "Tom va al mercado a vender plátanos."
+      },
+      {
+        "ht": "Moun yo ki nan mache a abitye achte fwi.",
+        "es": "La gente compra fruta en el mercado."
+      },
+      {
+        "ht": "Men okenn nan yo pap achte fwi nan men Tom. Yo pito achte fwi nan men medam yo.",
+        "es": "Pero nadie compra los plátanos de Tom. Prefieren comprarle a las mujeres."
+      },
+      {
+        "ht": "Nan kominote nou se fi sèlman ki vann fwi. Moun yo kòmanse pale sou Tom “Ki kalite gason sa a ye?”",
+        "es": "“En nuestra comunidad, sólo las mujeres venden fruta,” le dice la gente. “¿Qué clase de hombre es éste?” se pregunta la gente."
+      },
+      {
+        "ht": "Men Tom pa kite sa dekouraje’l. Lap rele « Achte fig mwen yo…Achte fig mwen yo. Fig mwen yo mi, fig yo dous.”",
+        "es": "Pero Tom no se rinde. Sigue gritando, “¡Compren mis plátanos! ¡Compren mis dulces plátanos maduros!”"
+      },
+      {
+        "ht": "Yon madanm deside achte yon rejim fig nan men Tom. Li enspekte chak fig apa.",
+        "es": "Una mujer coge un montón de plátanos de la bandeja. Revisa las plátanos cuidadosamente."
+      },
+      {
+        "ht": "Lòt medam yo achte kèk fig tou.",
+        "es": "La mujer compra los plátanos."
+      },
+      {
+        "ht": "Lòt moun kòmanse rive. Yo achte fig Tom yo enpi yo manje yo.",
+        "es": "Más gente viene al puesto. Compran los plátanos de Tom y se las comen."
+      },
+      {
+        "ht": "Anvan lontan Tom pa te gen fig ankò. Li konte lajan li.",
+        "es": "Al poco rato, la cesta está vacía. Tom cuenta el dinero que ganó."
+      },
+      {
+        "ht": "Ak lajan sa a Tom achte savon, sik ak pen. Li mete tout bagay sa yo nan panyen’l.",
+        "es": "Luego, Tom compra jabón, azúcar y pan. Pone las cosas en su cesta."
+      },
+      {
+        "ht": "Tom balanse panyen an sou tèt li epi li rantre lakay li.",
+        "es": "Tom carga la cesta sobre su cabeza y se va a casa."
+      }
+    ]
+  },
+  {
+    "id": "0302",
+    "titulo": "Dife",
+    "tituloEs": "El fuego",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0302/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0302/",
+    "segmentos": [
+      {
+        "ht": "Gade, dife!",
+        "es": "¡Mira, fuego!"
+      },
+      {
+        "ht": "Dife boule.",
+        "es": "El fuego quema."
+      },
+      {
+        "ht": "Dife kwit manje.",
+        "es": "El fuego cocina."
+      },
+      {
+        "ht": "Dife bay chalè.",
+        "es": "El fuego calienta."
+      },
+      {
+        "ht": "Dife bay limyè.",
+        "es": "El fuego ilumina."
+      },
+      {
+        "ht": "Gade, dife!",
+        "es": "¡Mira, fuego!"
+      },
+      {
+        "ht": "Dife bèl.",
+        "es": "El fuego es maravilloso."
+      },
+      {
+        "ht": "Enpi li gen fòs.",
+        "es": "Y es poderoso."
+      }
+    ]
+  },
+  {
+    "id": "0315",
+    "titulo": "Chante Sakima",
+    "tituloEs": "La canción de Sakima",
+    "nivel": 3,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0315/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0315/",
+    "segmentos": [
+      {
+        "ht": "Sakima te rete kay paran li yo ak yon ti sè ki gen katran. Yo te rete sou tè yon mesye rich. Ti ajoupa yo te nan fon yon ranje pyebwa.",
+        "es": "Sakima vivía con sus padres y su hermana de cuatro años de edad. Vivían en el terreno de un hombre rico. Su choza de paja estaba al final de una fila de árboles."
+      },
+      {
+        "ht": "Lè Sakima te gen twa zan, li tonbe malad epi li pèdi je li. Sakima te yon ti gason ki te gen anpil talan.",
+        "es": "Cuando Sakima tenía tres años de edad, se enfermó y perdió la vista. Sakima era un chico talentoso."
+      },
+      {
+        "ht": "Sakima te fè anpil bagay ke lòt ti gason sizan pa te kapab fè tankou chita ak sis granmoun nan kominote a enpi pale sou gwo bagay ak yo.",
+        "es": "Sakima hacía muchas cosas que los otros chicos de seis años no podían hacer. Por ejemplo, podía sentarse con los miembros mayores de la aldea y discutir asuntos importantes."
+      },
+      {
+        "ht": "Paran Sakima tap travay kay moun rich sa a. Yo te kite lakay bonè nan maten enpi yo te tounen byen ta nan aswè. Yo te kite Sakima ak ti sè li.",
+        "es": "Los padres de Sakima trabajaban en la casa del hombre rico. Salían a trabajar temprano en la mañana y volvían a casa tarde por la noche. Sakima se quedaba con su hermana pequeña."
+      },
+      {
+        "ht": "Sakima te renmen chante. Yon jou, manman’l mande li, “Ki kote ou aprann chante sa yo Sakima?”",
+        "es": "A Sakima le encantaba cantar. Un día su madre le preguntó, “¿Dónde aprendes estas canciones, Sakima?”"
+      },
+      {
+        "ht": "Sakima reponn li “Yo vin konsa nan tèt mwen, manman. Mwen tande yo nan tèt mwen enpi mwen chante yo.”",
+        "es": "Sakima le respondió, “Simplemente llegan, madre. Las escucho en mi cabeza y después las canto.”"
+      },
+      {
+        "ht": "Sakima te renmen chante pou ti sè li sitou lè li te grangou. Sè li te konn koute lap chante chante li te pi renmen yo. Li te chante bèl ti mòso dous.",
+        "es": "A Sakima le gustaba cantarle a su hermana pequeña, especialmente cuando ella tenía hambre. Su hermana le escuchaba cantar la canción favorita de Sakima. Y se relajaba bailando con su canción."
+      },
+      {
+        "ht": "Ti sè li te konn siplye’l « chante’l ankò, ankò, ankò, Sakima,” Sakima te aksepte enpi chante menm chante ankò, ankò, ankò.",
+        "es": "“¿Podrías cantarla una y otra vez, Sakima?”, le suplicaba su hermana. Sakima asentía y le cantaba una y otra vez."
+      },
+      {
+        "ht": "Yon swa, lè paran Sakima tounen lakay yo yo pate pale menm. Sakima santi te gen yon pwoblèm.",
+        "es": "Una noche después del trabajo, sus padres volvieron muy callados. Sakima sabía que algo estaba mal."
+      },
+      {
+        "ht": "” Manman, papa kisa kap pase » Sakima mande. Yo di Sakima ke pitit gason mesye rich la te disparèt. Mesye an te santi’l sèl ak tris anpil.",
+        "es": "“¿Cuál es el problema, madre, padre?” Preguntó Sakima. Sakima se enteró que el hijo del hombre rico se había perdido. El hombre se sentía muy triste y solo."
+      },
+      {
+        "ht": "Sakima di paran li « Mwen ta ka chante pou li …petèt kè’l ta kontan ankò,”. Men, paran li di li “Mesye sa a rich. Ou se sèlman yon ti gason avèg ou ye. Èske ou kwè ke chante ou yo kapab ede’l?”",
+        "es": "“Yo puedo cantar para él. Quizá eso lo hará feliz,” le dijo Sakima a sus padres. Pero sus padres lo desestimaron. “Él es muy rico. Tú sólo eres un chico ciego. ¿Crees que tu canción lo va a ayudar?”"
+      },
+      {
+        "ht": "Men, Sakima pa kite sa kraze’l. Ti sè li te dakò avèk li “Chante Sakima fè’m vin pi kalm lè mwen grangou. Yo kapab ede mesye rich sa a tou.”",
+        "es": "Pero Sakima no se rindió. Su hermana pequeña lo apoyó. Le dijo: “Las canciones de Sakima me ayudan cuando tengo hambre. Van a tranquilizar al hombre rico también.”"
+      },
+      {
+        "ht": "Nan demen, Sakima mande ti sè li pou li mennen’l kay mesye rich la.",
+        "es": "Al día siguiente, Sakima le pidió a su hermana pequeña que lo llevara a la casa del hombre rico."
+      },
+      {
+        "ht": "Li kanpe anba yon gwo fenèt enpi li kòmanse chante chante mesye a renmen. Tèt mesye an kòmanse parèt tou dousman nan fenèt la.",
+        "es": "Se paró debajo de una gran ventana y empezó a cantar su canción favorita. Lentamente, el hombre rico comenzó a asomar su cabeza por la gran ventana."
+      },
+      {
+        "ht": "Travayè yo sispann sa yo tap fè. Yo tap koute bèl chante Sakima yo. Men yonn nan yo di « Okenn moun pa ka console boss la. Eske ti gason avèg sa a kwè ke lap console li?”",
+        "es": "Los trabajadores dejaron de hacer sus tareas. Escucharon la hermosa canción de Sakima. Pero un hombre dijo, “Nadie ha podido consolar al jefe. ¿Acaso este chico ciego cree que él puede consolarlo?”"
+      },
+      {
+        "ht": "Lè Sakima fin chante li vire pou’l tounen lakay li. Men, mesye rich la kouri sòti dèyè li, li di li “Tanpri chante ankò.”",
+        "es": "Sakima terminó de cantar y se dio vuelta para irse. Pero el hombre rico salió de prisa y dijo: “Por favor canta de nuevo.”"
+      },
+      {
+        "ht": "Menm lè sa a, de mesye tap pote yon moun sou yon kad. Yo te jwenn ti gason an ke moun te kale enpi lage lòt bò wout la.",
+        "es": "En ese mismo momento, llegaron dos hombres que llevaban a alguien en una camilla. Habían encontrado al hijo del hombre rico apaleado y tirado a un lado del camino."
+      },
+      {
+        "ht": "Mesye rich la te kontan anpil ke li wè ti gason’l lan ankò. Li rekonpanse Sakima pou tèt li te vin konsole li. Li menmen pitit gason li ak Sakima lopital pou yo geri je Sakima.",
+        "es": "El hombre rico estaba muy feliz de ver a su hijo otra vez. Y le dio una recompensa a Sakima por consolarlo. Llevó a su hijo y a Sakima al hospital para que Sakima pudiera recuperar la vista."
+      }
+    ]
+  },
+  {
+    "id": "0324",
+    "titulo": "Jou mwen kite lakay mwen pou’m ale lavil",
+    "tituloEs": "El día que dejé mi casa para irme a la ciudad",
+    "nivel": 3,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0324/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0324/",
+    "segmentos": [
+      {
+        "ht": "Ti estasyon otobis la nan kominote kote’m rete a chaje ak moun ak otobis. Atè a te chaje ak bagay pou mete nan otobis yo. Machann tikè yo tap rele non kote otobis yo ta prale.",
+        "es": "La pequeña parada de autobuses de mi aldea estaba llena de gente y de autobuses sobrecargados. En el suelo había aun más cosas por cargar. Los pregoneros anunciaban los lugares a los que iban sus autobuses."
+      },
+      {
+        "ht": "“Lavil! Lavil! Direksyon lwès! Yonn nan machann yo di non kote mwen ta prale a.",
+        "es": "“¡A la ciudad! ¡A la ciudad! ¡Autobús hacia el oeste!” escuché que gritaba un pregonero. Ése era el autobús que yo necesitaba tomar."
+      },
+      {
+        "ht": "Otobis lavil la te prèske plen, men moun tap pouse toujou pou yo monte. Kèk nan yo mete sak yo anba otobis la, lòt te mete pa yo sou etajè anndan otobis la.",
+        "es": "Aunque el autobús con destino a la ciudad estaba casi lleno, había más gente empujando para subirse. Algunos ponían su equipaje en la parte de abajo. Otros lo ponían en las repisas de adentro."
+      },
+      {
+        "ht": "Nouvo pasaje yo kenbe tikè yo di nan men yo pandan yap chache kote pou yo chita nan otobis la. Fanm ak jèn timoun tap ranje kò yo pou vwayaj long sa a.",
+        "es": "Los pasajeros recién llegados se subían al autobús con sus boletos en mano buscando un asiento. Las mujeres con hijos pequeños los confortaban para el largo viaje."
+      },
+      {
+        "ht": "Mwen chita bò kote yon fenèt. Yon granmoun te chita akote’m. Li tap kenbe yon sak plastik vèt byen fèmen. Li te gen vye sapat nan pye’l ak yon manto chire. Li te gen yon jan eksite.",
+        "es": "Me apretujé al lado de una ventana. La persona a mi lado sujetaba con fuerza una bolsa de plástico verde. Llevaba sandalias viejas, un abrigo harapiento, y se veía nervioso."
+      },
+      {
+        "ht": "Mwen gade deyò enpi se lè sa mwen santi ke mwen tap kite kominote mwen an, kote’m te grandi. Mwen ta pral lavil.",
+        "es": "Miré por la ventana del autobús y me di cuenta de que estaba dejando atrás mi aldea, el lugar donde había crecido. Ahora me iba a la gran ciudad."
+      },
+      {
+        "ht": "Otobis lan te fin plen. Tout pasaje yo te chita. Machann lari tap eseye pase nan koulwa a pou yo vann dènye machandiz yo. Chak moun tap rele non machandiz pa yo. Pou mwen tout mo sa yo te komik.",
+        "es": "Terminaron de cargar el autobús y todos los pasajeros se sentaron. Los vendedores ambulantes se apretujaron para entrar a venderle sus productos a los pasajeros. Gritaban los nombres de lo que tenían para vender. Las palabras me parecían graciosas."
+      },
+      {
+        "ht": "Kèk pasaje tap achte bwason oswa ti manje. Men, moun ki pa te gen lajan, tankou mwen, rete gade.",
+        "es": "Algunos pasajeros compraron bebidas, otros compraron pequeños refrigerios y empezaron a comer. Los que no tenían dinero, como yo, solamente nos quedamos mirando."
+      },
+      {
+        "ht": "Tout aktivite kanpe lè otobis la kòmanse klaksonen, sa vle di ke nou pare pou’n ale. Machann tikè yo mande machann lari yo sòti nan otobis la.",
+        "es": "Todo este ajetreo fue interrumpido por el claxon del autobús, señal de que estábamos listos para partir. El pregonero gritó a los vendedores ambulantes para que se bajaran."
+      },
+      {
+        "ht": "Machann yo tap batay pou yo sòti. Kèk nan yo tap remèt klyan lajan alòs ke lòt tap fè dènye tantativ pou yo vann ankò.",
+        "es": "Los vendedores ambulantes se empujaban para salir del autobús. Algunos le entregaron su cambio a los pasajeros. Otros intentaron vender productos por última vez."
+      },
+      {
+        "ht": "Lè otobis la kite estasyon an, mwen gade deyò epi mwen mande tèt mwen si’m tap janm tounen lakay mwen ankò.",
+        "es": "Mientras el autobús partía desde la estación, miré por la ventana. Me preguntaba si alguna vez volvería a mi aldea."
+      },
+      {
+        "ht": "Li te kòmanse fè cho nan otobis la. Mwen fèmen je’m pou’m eseye dòmi.",
+        "es": "A medida que pasaba el tiempo, el autobús se puso muy caluroso. Cerré los ojos con la esperanza de quedarme dormido."
+      },
+      {
+        "ht": "Men, lespri’m toujou tounen sou lakay mwen. Èske manman’m an sekirite? Èske lapen mwen yo ap bay lajan? Èske frè’m ap sonje wouze ti pyebwa mwen te plante yo?",
+        "es": "Pero volví a pensar en mi casa. ¿Estará a salvo mi madre? ¿Traerán dinero mis conejos? ¿Se acordará mi hermano de regar los árboles que planté?"
+      },
+      {
+        "ht": "Sou wout la, mwen tap sonje adrès kote tonton’m nan rete lavil. Mwen tap repete non an nan tèt mwen epi mwen tonbe dòmi.",
+        "es": "Mientras viajaba, recitaba el nombre del lugar donde vivía mi tío en la gran ciudad. Seguí murmurando ese nombre mientras dormía."
+      },
+      {
+        "ht": "Nèf èdtan apre, mwen leve lè mwen tande yon moun ap rele non pasaje yo. Mwen ranmase ti sak mwen epi’m desann otobis la.",
+        "es": "Nueve horas más tarde, desperté escuchando fuertes golpeteos y gritos llamando a los pasajeros que viajaban de vuelta a mi aldea. Tomé mi pequeño morral y me bajé del autobús."
+      },
+      {
+        "ht": "Otobis retou a te plen deja. Li te pare pou’l tounen nan direksyon lès. Sa ki te pi enpòtan pou mwen lè sa a se te kòmanse chache lakay kote tonton’m nan rete.",
+        "es": "El autobús de vuelta a mi aldea se llenó rápidamente. Pronto empezaría su viaje de vuelta al este. Por ahora, lo más importante para mí era empezar a buscar la casa de mi tío."
+      }
+    ]
+  },
+  {
+    "id": "0327",
+    "titulo": "Konte bèt yo",
+    "tituloEs": "Contando animales",
+    "nivel": 1,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0327/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0327/",
+    "segmentos": [
+      {
+        "ht": "Yon elefan pral bwè dlo.",
+        "es": "Un elefante va a beber agua."
+      },
+      {
+        "ht": "De jiraf pral bwè dlo.",
+        "es": "Dos jirafas van a beber agua."
+      },
+      {
+        "ht": "De toro ak kat zwazo pral bwè dlo tou.",
+        "es": "Tres búfalos y cuatro pájaros también van a beber agua."
+      },
+      {
+        "ht": "Senk enpala ak sis kochon mawon ap mache pou yale bwè dlo.",
+        "es": "Cinco impalas y seis jabalíes están caminando hacia el agua."
+      },
+      {
+        "ht": "Sèt zèb ap kouri pou yale bwè dlo.",
+        "es": "Siete cebras están corriendo hacia el agua."
+      },
+      {
+        "ht": "Wit krapo ak nèf pwason ap naje pou yale bwè dlo.",
+        "es": "Ocho ranas y nueve peces están nadando en el agua."
+      },
+      {
+        "ht": "Yon lyon ap gwonde. Li vle bwè dlo tou. Ki moun ki pè lyon an?",
+        "es": "Un león ruge. También quiere beber. ¿Quién le tiene miedo al león?"
+      },
+      {
+        "ht": "Yon elefan ap bwè dlo ak lyon an.",
+        "es": "Un elefante está bebiendo agua con el león."
+      }
+    ]
+  },
+  {
+    "id": "0337",
+    "titulo": "Timoun lasi",
+    "tituloEs": "Niños de cera",
+    "nivel": 2,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0337/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0337/",
+    "segmentos": [
+      {
+        "ht": "Nan tan lontan te gen yon fanmi ki tap viv ak kè kontan.",
+        "es": "Había una vez una familia que vivía muy feliz."
+      },
+      {
+        "ht": "Yo pa te janm goumen yonn ak lòt. Yo te ede paran yo nan kay la ak nan jaden an.",
+        "es": "Nunca peleaban. Los hijos ayudaban a sus padres en el hogar y en los huertos."
+      },
+      {
+        "ht": "Men, yo pa te gen dwa ale twò pre dife.",
+        "es": "Pero tenían prohibido acercarse al fuego."
+      },
+      {
+        "ht": "Yo te fè tout travay sa yo nan lannwit paske yo te fèt ak lasi!",
+        "es": "Tenían que hacer todo su trabajo por las noches. ¡Porque eran niños de cera!"
+      },
+      {
+        "ht": "Men yonn nan ti gason yo te anvi wè limyè solèy la.",
+        "es": "Pero uno de los chicos sentía un fuerte deseo por salir a la luz del sol."
+      },
+      {
+        "ht": "Yon jou anvi sa a te gwo anpil. Frè li avèti’l …",
+        "es": "Un día su deseo fue muy fuerte. Sus hermanos le advirtieron que no lo hiciera…"
+      },
+      {
+        "ht": "Men, li te twò ta! Li fonn nan solèy cho a.",
+        "es": "¡Pero ya era tarde! Se derritió con el calor del sol."
+      },
+      {
+        "ht": "Timoun yo te si tèlman tris lè yo wè yo frè ap fonn.",
+        "es": "Los niños de cera se entristecieron de ver a su hermano derritiéndose."
+      },
+      {
+        "ht": "Yo fè yon plan. Yo pran lasi, yo fonn lasi a enpi yo fè’l tounen yon zwazo.",
+        "es": "Pero hicieron un plan. Tomaron los restos de cera derretida y le dieron la forma de un ave."
+      },
+      {
+        "ht": "Yo mennen frè zwazo yo sou tèt yon mòn wo.",
+        "es": "Llevaron a su hermano ave a lo alto de una montaña."
+      },
+      {
+        "ht": "Lè solèy la leve, zwazo an vole pandan l’ap chante nan limyè maten an.",
+        "es": "Y cuando salió el sol, el ave se fue volando y cantando con la luz del amanecer."
+      }
+    ]
+  },
+  {
+    "id": "0342",
+    "titulo": "Pinisyon",
+    "tituloEs": "Castigo",
+    "nivel": 2,
+    "fuente": "African Storybook / Global Storybooks",
+    "licencia": "CC BY",
+    "urlHt": "https://global-asp.github.io/storybooks-spanish/stories/ht/0342/",
+    "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0342/",
+    "segmentos": [
+      {
+        "ht": "Yon jou manman’m rive ak anpil fwi.",
+        "es": "Un día, mamá trajo mucha fruta."
+      },
+      {
+        "ht": "Nou mande manman nou “Kilè nou ka maje yon ti fwi?” Manman’m reponn nou “Nou pral manje fwi sa yo pita, aswè an.",
+        "es": "“¿Cuándo podemos comer fruta?” le preguntamos. “Esta noche comeremos fruta,” dice mamá."
+      },
+      {
+        "ht": "Frè’m ki rele Rahim renmen bouch li anpil. Li goute nan tout fwi yo enpi lo manje anpil nan yo.",
+        "es": "Mi hermano Rahim es glotón. Prueba toda la fruta. Come mucha."
+      },
+      {
+        "ht": "Ti frè’m rele “Gade sa Rahim fè!”. Mwen di “Rahim ou se yon vakabon, ou egoyis”.",
+        "es": "“¡Mira lo que hizo Rahim!” grita mi hermano pequeño. “Rahim es travieso y egoísta,” le respondo."
+      },
+      {
+        "ht": "Manman’m pa te kontan ak Rahim.",
+        "es": "Mamá se enoja con Rahim."
+      },
+      {
+        "ht": "Nou te fache ak Rahim tou. Men, Rahim pa janm regrèt anyen.",
+        "es": "Nosotros también nos enojamos con Rahim. Pero Rahim no está arrepentido."
+      },
+      {
+        "ht": "Ti frè’m mande manman’m « Ou pa pral pini Rahim? »",
+        "es": "“¿No vas a castigar a Rahim?” pregunta mi hermano pequeño."
+      },
+      {
+        "ht": "Manman’m avèti Rahim “Rahim, nan yon tibout tan ou pral regrèt sa ou fè ».",
+        "es": "“Rahim, pronto te arrepentirás,” le advierte mamá."
+      },
+      {
+        "ht": "Rahim kòmanse santi’l malad.",
+        "es": "Rahim empieza a sentir náuseas."
+      },
+      {
+        "ht": "“Vant mwen ap fè’m mal,” Rahim di tout ba.",
+        "es": "“Me duele mucho el estómago,” susurra Rahim."
+      },
+      {
+        "ht": "Manman’m te konnen sa ta pral rive. Fwi yo pini ou Rahim!",
+        "es": "Mamá sabía que esto pasaría. ¡La fruta está castigando a Rahim!"
+      },
+      {
+        "ht": "Apre sa a, Rahim vin mande nou padon. Li pwomèt nou “Mwen pap janm visye konsa ankò”. Nou tout kwè Rahim.",
+        "es": "Más tarde, Rahim nos pide disculpas. “No volveré a ser tan glotón,” promete. Y todos aceptamos su promesa."
+      }
+    ]
+  },
+  {
     "id": "timoun-lasi",
     "titulo": "Timoun lasi (Niños de cera)",
     "nivel": 2,
@@ -9,17 +2169,50 @@
     "urlEs": "https://global-asp.github.io/storybooks-spanish/stories/es/0337/",
     "autor": "Southern African Folktale (trad. kreyòl: ACE Haiti-University of Notre Dame USA; trad. español: Karina Vásquez)",
     "segmentos": [
-      { "ht": "Nan tan lontan te gen yon fanmi ki tap viv ak kè kontan.", "es": "Había una vez una familia que vivía muy feliz." },
-      { "ht": "Yo pa te janm goumen yonn ak lòt. Yo te ede paran yo nan kay la ak nan jaden an.", "es": "Nunca peleaban. Los hijos ayudaban a sus padres en el hogar y en los huertos." },
-      { "ht": "Men, yo pa te gen dwa ale twò pre dife.", "es": "Pero tenían prohibido acercarse al fuego." },
-      { "ht": "Yo te fè tout travay sa yo nan lannwit paske yo te fèt ak lasi!", "es": "Tenían que hacer todo su trabajo por las noches. ¡Porque eran niños de cera!" },
-      { "ht": "Men yonn nan ti gason yo te anvi wè limyè solèy la.", "es": "Pero uno de los chicos sentía un fuerte deseo por salir a la luz del sol." },
-      { "ht": "Yon jou anvi sa a te gwo anpil. Frè li avèti'l …", "es": "Un día su deseo fue muy fuerte. Sus hermanos le advirtieron que no lo hiciera…" },
-      { "ht": "Men, li te twò ta! Li fonn nan solèy cho a.", "es": "¡Pero ya era tarde! Se derritió con el calor del sol." },
-      { "ht": "Timoun yo te si tèlman tris lè yo wè yo frè ap fonn.", "es": "Los niños de cera se entristecieron de ver a su hermano derritiéndose." },
-      { "ht": "Yo fè yon plan. Yo pran lasi, yo fonn lasi a enpi yo fè'l tounen yon zwazo.", "es": "Pero hicieron un plan. Tomaron los restos de cera derretida y le dieron la forma de un ave." },
-      { "ht": "Yo mennen frè zwazo yo sou tèt yon mòn wo.", "es": "Llevaron a su hermano ave a lo alto de una montaña." },
-      { "ht": "Lè solèy la leve, zwazo an vole pandan l'ap chante nan limyè maten an.", "es": "Y cuando salió el sol, el ave se fue volando y cantando con la luz del amanecer." }
+      {
+        "ht": "Nan tan lontan te gen yon fanmi ki tap viv ak kè kontan.",
+        "es": "Había una vez una familia que vivía muy feliz."
+      },
+      {
+        "ht": "Yo pa te janm goumen yonn ak lòt. Yo te ede paran yo nan kay la ak nan jaden an.",
+        "es": "Nunca peleaban. Los hijos ayudaban a sus padres en el hogar y en los huertos."
+      },
+      {
+        "ht": "Men, yo pa te gen dwa ale twò pre dife.",
+        "es": "Pero tenían prohibido acercarse al fuego."
+      },
+      {
+        "ht": "Yo te fè tout travay sa yo nan lannwit paske yo te fèt ak lasi!",
+        "es": "Tenían que hacer todo su trabajo por las noches. ¡Porque eran niños de cera!"
+      },
+      {
+        "ht": "Men yonn nan ti gason yo te anvi wè limyè solèy la.",
+        "es": "Pero uno de los chicos sentía un fuerte deseo por salir a la luz del sol."
+      },
+      {
+        "ht": "Yon jou anvi sa a te gwo anpil. Frè li avèti'l …",
+        "es": "Un día su deseo fue muy fuerte. Sus hermanos le advirtieron que no lo hiciera…"
+      },
+      {
+        "ht": "Men, li te twò ta! Li fonn nan solèy cho a.",
+        "es": "¡Pero ya era tarde! Se derritió con el calor del sol."
+      },
+      {
+        "ht": "Timoun yo te si tèlman tris lè yo wè yo frè ap fonn.",
+        "es": "Los niños de cera se entristecieron de ver a su hermano derritiéndose."
+      },
+      {
+        "ht": "Yo fè yon plan. Yo pran lasi, yo fonn lasi a enpi yo fè'l tounen yon zwazo.",
+        "es": "Pero hicieron un plan. Tomaron los restos de cera derretida y le dieron la forma de un ave."
+      },
+      {
+        "ht": "Yo mennen frè zwazo yo sou tèt yon mòn wo.",
+        "es": "Llevaron a su hermano ave a lo alto de una montaña."
+      },
+      {
+        "ht": "Lè solèy la leve, zwazo an vole pandan l'ap chante nan limyè maten an.",
+        "es": "Y cuando salió el sol, el ave se fue volando y cantando con la luz del amanecer."
+      }
     ]
   }
 ]
