@@ -1,0 +1,83 @@
+[
+  {
+    "fecha": "2026-08-20T00:11:25.822Z",
+    "total": 62,
+    "ok": 35,
+    "duda": 20,
+    "error": 7,
+    "red": 0,
+    "tasaError": 0.11
+  },
+  {
+    "fecha": "2026-08-20T00:14:55.152Z",
+    "total": 62,
+    "ok": 43,
+    "duda": 19,
+    "error": 0,
+    "red": 0,
+    "cubierta": 8,
+    "tasaError": 0
+  },
+  {
+    "fecha": "2026-08-20T00:15:27.263Z",
+    "total": 62,
+    "ok": 45,
+    "duda": 17,
+    "error": 0,
+    "red": 0,
+    "cubierta": 10,
+    "tasaError": 0
+  },
+  {
+    "fecha": "2026-08-20T00:20:46.830Z",
+    "total": 86,
+    "ok": 63,
+    "duda": 20,
+    "error": 3,
+    "red": 0,
+    "cubierta": 10,
+    "tasaError": 0.03
+  },
+  {
+    "fecha": "2026-08-20T00:22:51.054Z",
+    "total": 86,
+    "ok": 54,
+    "duda": 12,
+    "error": 0,
+    "red": 20,
+    "cubierta": 15,
+    "tasaError": 0
+  },
+  {
+    "fecha": "2026-08-20T00:26:16.434Z",
+    "total": 86,
+    "ok": 63,
+    "duda": 12,
+    "error": 0,
+    "red": 11,
+    "cubierta": 15,
+    "tasaError": 0
+  },
+  {
+    "fecha": "2026-08-20T00:28:15.904Z",
+    "total": 86,
+    "ok": 69,
+    "duda": 17,
+    "error": 0,
+    "red": 0,
+    "cubierta": 15,
+    "tasaError": 0
+  },
+  {
+    "fecha": "2026-08-20T00:32:44.165Z",
+    "total": 86,
+    "ok": 69,
+    "duda": 17,
+    "error": 0,
+    "red": 0,
+    "cubierta": 15,
+    "tasaError": 0,
+    "regresion": false,
+    "deltaTasa": 0
+  }
+]

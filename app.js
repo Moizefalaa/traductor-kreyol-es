@@ -5,7 +5,7 @@
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v7";
+  var VERSION = "v8";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -115,6 +115,24 @@
     { ht: "Mwen blese", es: "Estoy herida" },
     { ht: "Rele anbilans", es: "Llama una ambulancia" },
     { ht: "Mwen santi m move", es: "Me siento muy mal" }
+  ];
+
+  var CORRECCIONES = [
+    { ht: "Bonjou", es: "Buenos días" },
+    { ht: "Mwen pè", es: "Tengo miedo" },
+    { ht: "padon", es: "perdón" },
+    { ht: "tablo", es: "pizarra" },
+    { ht: "pwofesè", es: "profesor" },
+    { ht: "Mwen fatige", es: "Estoy cansada" },
+    { ht: "Mwen blese", es: "Estoy herida" },
+    { ht: "Mwen kontan", es: "Estoy contenta" },
+    { ht: "Mwen rele…", es: "Me llamo…" },
+    { ht: "Kote pwofesè a?", es: "¿Dónde está el profesor?" },
+    { ht: "Mwen ta renmen ale lakay mwen", es: "Quisiera ir a mi casa" },
+    { ht: "Ki lè ou fini?", es: "¿A qué hora terminas?" },
+    { ht: "Mwen ap vini", es: "Voy para allá" },
+    { ht: "Èske m ka rantre?", es: "¿Puedo entrar?" },
+    { ht: "Mwen bezwen travay", es: "Necesito trabajo" }
   ];
 
   var VOCABULARIO = [
@@ -387,6 +405,7 @@
     }
     FRASES_RAPIDAS.forEach(function (g) { g.frases.forEach(function (f) { agregar(f.ht, f.es); }); });
     FRASES_EMERGENCIA.forEach(function (f) { agregar(f.ht, f.es); });
+    CORRECCIONES.forEach(function (c) { agregar(c.ht, c.es); });
     VOCABULARIO.forEach(function (g) { g.items.forEach(function (i) { agregar(i.ht, i.es); }); });
     return d;
   }

@@ -1,0 +1,17 @@
+[
+  { "ht": "Bonjou", "es": "Buenos días", "motivo": "El motor devuelve 'Hola'." },
+  { "ht": "Mwen pè", "es": "Tengo miedo", "motivo": "El motor devuelve 'Me temo que'." },
+  { "ht": "padon", "es": "perdón", "motivo": "El motor devuelve 'Lo siento'." },
+  { "ht": "tablo", "es": "pizarra", "motivo": "El motor devuelve 'mesa'." },
+  { "ht": "pwofesè", "es": "profesor", "motivo": "El motor devuelve 'maestro'." },
+  { "ht": "Mwen fatige", "es": "Estoy cansada", "motivo": "Género femenino (frase del aula)." },
+  { "ht": "Mwen blese", "es": "Estoy herida", "motivo": "Género femenino (frase del aula)." },
+  { "ht": "Mwen kontan", "es": "Estoy contenta", "motivo": "Frase curada del aula." },
+  { "ht": "Mwen rele…", "es": "Me llamo…", "motivo": "El motor devuelve 'Yo lo llamo…'." },
+  { "ht": "Kote pwofesè a?", "es": "¿Dónde está el profesor?", "motivo": "El motor devuelve 'maestro'." },
+  { "ht": "Mwen ta renmen ale lakay mwen", "es": "Quisiera ir a mi casa", "motivo": "El roundtrip cambia 'mi casa' por 'tu casa'." },
+  { "ht": "Ki lè ou fini?", "es": "¿A qué hora terminas?", "motivo": "El motor devuelve pasado 'cuando terminaste'." },
+  { "ht": "Mwen ap vini", "es": "Voy para allá", "motivo": "El motor devuelve 'ya voy', cambia el sentido." },
+  { "ht": "Èske m ka rantre?", "es": "¿Puedo entrar?", "motivo": "El motor devuelve '¿Puedo unirme?'." },
+  { "ht": "Mwen bezwen travay", "es": "Necesito trabajo", "motivo": "El motor devuelve 'necesito trabajar' (verbo, no sustantivo)." }
+]
