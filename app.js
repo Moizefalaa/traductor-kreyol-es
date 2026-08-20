@@ -5,7 +5,7 @@
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v11";
+  var VERSION = "v12";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -151,7 +151,9 @@
     { ht: "Li goute nan tout fwi yo enpi lo manje anpil nan yo.", es: "Prueba toda la fruta." },
     { ht: "Mwen ta vle ke ou ale chache yon ti manje la?", es: "Ojalá vayas pronto a buscar comida" },
     { ht: "Chen an kase tèt tounen epi yo pa janm wè li ankò.", es: "El perro se fue corriendo y nunca nadie lo ha visto aparecerse de nuevo." },
-    { ht: "Gingile kouri desann pyebwa anvan Leyopa a bay li yon kout pat.", es: "Antes de que el leopardo pudiera atacar a Gingile, él bajó muy rápidamente del árbol." }
+    { ht: "Gingile kouri desann pyebwa anvan Leyopa a bay li yon kout pat.", es: "Antes de que el leopardo pudiera atacar a Gingile, él bajó muy rápidamente del árbol." },
+    { ht: "Chè l' se chè mwen.", es: "Su carne es mi carne." },
+    { ht: "Premye branch lan te rele Pichon.", es: "La primera rama se llamaba Pisón." }
   ];
 
   var VOCABULARIO = [

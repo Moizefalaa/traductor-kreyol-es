@@ -32,5 +32,7 @@
   { "ht": "Li goute nan tout fwi yo enpi lo manje anpil nan yo.", "es": "Prueba toda la fruta.", "motivo": "El motor inserta 'impuras'." },
   { "ht": "Mwen ta vle ke ou ale chache yon ti manje la?", "es": "Ojalá vayas pronto a buscar comida", "motivo": "El motor convierte la frase en pregunta." },
   { "ht": "Chen an kase tèt tounen epi yo pa janm wè li ankò.", "es": "El perro se fue corriendo y nunca nadie lo ha visto aparecerse de nuevo.", "motivo": "El motor devuelve 'reaccionó bruscamente'." },
-  { "ht": "Gingile kouri desann pyebwa anvan Leyopa a bay li yon kout pat.", "es": "Antes de que el leopardo pudiera atacar a Gingile, él bajó muy rápidamente del árbol.", "motivo": "El motor traduce 'kout pat' como 'palmadita'." }
+  { "ht": "Gingile kouri desann pyebwa anvan Leyopa a bay li yon kout pat.", "es": "Antes de que el leopardo pudiera atacar a Gingile, él bajó muy rápidamente del árbol.", "motivo": "El motor traduce 'kout pat' como 'palmadita'." },
+  { "ht": "Chè l' se chè mwen.", "es": "Su carne es mi carne.", "motivo": "El motor confunde 'chè' (carne) con 'chère' (querida)." },
+  { "ht": "Premye branch lan te rele Pichon.", "es": "La primera rama se llamaba Pisón.", "motivo": "El motor traduce 'branch' (de río) como 'sucursal'." }
 ]
