@@ -9,7 +9,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="styles.css?v=20">
+  <link rel="stylesheet" href="styles.css?v=21">
 </head>
 <body>
   <header class="cabecera">
@@ -21,6 +21,7 @@
       <h1>Kreyòl ↔ Español</h1>
       <p>Criollo haitiano y español latino · hablado o escrito</p>
     </div>
+    <button id="btnApariencia" class="boton icono-cabecera" type="button" title="Personalizar colores y tema" aria-label="Personalizar colores y tema">&#127912;</button>
     <button id="btnInstalar" class="boton instalar" type="button">&#11015; Instalar app</button>
   </header>
 
@@ -180,6 +181,35 @@
     </div>
   </div>
 
-  <script src="app.js?v=20"></script>
+  <div id="modalApariencia" class="modal-overlay oculto" role="dialog" aria-modal="true" aria-label="Personalizar apariencia">
+    <div class="modal-caja">
+      <div class="modal-cabecera">
+        <h2>Personalizar</h2>
+        <button class="boton-cerrar" type="button" aria-label="Cerrar">&#10005;</button>
+      </div>
+      <p class="aviso">Elige el modo de pantalla y la paleta de colores de la app.</p>
+
+      <div class="grupo-opciones">
+        <p class="etiqueta-opcion">Modo de pantalla</p>
+        <div class="opciones" id="opcionesTema" role="group" aria-label="Tema">
+          <button class="opcion" data-tema="claro" type="button">&#9728;&#65039; Claro</button>
+          <button class="opcion" data-tema="oscuro" type="button">&#127769;&#65039; Oscuro</button>
+          <button class="opcion" data-tema="auto" type="button">&#9881;&#65039; Autom&#225;tico</button>
+        </div>
+      </div>
+
+      <div class="grupo-opciones">
+        <p class="etiqueta-opcion">Paleta de colores</p>
+        <div class="opciones" id="opcionesPaleta" role="group" aria-label="Paleta">
+          <button class="opcion" data-paleta="haiti" type="button"><span class="muestra haiti"></span> Hait&#237;</button>
+          <button class="opcion" data-paleta="oceano" type="button"><span class="muestra oceano"></span> Oc&#233;ano</button>
+          <button class="opcion" data-paleta="calido" type="button"><span class="muestra calido"></span> C&#225;lido</button>
+          <button class="opcion" data-paleta="noche" type="button"><span class="muestra noche"></span> Nocturno</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=21"></script>
 </body>
 </html>

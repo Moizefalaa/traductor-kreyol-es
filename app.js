@@ -4,8 +4,10 @@
   var CLAVE_HISTORIAL = "kreolEs_historial_v1";
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
+  var CLAVE_TEMA = "kreolEs_tema_v1";
+  var CLAVE_PALETA = "kreolEs_paleta_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v20";
+  var VERSION = "v21";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -49,6 +51,10 @@
   var textoImportar = document.getElementById("textoImportar");
   var btnConfirmarImportar = document.getElementById("btnConfirmarImportar");
   var resultadoImportar = document.getElementById("resultadoImportar");
+  var btnApariencia = document.getElementById("btnApariencia");
+  var modalApariencia = document.getElementById("modalApariencia");
+  var opcionesTema = document.getElementById("opcionesTema");
+  var opcionesPaleta = document.getElementById("opcionesPaleta");
 
   var reconocedor = null;
   var escuchando = false;
@@ -195,56 +201,56 @@
     {
       cat: "Cortesía",
       items: [
-        { ht: "mèsi", es: "gracias" },
-        { ht: "tanpri", es: "por favor" },
-        { ht: "padon", es: "perdón" },
-        { ht: "wi", es: "sí" },
-        { ht: "non", es: "no" },
-        { ht: "eskize m", es: "disculpe" }
+        { ht: "mèsi", es: "gracias", emoji: "🤝" },
+        { ht: "tanpri", es: "por favor", emoji: "🙏" },
+        { ht: "padon", es: "perdón", emoji: "🙇" },
+        { ht: "wi", es: "sí", emoji: "👍" },
+        { ht: "non", es: "no", emoji: "👎" },
+        { ht: "eskize m", es: "disculpe", emoji: "😅" }
       ]
     },
     {
       cat: "Números",
       items: [
-        { ht: "youn", es: "uno" },
-        { ht: "de", es: "dos" },
-        { ht: "twa", es: "tres" },
-        { ht: "kat", es: "cuatro" },
-        { ht: "senk", es: "cinco" },
-        { ht: "dis", es: "diez" }
+        { ht: "youn", es: "uno", emoji: "1️⃣" },
+        { ht: "de", es: "dos", emoji: "2️⃣" },
+        { ht: "twa", es: "tres", emoji: "3️⃣" },
+        { ht: "kat", es: "cuatro", emoji: "4️⃣" },
+        { ht: "senk", es: "cinco", emoji: "5️⃣" },
+        { ht: "dis", es: "diez", emoji: "🔟" }
       ]
     },
     {
       cat: "Colores",
       items: [
-        { ht: "wouj", es: "rojo" },
-        { ht: "ble", es: "azul" },
-        { ht: "vèt", es: "verde" },
-        { ht: "jòn", es: "amarillo" },
-        { ht: "nwa", es: "negro" },
-        { ht: "blan", es: "blanco" }
+        { ht: "wouj", es: "rojo", emoji: "🔴" },
+        { ht: "ble", es: "azul", emoji: "🔵" },
+        { ht: "vèt", es: "verde", emoji: "🟢" },
+        { ht: "jòn", es: "amarillo", emoji: "🟡" },
+        { ht: "nwa", es: "negro", emoji: "⚫" },
+        { ht: "blan", es: "blanco", emoji: "⚪" }
       ]
     },
     {
       cat: "La clase",
       items: [
-        { ht: "liv", es: "libro" },
-        { ht: "kreyon", es: "lápiz" },
-        { ht: "papye", es: "papel" },
-        { ht: "tablo", es: "pizarra" },
-        { ht: "chèz", es: "silla" },
-        { ht: "pwofesè", es: "profesor" }
+        { ht: "liv", es: "libro", emoji: "📘" },
+        { ht: "kreyon", es: "lápiz", emoji: "✏️" },
+        { ht: "papye", es: "papel", emoji: "📄" },
+        { ht: "tablo", es: "pizarra", emoji: "📋" },
+        { ht: "chèz", es: "silla", emoji: "🪑" },
+        { ht: "pwofesè", es: "profesor", emoji: "👨‍🏫" }
       ]
     },
     {
       cat: "Días",
       items: [
-        { ht: "lendi", es: "lunes" },
-        { ht: "madi", es: "martes" },
-        { ht: "mèkredi", es: "miércoles" },
-        { ht: "jedi", es: "jueves" },
-        { ht: "vandredi", es: "viernes" },
-        { ht: "samdi", es: "sábado" }
+        { ht: "lendi", es: "lunes", emoji: "🌙" },
+        { ht: "madi", es: "martes", emoji: "🔥" },
+        { ht: "mèkredi", es: "miércoles", emoji: "💧" },
+        { ht: "jedi", es: "jueves", emoji: "⚡" },
+        { ht: "vandredi", es: "viernes", emoji: "💛" },
+        { ht: "samdi", es: "sábado", emoji: "🎉" }
       ]
     }
   ];
@@ -1057,6 +1063,10 @@
       tarjeta.type = "button";
       tarjeta.className = "vocab-card";
 
+      var emoji = document.createElement("span");
+      emoji.className = "vocab-emoji";
+      emoji.textContent = item.emoji || "";
+
       var ht = document.createElement("span");
       ht.className = "vocab-ht";
       ht.textContent = item.ht;
@@ -1070,6 +1080,7 @@
       acciones.appendChild(botonHablar(item.ht, "ht"));
       acciones.appendChild(botonHablar(item.es, "es"));
 
+      tarjeta.appendChild(emoji);
       tarjeta.appendChild(ht);
       tarjeta.appendChild(es);
       tarjeta.appendChild(acciones);
@@ -1132,6 +1143,55 @@
     renderEmergencia();
     abrirModal(modalEmergencia);
   });
+
+  function cargarTema() {
+    try { return localStorage.getItem(CLAVE_TEMA) || "claro"; } catch (e) { return "claro"; }
+  }
+
+  function cargarPaleta() {
+    try { return localStorage.getItem(CLAVE_PALETA) || "haiti"; } catch (e) { return "haiti"; }
+  }
+
+  function aplicarTema(t) {
+    document.documentElement.setAttribute("data-theme", t);
+    try { localStorage.setItem(CLAVE_TEMA, t); } catch (e) {}
+  }
+
+  function aplicarPaleta(p) {
+    document.documentElement.setAttribute("data-paleta", p);
+    try { localStorage.setItem(CLAVE_PALETA, p); } catch (e) {}
+  }
+
+  function marcarOpcion(contenedor, atributo, valor) {
+    contenedor.querySelectorAll(".opcion").forEach(function (o) {
+      o.classList.toggle("activo", o.getAttribute(atributo) === valor);
+    });
+  }
+
+  if (btnApariencia && modalApariencia) {
+    aplicarTema(cargarTema());
+    aplicarPaleta(cargarPaleta());
+    marcarOpcion(opcionesTema, "data-tema", cargarTema());
+    marcarOpcion(opcionesPaleta, "data-paleta", cargarPaleta());
+
+    btnApariencia.addEventListener("click", function () {
+      abrirModal(modalApariencia);
+    });
+
+    opcionesTema.querySelectorAll(".opcion").forEach(function (o) {
+      o.addEventListener("click", function () {
+        aplicarTema(o.getAttribute("data-tema"));
+        marcarOpcion(opcionesTema, "data-tema", cargarTema());
+      });
+    });
+
+    opcionesPaleta.querySelectorAll(".opcion").forEach(function (o) {
+      o.addEventListener("click", function () {
+        aplicarPaleta(o.getAttribute("data-paleta"));
+        marcarOpcion(opcionesPaleta, "data-paleta", cargarPaleta());
+      });
+    });
+  }
 
   function iniciarConversacion(dir) {
     cambiarDireccion(dir);
