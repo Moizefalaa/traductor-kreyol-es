@@ -13,5 +13,8 @@
   { "ht": "Ki lè ou fini?", "es": "¿A qué hora terminas?", "motivo": "El motor devuelve pasado 'cuando terminaste'." },
   { "ht": "Mwen ap vini", "es": "Voy para allá", "motivo": "El motor devuelve 'ya voy', cambia el sentido." },
   { "ht": "Èske m ka rantre?", "es": "¿Puedo entrar?", "motivo": "El motor devuelve '¿Puedo unirme?'." },
-  { "ht": "Mwen bezwen travay", "es": "Necesito trabajo", "motivo": "El motor devuelve 'necesito trabajar' (verbo, no sustantivo)." }
+  { "ht": "Mwen bezwen travay", "es": "Necesito trabajo", "motivo": "El motor devuelve 'necesito trabajar' (verbo, no sustantivo)." },
+  { "ht": "Yo te fè tout travay sa yo nan lannwit paske yo te fèt ak lasi!", "es": "Tenían que hacer todo su trabajo por las noches. ¡Porque eran niños de cera!", "motivo": "'lasi' (cera) mal traducido como 'celosía'." },
+  { "ht": "Yo pran lasi, yo fonn lasi a enpi yo fè'l tounen yon zwazo.", "es": "Tomaron los restos de cera derretida y le dieron la forma de un ave.", "motivo": "'lasi' (cera) mal traducido como 'red'." },
+  { "ht": "Frè li avèti'l …", "es": "Sus hermanos le advirtieron que no lo hiciera…", "motivo": "La traducción del cuento usa plural." }
 ]

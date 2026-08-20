@@ -4,6 +4,7 @@ const path = require("path");
 const DIR = __dirname;
 const RUTA_CORPUS = path.join(DIR, "corpus.json");
 const RUTA_CORRECCIONES = path.join(DIR, "correcciones.json");
+const RUTA_TEXTOS = path.join(DIR, "textos.json");
 const RUTA_RESUMEN = path.join(DIR, "resumen.json");
 const DIR_REPORTES = path.join(DIR, "reportes");
 
@@ -199,6 +200,94 @@ async function verificar(entrada, correcciones) {
   return fila;
 }
 
+function dividirEnOraciones(texto) {
+  const limpio = (texto || "").replace(/\s+/g, " ").trim();
+  if (!limpio) return [];
+  return (limpio.match(/[^.!?…]+[.!?…]+|[^.!?…]+$/g) || [limpio])
+    .map(function (t) { return t.trim(); })
+    .filter(Boolean);
+}
+
+async function verificarOracion(idBase, titulo, nivel, ht, es, correcciones) {
+  const fila = {
+    tipo: "texto",
+    id: idBase,
+    titulo: titulo,
+    nivel: nivel,
+    ht: ht,
+    esEsperado: es,
+    corregida: false,
+    google: null,
+    roundtrip: null,
+    simDirecto: null,
+    simRoundtrip: null,
+    nivelDirecto: null,
+    nivelRoundtrip: null,
+    veredicto: "ok",
+    estado: "ok"
+  };
+
+  const correccion = corregidaPara(ht, correcciones);
+  if (correccion) {
+    fila.esEsperado = correccion.es;
+    fila.corregida = true;
+    fila.veredicto = "ok";
+    fila.estado = "cubierta";
+    return fila;
+  }
+
+  try {
+    const directo = await traducirConGoogle(ht, "ht", "es");
+    fila.google = directo;
+    fila.simDirecto = similitud(directo, fila.esEsperado);
+    fila.nivelDirecto = nivelDeSimilitud(fila.simDirecto);
+    try {
+      const reversa = await traducirConGoogle(directo, "es", "ht");
+      fila.roundtrip = reversa;
+      fila.simRoundtrip = similitud(reversa, ht);
+      fila.nivelRoundtrip = nivelDeSimilitud(fila.simRoundtrip);
+    } catch (e) {
+      fila.nivelRoundtrip = "distinto";
+      fila.simRoundtrip = 0;
+    }
+  } catch (e) {
+    fila.estado = "red";
+    fila.error = e.message;
+    return fila;
+  }
+
+  if (fila.nivelDirecto === "distinto") {
+    fila.veredicto = "error";
+  } else if (fila.nivelDirecto === "parecido" || fila.nivelRoundtrip !== "exacto") {
+    fila.veredicto = "duda";
+  }
+  return fila;
+}
+
+async function verificarTexto(texto, correcciones) {
+  const filas = [];
+  for (let i = 0; i < texto.segmentos.length; i++) {
+    const seg = texto.segmentos[i];
+    const oracionesHt = dividirEnOraciones(seg.ht);
+    const oracionesEs = dividirEnOraciones(seg.es);
+    const total = Math.max(oracionesHt.length, oracionesEs.length);
+    for (let j = 0; j < total; j++) {
+      const ht = oracionesHt[j] || "";
+      const es = oracionesEs[j] || "";
+      if (!ht) continue;
+      filas.push(await verificarOracion(
+        texto.id + "-seg" + (i + 1) + "-or" + (j + 1),
+        texto.titulo,
+        texto.nivel,
+        ht,
+        es,
+        correcciones
+      ));
+    }
+  }
+  return filas;
+}
+
 async function enParalelo(lista, limite, tarea) {
   const resultados = new Array(lista.length);
   let cursor = 0;
@@ -258,7 +347,8 @@ function imprimirErrores(filas) {
   if (!problemas.length) return;
   console.log("\nCANDIDATOS A REVISION");
   problemas.forEach(function (f) {
-    console.log("- [" + f.veredicto.toUpperCase() + "] " + f.id + "  " + f.ht);
+    const origen = f.tipo === "texto" ? "[" + f.titulo + ", nivel " + f.nivel + "] " : "";
+    console.log("- [" + f.veredicto.toUpperCase() + "] " + origen + f.id + "  " + f.ht);
     console.log("    esperado: " + f.esEsperado);
     console.log("    google:   " + f.google);
     if (f.roundtrip) console.log("    roundtrip (" + f.ht + "): " + f.roundtrip);
@@ -313,7 +403,9 @@ async function main() {
     "  - Directo:  motor(ht -> es) vs esperado\n" +
     "  - Ida y vuelta: motor(es -> ht) vs original\n" +
     "  - MyMemory se registra como dato, sin influir en el veredicto (poco fiable en kreyol)\n" +
-    "Las frases en correcciones.json se marcan como cubiertas por el diccionario\n" +
+    "  - corpus.json: frases sueltas\n" +
+    "  - textos.json: textos largos evaluados oración por oración\n" +
+    "Las frases/oraciones en correcciones.json se marcan como cubiertas por el diccionario\n" +
     "local (como en la app real) y no se vuelven a enviar al motor.\n");
 
   const corpus = leerJson(RUTA_CORPUS, []);
@@ -322,10 +414,18 @@ async function main() {
     process.exit(1);
   }
   const correcciones = leerJson(RUTA_CORRECCIONES, []);
+  const textos = leerJson(RUTA_TEXTOS, []);
 
-  const filas = await enParalelo(corpus, 3, function (entrada) {
+  const filasCorpus = await enParalelo(corpus, 3, function (entrada) {
     return verificar(entrada, correcciones);
   });
+
+  const filasTexto = [];
+  for (const texto of textos) {
+    filasTexto.push.apply(filasTexto, await verificarTexto(texto, correcciones));
+  }
+
+  const filas = filasCorpus.concat(filasTexto);
 
   const resumen = resumenDe(filas);
   imprimirResumen(resumen);
