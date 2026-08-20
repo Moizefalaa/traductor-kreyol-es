@@ -5,7 +5,7 @@
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v12";
+  var VERSION = "v13";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -153,7 +153,9 @@
     { ht: "Chen an kase tèt tounen epi yo pa janm wè li ankò.", es: "El perro se fue corriendo y nunca nadie lo ha visto aparecerse de nuevo." },
     { ht: "Gingile kouri desann pyebwa anvan Leyopa a bay li yon kout pat.", es: "Antes de que el leopardo pudiera atacar a Gingile, él bajó muy rápidamente del árbol." },
     { ht: "Chè l' se chè mwen.", es: "Su carne es mi carne." },
-    { ht: "Premye branch lan te rele Pichon.", es: "La primera rama se llamaba Pisón." }
+    { ht: "Premye branch lan te rele Pichon.", es: "La primera rama se llamaba Pisón." },
+    { ht: "Tè a va kale tout kalite pikan ak pengwen ba ou.", es: "La tierra te producirá espinos y cardos." },
+    { ht: "Se swe kouraj ou ki pou fè ou mete yon moso pen nan bouch ou jouk lè wa tounen nan tè kote ou soti a.", es: "Con el sudor de tu frente comerás el pan hasta que vuelvas a la tierra de donde saliste." }
   ];
 
   var VOCABULARIO = [

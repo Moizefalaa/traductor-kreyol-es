@@ -34,5 +34,7 @@
   { "ht": "Chen an kase tèt tounen epi yo pa janm wè li ankò.", "es": "El perro se fue corriendo y nunca nadie lo ha visto aparecerse de nuevo.", "motivo": "El motor devuelve 'reaccionó bruscamente'." },
   { "ht": "Gingile kouri desann pyebwa anvan Leyopa a bay li yon kout pat.", "es": "Antes de que el leopardo pudiera atacar a Gingile, él bajó muy rápidamente del árbol.", "motivo": "El motor traduce 'kout pat' como 'palmadita'." },
   { "ht": "Chè l' se chè mwen.", "es": "Su carne es mi carne.", "motivo": "El motor confunde 'chè' (carne) con 'chère' (querida)." },
-  { "ht": "Premye branch lan te rele Pichon.", "es": "La primera rama se llamaba Pisón.", "motivo": "El motor traduce 'branch' (de río) como 'sucursal'." }
+  { "ht": "Premye branch lan te rele Pichon.", "es": "La primera rama se llamaba Pisón.", "motivo": "El motor traduce 'branch' (de río) como 'sucursal'." },
+  { "ht": "Tè a va kale tout kalite pikan ak pengwen ba ou.", "es": "La tierra te producirá espinos y cardos.", "motivo": "El motor traduce 'pengwen' (cardos) como 'pingüinos'." },
+  { "ht": "Se swe kouraj ou ki pou fè ou mete yon moso pen nan bouch ou jouk lè wa tounen nan tè kote ou soti a.", "es": "Con el sudor de tu frente comerás el pan hasta que vuelvas a la tierra de donde saliste.", "motivo": "El motor lee 'wa' (tú) como 'rey' y 'kouraj' como 'valentía'." }
 ]
