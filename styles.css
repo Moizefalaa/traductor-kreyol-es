@@ -42,8 +42,22 @@ body {
 .franja.azul { background: var(--azul); width: 50%; }
 .franja.roja { background: var(--rojo); width: 50%; }
 
+.titulos { flex: 1; min-width: 0; }
 .titulos h1 { margin: 0; font-size: 1.15rem; }
 .titulos p { margin: 0; font-size: .78rem; opacity: .9; }
+
+.boton.instalar {
+  background: #fff;
+  color: var(--verde-oscuro);
+  font-size: .82rem;
+  padding: 8px 12px;
+  flex-shrink: 0;
+  border: none;
+}
+.boton.instalar:hover { background: #eef7f2; }
+@media (max-width: 420px) {
+  .boton.instalar { font-size: .75rem; padding: 7px 9px; }
+}
 
 main {
   max-width: 720px;
@@ -454,6 +468,15 @@ footer {
   display: grid;
   gap: 10px;
   margin-top: 6px;
+}
+
+.lista-pasos {
+  margin: 10px 0 12px;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  font-size: .92rem;
+  line-height: 1.45;
 }
 
 .emergencia-item {

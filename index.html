@@ -21,6 +21,7 @@
       <h1>Kreyòl ↔ Español</h1>
       <p>Criollo haitiano y español latino · hablado o escrito</p>
     </div>
+    <button id="btnInstalar" class="boton instalar" type="button">&#11015; Instalar app</button>
   </header>
 
   <div id="bannerActualizar" class="banner-actualizar oculto" role="status">
@@ -160,6 +161,22 @@
         <button id="btnConfirmarImportar" class="boton secundario" type="button">Importar</button>
       </div>
       <p id="resultadoImportar" class="estado oculto"></p>
+    </div>
+  </div>
+
+  <div id="modalInstalar" class="modal-overlay oculto" role="dialog" aria-modal="true" aria-label="Instalar la app">
+    <div class="modal-caja">
+      <div class="modal-cabecera">
+        <h2>Instalar la app</h2>
+        <button class="boton-cerrar" type="button" aria-label="Cerrar">&#10005;</button>
+      </div>
+      <p class="aviso">En este tel&#233;fono la instalaci&#243;n se hace desde el navegador:</p>
+      <ol class="lista-pasos">
+        <li>Toca el icono <strong>Compartir</strong> (cuadrado con flecha hacia arriba).</li>
+        <li>Despl&#225;zate y toca <strong>Agregar a pantalla de inicio</strong>.</li>
+        <li>Confirma con <strong>Agregar</strong>.</li>
+      </ol>
+      <p class="aviso">La app quedar&#225; en tu pantalla como un icono m&#225;s, lista para usar sin abrir el navegador.</p>
     </div>
   </div>
 

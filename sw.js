@@ -1,4 +1,4 @@
-var CACHE = "kreol-es-v17";
+var CACHE = "kreol-es-v18";
 var ARCHIVOS = [
   "./",
   "./index.html",

@@ -5,7 +5,7 @@
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v17";
+  var VERSION = "v18";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -1262,6 +1262,41 @@
     window.speechSynthesis.onvoiceschanged = function () {
       poblarSelectVoz();
     };
+  }
+
+  var promptInstalacion = null;
+  var btnInstalar = document.getElementById("btnInstalar");
+  var modalInstalar = document.getElementById("modalInstalar");
+
+  function ocultarInstalar() {
+    if (btnInstalar) btnInstalar.classList.add("oculto");
+  }
+
+  if (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) {
+    ocultarInstalar();
+  }
+
+  window.addEventListener("beforeinstallprompt", function (e) {
+    e.preventDefault();
+    promptInstalacion = e;
+  });
+
+  window.addEventListener("appinstalled", function () {
+    promptInstalacion = null;
+    ocultarInstalar();
+  });
+
+  if (btnInstalar) {
+    btnInstalar.addEventListener("click", function () {
+      if (promptInstalacion) {
+        promptInstalacion.prompt();
+        promptInstalacion.userChoice.then(function () {
+          promptInstalacion = null;
+        });
+      } else {
+        abrirModal(modalInstalar);
+      }
+    });
   }
 
   if ("serviceWorker" in navigator) {
