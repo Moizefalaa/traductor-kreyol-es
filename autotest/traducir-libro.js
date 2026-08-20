@@ -51,17 +51,10 @@ async function traducirLibro(cuento, salidaEs) {
   };
 }
 
-async function main() {
-  const cuento = TEXTOS.find(function (t) { return t.id === ID; });
-  if (!cuento) {
-    console.error("Cuento no encontrado: " + ID);
-    process.exit(1);
-  }
+async function traducirUnLibro(cuento) {
   console.log("Traduciendo «" + cuento.titulo + "» (nivel " + cuento.nivel + ", " + cuento.segmentos.length + " páginas)…");
-
   const ht = await traducirLibro(cuento, false);
   const es = await traducirLibro(cuento, true);
-
   const nombre = cuento.id + "-" + cuento.titulo.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   a.escribirJson(path.join(DIR_SALIDAS, nombre + "-es.json"), {
     cuento: cuento.titulo,
@@ -75,10 +68,29 @@ async function main() {
     memoria: ht.usadasMemoria,
     texto: ht.texto
   });
+  return { es: es, ht: ht, nombre: nombre };
+}
 
-  console.log("ht -> es: " + es.oraciones + " oraciones, " + es.usadasMemoria + " de la memoria.");
-  console.log("es -> ht: " + ht.oraciones + " oraciones, " + ht.usadasMemoria + " de la memoria.");
-  console.log("Guardado en " + DIR_SALIDAS);
+async function main() {
+  const cuentos = ID === "all" ? TEXTOS : TEXTOS.filter(function (t) { return t.id === ID; });
+  if (!cuentos.length) {
+    console.error("Cuento no encontrado: " + ID);
+    process.exit(1);
+  }
+
+  const resumen = [];
+  for (const cuento of cuentos) {
+    try {
+      const r = await traducirUnLibro(cuento);
+      console.log("  ht -> es: " + r.es.oraciones + " oraciones, " + r.es.usadasMemoria + " de la memoria.");
+      console.log("  es -> ht: " + r.ht.oraciones + " oraciones, " + r.ht.usadasMemoria + " de la memoria.");
+      resumen.push({ id: cuento.id, titulo: cuento.titulo, nivel: cuento.nivel, es: r.es.oraciones, ht: r.ht.oraciones });
+    } catch (e) {
+      console.error("  ERROR en «" + cuento.titulo + "»: " + e.message);
+    }
+  }
+  a.escribirJson(path.join(DIR_SALIDAS, "_resumen.json"), resumen);
+  console.log("\nLibros guardados en " + DIR_SALIDAS + " (" + resumen.length + " de " + cuentos.length + ").");
 }
 
 main().catch(function (e) {
