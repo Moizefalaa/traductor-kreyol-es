@@ -94,7 +94,7 @@ function principal() {
   const filas = reporte.filas || [];
   const dudas = filas.filter(
     (f) => (f.veredicto === "duda" || f.veredicto === "error") &&
-           (f.estado === "parafraseo" || f.estado === "sin-referencia")
+           (f.estado === "parafraseo" || f.estado === "sin-referencia" || f.estado === "error")
   );
   console.log("Reporte:", ruta);
   console.log("Filas totales:", filas.length, "| Dudas/errores a agrupar:", dudas.length);

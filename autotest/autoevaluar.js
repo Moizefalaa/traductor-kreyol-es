@@ -139,9 +139,23 @@ function idSeg(titulo, i, j) {
   return (titulo || "t") + "-seg" + (i + 1) + "-or" + (j + 1);
 }
 
-async function evaluar(textos, dict, soloId) {
+function resumenDe(filas) {
+  return {
+    total: filas.length,
+    ok: filas.filter((f) => f.veredicto === "ok").length,
+    duda: filas.filter((f) => f.veredicto === "duda").length,
+    error: filas.filter((f) => f.veredicto === "error").length,
+    cubierta: filas.filter((f) => f.estado === "cubierta").length,
+  };
+}
+
+async function evaluar(textos, dict, soloId, desdeId, rutaLatest) {
   const filas = [];
-  const usados = soloId ? textos.filter((t) => t.id === soloId) : textos;
+  let usados = textos;
+  if (soloId) usados = textos.filter((t) => t.id === soloId);
+  else if (desdeId) { const k = textos.findIndex((t) => t.id === desdeId); if (k >= 0) usados = textos.slice(k); }
+
+  const guardar = () => fs.writeFileSync(rutaLatest, JSON.stringify({ resumen: resumenDe(filas), filas, parcial: true }, null, 2) + "\n", "utf8");
   for (const texto of usados) {
     for (let i = 0; i < (texto.segmentos || []).length; i++) {
       const seg = texto.segmentos[i];
@@ -152,6 +166,7 @@ async function evaluar(textos, dict, soloId) {
         f.titulo = texto.id;
         f.nivel = texto.nivel;
         filas.push(f);
+        guardar();
       }
     }
   }
@@ -160,23 +175,25 @@ async function evaluar(textos, dict, soloId) {
 
 async function principal() {
   const args = process.argv.slice(2);
-  if (args.includes("--ayuda")) { console.log("Uso: node autotest/autoevaluar.js [--texto ID]"); return; }
+  if (args.includes("--ayuda")) { console.log("Uso: node autotest/autoevaluar.js [--texto ID] [--desde ID]"); return; }
   const ti = args.indexOf("--texto");
   const soloId = ti >= 0 ? args[ti + 1] : null;
+  const di = args.indexOf("--desde");
+  const desdeId = di >= 0 ? args[di + 1] : null;
   const textos = JSON.parse(fs.readFileSync(TEXTOS, "utf8"));
   const dict = cargarCorrecciones();
+  fs.mkdirSync(REPORTES, { recursive: true });
+  const rutaLatest = path.join(REPORTES, "run-latest.json");
+  if (desdeId && fs.existsSync(rutaLatest)) {
+    const ts = new Date().toISOString().replace(/[:.]/g, "-").replace(/Z$/, "");
+    fs.copyFileSync(rutaLatest, path.join(REPORTES, "run-respaldo-" + ts + "Z.json"));
+    console.log("Respaldo del reporte previo guardado (run-respaldo-" + ts + "Z.json).");
+  }
   console.log("Evaluando corpus (" + (soloId ? "texto " + soloId : textos.length + " textos") + ")...");
-  const filas = await evaluar(textos, dict, soloId);
-  const resumen = {
-    total: filas.length,
-    ok: filas.filter((f) => f.veredicto === "ok").length,
-    duda: filas.filter((f) => f.veredicto === "duda").length,
-    error: filas.filter((f) => f.veredicto === "error").length,
-    cubierta: filas.filter((f) => f.estado === "cubierta").length,
-  };
+  const filas = await evaluar(textos, dict, soloId, desdeId, rutaLatest);
+  const resumen = resumenDe(filas);
   const ts = new Date().toISOString().replace(/[:.]/g, "-").replace(/Z$/, "");
   const nombre = "run-" + ts + "Z.json";
-  fs.mkdirSync(REPORTES, { recursive: true });
   fs.writeFileSync(path.join(REPORTES, nombre), JSON.stringify({ resumen, filas }, null, 2) + "\n", "utf8");
   console.log("Resumen:", JSON.stringify(resumen));
   console.log("Reporte:", path.join("autotest", "reportes", nombre));
