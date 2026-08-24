@@ -21,6 +21,31 @@ const UMBRAL_PARECIDO = 0.5;
 const UMBRAL_SENTIDO = 0.6;
 const GOOGLE = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=";
 
+// Glosario idéntico al de app.js (GLOSARIO, líneas ~332-351) para que el
+// autoevaluador refleje la salida real del motor (incluidas las correcciones
+// de glosario), no solo la traducción cruda de Google.
+const GLOSARIO = [
+  { tipo: "salida", fuente: /\bfi?g\b/i, salida: { de: /\bhigo(s)?\b/gi, a: (m, p) => (p ? "plátanos" : "plátano") } },
+  { tipo: "salida", fuente: /\beg\b/i, salida: { de: /\boveja(s)?\b/gi, a: (m, p) => (p ? "águilas" : "águila") } },
+  { tipo: "salida", fuente: /\bofiyamezi\b/i, salida: { de: /\bofiyamezi\b/gi, a: "poco a poco" } },
+  { tipo: "fuente", fuente: /\benpi\b/gi, salida: { a: "epi" } },
+  { tipo: "salida", fuente: /\bgadyen bi\b/i, salida: { de: /\bcorredor\b/gi, a: "portero" } },
+];
+function aplicarGlosarioFuente(t) {
+  GLOSARIO.forEach((r) => { if (r.tipo === "fuente") t = t.replace(r.fuente, r.salida.a); });
+  return t;
+}
+function aplicarGlosarioSalida(fuente, traduccion) {
+  if (!fuente || !traduccion) return traduccion;
+  let res = traduccion;
+  GLOSARIO.forEach((r) => {
+    if (r.tipo !== "salida") return;
+    if (!r.fuente.test(fuente)) return;
+    res = res.replace(r.salida.de, r.salida.a);
+  });
+  return res;
+}
+
 function limpiar(t) {
   return (t || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase()
     .replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
@@ -110,12 +135,14 @@ async function verificarOracion(ht, es, dict) {
   const corr = dict[limpiar(ht)];
   if (corr) { fila.esEsperado = corr; fila.corregida = true; fila.veredicto = "ok"; fila.estado = "cubierta"; return fila; }
   try {
-    const directo = await encolar(() => traducirGoogle(ht, "ht", "es"));
-    fila.google = directo;
-    fila.simDirecto = similitud(directo, fila.esEsperado);
+    const htMotor = aplicarGlosarioFuente(ht);
+    const directo = await encolar(() => traducirGoogle(htMotor, "ht", "es"));
+    const directoMotor = aplicarGlosarioSalida(ht, directo);
+    fila.google = directoMotor;
+    fila.simDirecto = similitud(directoMotor, fila.esEsperado);
     fila.nivelDirecto = nivel(fila.simDirecto);
     try {
-      const reversa = await encolar(() => traducirGoogle(directo, "es", "ht"));
+      const reversa = await encolar(() => traducirGoogle(directoMotor, "es", "ht"));
       fila.roundtrip = reversa;
       fila.simRoundtrip = similitud(reversa, ht);
       fila.nivelRoundtrip = nivel(fila.simRoundtrip);

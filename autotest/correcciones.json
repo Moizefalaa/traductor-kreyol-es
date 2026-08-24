@@ -983,5 +983,10 @@
     "ht": "Èske yo bezwen lajan?",
     "es": "¿Necesitan dinero?",
     "motivo": "Tatoeba ht→es (id 13910965, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Koulyè a se Poul la ki gadyen bi an.",
+    "es": "Ahora es el Pollo quien es el portero.",
+    "motivo": "gadyen bi (portero/guardameta) mal traducido como corredor; corregido por regla de glosario (v29)."
   }
 ]

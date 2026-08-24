@@ -7,7 +7,7 @@
   var CLAVE_TEMA = "kreolEs_tema_v1";
   var CLAVE_PALETA = "kreolEs_paleta_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v28";
+  var VERSION = "v29";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -349,6 +349,11 @@
       tipo: "fuente",
       fuente: /\benpi\b/gi,
       salida: { a: "epi" }
+    },
+    {
+      tipo: "salida",
+      fuente: /\bgadyen bi\b/i,
+      salida: { de: /\bcorredor\b/gi, a: "portero" }
     }
   ];
 
