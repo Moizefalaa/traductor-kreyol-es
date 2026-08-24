@@ -3290,5 +3290,23 @@
         "es": "¿Necesitan dinero?"
       }
     ]
+  },
+  {
+    "id": "demo-alineado",
+    "nivel": 1,
+    "segmentos": [
+      {
+        "ht": "Chat la te renmen jwe ak ti boul wouj la.",
+        "es": "El gato sol�a jugar con la pelotita roja."
+      },
+      {
+        "ht": "Li te gen yon zanmi ki te yon chen.",
+        "es": "Ten�a un amigo que era un perro."
+      },
+      {
+        "ht": "Yo te ale nan jaden an chak maten.",
+        "es": "Iban al jard�n cada ma�ana."
+      }
+    ]
   }
 ]
