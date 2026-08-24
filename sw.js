@@ -1,9 +1,10 @@
-var CACHE = "kreol-es-v32";
+var CACHE = "kreol-es-v33";
 var ARCHIVOS = [
   "./",
   "./index.html",
-  "./styles.css?v=32",
-  "./app.js?v=32",
+  "./styles.css?v=33",
+  "./app.js?v=33",
+  "./textos-chile.json?v=33",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png"

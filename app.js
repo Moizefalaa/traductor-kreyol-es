@@ -7,8 +7,9 @@
   var CLAVE_TEMA = "kreolEs_tema_v1";
   var CLAVE_PALETA = "kreolEs_paleta_v1";
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
+  var CLAVE_CHILE_USER = "kreolEs_chile_user_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v32";
+  var VERSION = "v33";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -70,6 +71,15 @@
   var feedbackVacio = document.getElementById("feedbackVacio");
   var btnExportarFeedback = document.getElementById("btnExportarFeedback");
   var btnBorrarFeedback = document.getElementById("btnBorrarFeedback");
+  var selGrado = document.getElementById("selGrado");
+  var listaChile = document.getElementById("listaChile");
+  var chileVacio = document.getElementById("chileVacio");
+  var btnAgregarTextoChile = document.getElementById("btnAgregarTextoChile");
+  var modalAgregarChile = document.getElementById("modalAgregarChile");
+  var agregarTitulo = document.getElementById("agregarTitulo");
+  var selGradoModal = document.getElementById("selGradoModal");
+  var agregarTexto = document.getElementById("agregarTexto");
+  var btnGuardarChile = document.getElementById("btnGuardarChile");
 
   var reconocedor = null;
   var escuchando = false;
@@ -1893,4 +1903,123 @@
   window.addEventListener("online", function () {
     limpiarError();
   });
+
+  // ---- Lecturas escolares (Chile) ----
+  var TEXTOS_CHILE_URL = "textos-chile.json?v=" + VERSION.replace("v", "");
+  var chileData = { grados: [] };
+
+  function cargarChileUsuario() {
+    try {
+      var raw = localStorage.getItem(CLAVE_CHILE_USER);
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+  }
+
+  function guardarChileUsuario(map) {
+    try { localStorage.setItem(CLAVE_CHILE_USER, JSON.stringify(map)); } catch (e) {}
+  }
+
+  function poblarGrados() {
+    selGrado.innerHTML = "";
+    selGradoModal.innerHTML = "";
+    chileData.grados.forEach(function (g) {
+      var o1 = document.createElement("option");
+      o1.value = g.id; o1.textContent = g.nombre;
+      selGrado.appendChild(o1);
+      var o2 = document.createElement("option");
+      o2.value = g.id; o2.textContent = g.nombre;
+      selGradoModal.appendChild(o2);
+    });
+  }
+
+  function textosDeGrado(id) {
+    var base = [];
+    var g = chileData.grados.filter(function (x) { return x.id === id; })[0];
+    if (g) base = g.textos.slice();
+    var usuario = cargarChileUsuario()[id] || [];
+    return base.concat(usuario.map(function (t) {
+      return { titulo: t.titulo, texto: t.texto, fuente: t.fuente || "Texto agregado (este dispositivo)", usuario: true };
+    }));
+  }
+
+  function renderChile() {
+    var id = selGrado.value;
+    var textos = textosDeGrado(id);
+    listaChile.innerHTML = "";
+    if (!textos.length) {
+      chileVacio.classList.remove("oculto");
+      return;
+    }
+    chileVacio.classList.add("oculto");
+    textos.forEach(function (t) {
+      var li = document.createElement("li");
+      li.className = "item-chile";
+      var h = document.createElement("div");
+      h.className = "item-chile-titulo";
+      h.textContent = t.titulo + (t.usuario ? " (tuyo)" : "");
+      var p = document.createElement("p");
+      p.className = "item-chile-texto";
+      p.textContent = t.texto;
+      var f = document.createElement("p");
+      f.className = "item-chile-fuente";
+      f.textContent = "Fuente: " + t.fuente;
+      var b = document.createElement("button");
+      b.className = "boton pequeno";
+      b.type = "button";
+      b.textContent = "Traducir al kreyòl";
+      b.addEventListener("click", function () {
+        cambiarDireccion("es-ht");
+        origen.value = t.texto;
+        traducir();
+        seccionSalida.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      li.appendChild(h);
+      li.appendChild(p);
+      li.appendChild(f);
+      li.appendChild(b);
+      listaChile.appendChild(li);
+    });
+  }
+
+  function initChile() {
+    fetch(TEXTOS_CHILE_URL).then(function (r) { return r.json(); }).then(function (d) {
+      chileData = d && d.grados ? d : { grados: [] };
+      poblarGrados();
+      renderChile();
+    }).catch(function () {
+      chileData = { grados: [] };
+      poblarGrados();
+      renderChile();
+      mostrarError("No se pudo cargar textos-chile.json.");
+    });
+  }
+
+  selGrado.addEventListener("change", renderChile);
+
+  btnAgregarTextoChile.addEventListener("click", function () {
+    agregarTitulo.value = "";
+    agregarTexto.value = "";
+    selGradoModal.value = selGrado.value;
+    abrirModal(modalAgregarChile);
+    agregarTitulo.focus();
+  });
+
+  btnGuardarChile.addEventListener("click", function () {
+    var titulo = agregarTitulo.value.trim();
+    var texto = agregarTexto.value.trim();
+    var id = selGradoModal.value;
+    if (!titulo || !texto) {
+      agregarTitulo.focus();
+      return;
+    }
+    var map = cargarChileUsuario();
+    if (!map[id]) map[id] = [];
+    map[id].push({ titulo: titulo, texto: texto, fuente: "Agregado por ti" });
+    guardarChileUsuario(map);
+    cerrarModal(modalAgregarChile);
+    selGrado.value = id;
+    renderChile();
+  });
+
+  initChile();
 })();

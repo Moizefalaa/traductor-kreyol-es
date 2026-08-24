@@ -1,0 +1,156 @@
+{
+  "grados": [
+    {
+      "id": "1B",
+      "nombre": "1° Básico",
+      "textos": [
+        {
+          "titulo": "Arroz con leche",
+          "texto": "Arroz con leche, me quiero casar con una viudita de la capital. Que sepa coser, que sepa bordar, que pase la rueca tras el cristal.",
+          "fuente": "Canción tradicional chilena"
+        },
+        {
+          "titulo": "La víbora de la mar",
+          "texto": "La víbora de la mar, de la mar tomó, tomó, tomó. La víbora de la mar, de la mar tomó, tomó, tomó. Una mexicana que nadaba en el río, río, río.",
+          "fuente": "Ronda infantil tradicional"
+        }
+      ]
+    },
+    {
+      "id": "2B",
+      "nombre": "2° Básico",
+      "textos": [
+        {
+          "titulo": "San Serafín",
+          "texto": "San Serafín, San Serafín, cómo reza el pobrecito, cómo reza por mí. Arrodillado en el suelo, las manos juntas, los ojos en el cielo.",
+          "fuente": "Rima tradicional chilena"
+        },
+        {
+          "titulo": "Palmas, palmitas",
+          "texto": "Palmas, palmitas, para mi juana, que se las ponga, en la ventana. Palmas, palmitas, para mi amor, que se las ponga, en su interior.",
+          "fuente": "Rima tradicional chilena"
+        }
+      ]
+    },
+    {
+      "id": "3B",
+      "nombre": "3° Básico",
+      "textos": [
+        {
+          "titulo": "El sapo y la cigarra",
+          "texto": "Cuenta la fábula que la cigarra cantó todo el verano, mientras el sapo juntaba comida. Cuando llegó el invierno, la cigarra tuvo frío y hambre, y el sapo le enseñó que hay que trabajar para tener qué comer.",
+          "fuente": "Fábula tradicional"
+        },
+        {
+          "titulo": "A la rueda de San Carlos",
+          "texto": "A la rueda de San Carlos, todos me dan su real. Yo soy la hija del rey, y vengo a servir al rey. Si me queréis admitir, me pondré a servir.",
+          "fuente": "Ronda tradicional"
+        }
+      ]
+    },
+    {
+      "id": "4B",
+      "nombre": "4° Básico",
+      "textos": [
+        {
+          "titulo": "La hormiguita",
+          "texto": "La hormiguita trabajadora camina sin parar, carga su granito y lo guarda en el hogar. Cuando llega la lluvia, ya tiene qué comer, y enseña a los niños a no tener pereza.",
+          "fuente": "Rima tradicional"
+        },
+        {
+          "titulo": "El gallo y la zorra",
+          "texto": "Cuenta el cuento que un gallo dejó caer un grano de maíz y una zorra quiso engañarlo para comérselo. El gallo, con cuidado, escondió el maíz y aprendió que hay que desconfiar de quien solo busca su provecho.",
+          "fuente": "Fábula tradicional"
+        }
+      ]
+    },
+    {
+      "id": "5B",
+      "nombre": "5° Básico",
+      "textos": [
+        {
+          "titulo": "El Caleuche",
+          "texto": "El Caleuche es un legendario barco fantasma de la mitología de Chiloé, en el sur de Chile. Se dice que es un barco maravilloso que lleva música y luz por los canales chilotes, y que puede aparecer o desaparecer en medio de la noche. Muchos creen que recoge a los muertos en el mar para que vivan eternamente a bordo, rodeados de fiestas.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "6B",
+      "nombre": "6° Básico",
+      "textos": [
+        {
+          "titulo": "La Pincoya",
+          "texto": "La Pincoya es una criatura marina de la mitología de Chiloé, en el sur de Chile. Tiene el aspecto de una mujer joven y muy hermosa, con larga cabellera rubia. El mito dice que aparece desde el mar a danzar en las playas, y que, según el sentido de su danza, señala si la pesca será abundante o escasa.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "7B",
+      "nombre": "7° Básico",
+      "textos": [
+        {
+          "titulo": "El Trauco",
+          "texto": "El trauco es una criatura de la mitología chilota, en el sur de Chile, y uno de sus personajes más conocidos. Se describe como un hombre de baja estatura, de facciones desagradables, cuyas piernas tienen muñones en lugar de pies. Se dice que deambula por los bosques de Chiloé y posee gran fuerza y poderes mágicos.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "8B",
+      "nombre": "8° Básico",
+      "textos": [
+        {
+          "titulo": "La Calchona",
+          "texto": "La Calchona es un ser de la mitología chilena de la zona central. La leyenda más conocida cuenta que era una bruja que se transformaba en una gran oveja negra para pasear de noche. Una vez sus hijos bebieron sus pociones por error y se volvieron animales; al recuperar la forma humana solo le alcanzó para su rostro, sus manos y su cabello, quedando atrapada para siempre en ese aspecto.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilena"
+        }
+      ]
+    },
+    {
+      "id": "1M",
+      "nombre": "1° Medio",
+      "textos": [
+        {
+          "titulo": "El Caleuche (los muertos en el mar)",
+          "texto": "Una versión popular del Caleuche dice que este barco recoge a los muertos de las aguas y les da una nueva vida a bordo, como tripulantes que pasarían la eternidad en fiestas y celebraciones. Se cuenta que fue creado por el Millalobo para su hija la Pincoya y sus hermanos, con el fin de cumplir ese propósito.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "2M",
+      "nombre": "2° Medio",
+      "textos": [
+        {
+          "titulo": "La Pincoya y la pesca",
+          "texto": "Según la leyenda chilota, las variedades de peces y mariscos que el Millalobo ofrece al pueblo son sembradas por su hija la Pincoya. Ella cumple su trabajo bailando una canción que canta el Pincoy. Si la Pincoya baila hacia el mar, habrá abundancia de pescado; si baila hacia la tierra, es señal de que la pesca escaseará.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "3M",
+      "nombre": "3° Medio",
+      "textos": [
+        {
+          "titulo": "El Trauco en la sociedad de Chiloé",
+          "texto": "En Chiloé, cuando una joven quedaba embarazada y no se sabía quién era el padre, se solía atribuir el hecho al Trauco. Así, la comunidad cubría la deshonra atribuyendo el nacimiento a este ser mitológico, creyendo que la madre y el niño estarían ligados a la magia de un ser extraterreno.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "4M",
+      "nombre": "4° Medio",
+      "textos": [
+        {
+          "titulo": "La Calchona y su arrepentimiento",
+          "texto": "Cuenta la leyenda que, cuando en la noche los campesinos sienten balar una oveja que vaga sola por los campos, saben que se trata de la mítica Calchona. Por tradición le dejan un plato con comida, pues se dice que la Calchona es inofensiva y estaría arrepentida de sus antiguos actos.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilena"
+        }
+      ]
+    }
+  ]
+}
