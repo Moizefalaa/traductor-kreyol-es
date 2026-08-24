@@ -8,7 +8,7 @@
   var CLAVE_PALETA = "kreolEs_paleta_v1";
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v31";
+  var VERSION = "v32";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");

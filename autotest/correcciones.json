@@ -988,5 +988,15 @@
     "ht": "Koulyè a se Poul la ki gadyen bi an.",
     "es": "Ahora es el Pollo quien es el portero.",
     "motivo": "gadyen bi (portero/guardameta) mal traducido como corredor; corregido por regla de glosario (v29)."
+  },
+  {
+    "ht": "Li fè frèt.",
+    "es": "Hace frío.",
+    "motivo": "Reporte de usuario (2026-08-24T10:00:00.000Z)"
+  },
+  {
+    "ht": "M ap travay.",
+    "es": "Estoy trabajando.",
+    "motivo": "Reporte de usuario (2026-08-24T10:01:00.000Z)"
   }
 ]

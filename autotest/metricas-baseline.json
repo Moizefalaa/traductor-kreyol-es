@@ -1,0 +1,7 @@
+{
+  "reporte": "autotest/reportes/run-completo-glosario.json",
+  "fecha": "2026-08-24T19:34:10.679Z",
+  "oraciones": 1203,
+  "bleu": 0.018165767921681286,
+  "chrf": 0.10668036081093149
+}
