@@ -7,11 +7,15 @@
   var CLAVE_TEMA = "kreolEs_tema_v1";
   var CLAVE_PALETA = "kreolEs_paleta_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v24";
+  var VERSION = "v25";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
   var destino = document.getElementById("textoDestino");
+  var docArchivo = document.getElementById("docArchivo");
+  var docTexto = document.getElementById("docTexto");
+  var docSalida = document.getElementById("docSalida");
+  var btnDocTraducir = document.getElementById("btnDocTraducir");
   var seccionSalida = document.getElementById("seccionSalida");
   var chipOrigen = document.getElementById("chipOrigen");
   var chipDestino = document.getElementById("chipDestino");
@@ -579,6 +583,97 @@
     return true;
   }
 
+  function traducirUnaFrase(texto) {
+    texto = (texto || "").trim();
+    if (!texto) return Promise.resolve("");
+    var local = buscarEnDiccionario(texto);
+    if (local) return Promise.resolve(local);
+    if (!navigator.onLine) return Promise.reject(new Error("Sin conexión: la traducción en línea no está disponible."));
+    return traducirConGoogle(texto)
+      .catch(function () { return traducirConMyMemory(texto); })
+      .then(function (t) {
+        if (esSalidaEspañol()) return aEspanolLatino(t).texto;
+        return t;
+      });
+  }
+
+  function agregarFilaDoc(textoOrigen, textoTraducido, esError) {
+    var fila = document.createElement("div");
+    fila.className = "doc-fila";
+    var celdaO = document.createElement("div");
+    celdaO.className = "doc-origen";
+    celdaO.textContent = textoOrigen;
+    var celdaT = document.createElement("div");
+    celdaT.className = "doc-traducido" + (esError ? " doc-error" : "");
+    celdaT.textContent = textoTraducido;
+    fila.appendChild(celdaO);
+    fila.appendChild(celdaT);
+    docSalida.appendChild(fila);
+  }
+
+  function traducirDocumento() {
+    var texto = docTexto.value.trim();
+    if (!texto) {
+      mostrarError("Pega o extrae el texto del documento antes de traducir.");
+      return;
+    }
+    btnDocTraducir.disabled = true;
+    btnDocTraducir.textContent = "Traduciendo…";
+    docSalida.innerHTML = "";
+    limpiarError();
+
+    var oraciones = dividirEnOraciones(texto);
+    var indice = 0;
+    var pendientes = oraciones.length;
+
+    function procesarSiguiente() {
+      if (indice >= oraciones.length) {
+        btnDocTraducir.disabled = false;
+        btnDocTraducir.textContent = "Traducir documento";
+        return;
+      }
+      var oracion = oraciones[indice++];
+      traducirUnaFrase(oracion)
+        .then(function (traducida) { agregarFilaDoc(oracion, traducida, false); })
+        .catch(function (err) { agregarFilaDoc(oracion, "[no traducido: " + err.message + "]", true); })
+        .then(function () {
+          if (--pendientes >= 0) procesarSiguiente();
+        });
+    }
+    procesarSiguiente();
+  }
+
+  async function extraerTextoPdf(archivo) {
+    if (!window.pdfjsLib) {
+      throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
+    }
+    try {
+      if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+      }
+    } catch (e) { /* dejar que falle al usar */ }
+    var buf = await archivo.arrayBuffer();
+    var pdf = await window.pdfjsLib.getDocument({ data: buf }).promise;
+    var partes = [];
+    for (var p = 1; p <= pdf.numPages; p++) {
+      var page = await pdf.getPage(p);
+      var contenido = await page.getTextContent();
+      var lineas = [];
+      var ultimaY = null;
+      contenido.items.forEach(function (item) {
+        if (item.str === "") return;
+        if (ultimaY !== null && item.transform && Math.abs(item.transform[5] - ultimaY) > 5) {
+          lineas.push("\n");
+        }
+        lineas.push(item.str);
+        if (item.transform) ultimaY = item.transform[5];
+      });
+      partes.push(lineas.join(" ").replace(/\s+/g, " ").trim());
+    }
+    return partes.filter(function (t) { return t.trim(); }).join("\n\n");
+  }
+
   function configurarVoz() {
     var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) {
@@ -895,6 +990,33 @@
   });
 
   btnTraducir.addEventListener("click", traducir);
+
+  if (docArchivo && docTexto && docSalida && btnDocTraducir) {
+    docArchivo.addEventListener("change", function () {
+      var archivo = docArchivo.files && docArchivo.files[0];
+      if (!archivo) return;
+      btnDocTraducir.disabled = true;
+      docTexto.value = "Extrayendo texto del PDF…";
+      docSalida.innerHTML = "";
+      extraerTextoPdf(archivo)
+        .then(function (txt) {
+          docTexto.value = txt;
+          btnDocTraducir.disabled = false;
+        })
+        .catch(function (err) {
+          docTexto.value = "";
+          mostrarError("No se pudo leer el PDF: " + err.message + " Puedes pegar el texto manualmente.");
+          btnDocTraducir.disabled = false;
+        });
+    });
+
+    docTexto.addEventListener("input", function () {
+      btnDocTraducir.disabled = !docTexto.value.trim();
+    });
+
+    btnDocTraducir.addEventListener("click", traducirDocumento);
+    btnDocTraducir.disabled = !docTexto.value.trim();
+  }
 
   origen.addEventListener("keydown", function (e) {
     if ((e.ctrlKey || e.metaKey) && e.key === "Enter") traducir();

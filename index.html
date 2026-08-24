@@ -9,7 +9,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="styles.css?v=24">
+  <link rel="stylesheet" href="styles.css?v=25">
 </head>
 <body>
   <header class="cabecera">
@@ -90,6 +90,17 @@
       <p id="textoDestino" class="traduccion" lang="es"></p>
       <p id="avisoNeutral" class="aviso oculto">Traducción normalizada a español neutro/latino.</p>
       <p id="avisoInverso" class="aviso oculto">Traducción al criollo con motor gratuito: útil para frases cortas, puede variar en frases largas.</p>
+    </section>
+
+    <section class="tarjeta documento" aria-label="Documentos">
+      <div class="barra-etiqueta"><h2>&#128196; Documentos (PDF de texto)</h2></div>
+      <p class="aviso">Sube un PDF que contenga texto (no escaneado). Se extrae y se traduce oración por oración, aplicando tus correcciones. También puedes pegar texto manualmente.</p>
+      <div class="barra-acciones documento-acciones">
+        <input id="docArchivo" type="file" accept="application/pdf,.pdf" />
+        <button id="btnDocTraducir" class="boton secundario" type="button" disabled>Traducir documento</button>
+      </div>
+      <textarea id="docTexto" class="area-doc" rows="8" placeholder="El texto extraído aparecerá aquí. También puedes pegar el texto del documento manualmente." spellcheck="false"></textarea>
+      <div id="docSalida" class="doc-salida" aria-live="polite"></div>
     </section>
 
     <section class="tarjeta frases" aria-label="Frases rápidas">
@@ -210,6 +221,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=24"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="app.js?v=25"></script>
 </body>
 </html>
