@@ -7,7 +7,7 @@
   var CLAVE_TEMA = "kreolEs_tema_v1";
   var CLAVE_PALETA = "kreolEs_paleta_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v26";
+  var VERSION = "v27";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -199,6 +199,32 @@
     { ht: "Tom ap mache ak yon panyen fig sou tèt li.", es: "Tom camina con una cesta de plátanos en la cabeza." },
     { ht: "Achte fig mwen yo.", es: "¡Compren mis plátanos!" },
     { ht: "Tom pral vann fig li yo nan mache a.", es: "Tom venderá sus plátanos en el mercado." }
+  ];
+
+  // Glosario aplicado en tiempo de traducción para corregir errores sistemáticos
+  // del motor (kreyòl -> español). tipo "fuente": reescribe la fuente antes del motor.
+  // tipo "salida": corrige la traducción cuando la fuente contiene el lema indicado.
+  var GLOSARIO = [
+    {
+      tipo: "salida",
+      fuente: /\bfi?g\b/i,
+      salida: { de: /\bhigo(s)?\b/gi, a: function (m, p) { return p ? "plátanos" : "plátano"; } }
+    },
+    {
+      tipo: "salida",
+      fuente: /\beg\b/i,
+      salida: { de: /\boveja(s)?\b/gi, a: function (m, p) { return p ? "águilas" : "águila"; } }
+    },
+    {
+      tipo: "salida",
+      fuente: /\bofiyamezi\b/i,
+      salida: { de: /\bofiyamezi\b/gi, a: "poco a poco" }
+    },
+    {
+      tipo: "fuente",
+      fuente: /\benpi\b/gi,
+      salida: { a: "epi" }
+    }
   ];
 
   var VOCABULARIO = [
@@ -420,6 +446,33 @@
     estadoVoz.classList.remove("error");
   }
 
+  function prepararFuenteKreyol(texto) {
+    var t = texto;
+    GLOSARIO.forEach(function (r) {
+      if (r.tipo === "fuente") t = t.replace(r.fuente, r.salida.a);
+    });
+    return t;
+  }
+
+  function aplicarGlosario(fuente, traduccion) {
+    if (!fuente || !traduccion) return traduccion;
+    var res = traduccion;
+    GLOSARIO.forEach(function (r) {
+      if (r.tipo !== "salida") return;
+      if (!r.fuente.test(fuente)) return;
+      res = res.replace(r.salida.de, r.salida.a);
+    });
+    return res;
+  }
+
+  function traducirTextoMotor(texto) {
+    var textoMotor = esSalidaEspañol() ? texto : prepararFuenteKreyol(texto);
+    if (!navigator.onLine) return Promise.reject(new Error("Sin conexión: la traducción en línea no está disponible."));
+    return traducirConGoogle(textoMotor)
+      .catch(function () { return traducirConMyMemory(textoMotor); })
+      .then(function (t) { return aplicarGlosario(texto, t); });
+  }
+
   function traducirConGoogle(texto) {
     var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" +
       idiomaOrigen() + "&tl=" + idiomaDestino() + "&dt=t&q=" + encodeURIComponent(texto);
@@ -544,8 +597,7 @@
 
     if (traducirTextoLargo()) return;
 
-    traducirConGoogle(texto)
-      .catch(function () { return traducirConMyMemory(texto); })
+    traducirTextoMotor(texto)
       .then(mostrarResultado)
       .catch(function (err) {
         mostrarError("No se pudo traducir: " + err.message);
@@ -567,8 +619,7 @@
       if (!navigator.onLine) {
         return Promise.reject(new Error("Sin conexión: la traducción en línea no está disponible."));
       }
-      return traducirConGoogle(oracion)
-        .catch(function () { return traducirConMyMemory(oracion); });
+      return traducirTextoMotor(oracion);
     });
 
     Promise.all(promesas)
@@ -589,12 +640,10 @@
     var local = buscarEnDiccionario(texto);
     if (local) return Promise.resolve(local);
     if (!navigator.onLine) return Promise.reject(new Error("Sin conexión: la traducción en línea no está disponible."));
-    return traducirConGoogle(texto)
-      .catch(function () { return traducirConMyMemory(texto); })
-      .then(function (t) {
-        if (esSalidaEspañol()) return aEspanolLatino(t).texto;
-        return t;
-      });
+    return traducirTextoMotor(texto).then(function (t) {
+      if (esSalidaEspañol()) return aEspanolLatino(t).texto;
+      return t;
+    });
   }
 
   function agregarFilaDoc(textoOrigen, textoTraducido, esError) {
