@@ -9,7 +9,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="styles.css?v=25">
+  <link rel="stylesheet" href="styles.css?v=26">
 </head>
 <body>
   <header class="cabecera">
@@ -93,10 +93,10 @@
     </section>
 
     <section class="tarjeta documento" aria-label="Documentos">
-      <div class="barra-etiqueta"><h2>&#128196; Documentos (PDF de texto)</h2></div>
-      <p class="aviso">Sube un PDF que contenga texto (no escaneado). Se extrae y se traduce oración por oración, aplicando tus correcciones. También puedes pegar texto manualmente.</p>
+      <div class="barra-etiqueta"><h2>&#128196; Documentos (PDF o Word)</h2></div>
+      <p class="aviso">Sube un PDF o un Word (.docx) que contengan texto (no escaneados). Se extrae y se traduce oración por oración, aplicando tus correcciones. También puedes pegar texto manualmente.</p>
       <div class="barra-acciones documento-acciones">
-        <input id="docArchivo" type="file" accept="application/pdf,.pdf" />
+        <input id="docArchivo" type="file" accept="application/pdf,.pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.docx" />
         <button id="btnDocTraducir" class="boton secundario" type="button" disabled>Traducir documento</button>
       </div>
       <textarea id="docTexto" class="area-doc" rows="8" placeholder="El texto extraído aparecerá aquí. También puedes pegar el texto del documento manualmente." spellcheck="false"></textarea>
@@ -222,6 +222,7 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <script src="app.js?v=25"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+  <script src="app.js?v=26"></script>
 </body>
 </html>

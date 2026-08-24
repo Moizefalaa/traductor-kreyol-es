@@ -7,7 +7,7 @@
   var CLAVE_TEMA = "kreolEs_tema_v1";
   var CLAVE_PALETA = "kreolEs_paleta_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v25";
+  var VERSION = "v26";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -674,6 +674,17 @@
     return partes.filter(function (t) { return t.trim(); }).join("\n\n");
   }
 
+  function extraerTextoWord(archivo) {
+    if (!window.mammoth) {
+      throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
+    }
+    return archivo.arrayBuffer().then(function (buf) {
+      return window.mammoth.extractRawText({ arrayBuffer: buf }).then(function (res) {
+        return (res.value || "").trim();
+      });
+    });
+  }
+
   function configurarVoz() {
     var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) {
@@ -996,16 +1007,20 @@
       var archivo = docArchivo.files && docArchivo.files[0];
       if (!archivo) return;
       btnDocTraducir.disabled = true;
-      docTexto.value = "Extrayendo texto del PDF…";
       docSalida.innerHTML = "";
-      extraerTextoPdf(archivo)
+      var nombre = (archivo.name || "").toLowerCase();
+      var esPdf = /\.pdf$/.test(nombre) || archivo.type === "application/pdf";
+      docTexto.value = esPdf ? "Extrayendo texto del PDF…" : "Extrayendo texto del documento…";
+      var promesa = esPdf ? extraerTextoPdf(archivo) : extraerTextoWord(archivo);
+      promesa
         .then(function (txt) {
           docTexto.value = txt;
           btnDocTraducir.disabled = false;
         })
         .catch(function (err) {
           docTexto.value = "";
-          mostrarError("No se pudo leer el PDF: " + err.message + " Puedes pegar el texto manualmente.");
+          var tipo = esPdf ? "el PDF" : "el documento Word";
+          mostrarError("No se pudo leer " + tipo + ": " + err.message + " Puedes pegar el texto manualmente.");
           btnDocTraducir.disabled = false;
         });
     });
