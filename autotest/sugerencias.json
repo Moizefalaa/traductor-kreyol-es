@@ -1,0 +1,26 @@
+{
+  "reporte": "C:\\Users\\Javier\\Documents\\Default Project\\traductor-kreyol-es\\autotest\\reportes\\run-2026-08-24T14-47-27-853ZZ.json",
+  "totalDudas": 2,
+  "grupos": [],
+  "sinReferencia": {
+    "total": 0,
+    "ejemplos": []
+  },
+  "otros": {
+    "total": 2,
+    "ejemplos": [
+      {
+        "id": "0030-seg1-or1",
+        "ht": "Mwen santi anpil bagay nan kè mwen.",
+        "google": "Siento muchas cosas en mi corazón.",
+        "esEsperado": "Mi corazón siente muchas cosas."
+      },
+      {
+        "id": "0030-seg5-or1",
+        "ht": "Mwen santi ke manman mwen renmen’m lè li kenbe’m nan bra li.",
+        "google": "Siento que mi madre me ama cuando me tiene en sus brazos.",
+        "esEsperado": "Me siento querida cuando mi mamá me da un abrazo."
+      }
+    ]
+  }
+}
