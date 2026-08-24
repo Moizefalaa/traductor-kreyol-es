@@ -1,0 +1,172 @@
+{
+  "grados": [
+    {
+      "id": "1B",
+      "nombre": "1° Básico",
+      "textos": [
+        {
+          "titulo": "Arroz con leche",
+          "es": "Arroz con leche, me quiero casar con una viudita de la capital. Que sepa coser, que sepa bordar, que pase la rueca tras el cristal.",
+          "ht": "Diri ak lèt, mwen vle marye ak yon vèv ki soti nan kapital la. Ki konnen koud, ki konnen brode, ki pase wou a dèyè vè a.",
+          "fuente": "Canción tradicional chilena"
+        },
+        {
+          "titulo": "La víbora de la mar",
+          "es": "La víbora de la mar, de la mar tomó, tomó, tomó. La víbora de la mar, de la mar tomó, tomó, tomó. Una mexicana que nadaba en el río, río, río.",
+          "ht": "Vipè lanmè a, nan lanmè a li te pran, li te pran, li te pran. Vipè lanmè a, nan lanmè a li te pran, li te pran, li te pran. Yon meksikèn k ap naje nan rivyè a, rivyè a, rivyè a.",
+          "fuente": "Ronda infantil tradicional"
+        }
+      ]
+    },
+    {
+      "id": "2B",
+      "nombre": "2° Básico",
+      "textos": [
+        {
+          "titulo": "San Serafín",
+          "es": "San Serafín, San Serafín, cómo reza el pobrecito, cómo reza por mí. Arrodillado en el suelo, las manos juntas, los ojos en el cielo.",
+          "ht": "San Serafín, San Serafín, kijan pòv la priye, kijan li priye pou mwen. Jenou atè, men kole, je nan syèl la.",
+          "fuente": "Rima tradicional chilena"
+        },
+        {
+          "titulo": "Palmas, palmitas",
+          "es": "Palmas, palmitas, para mi juana, que se las ponga, en la ventana. Palmas, palmitas, para mi amor, que se las ponga, en su interior.",
+          "ht": "Palmis, palmis, pou jwàn mwen, pou l mete yo sou fenèt la. Palmis, palmis, pou lanmou mwen, pou l mete yo anndan.",
+          "fuente": "Rima tradicional chilena"
+        }
+      ]
+    },
+    {
+      "id": "3B",
+      "nombre": "3° Básico",
+      "textos": [
+        {
+          "titulo": "El sapo y la cigarra",
+          "es": "Cuenta la fábula que la cigarra cantó todo el verano, mientras el sapo juntaba comida. Cuando llegó el invierno, la cigarra tuvo frío y hambre, y el sapo le enseñó que hay que trabajar para tener qué comer.",
+          "ht": "Selon istwa a, sikada a te chante pandan tout ete a, pandan ke krapo a t ap rasanble manje. Lè sezon fredi rive, sikada a te frèt e grangou, e krapo a te montre li ke fòk li travay pou l gen yon bagay pou l manje.",
+          "fuente": "Fábula tradicional"
+        },
+        {
+          "titulo": "A la rueda de San Carlos",
+          "es": "A la rueda de San Carlos, todos me dan su real. Yo soy la hija del rey, y vengo a servir al rey. Si me queréis admitir, me pondré a servir.",
+          "ht": "Nan wou San Carlos, tout moun ban mwen lajan yo. Mwen se pitit fi wa a, e mwen vini pou m sèvi wa a. Si nou vle admèt mwen, mwen pral sèvi.",
+          "fuente": "Ronda tradicional"
+        }
+      ]
+    },
+    {
+      "id": "4B",
+      "nombre": "4° Básico",
+      "textos": [
+        {
+          "titulo": "La hormiguita",
+          "es": "La hormiguita trabajadora camina sin parar, carga su granito y lo guarda en el hogar. Cuando llega la lluvia, ya tiene qué comer, y enseña a los niños a no tener pereza.",
+          "ht": "Ti foumi k ap travay la mache san rete, li pote ti grenn li epi li mete l nan kay li. Lè lapli tonbe, li deja gen yon bagay pou l manje, e li anseye timoun yo pou yo pa parese.",
+          "fuente": "Rima tradicional"
+        },
+        {
+          "titulo": "El gallo y la zorra",
+          "es": "Cuenta el cuento que un gallo dejó caer un grano de maíz y una zorra quiso engañarlo para comérselo. El gallo, con cuidado, escondió el maíz y aprendió que hay que desconfiar de quien solo busca su provecho.",
+          "ht": "Selon istwa a, yon kòk te lage yon grenn mayi e yon renà te eseye twonpe l pou l manje l. Kòk la te sere mayi a avèk anpil atansyon e li te aprann pou l mefye l de moun k ap chèche pwofit yo sèlman.",
+          "fuente": "Fábula tradicional"
+        }
+      ]
+    },
+    {
+      "id": "5B",
+      "nombre": "5° Básico",
+      "textos": [
+        {
+          "titulo": "El Caleuche",
+          "es": "El Caleuche es un legendario barco fantasma de la mitología de Chiloé, en el sur de Chile. Se dice que es un barco maravilloso que lleva música y luz por los canales chilotes, y que puede aparecer o desaparecer en medio de la noche. Muchos creen que recoge a los muertos en el mar para que vivan eternamente a bordo, rodeados de fiestas.",
+          "ht": "Caleuche a se yon bato fantom lejand ki soti nan mitoloji Chiloé nan sid Chili. Yo di se yon bato mèveye ki pote mizik ak limyè nan kanal Chilots yo, e li ka parèt oswa disparèt nan mitan lannwit lan. Anpil moun kwè li rasanble moun ki mouri yo nan lanmè pou yo viv abò pou toutan, antoure ak fèt.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "6B",
+      "nombre": "6° Básico",
+      "textos": [
+        {
+          "titulo": "La Pincoya",
+          "es": "La Pincoya es una criatura marina de la mitología de Chiloé, en el sur de Chile. Tiene el aspecto de una mujer joven y muy hermosa, con larga cabellera rubia. El mito dice que aparece desde el mar a danzar en las playas, y que, según el sentido de su danza, señala si la pesca será abundante o escasa.",
+          "ht": "Pincoya se yon kreyati lanmè ki soti nan mitoloji Chiloé, nan sid Chili. Li sanble ak yon jèn fi trè bèl ak cheve long blond. Mit la di li soti nan lanmè pou danse sou plaj yo, e selon sans dans lan, li montre si lapèch ap abondan oswa si l ap manke.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "7B",
+      "nombre": "7° Básico",
+      "textos": [
+        {
+          "titulo": "El Trauco",
+          "es": "El trauco es una criatura de la mitología chilota, en el sur de Chile, y uno de sus personajes más conocidos. Se describe como un hombre de baja estatura, de facciones desagradables, cuyas piernas tienen muñones en lugar de pies. Se dice que deambula por los bosques de Chiloé y posee gran fuerza y poderes mágicos.",
+          "ht": "Trauco a se yon kreyati ki soti nan mitoloji Chilota, nan sid Chili, e se youn nan karaktè ki pi popilè ladan l. Yo dekri l kòm yon nonm ki pa wo, ki gen figi move, ki gen janm kout ki pa gen pye. Yo di li ap mache nan forè Chiloé yo e li gen gwo fòs ak pouvwa majik.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "8B",
+      "nombre": "8° Básico",
+      "textos": [
+        {
+          "titulo": "La Calchona",
+          "es": "La Calchona es un ser de la mitología chilena de la zona central. La leyenda más conocida cuenta que era una bruja que se transformaba en una gran oveja negra para pasear de noche. Una vez sus hijos bebieron sus pociones por error y se volvieron animales; al recuperar la forma humana solo le alcanzó para su rostro, sus manos y su cabello, quedando atrapada para siempre en ese aspecto.",
+          "ht": "La Calchona se yon èt ki soti nan mitoloji chilyen nan zòn santral la. Lejand ki pi popilè a di ke li te yon sòsyè ki te transfòme nan yon gwo mouton nwa pou yon ti mache nan mitan lannwit. Yon fwa pitit li yo te bwè pòsyon yo pa erè epi yo te vin bèt; lè yo te refè fòm imen an, li te sèlman rive jwenn li pou figi l, men l yo ak cheve l, yo te rete kole pou toutan nan aspè sa a.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilena"
+        }
+      ]
+    },
+    {
+      "id": "1M",
+      "nombre": "1° Medio",
+      "textos": [
+        {
+          "titulo": "El Caleuche (los muertos en el mar)",
+          "es": "Una versión popular del Caleuche dice que este barco recoge a los muertos de las aguas y les da una nueva vida a bordo, como tripulantes que pasarían la eternidad en fiestas y celebraciones. Se cuenta que fue creado por el Millalobo para su hija la Pincoya y sus hermanos, con el fin de cumplir ese propósito.",
+          "ht": "Gen yon vèsyon popilè nan Caleuche a ki di bato sa a pran moun ki mouri yo nan dlo a epi li ba yo yon nouvo lavi abò, tankou manm ekipaj k ap pase etènite nan fèt ak selebrasyon. Yo di Millalobo te kreye l pou pitit fi l Pincoya ak frè l yo, pou reyalize objektif sa a.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "2M",
+      "nombre": "2° Medio",
+      "textos": [
+        {
+          "titulo": "La Pincoya y la pesca",
+          "es": "Según la leyenda chilota, las variedades de peces y mariscos que el Millalobo ofrece al pueblo son sembradas por su hija la Pincoya. Ella cumple su trabajo bailando una canción que canta el Pincoy. Si la Pincoya baila hacia el mar, habrá abundancia de pescado; si baila hacia la tierra, es señal de que la pesca escaseará.",
+          "ht": "Dapre lejand Chilota a, varyete pwason ak fwidmè Millalobo bay pèp la se Pincoya, pitit fi l, ki plante yo. Li fè travay li lè li danse sou yon chante Pincoy chante. Si Pincoya danse bò lanmè a, pral gen anpil pwason; si li danse bò tè a, se yon siy lapèch pral ra.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "3M",
+      "nombre": "3° Medio",
+      "textos": [
+        {
+          "titulo": "El Trauco en la sociedad de Chiloé",
+          "es": "En Chiloé, cuando una joven quedaba embarazada y no se sabía quién era el padre, se solía atribuir el hecho al Trauco. Así, la comunidad cubría la deshonra atribuyendo el nacimiento a este ser mitológico, creyendo que la madre y el niño estarían ligados a la magia de un ser extraterreno.",
+          "ht": "Nan Chiloé, lè yon jèn fi te vin ansent e yo pa t konnen kiyès ki papa l, an jeneral se Trauco ki te fè sa. Konsa, kominote a te kache dezonè a lè yo te atribye nesans lan a yon èt mitolojik sa a, paske yo te kwè manman an ak timoun nan t ap gen rapò ak majik yon èt etranje.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilota"
+        }
+      ]
+    },
+    {
+      "id": "4M",
+      "nombre": "4° Medio",
+      "textos": [
+        {
+          "titulo": "La Calchona y su arrepentimiento",
+          "es": "Cuenta la leyenda que, cuando en la noche los campesinos sienten balar una oveja que vaga sola por los campos, saben que se trata de la mítica Calchona. Por tradición le dejan un plato con comida, pues se dice que la Calchona es inofensiva y estaría arrepentida de sus antiguos actos.",
+          "ht": "Dapre lejann nan, lè kiltivatè yo tande yon mouton ap bèje nan mitan lannwit k ap mache poukont li nan jaden yo, yo konnen se Calchona mitik la. Tradisyonèlman, yo kite l yon plat manje, paske yo di Calchona a pa danjere e li ta regrèt zak l yo nan tan lontan.",
+          "fuente": "Wikipedia (CC BY-SA) - mitología chilena"
+        }
+      ]
+    }
+  ]
+}

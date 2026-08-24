@@ -118,14 +118,18 @@ async function main() {
     console.log("  chrF  = " + ((sumC / n) * 100).toFixed(2));
   }
   if (fold && paresNuevos.length) {
-    const txt = JSON.parse(fs.readFileSync(TEXTOS, "utf8"));
-    const base = txt.textos ? txt.textos.length : 0;
-    txt.textos = (txt.textos || []).concat(paresNuevos.map((p, i) => ({
+    const raw = JSON.parse(fs.readFileSync(TEXTOS, "utf8"));
+    const esArray = Array.isArray(raw);
+    const base = esArray ? raw.length : (raw.textos ? raw.textos.length : 0);
+    const nuevos = paresNuevos.map((p, i) => ({
       id: "chile" + String(base + i + 1).padStart(4, "0"),
       titulo: p.titulo, nivel: "chile", tipo: "texto", ht: p.ht, es: p.es, fuente: p.fuente
-    })));
-    fs.writeFileSync(TEXTOS, JSON.stringify(txt, null, 2));
-    console.log("\nAñadidos " + paresNuevos.length + " pares a textos.json (ahora " + txt.textos.length + " textos).");
+    }));
+    let salida, total;
+    if (esArray) { salida = raw.concat(nuevos); total = salida.length; }
+    else { raw.textos = (raw.textos || []).concat(nuevos); salida = raw; total = raw.textos.length; }
+    fs.writeFileSync(TEXTOS, JSON.stringify(salida, null, 2));
+    console.log("\nAñadidos " + paresNuevos.length + " pares a textos.json (ahora " + total + " textos).");
   }
 }
 main().catch((e) => { console.error(e); process.exit(1); });
