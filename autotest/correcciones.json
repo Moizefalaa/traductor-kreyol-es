@@ -353,5 +353,635 @@
     "ht": "Tom pral vann fig li yo nan mache a.",
     "es": "Tom venderá sus plátanos en el mercado.",
     "motivo": "El motor traduce 'fig' (plátano) como 'higo'."
+  },
+  {
+    "ht": "Moun Filipin yo pa tankou moun Swis.",
+    "es": "Los filipinos no son como los suizos.",
+    "motivo": "Tatoeba ht→es (id 10472976, CC BY 2.0 FR, @nonong): traducción humana de referencia."
+  },
+  {
+    "ht": "Èske ou pale angle?",
+    "es": "¿Habla usted inglés?",
+    "motivo": "Tatoeba ht→es (id 10852293, CC BY 2.0 FR, @janTuki): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki lè lekòl la fini?",
+    "es": "¿Cuándo se acaba la escuela?",
+    "motivo": "Tatoeba ht→es (id 8011624, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Byen veni.",
+    "es": "Bienvenida.",
+    "motivo": "Tatoeba ht→es (id 1897920, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen vle ale.",
+    "es": "Quiero ir.",
+    "motivo": "Tatoeba ht→es (id 3338173, CC BY 2.0 FR, @biber): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen pral jwe tenis.",
+    "es": "Voy a jugar al tenis.",
+    "motivo": "Tatoeba ht→es (id 8011615, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Yon revolisyon se pa yon dine de gala.",
+    "es": "Una revolución no es una cena de gala.",
+    "motivo": "Tatoeba ht→es (id 13837446, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Kijan ou di \"yuri\" an angle?",
+    "es": "¿Cómo se dice \"yuri\" en inglés?",
+    "motivo": "Tatoeba ht→es (id 3138154, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "Pote'l pi pre.",
+    "es": "Acércalo.",
+    "motivo": "Tatoeba ht→es (id 8011626, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "\"Eske w pale franse?\" \"Non.\"",
+    "es": "\"¿Habla usted francés?\" \"No.\"",
+    "motivo": "Tatoeba ht→es (id 4697829, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Felisitasyon!",
+    "es": "¡Felicitaciones!",
+    "motivo": "Tatoeba ht→es (id 8886036, CC BY 2.0 FR, @gringoton): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen renmen chat nou yo.",
+    "es": "Quiero mucho a nuestros gatos.",
+    "motivo": "Tatoeba ht→es (id 13838181, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "M pa vlè alè nan lekòl.",
+    "es": "No quiero ir a la escuela.",
+    "motivo": "Tatoeba ht→es (id 3633477, CC BY 2.0 FR, @ecorralest101): traducción humana de referencia."
+  },
+  {
+    "ht": "Kiyès Bondye ye?",
+    "es": "¿Quién es Dios?",
+    "motivo": "Tatoeba ht→es (id 13864818, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen renmen'w.",
+    "es": "Te quiero.",
+    "motivo": "Tatoeba ht→es (id 8011629, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen pa renmen sab la.",
+    "es": "No me gusta la arena.",
+    "motivo": "Tatoeba ht→es (id 13932059, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Nou bezwen konkou li.",
+    "es": "Necesitamos su ayuda.",
+    "motivo": "Tatoeba ht→es (id 4697879, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Ou pa pral genyen pwoblèm sa a.",
+    "es": "No tendrá ese problema.",
+    "motivo": "Tatoeba ht→es (id 8011588, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Bon maten!",
+    "es": "¡Buenos días!",
+    "motivo": "Tatoeba ht→es (id 3138159, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "Li avèk li.",
+    "es": "Ella está con ella.",
+    "motivo": "Tatoeba ht→es (id 13931138, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "M renmen fim sa a.",
+    "es": "Me gusta esa película.",
+    "motivo": "Tatoeba ht→es (id 4697813, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Burj Khalifa aktyelman se gratsyél ki pi wo nan mond.",
+    "es": "El Burj Khalifa es actualmente el rascacielos más alto del mundo.",
+    "motivo": "Tatoeba ht→es (id 4256771, CC BY 2.0 FR, @Balamax): traducción humana de referencia."
+  },
+  {
+    "ht": "Lanmò se yon bagay natirèl.",
+    "es": "La muerte es natural.",
+    "motivo": "Tatoeba ht→es (id 13974001, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Non, se mwen papa w.",
+    "es": "No, yo soy tu padre.",
+    "motivo": "Tatoeba ht→es (id 13880402, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Li te mouri pou nou ka viv.",
+    "es": "Él murió para que nosotros podamos vivir.",
+    "motivo": "Tatoeba ht→es (id 13910035, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Nou manje vyann.",
+    "es": "Coméis carne.",
+    "motivo": "Tatoeba ht→es (id 13970386, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen ap ale nan London.",
+    "es": "Voy a Londres.",
+    "motivo": "Tatoeba ht→es (id 3337885, CC BY 2.0 FR, @biber): traducción humana de referencia."
+  },
+  {
+    "ht": "Tom se yon non.",
+    "es": "Tom es un nombre.",
+    "motivo": "Tatoeba ht→es (id 13930404, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen renmen manje pikant.",
+    "es": "Me encanta comer picante.",
+    "motivo": "Tatoeba ht→es (id 8011606, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Kote kle yo?",
+    "es": "¿Dónde están las llaves?",
+    "motivo": "Tatoeba ht→es (id 10852321, CC BY 2.0 FR, @janTuki): traducción humana de referencia."
+  },
+  {
+    "ht": "Anpil gèp se polinizatè.",
+    "es": "Muchas avispas son polinizadoras.",
+    "motivo": "Tatoeba ht→es (id 13925155, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Yo a konprann nou.",
+    "es": "Nos van a entender.",
+    "motivo": "Tatoeba ht→es (id 4697786, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "An ki lanné ou wè jou ?",
+    "es": "¿En qué año naciste?",
+    "motivo": "Tatoeba ht→es (id 11929109, CC BY 2.0 FR, @assitan): traducción humana de referencia."
+  },
+  {
+    "ht": "Yo a ka kanpe w.",
+    "es": "Ellos no te pueden detener.",
+    "motivo": "Tatoeba ht→es (id 4697789, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Lapè san jistis se sèlman yon sispann-tire.",
+    "es": "La paz sin justicia es solo un alto el fuego.",
+    "motivo": "Tatoeba ht→es (id 13958562, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Fèmen pòt sa a!",
+    "es": "¡Cierra esa puerta!",
+    "motivo": "Tatoeba ht→es (id 4697819, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Ou, nou papa ki dan lesyel, Fer ou ganny rekonnet konman Bondye.",
+    "es": "Padre nuestro que estás en el cielo, santificado sea tu nombre.",
+    "motivo": "Tatoeba ht→es (id 2180406, CC BY 2.0 FR, @Manfredo): traducción humana de referencia."
+  },
+  {
+    "ht": "Li pa renmen pwason.",
+    "es": "A ella no le gusta el pescado.",
+    "motivo": "Tatoeba ht→es (id 4697839, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Chak pèp se yon pèp chwazi.",
+    "es": "Cada pueblo es elegido.",
+    "motivo": "Tatoeba ht→es (id 13838103, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Non mwen sè Tom",
+    "es": "Mi nombre es Tom.",
+    "motivo": "Tatoeba ht→es (id 3138572, CC BY 2.0 FR, @Clic): traducción humana de referencia."
+  },
+  {
+    "ht": "Nou bezwen èd li.",
+    "es": "Necesitamos su ayuda.",
+    "motivo": "Tatoeba ht→es (id 8011610, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen te timid.",
+    "es": "Era tímido.",
+    "motivo": "Tatoeba ht→es (id 4697811, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki non'w ?",
+    "es": "¿Cómo te llamas?",
+    "motivo": "Tatoeba ht→es (id 11929107, CC BY 2.0 FR, @assitan): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen se yon fanm.",
+    "es": "Soy una mujer.",
+    "motivo": "Tatoeba ht→es (id 13797893, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen rele Tom.",
+    "es": "Me llamo Tom.",
+    "motivo": "Tatoeba ht→es (id 8011614, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Sami se yon Mizilman.",
+    "es": "Sami es musulmán.",
+    "motivo": "Tatoeba ht→es (id 13918120, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen pa renmen manje tomat.",
+    "es": "No me gusta comer tomates.",
+    "motivo": "Tatoeba ht→es (id 10852306, CC BY 2.0 FR, @janTuki): traducción humana de referencia."
+  },
+  {
+    "ht": "Bon maten. Koman ou ye?",
+    "es": "Buenos días. ¿Cómo está usted?",
+    "motivo": "Tatoeba ht→es (id 3138160, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "Kijan ou di \"fromaj\" an alman?",
+    "es": "¿Cómo se dice «queso» en alemán?",
+    "motivo": "Tatoeba ht→es (id 3138155, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "Koman ou ye?",
+    "es": "¿Qué tal te va?",
+    "motivo": "Tatoeba ht→es (id 1897921, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "Bon maten, Mike.",
+    "es": "Buenos días, Mike.",
+    "motivo": "Tatoeba ht→es (id 3138158, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "Tom se yon ranmasè fatra.",
+    "es": "Tomás es un basurero.",
+    "motivo": "Tatoeba ht→es (id 13931924, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Èske ou pale fransè?",
+    "es": "¿Usted habla francés?",
+    "motivo": "Tatoeba ht→es (id 10468127, CC BY 2.0 FR, @Julien_PDC): traducción humana de referencia."
+  },
+  {
+    "ht": "Vant mwen fè mal.",
+    "es": "Me duele el estómago.",
+    "motivo": "Tatoeba ht→es (id 10852319, CC BY 2.0 FR, @janTuki): traducción humana de referencia."
+  },
+  {
+    "ht": "Poukisa tout gason yo oblije tonbe damou pou mwen? Mwen pa vle sa.",
+    "es": "¿Por qué todos los hombres tienen que enamorarse de mí? No quiero eso.",
+    "motivo": "Tatoeba ht→es (id 13928842, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen pa mò.",
+    "es": "No estoy muerta.",
+    "motivo": "Tatoeba ht→es (id 10713359, CC BY 2.0 FR, @ecorralest101): traducción humana de referencia."
+  },
+  {
+    "ht": "Kiyès mwen ye?",
+    "es": "¿Quién soy yo?",
+    "motivo": "Tatoeba ht→es (id 10852324, CC BY 2.0 FR, @janTuki): traducción humana de referencia."
+  },
+  {
+    "ht": "Ou se yon fanm wo.",
+    "es": "Eres una mujer alta.",
+    "motivo": "Tatoeba ht→es (id 13956364, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Lanmò natirèl.",
+    "es": "La muerte es natural.",
+    "motivo": "Tatoeba ht→es (id 13974000, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Ou jòn.",
+    "es": "Estás amarillento.",
+    "motivo": "Tatoeba ht→es (id 8011600, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki kote ou ye?",
+    "es": "¿Dónde estás?",
+    "motivo": "Tatoeba ht→es (id 5342153, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki bò ou ye?",
+    "es": "¿Dónde estás?",
+    "motivo": "Tatoeba ht→es (id 5342156, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Li ansanm avè l.",
+    "es": "Ella está con ella.",
+    "motivo": "Tatoeba ht→es (id 13931140, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Aprann angle.",
+    "es": "Aprende inglés.",
+    "motivo": "Tatoeba ht→es (id 13799897, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Bonjou! Bon maten!",
+    "es": "¡Hola! ¡Buenos días!",
+    "motivo": "Tatoeba ht→es (id 3138161, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "Konbyen pedofil ki gen nan gouvènman an?",
+    "es": "¿Cuántos pedófilos hay en el gobierno?",
+    "motivo": "Tatoeba ht→es (id 13930632, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Disfori sèks an konn kòmanse pandan anfans.",
+    "es": "La disforia de género suele comenzar en la niñez.",
+    "motivo": "Tatoeba ht→es (id 13972991, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Ou se yon vòlè, Tom.",
+    "es": "Eres un ladrón, Tom.",
+    "motivo": "Tatoeba ht→es (id 13932240, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "\"Mesi.\" \"De ryen.\"",
+    "es": "\"Gracias.\" \"De nada.\"",
+    "motivo": "Tatoeba ht→es (id 3138149, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "Toujou sensè.",
+    "es": "Sé siempre franco.",
+    "motivo": "Tatoeba ht→es (id 13930817, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen rayi epi mwen renmen.",
+    "es": "Odio y amo.",
+    "motivo": "Tatoeba ht→es (id 13913523, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Pèsonn pa te konen kote li te ale.",
+    "es": "Nadie sabía adónde fue.",
+    "motivo": "Tatoeba ht→es (id 8011617, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki kote ou rete?",
+    "es": "¿Dónde vives?",
+    "motivo": "Tatoeba ht→es (id 10852326, CC BY 2.0 FR, @janTuki): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki kote ou soti?",
+    "es": "¿De dónde venís?",
+    "motivo": "Tatoeba ht→es (id 10468125, CC BY 2.0 FR, @Julien_PDC): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen pa pale angle.",
+    "es": "No hablo inglés.",
+    "motivo": "Tatoeba ht→es (id 10852292, CC BY 2.0 FR, @janTuki): traducción humana de referencia."
+  },
+  {
+    "ht": "Tanpri ban m youn.",
+    "es": "Por favor, dame uno.",
+    "motivo": "Tatoeba ht→es (id 4697823, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Se kay Anita.",
+    "es": "Es la casa de Anita.",
+    "motivo": "Tatoeba ht→es (id 3649392, CC BY 2.0 FR, @ecorralest101): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen se yon chat.",
+    "es": "Soy un gato.",
+    "motivo": "Tatoeba ht→es (id 13838175, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Se fen yon anpi.",
+    "es": "Es el fin de un imperio.",
+    "motivo": "Tatoeba ht→es (id 13959337, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Pe bouch ou, fachis.",
+    "es": "Cállate, fascista.",
+    "motivo": "Tatoeba ht→es (id 13922529, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki lè li fè?",
+    "es": "¿Qué hora es?",
+    "motivo": "Tatoeba ht→es (id 3213631, CC BY 2.0 FR, @ecorralest101): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen renmen mont sa a.",
+    "es": "Me gusta este reloj.",
+    "motivo": "Tatoeba ht→es (id 10852309, CC BY 2.0 FR, @janTuki): traducción humana de referencia."
+  },
+  {
+    "ht": "Tom te wè yon reken.",
+    "es": "Tom vio un tiburón.",
+    "motivo": "Tatoeba ht→es (id 13977856, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Kiyès ou ye?",
+    "es": "¿Quiénes son ustedes?",
+    "motivo": "Tatoeba ht→es (id 10468114, CC BY 2.0 FR, @Julien_PDC): traducción humana de referencia."
+  },
+  {
+    "ht": "Kimoun mwen ye?",
+    "es": "¿Quién soy yo?",
+    "motivo": "Tatoeba ht→es (id 10166079, CC BY 2.0 FR, @ecorralest101): traducción humana de referencia."
+  },
+  {
+    "ht": "Pòm sa a pi wouj.",
+    "es": "Esta manzana es más roja.",
+    "motivo": "Tatoeba ht→es (id 13912918, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Machin nan piti.",
+    "es": "El coche es pequeño.",
+    "motivo": "Tatoeba ht→es (id 13931314, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Parès se manman envansyon.",
+    "es": "La haraganería es la madre de la invención.",
+    "motivo": "Tatoeba ht→es (id 13976123, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Tom pa ka fè fòt.",
+    "es": "Tom no puede cometer errores.",
+    "motivo": "Tatoeba ht→es (id 8011604, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Tom sanble terib.",
+    "es": "Tom se ve terrible.",
+    "motivo": "Tatoeba ht→es (id 8011602, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Kijan ou di...?",
+    "es": "¿Cómo se dice...?",
+    "motivo": "Tatoeba ht→es (id 3138152, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki laj-ou ?",
+    "es": "¿Cuántos años tienes?",
+    "motivo": "Tatoeba ht→es (id 11929097, CC BY 2.0 FR, @assitan): traducción humana de referencia."
+  },
+  {
+    "ht": "Konbyen li koute?",
+    "es": "¿Cuánto cuesta?",
+    "motivo": "Tatoeba ht→es (id 9939190, CC BY 2.0 FR, @Alairis): traducción humana de referencia."
+  },
+  {
+    "ht": "Aktyelman Burj Khalifa se gratsyél ki pi wo nan mond lan.",
+    "es": "El Burj Khalifa es actualmente el rascacielos más alto del mundo.",
+    "motivo": "Tatoeba ht→es (id 4257292, CC BY 2.0 FR, @Balamax): traducción humana de referencia."
+  },
+  {
+    "ht": "Aprann franse.",
+    "es": "¡Aprende francés!",
+    "motivo": "Tatoeba ht→es (id 13799966, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Burj Khalifa kounye a se gratsyél ki pi wo nan mond.",
+    "es": "El Burj Khalifa es actualmente el rascacielos más alto del mundo.",
+    "motivo": "Tatoeba ht→es (id 4256772, CC BY 2.0 FR, @Balamax): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen gen yon amstè.",
+    "es": "Tengo un hámster.",
+    "motivo": "Tatoeba ht→es (id 13970027, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen se yon gason.",
+    "es": "Soy un hombre.",
+    "motivo": "Tatoeba ht→es (id 13797996, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Lanmò pa solisyon an.",
+    "es": "La muerte no es la solución.",
+    "motivo": "Tatoeba ht→es (id 13910204, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Jodi a se 26 jiyè 2023: Bòn Jounen Esperanto! Sa fè 136 ane, 1887-2023. Sonje ke pandan plizyè deseni, pa te gen okenn Entènèt, ki kounye a ede gaye nan lang tankou Esperanto, atravè lemond.",
+    "es": "Hoy es 26 de julio de 2023: ¡Feliz Día del Esperanto! Han pasado 136 años, 1887-2023. Recuerde que durante muchas décadas no hubo Internet, lo que ahora ayuda a la propagación de idiomas como del esperanto, en todo el mundo.",
+    "motivo": "Tatoeba ht→es (id 11973721, CC BY 2.0 FR, @nonong): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki sa yo te di ou?",
+    "es": "¿Qué te han dicho?",
+    "motivo": "Tatoeba ht→es (id 8011625, CC BY 2.0 FR, @kanpekin): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen renmen madanm mwen.",
+    "es": "Amo a mi esposa.",
+    "motivo": "Tatoeba ht→es (id 10852308, CC BY 2.0 FR, @janTuki): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki bò w ye?",
+    "es": "¿Dónde estás?",
+    "motivo": "Tatoeba ht→es (id 5342157, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Bon apre-midi!",
+    "es": "¡Buenas tardes!",
+    "motivo": "Tatoeba ht→es (id 1897923, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "Matant mwen renmen kreyòl mizik.",
+    "es": "A mi tía le gusta la música criolla.",
+    "motivo": "Tatoeba ht→es (id 2427231, CC BY 2.0 FR, @google): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki kote nou ye?",
+    "es": "¿Dónde están?",
+    "motivo": "Tatoeba ht→es (id 5342155, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen pa konprann.",
+    "es": "No entiendo.",
+    "motivo": "Tatoeba ht→es (id 3214262, CC BY 2.0 FR, @ecorralest101): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen pè areye.",
+    "es": "Le tengo miedo a las arañas.",
+    "motivo": "Tatoeba ht→es (id 10852314, CC BY 2.0 FR, @janTuki): traducción humana de referencia."
+  },
+  {
+    "ht": "Tom fè plis lajan pase paran li yo.",
+    "es": "Tom gana más que sus padres.",
+    "motivo": "Tatoeba ht→es (id 4697809, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Nou pa vole.",
+    "es": "No volamos.",
+    "motivo": "Tatoeba ht→es (id 13951957, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen te vote kont ou.",
+    "es": "Voté en tu contra.",
+    "motivo": "Tatoeba ht→es (id 13961315, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen ap ekri yon lèt.",
+    "es": "Estoy escribiendo una carta.",
+    "motivo": "Tatoeba ht→es (id 3338178, CC BY 2.0 FR, @biber): traducción humana de referencia."
+  },
+  {
+    "ht": "Modpas la se \"modpas\".",
+    "es": "La contraseña es «contraseña».",
+    "motivo": "Tatoeba ht→es (id 13835528, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Kijan ou di \"Mwen renmen w\" an franse?",
+    "es": "¿Cómo se dice \"te amo\" en francés?",
+    "motivo": "Tatoeba ht→es (id 3138151, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "M a rete lakay mwen an demen.",
+    "es": "Mañana me quedaré en mi casa.",
+    "motivo": "Tatoeba ht→es (id 4697785, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen pa konnen.",
+    "es": "No sé.",
+    "motivo": "Tatoeba ht→es (id 3214266, CC BY 2.0 FR, @ecorralest101): traducción humana de referencia."
+  },
+  {
+    "ht": "Bonjou, Tom. Bon maten.",
+    "es": "Hola Tom. Buenos días.",
+    "motivo": "Tatoeba ht→es (id 3138157, CC BY 2.0 FR, @LanguageExpert): traducción humana de referencia."
+  },
+  {
+    "ht": "M te vini, m te wè, m te vannen.",
+    "es": "Vine, vi, vencí.",
+    "motivo": "Tatoeba ht→es (id 4697787, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen pa janm pral konprann.",
+    "es": "Nunca lo entenderé.",
+    "motivo": "Tatoeba ht→es (id 4697851, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Mond lan an danje.",
+    "es": "El mundo está en peligro.",
+    "motivo": "Tatoeba ht→es (id 13911570, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Kisa mwen ye?",
+    "es": "¿Yo soy qué?",
+    "motivo": "Tatoeba ht→es (id 10724027, CC BY 2.0 FR, @ecorralest101): traducción humana de referencia."
+  },
+  {
+    "ht": "Ki kote w ye?",
+    "es": "¿Dónde estás?",
+    "motivo": "Tatoeba ht→es (id 5342154, CC BY 2.0 FR, @panamicua): traducción humana de referencia."
+  },
+  {
+    "ht": "Nou te vwazen.",
+    "es": "Éramos vecinos.",
+    "motivo": "Tatoeba ht→es (id 13909324, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Entèlijans atifisyèl pa egziste.",
+    "es": "No existe tal cosa como la inteligencia artificial.",
+    "motivo": "Tatoeba ht→es (id 13909908, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Mwen gen yon ti chen.",
+    "es": "Tengo un perro pequeño.",
+    "motivo": "Tatoeba ht→es (id 13961483, CC BY 2.0 FR, @rul): traducción humana de referencia."
+  },
+  {
+    "ht": "Èske yo bezwen lajan?",
+    "es": "¿Necesitan dinero?",
+    "motivo": "Tatoeba ht→es (id 13910965, CC BY 2.0 FR, @rul): traducción humana de referencia."
   }
 ]

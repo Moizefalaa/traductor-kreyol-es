@@ -1,0 +1,898 @@
+[
+  {
+    "id": 10472976,
+    "ht": "Moun Filipin yo pa tankou moun Swis.",
+    "es": "Los filipinos no son como los suizos.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "nonong"
+  },
+  {
+    "id": 10852293,
+    "ht": "Èske ou pale angle?",
+    "es": "¿Habla usted inglés?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "janTuki"
+  },
+  {
+    "id": 8011624,
+    "ht": "Ki lè lekòl la fini?",
+    "es": "¿Cuándo se acaba la escuela?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 1897920,
+    "ht": "Byen veni.",
+    "es": "Bienvenida.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 3338173,
+    "ht": "Mwen vle ale.",
+    "es": "Quiero ir.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "biber"
+  },
+  {
+    "id": 8011615,
+    "ht": "Mwen pral jwe tenis.",
+    "es": "Voy a jugar al tenis.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 13837446,
+    "ht": "Yon revolisyon se pa yon dine de gala.",
+    "es": "Una revolución no es una cena de gala.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 3138154,
+    "ht": "Kijan ou di \"yuri\" an angle?",
+    "es": "¿Cómo se dice \"yuri\" en inglés?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 8011626,
+    "ht": "Pote'l pi pre.",
+    "es": "Acércalo.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 4697829,
+    "ht": "\"Eske w pale franse?\" \"Non.\"",
+    "es": "\"¿Habla usted francés?\" \"No.\"",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 8886036,
+    "ht": "Felisitasyon!",
+    "es": "¡Felicitaciones!",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "gringoton"
+  },
+  {
+    "id": 13838181,
+    "ht": "Mwen renmen chat nou yo.",
+    "es": "Quiero mucho a nuestros gatos.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 3633477,
+    "ht": "M pa vlè alè nan lekòl.",
+    "es": "No quiero ir a la escuela.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "ecorralest101"
+  },
+  {
+    "id": 13864818,
+    "ht": "Kiyès Bondye ye?",
+    "es": "¿Quién es Dios?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 8011629,
+    "ht": "Mwen renmen'w.",
+    "es": "Te quiero.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 13932059,
+    "ht": "Mwen pa renmen sab la.",
+    "es": "No me gusta la arena.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 4697879,
+    "ht": "Nou bezwen konkou li.",
+    "es": "Necesitamos su ayuda.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 8011588,
+    "ht": "Ou pa pral genyen pwoblèm sa a.",
+    "es": "No tendrá ese problema.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 3138159,
+    "ht": "Bon maten!",
+    "es": "¡Buenos días!",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 13931138,
+    "ht": "Li avèk li.",
+    "es": "Ella está con ella.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 4697813,
+    "ht": "M renmen fim sa a.",
+    "es": "Me gusta esa película.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 4256771,
+    "ht": "Burj Khalifa aktyelman se gratsyél ki pi wo nan mond.",
+    "es": "El Burj Khalifa es actualmente el rascacielos más alto del mundo.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "Balamax"
+  },
+  {
+    "id": 13974001,
+    "ht": "Lanmò se yon bagay natirèl.",
+    "es": "La muerte es natural.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13880402,
+    "ht": "Non, se mwen papa w.",
+    "es": "No, yo soy tu padre.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13910035,
+    "ht": "Li te mouri pou nou ka viv.",
+    "es": "Él murió para que nosotros podamos vivir.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13970386,
+    "ht": "Nou manje vyann.",
+    "es": "Coméis carne.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 3337885,
+    "ht": "Mwen ap ale nan London.",
+    "es": "Voy a Londres.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "biber"
+  },
+  {
+    "id": 13930404,
+    "ht": "Tom se yon non.",
+    "es": "Tom es un nombre.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 8011606,
+    "ht": "Mwen renmen manje pikant.",
+    "es": "Me encanta comer picante.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 10852321,
+    "ht": "Kote kle yo?",
+    "es": "¿Dónde están las llaves?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "janTuki"
+  },
+  {
+    "id": 13925155,
+    "ht": "Anpil gèp se polinizatè.",
+    "es": "Muchas avispas son polinizadoras.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 4697786,
+    "ht": "Yo a konprann nou.",
+    "es": "Nos van a entender.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 11929109,
+    "ht": "An ki lanné ou wè jou ?",
+    "es": "¿En qué año naciste?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "assitan"
+  },
+  {
+    "id": 4697789,
+    "ht": "Yo a ka kanpe w.",
+    "es": "Ellos no te pueden detener.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 13958562,
+    "ht": "Lapè san jistis se sèlman yon sispann-tire.",
+    "es": "La paz sin justicia es solo un alto el fuego.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 4697819,
+    "ht": "Fèmen pòt sa a!",
+    "es": "¡Cierra esa puerta!",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 2180406,
+    "ht": "Ou, nou papa ki dan lesyel, Fer ou ganny rekonnet konman Bondye.",
+    "es": "Padre nuestro que estás en el cielo, santificado sea tu nombre.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "Manfredo"
+  },
+  {
+    "id": 4697839,
+    "ht": "Li pa renmen pwason.",
+    "es": "A ella no le gusta el pescado.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 13838103,
+    "ht": "Chak pèp se yon pèp chwazi.",
+    "es": "Cada pueblo es elegido.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 3138572,
+    "ht": "Non mwen sè Tom",
+    "es": "Mi nombre es Tom.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "Clic"
+  },
+  {
+    "id": 8011610,
+    "ht": "Nou bezwen èd li.",
+    "es": "Necesitamos su ayuda.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 4697811,
+    "ht": "Mwen te timid.",
+    "es": "Era tímido.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 11929107,
+    "ht": "Ki non'w ?",
+    "es": "¿Cómo te llamas?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "assitan"
+  },
+  {
+    "id": 13797893,
+    "ht": "Mwen se yon fanm.",
+    "es": "Soy una mujer.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 8011614,
+    "ht": "Mwen rele Tom.",
+    "es": "Me llamo Tom.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 13918120,
+    "ht": "Sami se yon Mizilman.",
+    "es": "Sami es musulmán.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 10852306,
+    "ht": "Mwen pa renmen manje tomat.",
+    "es": "No me gusta comer tomates.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "janTuki"
+  },
+  {
+    "id": 3138160,
+    "ht": "Bon maten. Koman ou ye?",
+    "es": "Buenos días. ¿Cómo está usted?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 3138155,
+    "ht": "Kijan ou di \"fromaj\" an alman?",
+    "es": "¿Cómo se dice «queso» en alemán?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 1897921,
+    "ht": "Koman ou ye?",
+    "es": "¿Qué tal te va?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 3138158,
+    "ht": "Bon maten, Mike.",
+    "es": "Buenos días, Mike.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 13931924,
+    "ht": "Tom se yon ranmasè fatra.",
+    "es": "Tomás es un basurero.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 10468127,
+    "ht": "Èske ou pale fransè?",
+    "es": "¿Usted habla francés?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "Julien_PDC"
+  },
+  {
+    "id": 10852319,
+    "ht": "Vant mwen fè mal.",
+    "es": "Me duele el estómago.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "janTuki"
+  },
+  {
+    "id": 13928842,
+    "ht": "Poukisa tout gason yo oblije tonbe damou pou mwen? Mwen pa vle sa.",
+    "es": "¿Por qué todos los hombres tienen que enamorarse de mí? No quiero eso.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 10713359,
+    "ht": "Mwen pa mò.",
+    "es": "No estoy muerta.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "ecorralest101"
+  },
+  {
+    "id": 10852324,
+    "ht": "Kiyès mwen ye?",
+    "es": "¿Quién soy yo?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "janTuki"
+  },
+  {
+    "id": 13956364,
+    "ht": "Ou se yon fanm wo.",
+    "es": "Eres una mujer alta.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13974000,
+    "ht": "Lanmò natirèl.",
+    "es": "La muerte es natural.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 8011600,
+    "ht": "Ou jòn.",
+    "es": "Estás amarillento.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 5342153,
+    "ht": "Ki kote ou ye?",
+    "es": "¿Dónde estás?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 5342156,
+    "ht": "Ki bò ou ye?",
+    "es": "¿Dónde estás?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 13931140,
+    "ht": "Li ansanm avè l.",
+    "es": "Ella está con ella.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13799897,
+    "ht": "Aprann angle.",
+    "es": "Aprende inglés.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 3138161,
+    "ht": "Bonjou! Bon maten!",
+    "es": "¡Hola! ¡Buenos días!",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 13930632,
+    "ht": "Konbyen pedofil ki gen nan gouvènman an?",
+    "es": "¿Cuántos pedófilos hay en el gobierno?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13972991,
+    "ht": "Disfori sèks an konn kòmanse pandan anfans.",
+    "es": "La disforia de género suele comenzar en la niñez.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13932240,
+    "ht": "Ou se yon vòlè, Tom.",
+    "es": "Eres un ladrón, Tom.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 3138149,
+    "ht": "\"Mesi.\" \"De ryen.\"",
+    "es": "\"Gracias.\" \"De nada.\"",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 13930817,
+    "ht": "Toujou sensè.",
+    "es": "Sé siempre franco.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13913523,
+    "ht": "Mwen rayi epi mwen renmen.",
+    "es": "Odio y amo.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 8011617,
+    "ht": "Pèsonn pa te konen kote li te ale.",
+    "es": "Nadie sabía adónde fue.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 10852326,
+    "ht": "Ki kote ou rete?",
+    "es": "¿Dónde vives?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "janTuki"
+  },
+  {
+    "id": 10468125,
+    "ht": "Ki kote ou soti?",
+    "es": "¿De dónde venís?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "Julien_PDC"
+  },
+  {
+    "id": 10852292,
+    "ht": "Mwen pa pale angle.",
+    "es": "No hablo inglés.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "janTuki"
+  },
+  {
+    "id": 4697823,
+    "ht": "Tanpri ban m youn.",
+    "es": "Por favor, dame uno.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 3649392,
+    "ht": "Se kay Anita.",
+    "es": "Es la casa de Anita.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "ecorralest101"
+  },
+  {
+    "id": 13838175,
+    "ht": "Mwen se yon chat.",
+    "es": "Soy un gato.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13959337,
+    "ht": "Se fen yon anpi.",
+    "es": "Es el fin de un imperio.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13922529,
+    "ht": "Pe bouch ou, fachis.",
+    "es": "Cállate, fascista.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 3213631,
+    "ht": "Ki lè li fè?",
+    "es": "¿Qué hora es?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "ecorralest101"
+  },
+  {
+    "id": 10852309,
+    "ht": "Mwen renmen mont sa a.",
+    "es": "Me gusta este reloj.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "janTuki"
+  },
+  {
+    "id": 13977856,
+    "ht": "Tom te wè yon reken.",
+    "es": "Tom vio un tiburón.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 10468114,
+    "ht": "Kiyès ou ye?",
+    "es": "¿Quiénes son ustedes?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "Julien_PDC"
+  },
+  {
+    "id": 10166079,
+    "ht": "Kimoun mwen ye?",
+    "es": "¿Quién soy yo?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "ecorralest101"
+  },
+  {
+    "id": 13912918,
+    "ht": "Pòm sa a pi wouj.",
+    "es": "Esta manzana es más roja.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13931314,
+    "ht": "Machin nan piti.",
+    "es": "El coche es pequeño.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13976123,
+    "ht": "Parès se manman envansyon.",
+    "es": "La haraganería es la madre de la invención.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 8011604,
+    "ht": "Tom pa ka fè fòt.",
+    "es": "Tom no puede cometer errores.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 8011602,
+    "ht": "Tom sanble terib.",
+    "es": "Tom se ve terrible.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 3138152,
+    "ht": "Kijan ou di...?",
+    "es": "¿Cómo se dice...?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 11929097,
+    "ht": "Ki laj-ou ?",
+    "es": "¿Cuántos años tienes?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "assitan"
+  },
+  {
+    "id": 9939190,
+    "ht": "Konbyen li koute?",
+    "es": "¿Cuánto cuesta?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "Alairis"
+  },
+  {
+    "id": 4257292,
+    "ht": "Aktyelman Burj Khalifa se gratsyél ki pi wo nan mond lan.",
+    "es": "El Burj Khalifa es actualmente el rascacielos más alto del mundo.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "Balamax"
+  },
+  {
+    "id": 13799966,
+    "ht": "Aprann franse.",
+    "es": "¡Aprende francés!",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 4256772,
+    "ht": "Burj Khalifa kounye a se gratsyél ki pi wo nan mond.",
+    "es": "El Burj Khalifa es actualmente el rascacielos más alto del mundo.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "Balamax"
+  },
+  {
+    "id": 13970027,
+    "ht": "Mwen gen yon amstè.",
+    "es": "Tengo un hámster.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13797996,
+    "ht": "Mwen se yon gason.",
+    "es": "Soy un hombre.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13910204,
+    "ht": "Lanmò pa solisyon an.",
+    "es": "La muerte no es la solución.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 11973721,
+    "ht": "Jodi a se 26 jiyè 2023: Bòn Jounen Esperanto! Sa fè 136 ane, 1887-2023. Sonje ke pandan plizyè deseni, pa te gen okenn Entènèt, ki kounye a ede gaye nan lang tankou Esperanto, atravè lemond.",
+    "es": "Hoy es 26 de julio de 2023: ¡Feliz Día del Esperanto! Han pasado 136 años, 1887-2023. Recuerde que durante muchas décadas no hubo Internet, lo que ahora ayuda a la propagación de idiomas como del esperanto, en todo el mundo.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "nonong"
+  },
+  {
+    "id": 8011625,
+    "ht": "Ki sa yo te di ou?",
+    "es": "¿Qué te han dicho?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "kanpekin"
+  },
+  {
+    "id": 10852308,
+    "ht": "Mwen renmen madanm mwen.",
+    "es": "Amo a mi esposa.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "janTuki"
+  },
+  {
+    "id": 5342157,
+    "ht": "Ki bò w ye?",
+    "es": "¿Dónde estás?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 1897923,
+    "ht": "Bon apre-midi!",
+    "es": "¡Buenas tardes!",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 2427231,
+    "ht": "Matant mwen renmen kreyòl mizik.",
+    "es": "A mi tía le gusta la música criolla.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "google"
+  },
+  {
+    "id": 5342155,
+    "ht": "Ki kote nou ye?",
+    "es": "¿Dónde están?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 3214262,
+    "ht": "Mwen pa konprann.",
+    "es": "No entiendo.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "ecorralest101"
+  },
+  {
+    "id": 10852314,
+    "ht": "Mwen pè areye.",
+    "es": "Le tengo miedo a las arañas.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "janTuki"
+  },
+  {
+    "id": 1897919,
+    "ht": "Bonjou!",
+    "es": "¡Buenos días!",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 4697809,
+    "ht": "Tom fè plis lajan pase paran li yo.",
+    "es": "Tom gana más que sus padres.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 13799899,
+    "ht": "Aprann anglè.",
+    "es": "Aprende inglés.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13951957,
+    "ht": "Nou pa vole.",
+    "es": "No volamos.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13961315,
+    "ht": "Mwen te vote kont ou.",
+    "es": "Voté en tu contra.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 3338178,
+    "ht": "Mwen ap ekri yon lèt.",
+    "es": "Estoy escribiendo una carta.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "biber"
+  },
+  {
+    "id": 13835528,
+    "ht": "Modpas la se \"modpas\".",
+    "es": "La contraseña es «contraseña».",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 3138151,
+    "ht": "Kijan ou di \"Mwen renmen w\" an franse?",
+    "es": "¿Cómo se dice \"te amo\" en francés?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 4697785,
+    "ht": "M a rete lakay mwen an demen.",
+    "es": "Mañana me quedaré en mi casa.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 3214266,
+    "ht": "Mwen pa konnen.",
+    "es": "No sé.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "ecorralest101"
+  },
+  {
+    "id": 3138157,
+    "ht": "Bonjou, Tom. Bon maten.",
+    "es": "Hola Tom. Buenos días.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "LanguageExpert"
+  },
+  {
+    "id": 4697787,
+    "ht": "M te vini, m te wè, m te vannen.",
+    "es": "Vine, vi, vencí.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 4697851,
+    "ht": "Mwen pa janm pral konprann.",
+    "es": "Nunca lo entenderé.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 13911570,
+    "ht": "Mond lan an danje.",
+    "es": "El mundo está en peligro.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 10724027,
+    "ht": "Kisa mwen ye?",
+    "es": "¿Yo soy qué?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "ecorralest101"
+  },
+  {
+    "id": 5342154,
+    "ht": "Ki kote w ye?",
+    "es": "¿Dónde estás?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "panamicua"
+  },
+  {
+    "id": 13909324,
+    "ht": "Nou te vwazen.",
+    "es": "Éramos vecinos.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13909908,
+    "ht": "Entèlijans atifisyèl pa egziste.",
+    "es": "No existe tal cosa como la inteligencia artificial.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13961483,
+    "ht": "Mwen gen yon ti chen.",
+    "es": "Tengo un perro pequeño.",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  },
+  {
+    "id": 13910965,
+    "ht": "Èske yo bezwen lajan?",
+    "es": "¿Necesitan dinero?",
+    "licencia": "CC BY 2.0 FR",
+    "autor": "rul"
+  }
+]
