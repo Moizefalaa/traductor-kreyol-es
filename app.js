@@ -8,7 +8,7 @@
   var CLAVE_PALETA = "kreolEs_paleta_v1";
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v30";
+  var VERSION = "v31";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -587,8 +587,24 @@
     estadoVoz.classList.remove("error");
   }
 
+  function normalizarVariantesKreyol(texto) {
+    var t = " " + texto + " ";
+    var cliticos = {
+      "m'": "mwen", "w'": "ou", "l'": "li", "y'": "yo", "t'": "te",
+      "p'": "pa", "s'": "sa", "d'": "de", "k'": "ki", "n'": "nou"
+    };
+    Object.keys(cliticos).forEach(function (c) {
+      var re = new RegExp("(^|\\s)(" + c.replace("'", "\\'") + ")", "gi");
+      t = t.replace(re, function (m, pre) { return pre + cliticos[c] + " "; });
+    });
+    t = t.replace(/\bsh/gi, "ch");
+    t = t.replace(/\s+([.,!?;:])/g, "$1");
+    t = t.replace(/\s{2,}/g, " ");
+    return t.trim();
+  }
+
   function prepararFuenteKreyol(texto) {
-    var t = texto;
+    var t = normalizarVariantesKreyol(texto);
     GLOSARIO.forEach(function (r) {
       if (r.tipo === "fuente") t = t.replace(r.fuente, r.salida.a);
     });
