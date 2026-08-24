@@ -1,9 +1,9 @@
-var CACHE = "kreol-es-v29";
+var CACHE = "kreol-es-v30";
 var ARCHIVOS = [
   "./",
   "./index.html",
-  "./styles.css?v=29",
-  "./app.js?v=29",
+  "./styles.css?v=30",
+  "./app.js?v=30",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png"
@@ -68,3 +68,4 @@ self.addEventListener("fetch", function (evento) {
     );
   }
 });
+

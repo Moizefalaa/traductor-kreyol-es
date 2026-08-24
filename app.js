@@ -6,8 +6,9 @@
   var CLAVE_VOZ = "kreolEs_voz_v1";
   var CLAVE_TEMA = "kreolEs_tema_v1";
   var CLAVE_PALETA = "kreolEs_paleta_v1";
+  var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v29";
+  var VERSION = "v30";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -59,6 +60,16 @@
   var modalApariencia = document.getElementById("modalApariencia");
   var opcionesTema = document.getElementById("opcionesTema");
   var opcionesPaleta = document.getElementById("opcionesPaleta");
+  var btnReportar = document.getElementById("btnReportar");
+  var modalReportar = document.getElementById("modalReportar");
+  var repOrigen = document.getElementById("repOrigen");
+  var repDestino = document.getElementById("repDestino");
+  var repSugerido = document.getElementById("repSugerido");
+  var btnConfirmarReporte = document.getElementById("btnConfirmarReporte");
+  var listaFeedback = document.getElementById("listaFeedback");
+  var feedbackVacio = document.getElementById("feedbackVacio");
+  var btnExportarFeedback = document.getElementById("btnExportarFeedback");
+  var btnBorrarFeedback = document.getElementById("btnBorrarFeedback");
 
   var reconocedor = null;
   var escuchando = false;
@@ -1569,7 +1580,8 @@
       exportadoEl: new Date().toISOString(),
       favoritas: items.filter(function (i) { return i.favorito; }).slice(-15),
       frecuencia: Object.values(mapa).sort(function (a, b) { return b.veces - a.veces; }).slice(0, 25),
-      historial: items.slice(-10)
+      historial: items.slice(-10),
+      correccionesSugeridas: cargarFeedback()
     };
   }
 
@@ -1632,6 +1644,17 @@
     });
     guardarHistorial(actual);
     renderHistorial();
+    if (Array.isArray(datos.correccionesSugeridas)) {
+      var fb = cargarFeedback();
+      var claves = {};
+      fb.forEach(function (f) { claves[f.origen + "|||" + f.destino + "|||" + f.sugerido] = true; });
+      datos.correccionesSugeridas.forEach(function (f) {
+        var c = (f.origen || "") + "|||" + (f.destino || "") + "|||" + (f.sugerido || "");
+        if (!claves[c]) { claves[c] = true; fb.push(f); }
+      });
+      guardarFeedback(fb);
+      renderFeedback();
+    }
     return agregados;
   }
 
@@ -1756,6 +1779,100 @@
 
   var versionEl = document.getElementById("versionApp");
   if (versionEl) versionEl.textContent = "Versión de la app: " + VERSION;
+
+  // --- Correcciones sugeridas (feedback de traducciones incorrectas) ---
+  function cargarFeedback() {
+    try {
+      var raw = localStorage.getItem(CLAVE_FEEDBACK);
+      var arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr : [];
+    } catch (e) { return []; }
+  }
+  function guardarFeedback(lista) {
+    try { localStorage.setItem(CLAVE_FEEDBACK, JSON.stringify(lista)); } catch (e) {}
+  }
+  function renderFeedback() {
+    var items = cargarFeedback();
+    listaFeedback.innerHTML = "";
+    feedbackVacio.classList.toggle("oculto", items.length > 0);
+    items.forEach(function (it, idx) {
+      var li = document.createElement("li");
+      li.className = "feedback-item";
+      var dir = it.direccion === "es-ht" ? "ES→HT" : "HT→ES";
+      li.innerHTML =
+        '<div class="feedback-cabeza"><span class="chip chip-ayuda">' + dir + '</span>' +
+        '<button class="boton-icono btn-borrar-feedback" type="button" title="Eliminar" aria-label="Eliminar">&#128465;</button></div>' +
+        '<p class="feedback-origen"></p>' +
+        '<p class="feedback-traduccion"></p>' +
+        '<p class="feedback-sugerido"></p>';
+      li.querySelector(".feedback-origen").textContent = "Original: " + it.origen;
+      li.querySelector(".feedback-traduccion").textContent = "Traducción actual: " + it.destino;
+      li.querySelector(".feedback-sugerido").textContent = "Correcta: " + it.sugerido;
+      li.querySelector(".btn-borrar-feedback").addEventListener("click", function () {
+        var lista = cargarFeedback();
+        lista.splice(idx, 1);
+        guardarFeedback(lista);
+        renderFeedback();
+      });
+      listaFeedback.appendChild(li);
+    });
+  }
+
+  function abrirReporte() {
+    if (!destino.textContent) {
+      mostrarError("Traduce algo primero para poder reportarlo.");
+      return;
+    }
+    repOrigen.textContent = origen.value.trim();
+    repDestino.textContent = destino.textContent;
+    repSugerido.value = "";
+    abrirModal(modalReportar);
+    repSugerido.focus();
+  }
+
+  btnReportar.addEventListener("click", abrirReporte);
+
+  btnConfirmarReporte.addEventListener("click", function () {
+    var sugerido = repSugerido.value.trim();
+    if (!sugerido) { repSugerido.focus(); return; }
+    var lista = cargarFeedback();
+    lista.push({
+      id: Date.now() + "-" + Math.random().toString(36).slice(2, 7),
+      origen: origen.value.trim(),
+      destino: destino.textContent,
+      sugerido: sugerido,
+      direccion: direccion,
+      fecha: new Date().toISOString()
+    });
+    guardarFeedback(lista);
+    cerrarModal(modalReportar);
+    renderFeedback();
+  });
+
+  btnBorrarFeedback.addEventListener("click", function () {
+    if (!cargarFeedback().length) return;
+    if (confirm("¿Borrar todos los reportes de traducción?")) {
+      guardarFeedback([]);
+      renderFeedback();
+    }
+  });
+
+  btnExportarFeedback.addEventListener("click", function () {
+    var lista = cargarFeedback();
+    var datos = { app: "traductor-kreyol-es", tipo: "correcciones-sugeridas", exportadoEl: new Date().toISOString(), correcciones: lista };
+    var json = JSON.stringify(datos, null, 2);
+    var blob = new Blob([json], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "correcciones-sugeridas.json";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  });
+
+  renderFeedback();
 
   window.addEventListener("online", function () {
     limpiarError();

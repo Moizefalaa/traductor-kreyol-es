@@ -9,7 +9,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="styles.css?v=29">
+  <link rel="stylesheet" href="styles.css?v=30">
 </head>
 <body>
   <header class="cabecera">
@@ -85,6 +85,7 @@
           <button id="btnLeerDestino" class="boton-icono" type="button" aria-label="Escuchar la traducción" title="Escuchar traducción">&#128266;</button>
           <button id="btnCopiar" class="boton-icono" type="button" aria-label="Copiar traducción" title="Copiar">&#128203;</button>
           <button id="btnFavorito" class="boton-icono" type="button" aria-label="Guardar como favorita" title="Guardar favorita">&#9733;</button>
+          <button id="btnReportar" class="boton-icono" type="button" aria-label="Reportar traducción incorrecta" title="Reportar traducción incorrecta">&#128681;</button>
         </div>
       </div>
       <p id="textoDestino" class="traduccion" lang="es"></p>
@@ -128,6 +129,19 @@
       </div>
       <ul id="listaHistorial" class="lista"></ul>
       <p id="historialVacio" class="vacio">Todavía no hay traducciones.</p>
+    </section>
+
+    <section class="tarjeta feedback" aria-label="Correcciones sugeridas">
+      <div class="barra-etiqueta">
+        <h2>Correcciones sugeridas</h2>
+        <div class="controles-entrada">
+          <button id="btnExportarFeedback" class="boton pequeno" type="button" title="Exportar tus reportes como JSON">Exportar</button>
+          <button id="btnBorrarFeedback" class="boton-icono" type="button" aria-label="Borrar reportes" title="Borrar reportes">&#128465;</button>
+        </div>
+      </div>
+      <p class="aviso">Las traducciones que reportes como incorrectas se guardan aquí, en tu dispositivo. Exporta el JSON para enviárnoslo y mejorar el traductor.</p>
+      <ul id="listaFeedback" class="lista"></ul>
+      <p id="feedbackVacio" class="vacio">Todavía no has reportado traducciones.</p>
     </section>
   </main>
 
@@ -192,6 +206,23 @@
     </div>
   </div>
 
+  <div id="modalReportar" class="modal-overlay oculto" role="dialog" aria-modal="true" aria-label="Reportar traducción">
+    <div class="modal-caja">
+      <div class="modal-cabecera">
+        <h2>Reportar traducción</h2>
+        <button class="boton-cerrar" type="button" aria-label="Cerrar">&#10005;</button>
+      </div>
+      <p class="aviso">Si la traducción no es correcta, escribe la versión correcta. Esto nos ayuda a mejorar el traductor.</p>
+      <p class="reporte-linea"><strong>Original:</strong> <span id="repOrigen"></span></p>
+      <p class="reporte-linea"><strong>Traducción actual:</strong> <span id="repDestino"></span></p>
+      <label for="repSugerido">Traducción correcta:</label>
+      <textarea id="repSugerido" class="area-importar" rows="3" placeholder="Escribe aquí la traducción correcta…"></textarea>
+      <div class="modal-acciones">
+        <button id="btnConfirmarReporte" class="boton principal" type="button">Enviar reporte</button>
+      </div>
+    </div>
+  </div>
+
   <div id="modalApariencia" class="modal-overlay oculto" role="dialog" aria-modal="true" aria-label="Personalizar apariencia">
     <div class="modal-caja">
       <div class="modal-cabecera">
@@ -223,6 +254,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
-  <script src="app.js?v=29"></script>
+  <script src="app.js?v=30"></script>
 </body>
 </html>
+

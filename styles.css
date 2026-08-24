@@ -874,3 +874,21 @@ footer {
 @media (max-width: 560px) {
   .doc-fila { grid-template-columns: 1fr; }
 }
+
+/* Correcciones sugeridas (feedback) */
+.reporte-linea { margin: 0.2rem 0; word-break: break-word; }
+.feedback-item {
+  border: 1px solid var(--borde, #d8e6df);
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  margin-bottom: 0.55rem;
+}
+.feedback-cabeza {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+}
+.feedback-item p { margin: 0.15rem 0; }
+.feedback-origen { color: var(--texto-sec, #4a5a54); }
+.feedback-sugerido { font-weight: 600; color: var(--verde, #0b6e4f); }
