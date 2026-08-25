@@ -1,2 +1,7 @@
 autotest/reportes/
 autotest/libros/
+autotest/_*.log
+autotest/_*.err
+autotest/_google-unblocked.txt
+autotest/chile-draft.json
+autotest/_probe.log
