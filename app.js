@@ -9,7 +9,7 @@
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var CLAVE_CHILE_USER = "kreolEs_chile_user_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v34";
+  var VERSION = "v35";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -80,6 +80,8 @@
   var selGradoModal = document.getElementById("selGradoModal");
   var agregarTexto = document.getElementById("agregarTexto");
   var btnGuardarChile = document.getElementById("btnGuardarChile");
+  var contadorCaracteres = document.getElementById("contadorCaracteres");
+  var avisoMotor = document.getElementById("avisoMotor");
 
   var reconocedor = null;
   var escuchando = false;
@@ -481,6 +483,7 @@
       btnDirES.classList.add("activo");
     }
     destino.lang = idiomaDestino();
+    origen.lang = idiomaOrigen();
     renderFrases(catFrasesActual);
   }
 
@@ -495,10 +498,12 @@
       var origenP = document.createElement("p");
       origenP.className = "origen";
       origenP.textContent = item.origen;
+      origenP.lang = item.idiomaOrigen || "ht";
 
       var destinoP = document.createElement("p");
       destinoP.className = "destino";
       destinoP.textContent = item.destino;
+      destinoP.lang = item.idiomaDestino || "es";
 
       var meta = document.createElement("div");
       meta.className = "meta";
@@ -609,6 +614,26 @@
     estadoVoz.classList.remove("error");
   }
 
+  var ultimoMotor = "google";
+  var LIMITE_MYMEMORY = 500;
+
+  function actualizarContador() {
+    if (!contadorCaracteres) return;
+    var n = origen.value.length;
+    if (!n) {
+      contadorCaracteres.classList.add("oculto");
+      return;
+    }
+    contadorCaracteres.classList.remove("oculto");
+    if (n > LIMITE_MYMEMORY) {
+      contadorCaracteres.textContent = n + " caracteres · el motor de respaldo acepta máx. " + LIMITE_MYMEMORY;
+      contadorCaracteres.classList.add("limite");
+    } else {
+      contadorCaracteres.textContent = n + " caracteres";
+      contadorCaracteres.classList.remove("limite");
+    }
+  }
+
   function normalizarVariantesKreyol(texto) {
     var t = " " + texto + " ";
     var cliticos = {
@@ -647,8 +672,12 @@
   function traducirTextoMotor(texto) {
     var textoMotor = esSalidaEspañol() ? texto : prepararFuenteKreyol(texto);
     if (!navigator.onLine) return Promise.reject(new Error("Sin conexión: la traducción en línea no está disponible."));
+    ultimoMotor = "google";
     return traducirConGoogle(textoMotor)
-      .catch(function () { return traducirConMyMemory(textoMotor); })
+      .catch(function () {
+        ultimoMotor = "mymemory";
+        return traducirConMyMemory(textoMotor);
+      })
       .then(function (t) { return aplicarGlosario(texto, t); });
   }
 
@@ -754,6 +783,7 @@
     destino.textContent = resultado;
     avisoNeutral.classList.toggle("oculto", !normalizado);
     avisoInverso.classList.toggle("oculto", esSalidaEspañol());
+    if (avisoMotor) avisoMotor.classList.toggle("oculto", ultimoMotor !== "mymemory");
     seccionSalida.hidden = false;
 
     ultimaTraduccion = agregarTraduccion(origen.value.trim(), resultado, normalizado);
@@ -774,6 +804,7 @@
 
     var local = buscarEnDiccionario(texto);
     if (local) {
+      ultimoMotor = "local";
       mostrarResultado(local);
       btnTraducir.disabled = false;
       btnTraducir.textContent = "Traducir";
@@ -903,14 +934,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=34");
+      await cargarScript("vendor/pdf.min.js?v=35");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=34";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=35";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -935,7 +966,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=34").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=35").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }
@@ -1301,10 +1332,13 @@
     if ((e.ctrlKey || e.metaKey) && e.key === "Enter") traducir();
   });
 
+  origen.addEventListener("input", actualizarContador);
+
   btnLimpiar.addEventListener("click", function () {
     origen.value = "";
     seccionSalida.hidden = true;
     ultimaTraduccion = null;
+    actualizarContador();
     origen.focus();
   });
 
@@ -1457,8 +1491,10 @@
       b.className = "frase-boton";
       var fuerte = document.createElement("strong");
       fuerte.textContent = esSalidaEspañol() ? f.ht : f.es;
+      fuerte.lang = esSalidaEspañol() ? "ht" : "es";
       var debil = document.createElement("span");
       debil.textContent = esSalidaEspañol() ? f.es : f.ht;
+      debil.lang = esSalidaEspañol() ? "es" : "ht";
       b.appendChild(fuerte);
       b.appendChild(debil);
       b.addEventListener("click", function () { usarFrase(f.ht, f.es); });
@@ -1498,10 +1534,12 @@
       var ht = document.createElement("span");
       ht.className = "vocab-ht";
       ht.textContent = item.ht;
+      ht.lang = "ht";
 
       var es = document.createElement("span");
       es.className = "vocab-es";
       es.textContent = item.es;
+      es.lang = "es";
 
       var acciones = document.createElement("div");
       acciones.className = "vocab-acciones";
@@ -1529,10 +1567,12 @@
       var ht = document.createElement("p");
       ht.className = "ht";
       ht.textContent = f.ht;
+      ht.lang = "ht";
 
       var es = document.createElement("p");
       es.className = "es";
       es.textContent = f.es;
+      es.lang = "es";
 
       var acciones = document.createElement("div");
       acciones.className = "emergencia-acciones";
@@ -1546,13 +1586,50 @@
     });
   }
 
+  var ultimoFocoAntesDeModal = null;
+
+  function elementosEnfocables(modal) {
+    return Array.prototype.slice.call(modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )).filter(function (el) { return !el.disabled; });
+  }
+
   function abrirModal(modal) {
+    ultimoFocoAntesDeModal = document.activeElement;
     modal.classList.remove("oculto");
+    var objetivo = modal.querySelector("textarea, input") || elementosEnfocables(modal)[0];
+    if (objetivo) setTimeout(function () { objetivo.focus(); }, 30);
   }
 
   function cerrarModal(modal) {
     modal.classList.add("oculto");
+    if (ultimoFocoAntesDeModal && ultimoFocoAntesDeModal.focus) {
+      ultimoFocoAntesDeModal.focus();
+    }
+    ultimoFocoAntesDeModal = null;
   }
+
+  document.addEventListener("keydown", function (e) {
+    var modal = document.querySelector(".modal-overlay:not(.oculto)");
+    if (!modal) return;
+    if (e.key === "Escape") {
+      cerrarModal(modal);
+      return;
+    }
+    if (e.key === "Tab") {
+      var enfocables = elementosEnfocables(modal);
+      if (!enfocables.length) return;
+      var primero = enfocables[0];
+      var ultimo = enfocables[enfocables.length - 1];
+      if (e.shiftKey && document.activeElement === primero) {
+        e.preventDefault();
+        ultimo.focus();
+      } else if (!e.shiftKey && document.activeElement === ultimo) {
+        e.preventDefault();
+        primero.focus();
+      }
+    }
+  });
 
   document.querySelectorAll(".modal-overlay").forEach(function (m) {
     m.addEventListener("click", function (e) {
@@ -2008,6 +2085,7 @@
       var p = document.createElement("p");
       p.className = "item-chile-texto";
       p.textContent = t.texto;
+      p.lang = "es";
       p.title = "Toca para ver el texto completo";
       p.addEventListener("click", function () {
         li.classList.toggle("expandido");

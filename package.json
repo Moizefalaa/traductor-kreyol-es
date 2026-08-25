@@ -1,0 +1,11 @@
+{
+  "name": "traductor-kreyol-es",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Traductor criollo haitiano (kreyòl) ↔ español latino — PWA para estudiantes y profesores.",
+  "scripts": {
+    "check": "node autotest/check-syntax.js",
+    "evaluar": "node autotest/autoevaluar.js",
+    "bump": "node autotest/bump-version.js"
+  }
+}

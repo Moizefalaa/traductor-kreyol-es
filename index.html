@@ -9,7 +9,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="styles.css?v=34">
+  <link rel="stylesheet" href="styles.css?v=35">
 </head>
 <body>
   <header class="cabecera">
@@ -47,6 +47,7 @@
         </div>
       </div>
       <textarea id="textoOrigen" rows="4" placeholder="Escribe o dicta en criollo haitiano…" spellcheck="false"></textarea>
+      <p id="contadorCaracteres" class="contador oculto"></p>
       <div class="barra-acciones">
         <button id="btnEscuchar" class="boton principal" type="button" disabled>
           <span class="micro">&#127908;</span> Escuchar
@@ -91,6 +92,7 @@
       <p id="textoDestino" class="traduccion" lang="es"></p>
       <p id="avisoNeutral" class="aviso oculto">Traducción normalizada a español neutro/latino.</p>
       <p id="avisoInverso" class="aviso oculto">Traducción al criollo con motor gratuito: útil para frases cortas, puede variar en frases largas.</p>
+      <p id="avisoMotor" class="aviso aviso-motor oculto">El motor principal no respondió; se usó el motor alternativo (MyMemory). La calidad puede variar.</p>
     </section>
 
     <section class="tarjeta documento" aria-label="Documentos">
@@ -283,7 +285,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=34"></script>
+  <script src="app.js?v=35"></script>
 </body>
 </html>
 

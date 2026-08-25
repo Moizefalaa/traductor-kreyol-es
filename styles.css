@@ -440,6 +440,11 @@ textarea:focus {
 
 .aviso { font-size: .78rem; color: var(--texto-suave); margin: 8px 0 0; }
 
+.aviso-motor { color: var(--dorado); }
+
+.contador { font-size: .75rem; color: var(--texto-suave); margin: 6px 2px 0; text-align: right; }
+.contador.limite { color: var(--rojo); font-weight: 600; }
+
 .lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 
 .item {
