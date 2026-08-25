@@ -9,7 +9,7 @@
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var CLAVE_CHILE_USER = "kreolEs_chile_user_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v33";
+  var VERSION = "v34";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -538,6 +538,18 @@
     }
   }
 
+  var MAX_HISTORIAL = 200;
+
+  function limitarHistorial(items) {
+    if (items.length <= MAX_HISTORIAL) return items;
+    var favoritos = items.filter(function (i) { return i.favorito; });
+    var resto = items.filter(function (i) { return !i.favorito; });
+    var mantener = Math.max(0, MAX_HISTORIAL - favoritos.length);
+    var recortado = favoritos.concat(resto.slice(resto.length - mantener));
+    recortado.sort(function (a, b) { return (a.fecha < b.fecha) ? -1 : 1; });
+    return recortado;
+  }
+
   function agregarTraduccion(origenTexto, destinoTexto, normalizado) {
     var items = cargarHistorial();
     var entrada = {
@@ -551,7 +563,7 @@
       idiomaDestino: idiomaDestino()
     };
     items.push(entrada);
-    guardarHistorial(items);
+    guardarHistorial(limitarHistorial(items));
     renderHistorial();
     return entrada;
   }
@@ -640,10 +652,23 @@
       .then(function (t) { return aplicarGlosario(texto, t); });
   }
 
+  function fetchConTimeout(url, ms) {
+    if (typeof AbortController === "undefined") return fetch(url);
+    var control = new AbortController();
+    var temporizador = setTimeout(function () { control.abort(); }, ms || 10000);
+    return fetch(url, { signal: control.signal }).then(function (resp) {
+      clearTimeout(temporizador);
+      return resp;
+    }, function (err) {
+      clearTimeout(temporizador);
+      throw err;
+    });
+  }
+
   function traducirConGoogle(texto) {
     var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" +
       idiomaOrigen() + "&tl=" + idiomaDestino() + "&dt=t&q=" + encodeURIComponent(texto);
-    return fetch(url)
+    return fetchConTimeout(url, 10000)
       .then(function (resp) {
         if (!resp.ok) throw new Error("HTTP " + resp.status);
         return resp.json();
@@ -663,7 +688,7 @@
     var url = "https://api.mymemory.translated.net/get?q=" +
       encodeURIComponent(texto) +
       "&langpair=" + idiomaOrigen() + "%7C" + idiomaDestino();
-    return fetch(url)
+    return fetchConTimeout(url, 15000)
       .then(function (resp) {
         if (!resp.ok) throw new Error("HTTP " + resp.status);
         return resp.json();
@@ -859,14 +884,33 @@
     procesarSiguiente();
   }
 
+  var scriptsCargados = {};
+  function cargarScript(ruta) {
+    if (!scriptsCargados[ruta]) {
+      scriptsCargados[ruta] = new Promise(function (resolve, reject) {
+        var s = document.createElement("script");
+        s.src = ruta;
+        s.onload = function () { resolve(); };
+        s.onerror = function () {
+          delete scriptsCargados[ruta];
+          reject(new Error("No se pudo cargar " + ruta));
+        };
+        document.head.appendChild(s);
+      });
+    }
+    return scriptsCargados[ruta];
+  }
+
   async function extraerTextoPdf(archivo) {
+    try {
+      await cargarScript("vendor/pdf.min.js?v=34");
+    } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc =
-          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=34";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -891,13 +935,17 @@
   }
 
   function extraerTextoWord(archivo) {
-    if (!window.mammoth) {
-      throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
-    }
-    return archivo.arrayBuffer().then(function (buf) {
-      return window.mammoth.extractRawText({ arrayBuffer: buf }).then(function (res) {
-        return (res.value || "").trim();
+    return cargarScript("vendor/mammoth.browser.min.js?v=34").then(function () {
+      if (!window.mammoth) {
+        throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
+      }
+      return archivo.arrayBuffer().then(function (buf) {
+        return window.mammoth.extractRawText({ arrayBuffer: buf }).then(function (res) {
+          return (res.value || "").trim();
+        });
       });
+    }, function () {
+      throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
     });
   }
 
@@ -1960,6 +2008,10 @@
       var p = document.createElement("p");
       p.className = "item-chile-texto";
       p.textContent = t.texto;
+      p.title = "Toca para ver el texto completo";
+      p.addEventListener("click", function () {
+        li.classList.toggle("expandido");
+      });
       var f = document.createElement("p");
       f.className = "item-chile-fuente";
       f.textContent = "Fuente: " + t.fuente;
@@ -1970,7 +2022,13 @@
       b.addEventListener("click", function () {
         cambiarDireccion("es-ht");
         origen.value = t.texto;
+        b.disabled = true;
+        b.textContent = "Traduciendo…";
         traducir();
+        setTimeout(function () {
+          b.disabled = false;
+          b.textContent = "Traducir al kreyòl";
+        }, 3000);
         seccionSalida.scrollIntoView({ behavior: "smooth", block: "start" });
       });
       li.appendChild(h);

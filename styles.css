@@ -246,7 +246,7 @@ main {
   border: 1px solid var(--borde);
   border-radius: 12px;
   padding: 12px 14px;
-  background: var(--fondo-tarjeta);
+  background: var(--superficie-suave);
   display: grid;
   gap: 6px;
 }
@@ -258,6 +258,16 @@ main {
   color: var(--texto);
   line-height: 1.5;
   white-space: pre-wrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.item-chile.expandido .item-chile-texto {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
 }
 
 .item-chile-fuente { margin: 0; font-size: .78rem; color: var(--texto-suave); font-style: italic; }

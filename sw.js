@@ -1,10 +1,13 @@
-var CACHE = "kreol-es-v33";
+var CACHE = "kreol-es-v34";
 var ARCHIVOS = [
   "./",
   "./index.html",
-  "./styles.css?v=33",
-  "./app.js?v=33",
-  "./textos-chile.json?v=33",
+  "./styles.css?v=34",
+  "./app.js?v=34",
+  "./textos-chile.json?v=34",
+  "./vendor/pdf.min.js?v=34",
+  "./vendor/pdf.worker.min.js?v=34",
+  "./vendor/mammoth.browser.min.js?v=34",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png"
@@ -44,20 +47,25 @@ self.addEventListener("fetch", function (evento) {
 
   var url = new URL(evento.request.url);
   if (url.origin === location.origin) {
+    // Cache-first: los recursos llevan ?v=NN y cambian con cada versión, así
+    // que lo cacheado nunca queda obsoleto. Arranque instantáneo y offline real.
     evento.respondWith(
-      fetch(evento.request).then(function (respuesta) {
-        if (respuesta && respuesta.ok) {
-          var clon = respuesta.clone();
-          caches.open(CACHE).then(function (cache) { cache.put(evento.request, clon); });
-        }
-        return respuesta;
-      }).catch(function () {
-        return caches.match(evento.request).then(function (enCache) {
-          if (enCache) return enCache;
-          if (evento.request.mode === "navigate") {
-            return caches.match("./index.html");
+      caches.match(evento.request).then(function (enCache) {
+        if (enCache) return enCache;
+        return fetch(evento.request).then(function (respuesta) {
+          if (respuesta && respuesta.ok) {
+            var clon = respuesta.clone();
+            caches.open(CACHE).then(function (cache) { cache.put(evento.request, clon); });
           }
-          return new Response("Sin conexión", { status: 503, statusText: "Sin conexión" });
+          return respuesta;
+        }).catch(function () {
+          return caches.match(evento.request).then(function (copia) {
+            if (copia) return copia;
+            if (evento.request.mode === "navigate") {
+              return caches.match("./index.html");
+            }
+            return new Response("Sin conexión", { status: 503, statusText: "Sin conexión" });
+          });
         });
       })
     );
