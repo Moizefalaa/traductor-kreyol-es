@@ -15,7 +15,7 @@
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var CLAVE_CHILE_USER = "kreolEs_chile_user_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v39";
+  var VERSION = "v40";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -914,14 +914,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=39");
+      await cargarScript("vendor/pdf.min.js?v=40");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=39";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=40";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -946,7 +946,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=39").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=40").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }
@@ -1744,20 +1744,52 @@
     };
   }
 
-  btnCompartirQR.addEventListener("click", function () {
+  // QR generado en el propio dispositivo (vendor/qrcode.js). Así no se envían
+  // los datos del usuario a ningún servicio externo.
+  var MAX_QR_CHARS = 1500;
+
+  function construirPayloadQR() {
     var datos = construirPayloadCompartir();
     var json = JSON.stringify(datos);
+    if (json.length > MAX_QR_CHARS) {
+      json = JSON.stringify({
+        app: datos.app,
+        schemaVersion: datos.schemaVersion,
+        favoritas: datos.favoritas.slice(0, 10),
+        correccionesSugeridas: (datos.correccionesSugeridas || []).slice(0, 10)
+      });
+    }
+    return json;
+  }
+
+  function mostrarAvisoQR(texto) {
     contenedorQR.innerHTML = "";
-    var img = document.createElement("img");
-    img.className = "qr-img";
-    img.alt = "Código QR con datos para compartir";
-    img.src = "https://api.qrserver.com/v1/create-qr-code/?size=280x280&qzone=1&data=" + encodeURIComponent(json);
-    img.onerror = function () {
-      contenedorQR.innerHTML = "<p class='aviso'>No se pudo generar el c\u00f3digo QR (requiere internet). Usa el bot\u00f3n \u201cCopiar datos\u201d.</p>";
-    };
-    contenedorQR.appendChild(img);
+    var p = document.createElement("p");
+    p.className = "aviso";
+    p.textContent = texto;
+    contenedorQR.appendChild(p);
+  }
+
+  btnCompartirQR.addEventListener("click", function () {
+    var json = construirPayloadQR();
     btnCopiarJSON.dataset.json = json;
     abrirModal(modalQR);
+    mostrarAvisoQR("Generando código QR…");
+    cargarScript("vendor/qrcode.js?v=" + VERSION.replace("v", "")).then(function () {
+      if (typeof qrcode !== "function") throw new Error("sin librería");
+      var qr = qrcode(0, "L");
+      qr.addData(json);
+      qr.make();
+      var svg = qr.createSvgTag({ cellSize: 4, margin: 4, scalable: true });
+      var img = document.createElement("img");
+      img.className = "qr-img";
+      img.alt = "Código QR con datos para compartir";
+      img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+      contenedorQR.innerHTML = "";
+      contenedorQR.appendChild(img);
+    }).catch(function () {
+      mostrarAvisoQR("No se pudo generar el código QR. Usa el botón «Copiar datos».");
+    });
   });
 
   btnCopiarJSON.addEventListener("click", function () {
