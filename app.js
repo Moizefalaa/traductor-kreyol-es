@@ -15,7 +15,7 @@
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var CLAVE_CHILE_USER = "kreolEs_chile_user_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v41";
+  var VERSION = "v42";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -24,6 +24,9 @@
   var docTexto = document.getElementById("docTexto");
   var docSalida = document.getElementById("docSalida");
   var btnDocTraducir = document.getElementById("btnDocTraducir");
+  var docProgreso = document.getElementById("docProgreso");
+  var docProgresoBarra = document.getElementById("docProgresoBarra");
+  var docProgresoTexto = document.getElementById("docProgresoTexto");
   var seccionSalida = document.getElementById("seccionSalida");
   var chipOrigen = document.getElementById("chipOrigen");
   var chipDestino = document.getElementById("chipDestino");
@@ -89,6 +92,8 @@
   var contadorCaracteres = document.getElementById("contadorCaracteres");
   var avisoMotor = document.getElementById("avisoMotor");
   var avisoError = document.getElementById("avisoError");
+  var avisoErrorTexto = document.getElementById("avisoErrorTexto");
+  var btnReintentar = document.getElementById("btnReintentar");
   var modalConfirmar = document.getElementById("modalConfirmar");
   var confirmarTitulo = document.getElementById("confirmarTitulo");
   var confirmarMensaje = document.getElementById("confirmarMensaje");
@@ -550,14 +555,25 @@
     return entrada;
   }
 
-  function mostrarError(mensaje) {
-    avisoError.textContent = mensaje;
+  var accionReintentar = null;
+
+  function mostrarError(mensaje, reintentar) {
+    avisoErrorTexto.textContent = mensaje;
+    accionReintentar = typeof reintentar === "function" ? reintentar : null;
+    btnReintentar.classList.toggle("oculto", !accionReintentar);
     avisoError.classList.remove("oculto");
   }
 
   function limpiarError() {
     avisoError.classList.add("oculto");
+    accionReintentar = null;
   }
+
+  btnReintentar.addEventListener("click", function () {
+    var accion = accionReintentar;
+    limpiarError();
+    if (typeof accion === "function") accion();
+  });
 
   var ultimoMotor = "google";
   var LIMITE_MYMEMORY = 500;
@@ -769,7 +785,7 @@
     if (!navigator.onLine) {
       btnTraducir.disabled = false;
       btnTraducir.textContent = "Traducir";
-      mostrarError("Sin conexión: la traducción en línea no está disponible. Revisa tu internet.");
+      mostrarError("Sin conexión: la traducción en línea no está disponible. Revisa tu internet.", traducir);
       return;
     }
 
@@ -778,7 +794,7 @@
     traducirTextoMotor(texto)
       .then(function (t) { if (miId === idTraduccion) mostrarResultado(t); })
       .catch(function (err) {
-        if (miId === idTraduccion) mostrarError("No se pudo traducir: " + err.message);
+        if (miId === idTraduccion) mostrarError("No se pudo traducir: " + err.message, traducir);
       })
       .finally(function () {
         if (miId === idTraduccion) {
@@ -798,7 +814,7 @@
         if (miId === idTraduccion) mostrarResultado(traducidas.join(" "));
       })
       .catch(function (err) {
-        if (miId === idTraduccion) mostrarError("No se pudo traducir el texto: " + err.message);
+        if (miId === idTraduccion) mostrarError("No se pudo traducir el texto: " + err.message, traducir);
       })
       .finally(function () {
         if (miId === idTraduccion) {
@@ -858,6 +874,23 @@
     docSalida.appendChild(fila);
   }
 
+  function actualizarProgresoDoc(hechas, total) {
+    if (!docProgreso) return;
+    if (!total) {
+      docProgreso.classList.add("oculto");
+      return;
+    }
+    docProgreso.classList.remove("oculto");
+    docProgresoTexto.textContent = "Traduciendo " + hechas + " de " + total + " oración" + (total === 1 ? "" : "es") + "…";
+    docProgresoBarra.style.width = Math.round((hechas / total) * 100) + "%";
+  }
+
+  function ocultarProgresoDoc() {
+    if (!docProgreso) return;
+    docProgreso.classList.add("oculto");
+    docProgresoBarra.style.width = "0%";
+  }
+
   function traducirDocumento() {
     var texto = docTexto.value.trim();
     if (!texto) {
@@ -872,11 +905,14 @@
 
     var oraciones = dividirEnOraciones(texto);
     var indice = 0;
+    var hechas = 0;
+    actualizarProgresoDoc(0, oraciones.length);
 
     function terminar() {
       if (miId === idDocumento) {
         btnDocTraducir.disabled = false;
         btnDocTraducir.textContent = "Traducir documento";
+        ocultarProgresoDoc();
       }
     }
 
@@ -894,7 +930,12 @@
         .catch(function (err) {
           if (miId === idDocumento) agregarFilaDoc(oracion, "[no traducido: " + err.message + "]", true);
         })
-        .then(procesarSiguiente);
+        .then(function () {
+          if (miId !== idDocumento) return;
+          hechas++;
+          actualizarProgresoDoc(hechas, oraciones.length);
+          procesarSiguiente();
+        });
     }
     procesarSiguiente();
   }
@@ -918,14 +959,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=41");
+      await cargarScript("vendor/pdf.min.js?v=42");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=41";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=42";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -950,7 +991,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=41").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=42").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }
@@ -2243,7 +2284,7 @@
       chileData = { grados: [] };
       poblarGrados();
       renderChile();
-      mostrarError("No se pudo cargar textos-chile.json.");
+      mostrarError("No se pudo cargar textos-chile.json.", initChile);
     });
   }
 

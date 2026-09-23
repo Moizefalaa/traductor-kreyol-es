@@ -834,14 +834,45 @@ footer {
 .muestra.calido { background: linear-gradient(135deg, #c4551f 0 33%, #b45309 33% 66%, #b91c1c 66%); }
 .muestra.noche { background: linear-gradient(135deg, #7c3aed 0 33%, #6d28d9 33% 66%, #db2777 66%); }
 
-#avisoError {
+.aviso-error {
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
   background: var(--tint-rojo);
   border: 1px solid color-mix(in srgb, var(--rojo) 40%, transparent);
   border-radius: 12px;
   padding: 10px 12px;
   color: var(--rojo);
+  font-size: .88rem;
 }
+
+.aviso-error #avisoErrorTexto { flex: 1; min-width: 160px; }
+
+.progreso {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.progreso-pista {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--superficie-media);
+  overflow: hidden;
+}
+
+.progreso-relleno {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--verde), var(--azul));
+  transition: width .2s ease;
+}
+
+.progreso-texto { font-size: .8rem; color: var(--texto-suave); }
 
 :root[data-theme="oscuro"] {
   color-scheme: dark;

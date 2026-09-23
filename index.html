@@ -9,7 +9,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="styles.css?v=41">
+  <link rel="stylesheet" href="styles.css?v=42">
 </head>
 <body>
   <header class="cabecera">
@@ -31,7 +31,10 @@
   </div>
 
   <main>
-    <p id="avisoError" class="estado error oculto" role="alert"></p>
+    <div id="avisoError" class="aviso-error oculto" role="alert">
+      <span id="avisoErrorTexto"></span>
+      <button id="btnReintentar" class="boton pequeno oculto" type="button">Reintentar</button>
+    </div>
     <button id="btnEmergencia" class="boton emergencia" type="button">&#128680; Emergencia · Ijans</button>
 
     <section class="tarjeta entrada" aria-label="Traducción">
@@ -104,6 +107,10 @@
         <button id="btnDocTraducir" class="boton secundario" type="button" disabled>Traducir documento</button>
       </div>
       <textarea id="docTexto" class="area-doc" rows="8" placeholder="El texto extraído aparecerá aquí. También puedes pegar el texto del documento manualmente." spellcheck="false"></textarea>
+      <div id="docProgreso" class="progreso oculto">
+        <div class="progreso-pista"><div id="docProgresoBarra" class="progreso-relleno"></div></div>
+        <span id="docProgresoTexto" class="progreso-texto"></span>
+      </div>
       <div id="docSalida" class="doc-salida" aria-live="polite"></div>
     </section>
 
@@ -300,8 +307,8 @@
     </div>
   </div>
 
-  <script src="core.js?v=41"></script>
-  <script src="app.js?v=41"></script>
+  <script src="core.js?v=42"></script>
+  <script src="app.js?v=42"></script>
 </body>
 </html>
 
