@@ -23,7 +23,7 @@
   var guardarCacheTraduccion = STORE.guardarCacheTraduccion;
 
   var SCHEMA_VERSION = 1;
-  var VERSION = "v46";
+  var VERSION = "v47";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -99,6 +99,7 @@
   var btnGuardarChile = document.getElementById("btnGuardarChile");
   var contadorCaracteres = document.getElementById("contadorCaracteres");
   var avisoMotor = document.getElementById("avisoMotor");
+  var avisoCache = document.getElementById("avisoCache");
   var avisoError = document.getElementById("avisoError");
   var avisoErrorTexto = document.getElementById("avisoErrorTexto");
   var btnReintentar = document.getElementById("btnReintentar");
@@ -278,14 +279,15 @@
   }
 
   function traducirTextoMotor(texto) {
-    if (!navigator.onLine) return Promise.reject(new Error("Sin conexión: la traducción en línea no está disponible."));
     var textoMotor = esSalidaEspañol() ? texto : prepararFuenteKreyol(texto);
     var clave = VERSION + "|" + idiomaOrigen() + "|" + idiomaDestino() + "|" + textoMotor;
+    // Primero la caché: así una frase ya traducida funciona aunque no haya internet.
     var cacheado = leerCacheTraduccion(clave);
     if (cacheado !== null) {
       ultimoMotor = "cache";
       return Promise.resolve(aplicarGlosario(texto, cacheado));
     }
+    if (!navigator.onLine) return Promise.reject(new Error("Sin conexión: la traducción en línea no está disponible."));
     return TRAD.traducir(textoMotor, { origen: idiomaOrigen(), destino: idiomaDestino() })
       .then(function (res) {
         ultimoMotor = res.motor;
@@ -317,6 +319,7 @@
     avisoNeutral.classList.toggle("oculto", !normalizado);
     avisoInverso.classList.toggle("oculto", esSalidaEspañol());
     if (avisoMotor) avisoMotor.classList.toggle("oculto", ultimoMotor !== "mymemory");
+    if (avisoCache) avisoCache.classList.toggle("oculto", ultimoMotor !== "cache");
     seccionSalida.hidden = false;
 
     ultimaTraduccion = agregarTraduccion(origen.value.trim(), resultado, normalizado);
@@ -346,13 +349,6 @@
       mostrarResultado(local);
       btnTraducir.disabled = false;
       btnTraducir.textContent = "Traducir";
-      return;
-    }
-
-    if (!navigator.onLine) {
-      btnTraducir.disabled = false;
-      btnTraducir.textContent = "Traducir";
-      mostrarError("Sin conexión: la traducción en línea no está disponible. Revisa tu internet.", traducir);
       return;
     }
 
@@ -526,14 +522,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=46");
+      await cargarScript("vendor/pdf.min.js?v=47");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=46";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=47";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -558,7 +554,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=46").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=47").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }
