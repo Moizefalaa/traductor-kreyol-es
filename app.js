@@ -23,7 +23,7 @@
   var guardarCacheTraduccion = STORE.guardarCacheTraduccion;
 
   var SCHEMA_VERSION = 1;
-  var VERSION = "v47";
+  var VERSION = "v48";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -100,6 +100,7 @@
   var contadorCaracteres = document.getElementById("contadorCaracteres");
   var avisoMotor = document.getElementById("avisoMotor");
   var avisoCache = document.getElementById("avisoCache");
+  var avisoOffline = document.getElementById("avisoOffline");
   var avisoError = document.getElementById("avisoError");
   var avisoErrorTexto = document.getElementById("avisoErrorTexto");
   var btnReintentar = document.getElementById("btnReintentar");
@@ -522,14 +523,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=47");
+      await cargarScript("vendor/pdf.min.js?v=48");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=47";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=48";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -554,7 +555,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=47").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=48").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }
@@ -1618,9 +1619,16 @@
 
   renderFeedback();
 
+  function actualizarConexion() {
+    if (avisoOffline) avisoOffline.classList.toggle("oculto", navigator.onLine);
+  }
+
   window.addEventListener("online", function () {
     limpiarError();
+    actualizarConexion();
   });
+  window.addEventListener("offline", actualizarConexion);
+  actualizarConexion();
 
   // ---- Lecturas escolares (Chile) ----
   var TEXTOS_CHILE_URL = "textos-chile.json?v=" + VERSION.replace("v", "");
