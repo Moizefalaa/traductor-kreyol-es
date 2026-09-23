@@ -3,6 +3,7 @@
 
   var CORE = window.KreyolCore;
   var STORE = window.KreyolStore;
+  var TRAD = window.KreyolTraductor;
   var aEspanolLatino = CORE.aEspanolLatino;
   var prepararFuenteKreyol = CORE.prepararFuenteKreyol;
   var aplicarGlosario = CORE.aplicarGlosario;
@@ -21,7 +22,7 @@
   var guardarCacheTraduccion = STORE.guardarCacheTraduccion;
 
   var SCHEMA_VERSION = 1;
-  var VERSION = "v44";
+  var VERSION = "v45";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -275,27 +276,6 @@
     }
   }
 
-  // --- Motores de traducción en orden de preferencia ---
-  // Para añadir un proveedor nuevo basta con agregarlo aquí.
-  var MOTORES = [
-    { id: "google", fn: traducirConGoogle },
-    { id: "mymemory", fn: traducirConMyMemory }
-  ];
-
-  function traducirConProveedores(textoMotor) {
-    var i = 0;
-    function intentar() {
-      var motor = MOTORES[i++];
-      if (!motor) return Promise.reject(new Error("Ningún motor disponible"));
-      ultimoMotor = motor.id;
-      return motor.fn(textoMotor).catch(function (err) {
-        if (i >= MOTORES.length) throw err;
-        return intentar();
-      });
-    }
-    return intentar();
-  }
-
   function traducirTextoMotor(texto) {
     if (!navigator.onLine) return Promise.reject(new Error("Sin conexión: la traducción en línea no está disponible."));
     var textoMotor = esSalidaEspañol() ? texto : prepararFuenteKreyol(texto);
@@ -305,60 +285,11 @@
       ultimoMotor = "cache";
       return Promise.resolve(aplicarGlosario(texto, cacheado));
     }
-    return traducirConProveedores(textoMotor).then(function (t) {
-      guardarCacheTraduccion(clave, t);
-      return aplicarGlosario(texto, t);
-    });
-  }
-
-  function fetchConTimeout(url, ms) {
-    if (typeof AbortController === "undefined") return fetch(url);
-    var control = new AbortController();
-    var temporizador = setTimeout(function () { control.abort(); }, ms || 10000);
-    return fetch(url, { signal: control.signal }).then(function (resp) {
-      clearTimeout(temporizador);
-      return resp;
-    }, function (err) {
-      clearTimeout(temporizador);
-      throw err;
-    });
-  }
-
-  function traducirConGoogle(texto) {
-    var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" +
-      idiomaOrigen() + "&tl=" + idiomaDestino() + "&dt=t&q=" + encodeURIComponent(texto);
-    return fetchConTimeout(url, 10000)
-      .then(function (resp) {
-        if (!resp.ok) throw new Error("HTTP " + resp.status);
-        return resp.json();
-      })
-      .then(function (datos) {
-        var segmentos = datos && datos[0];
-        if (!Array.isArray(segmentos) || !segmentos.length) {
-          throw new Error("Respuesta vacía");
-        }
-        var t = segmentos.map(function (s) { return (s && s[0]) || ""; }).join("");
-        if (!t || t === texto) throw new Error("Sin traducción");
-        return t;
-      });
-  }
-
-  function traducirConMyMemory(texto) {
-    var url = "https://api.mymemory.translated.net/get?q=" +
-      encodeURIComponent(texto) +
-      "&langpair=" + idiomaOrigen() + "%7C" + idiomaDestino();
-    return fetchConTimeout(url, 15000)
-      .then(function (resp) {
-        if (!resp.ok) throw new Error("HTTP " + resp.status);
-        return resp.json();
-      })
-      .then(function (datos) {
-        var traducido = (datos.responseData && datos.responseData.translatedText) || "";
-        if (traducido === "QUERY LENGTH LIMIT EXCEEDED. MAX ALLOWED QUERY : 500 CHARS") {
-          throw new Error("El texto supera los 500 caracteres permitidos.");
-        }
-        if (!traducido) throw new Error("Sin traducción");
-        return traducido;
+    return TRAD.traducir(textoMotor, { origen: idiomaOrigen(), destino: idiomaDestino() })
+      .then(function (res) {
+        ultimoMotor = res.motor;
+        guardarCacheTraduccion(clave, res.texto);
+        return aplicarGlosario(texto, res.texto);
       });
   }
 
@@ -594,14 +525,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=44");
+      await cargarScript("vendor/pdf.min.js?v=45");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=44";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=45";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -626,7 +557,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=44").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=45").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }

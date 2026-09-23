@@ -5,7 +5,7 @@
   "description": "Traductor criollo haitiano (kreyòl) ↔ español latino — PWA para estudiantes y profesores.",
   "scripts": {
     "check": "node autotest/check-syntax.js",
-    "test": "node autotest/test-core.js && node autotest/test-storage.js",
+    "test": "node autotest/test-core.js && node autotest/test-storage.js && node autotest/test-traductor.js",
     "evaluar": "node autotest/autoevaluar.js",
     "bump": "node autotest/bump-version.js"
   }
