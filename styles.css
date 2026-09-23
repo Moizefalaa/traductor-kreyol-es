@@ -834,6 +834,15 @@ footer {
 .muestra.calido { background: linear-gradient(135deg, #c4551f 0 33%, #b45309 33% 66%, #b91c1c 66%); }
 .muestra.noche { background: linear-gradient(135deg, #7c3aed 0 33%, #6d28d9 33% 66%, #db2777 66%); }
 
+#avisoError {
+  margin: 0;
+  background: var(--tint-rojo);
+  border: 1px solid color-mix(in srgb, var(--rojo) 40%, transparent);
+  border-radius: 12px;
+  padding: 10px 12px;
+  color: var(--rojo);
+}
+
 :root[data-theme="oscuro"] {
   color-scheme: dark;
 }

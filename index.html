@@ -9,7 +9,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="styles.css?v=40">
+  <link rel="stylesheet" href="styles.css?v=41">
 </head>
 <body>
   <header class="cabecera">
@@ -31,6 +31,7 @@
   </div>
 
   <main>
+    <p id="avisoError" class="estado error oculto" role="alert"></p>
     <button id="btnEmergencia" class="boton emergencia" type="button">&#128680; Emergencia · Ijans</button>
 
     <section class="tarjeta entrada" aria-label="Traducción">
@@ -285,8 +286,22 @@
     </div>
   </div>
 
-  <script src="core.js?v=40"></script>
-  <script src="app.js?v=40"></script>
+  <div id="modalConfirmar" class="modal-overlay oculto" role="dialog" aria-modal="true" aria-label="Confirmar acción">
+    <div class="modal-caja">
+      <div class="modal-cabecera">
+        <h2 id="confirmarTitulo">Confirmar</h2>
+        <button class="boton-cerrar" type="button" aria-label="Cerrar">&#10005;</button>
+      </div>
+      <p id="confirmarMensaje" class="aviso"></p>
+      <div class="modal-acciones">
+        <button id="btnConfirmarNo" class="boton secundario" type="button">Cancelar</button>
+        <button id="btnConfirmarSi" class="boton principal" type="button">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="core.js?v=41"></script>
+  <script src="app.js?v=41"></script>
 </body>
 </html>
 

@@ -15,7 +15,7 @@
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var CLAVE_CHILE_USER = "kreolEs_chile_user_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v40";
+  var VERSION = "v41";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -88,6 +88,12 @@
   var btnGuardarChile = document.getElementById("btnGuardarChile");
   var contadorCaracteres = document.getElementById("contadorCaracteres");
   var avisoMotor = document.getElementById("avisoMotor");
+  var avisoError = document.getElementById("avisoError");
+  var modalConfirmar = document.getElementById("modalConfirmar");
+  var confirmarTitulo = document.getElementById("confirmarTitulo");
+  var confirmarMensaje = document.getElementById("confirmarMensaje");
+  var btnConfirmarSi = document.getElementById("btnConfirmarSi");
+  var btnConfirmarNo = document.getElementById("btnConfirmarNo");
 
   var reconocedor = null;
   var escuchando = false;
@@ -545,14 +551,12 @@
   }
 
   function mostrarError(mensaje) {
-    estadoVoz.textContent = mensaje;
-    estadoVoz.classList.remove("oculto");
-    estadoVoz.classList.add("error");
+    avisoError.textContent = mensaje;
+    avisoError.classList.remove("oculto");
   }
 
   function limpiarError() {
-    estadoVoz.classList.add("oculto");
-    estadoVoz.classList.remove("error");
+    avisoError.classList.add("oculto");
   }
 
   var ultimoMotor = "google";
@@ -914,14 +918,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=40");
+      await cargarScript("vendor/pdf.min.js?v=41");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=40";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=41";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -946,7 +950,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=40").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=41").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }
@@ -1272,7 +1276,6 @@
     modoConversacion = false;
     localStorage.setItem(CLAVE_DIRECCION, nueva);
     actualizarEtiquetas();
-    origen.value = "";
     seccionSalida.hidden = true;
     ultimaTraduccion = null;
     configurarVoz();
@@ -1374,12 +1377,17 @@
 
   btnBorrarHistorial.addEventListener("click", function () {
     if (!cargarHistorial().length) return;
-    if (confirm("¿Borrar todo el historial?")) {
-      guardarHistorial([]);
-      renderHistorial();
-      seccionSalida.hidden = true;
-      ultimaTraduccion = null;
-    }
+    pedirConfirmacion(
+      "Borrar historial",
+      "¿Seguro que quieres borrar todo el historial? Esta acción no se puede deshacer.",
+      "Borrar",
+      function () {
+        guardarHistorial([]);
+        renderHistorial();
+        seccionSalida.hidden = true;
+        ultimaTraduccion = null;
+      }
+    );
   });
 
   btnExportar.addEventListener("click", function () {
@@ -1648,6 +1656,28 @@
       var modal = b.closest(".modal-overlay");
       if (modal) cerrarModal(modal);
     });
+  });
+
+  var accionConfirmar = null;
+
+  function pedirConfirmacion(titulo, mensaje, textoSi, accion) {
+    confirmarTitulo.textContent = titulo;
+    confirmarMensaje.textContent = mensaje;
+    btnConfirmarSi.textContent = textoSi;
+    accionConfirmar = accion;
+    abrirModal(modalConfirmar);
+  }
+
+  btnConfirmarSi.addEventListener("click", function () {
+    var accion = accionConfirmar;
+    accionConfirmar = null;
+    cerrarModal(modalConfirmar);
+    if (typeof accion === "function") accion();
+  });
+
+  btnConfirmarNo.addEventListener("click", function () {
+    accionConfirmar = null;
+    cerrarModal(modalConfirmar);
   });
 
   btnEmergencia.addEventListener("click", function () {
@@ -2084,10 +2114,15 @@
 
   btnBorrarFeedback.addEventListener("click", function () {
     if (!cargarFeedback().length) return;
-    if (confirm("¿Borrar todos los reportes de traducción?")) {
-      guardarFeedback([]);
-      renderFeedback();
-    }
+    pedirConfirmacion(
+      "Borrar reportes",
+      "¿Seguro que quieres borrar todos los reportes de traducción? Esta acción no se puede deshacer.",
+      "Borrar",
+      function () {
+        guardarFeedback([]);
+        renderFeedback();
+      }
+    );
   });
 
   btnExportarFeedback.addEventListener("click", function () {
