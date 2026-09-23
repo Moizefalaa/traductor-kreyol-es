@@ -9,7 +9,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="styles.css?v=37">
+  <link rel="stylesheet" href="styles.css?v=38">
 </head>
 <body>
   <header class="cabecera">
@@ -89,7 +89,7 @@
           <button id="btnReportar" class="boton-icono" type="button" aria-label="Reportar traducción incorrecta" title="Reportar traducción incorrecta">&#128681;</button>
         </div>
       </div>
-      <p id="textoDestino" class="traduccion" lang="es"></p>
+      <p id="textoDestino" class="traduccion" lang="es" aria-live="polite"></p>
       <p id="avisoNeutral" class="aviso oculto">Traducción normalizada a español neutro/latino.</p>
       <p id="avisoInverso" class="aviso oculto">Traducción al criollo con motor gratuito: útil para frases cortas, puede variar en frases largas.</p>
       <p id="avisoMotor" class="aviso aviso-motor oculto">El motor principal no respondió; se usó el motor alternativo (MyMemory). La calidad puede variar.</p>
@@ -99,7 +99,7 @@
       <div class="barra-etiqueta"><h2>&#128196; Documentos (PDF o Word)</h2></div>
       <p class="aviso">Sube un PDF o un Word (.docx) que contengan texto (no escaneados). Se extrae y se traduce oración por oración, aplicando tus correcciones. También puedes pegar texto manualmente.</p>
       <div class="barra-acciones documento-acciones">
-        <input id="docArchivo" type="file" accept="application/pdf,.pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.docx" />
+        <input id="docArchivo" type="file" accept="application/pdf,.pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.docx" aria-label="Elegir archivo PDF o Word para traducir" />
         <button id="btnDocTraducir" class="boton secundario" type="button" disabled>Traducir documento</button>
       </div>
       <textarea id="docTexto" class="area-doc" rows="8" placeholder="El texto extraído aparecerá aquí. También puedes pegar el texto del documento manualmente." spellcheck="false"></textarea>
@@ -285,7 +285,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=37"></script>
+  <script src="app.js?v=38"></script>
 </body>
 </html>
 

@@ -9,7 +9,7 @@
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var CLAVE_CHILE_USER = "kreolEs_chile_user_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v37";
+  var VERSION = "v38";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -549,6 +549,7 @@
   }
 
   var MAX_HISTORIAL = 200;
+  var MAX_FEEDBACK = 500;
 
   function limitarHistorial(items) {
     if (items.length <= MAX_HISTORIAL) return items;
@@ -1042,14 +1043,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=37");
+      await cargarScript("vendor/pdf.min.js?v=38");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=37";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=38";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -1074,7 +1075,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=37").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=38").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }
@@ -1900,10 +1901,11 @@
   });
 
   function normalizarEntrada(e) {
+    e = e || {};
     return {
       id: e.id || Date.now() + "-" + Math.random().toString(36).slice(2, 7),
-      origen: e.origen || "",
-      destino: e.destino || "",
+      origen: String(e.origen || ""),
+      destino: String(e.destino || ""),
       normalizado: !!e.normalizado,
       favorito: !!e.favorito,
       fecha: e.fecha || new Date().toISOString(),
@@ -1913,6 +1915,9 @@
   }
 
   function importarDatos(json) {
+    if (typeof json !== "string" || json.length > 300000) {
+      throw new Error("Los datos son demasiado grandes para importar (máx. 300 KB).");
+    }
     var datos = JSON.parse(json);
     if (!datos || datos.app !== "traductor-kreyol-es" || !Array.isArray(datos.historial)) {
       throw new Error("El JSON no parece de esta aplicación.");
@@ -1921,7 +1926,8 @@
     var existentes = {};
     actual.forEach(function (e) { existentes[e.origen + "|||" + e.destino] = true; });
     var agregados = 0;
-    datos.historial.forEach(function (e) {
+    datos.historial.slice(0, MAX_HISTORIAL).forEach(function (e) {
+      e = e || {};
       var clave = (e.origen || "") + "|||" + (e.destino || "");
       if (!existentes[clave]) {
         existentes[clave] = true;
@@ -1929,17 +1935,30 @@
         agregados++;
       }
     });
-    guardarHistorial(actual);
+    guardarHistorial(limitarHistorial(actual));
     renderHistorial();
     if (Array.isArray(datos.correccionesSugeridas)) {
       var fb = cargarFeedback();
       var claves = {};
       fb.forEach(function (f) { claves[f.origen + "|||" + f.destino + "|||" + f.sugerido] = true; });
-      datos.correccionesSugeridas.forEach(function (f) {
-        var c = (f.origen || "") + "|||" + (f.destino || "") + "|||" + (f.sugerido || "");
-        if (!claves[c]) { claves[c] = true; fb.push(f); }
+      datos.correccionesSugeridas.slice(0, MAX_FEEDBACK).forEach(function (f) {
+        f = f || {};
+        var origen = String(f.origen || "");
+        var destino = String(f.destino || "");
+        var sugerido = String(f.sugerido || "");
+        var c = origen + "|||" + destino + "|||" + sugerido;
+        if (!sugerido || claves[c]) return;
+        claves[c] = true;
+        fb.push({
+          id: f.id || Date.now() + "-" + Math.random().toString(36).slice(2, 7),
+          origen: origen,
+          destino: destino,
+          sugerido: sugerido,
+          direccion: f.direccion === "es-ht" ? "es-ht" : "ht-es",
+          fecha: f.fecha || new Date().toISOString()
+        });
       });
-      guardarFeedback(fb);
+      guardarFeedback(fb.slice(-MAX_FEEDBACK));
       renderFeedback();
     }
     return agregados;
@@ -2085,22 +2104,46 @@
     items.forEach(function (it, idx) {
       var li = document.createElement("li");
       li.className = "feedback-item";
-      var dir = it.direccion === "es-ht" ? "ES→HT" : "HT→ES";
-      li.innerHTML =
-        '<div class="feedback-cabeza"><span class="chip chip-ayuda">' + dir + '</span>' +
-        '<button class="boton-icono btn-borrar-feedback" type="button" title="Eliminar" aria-label="Eliminar">&#128465;</button></div>' +
-        '<p class="feedback-origen"></p>' +
-        '<p class="feedback-traduccion"></p>' +
-        '<p class="feedback-sugerido"></p>';
-      li.querySelector(".feedback-origen").textContent = "Original: " + it.origen;
-      li.querySelector(".feedback-traduccion").textContent = "Traducción actual: " + it.destino;
-      li.querySelector(".feedback-sugerido").textContent = "Correcta: " + it.sugerido;
-      li.querySelector(".btn-borrar-feedback").addEventListener("click", function () {
+
+      var cabeza = document.createElement("div");
+      cabeza.className = "feedback-cabeza";
+
+      var chip = document.createElement("span");
+      chip.className = "chip chip-ayuda";
+      chip.textContent = it.direccion === "es-ht" ? "ES→HT" : "HT→ES";
+
+      var borrar = document.createElement("button");
+      borrar.type = "button";
+      borrar.className = "boton-icono btn-borrar-feedback";
+      borrar.title = "Eliminar";
+      borrar.setAttribute("aria-label", "Eliminar");
+      borrar.textContent = "\uD83D\uDDD1";
+      borrar.addEventListener("click", function () {
         var lista = cargarFeedback();
         lista.splice(idx, 1);
         guardarFeedback(lista);
         renderFeedback();
       });
+
+      cabeza.appendChild(chip);
+      cabeza.appendChild(borrar);
+
+      var pOrigen = document.createElement("p");
+      pOrigen.className = "feedback-origen";
+      pOrigen.textContent = "Original: " + (it.origen || "");
+
+      var pDestino = document.createElement("p");
+      pDestino.className = "feedback-traduccion";
+      pDestino.textContent = "Traducción actual: " + (it.destino || "");
+
+      var pSugerido = document.createElement("p");
+      pSugerido.className = "feedback-sugerido";
+      pSugerido.textContent = "Correcta: " + (it.sugerido || "");
+
+      li.appendChild(cabeza);
+      li.appendChild(pOrigen);
+      li.appendChild(pDestino);
+      li.appendChild(pSugerido);
       listaFeedback.appendChild(li);
     });
   }
