@@ -9,7 +9,7 @@
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var CLAVE_CHILE_USER = "kreolEs_chile_user_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v36";
+  var VERSION = "v37";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -92,6 +92,8 @@
   var idTraduccion = 0;
   var idDocumento = 0;
   var fallbackReconocimientoHt = null;
+  var modoConversacion = false;
+  var hablarAlTraducir = false;
 
   var direccion = localStorage.getItem(CLAVE_DIRECCION) === "es-ht" ? "es-ht" : "ht-es";
 
@@ -672,16 +674,85 @@
     return res;
   }
 
+  // --- Caché de traducciones (evita repetir llamadas a las APIs) ---
+  var CLAVE_CACHE_TRAD = "kreolEs_cache_trad_v1";
+  var MAX_CACHE_TRAD = 300;
+  var cacheTraduccion = null;
+  var cacheTraduccionTemporizador = null;
+
+  function cargarCacheTraduccion() {
+    if (cacheTraduccion) return cacheTraduccion;
+    cacheTraduccion = new Map();
+    try {
+      var raw = localStorage.getItem(CLAVE_CACHE_TRAD);
+      if (raw) {
+        JSON.parse(raw).forEach(function (par) {
+          if (Array.isArray(par) && par.length === 2) cacheTraduccion.set(par[0], par[1]);
+        });
+      }
+    } catch (e) {}
+    return cacheTraduccion;
+  }
+
+  function persistirCacheTraduccion() {
+    if (cacheTraduccionTemporizador) return;
+    cacheTraduccionTemporizador = setTimeout(function () {
+      cacheTraduccionTemporizador = null;
+      try {
+        localStorage.setItem(CLAVE_CACHE_TRAD, JSON.stringify(Array.from(cargarCacheTraduccion().entries())));
+      } catch (e) {}
+    }, 1000);
+  }
+
+  function leerCacheTraduccion(clave) {
+    var m = cargarCacheTraduccion();
+    return m.has(clave) ? m.get(clave) : null;
+  }
+
+  function guardarCacheTraduccion(clave, valor) {
+    var m = cargarCacheTraduccion();
+    if (m.has(clave)) m.delete(clave);
+    m.set(clave, valor);
+    while (m.size > MAX_CACHE_TRAD) {
+      m.delete(m.keys().next().value);
+    }
+    persistirCacheTraduccion();
+  }
+
+  // --- Motores de traducción en orden de preferencia ---
+  // Para añadir un proveedor nuevo basta con agregarlo aquí.
+  var MOTORES = [
+    { id: "google", fn: traducirConGoogle },
+    { id: "mymemory", fn: traducirConMyMemory }
+  ];
+
+  function traducirConProveedores(textoMotor) {
+    var i = 0;
+    function intentar() {
+      var motor = MOTORES[i++];
+      if (!motor) return Promise.reject(new Error("Ningún motor disponible"));
+      ultimoMotor = motor.id;
+      return motor.fn(textoMotor).catch(function (err) {
+        if (i >= MOTORES.length) throw err;
+        return intentar();
+      });
+    }
+    return intentar();
+  }
+
   function traducirTextoMotor(texto) {
-    var textoMotor = esSalidaEspañol() ? texto : prepararFuenteKreyol(texto);
     if (!navigator.onLine) return Promise.reject(new Error("Sin conexión: la traducción en línea no está disponible."));
-    ultimoMotor = "google";
-    return traducirConGoogle(textoMotor)
-      .catch(function () {
-        ultimoMotor = "mymemory";
-        return traducirConMyMemory(textoMotor);
-      })
-      .then(function (t) { return aplicarGlosario(texto, t); });
+    var textoMotor = esSalidaEspañol() ? texto : prepararFuenteKreyol(texto);
+    var clave = VERSION + "|" + idiomaOrigen() + "|" + idiomaDestino() + "|" + textoMotor;
+    var cacheado = leerCacheTraduccion(clave);
+    if (cacheado !== null) {
+      ultimoMotor = "cache";
+      return Promise.resolve(aplicarGlosario(texto, cacheado));
+    }
+    return traducirConProveedores(textoMotor).then(function (t) {
+      guardarCacheTraduccion(clave, t);
+      return aplicarGlosario(texto, t);
+    });
   }
 
   function fetchConTimeout(url, ms) {
@@ -792,6 +863,10 @@
     ultimaTraduccion = agregarTraduccion(origen.value.trim(), resultado, normalizado);
     btnFavorito.classList.toggle("activo", false);
     seccionSalida.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    if (hablarAlTraducir) {
+      hablarAlTraducir = false;
+      leer(resultado, idiomaDestino(), function () {});
+    }
   }
 
   function traducir() {
@@ -967,14 +1042,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=36");
+      await cargarScript("vendor/pdf.min.js?v=37");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=36";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=37";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -999,7 +1074,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=36").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=37").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }
@@ -1070,6 +1145,8 @@
       btnEscuchar.classList.remove("escuchando");
       btnEscuchar.textContent = "\uD83C\uDF99 Escuchar";
       estadoVoz.classList.add("oculto");
+      hablarAlTraducir = modoConversacion;
+      modoConversacion = false;
       if (origen.value.trim()) traducir();
     };
 
@@ -1319,6 +1396,8 @@
     direccion = nueva;
     idTraduccion++;
     idDocumento++;
+    hablarAlTraducir = false;
+    modoConversacion = false;
     localStorage.setItem(CLAVE_DIRECCION, nueva);
     actualizarEtiquetas();
     origen.value = "";
@@ -1332,6 +1411,8 @@
 
   btnEscuchar.addEventListener("click", function () {
     if (!reconocedor) return;
+    modoConversacion = false;
+    hablarAlTraducir = false;
     if (escuchando) {
       reconocedor.stop();
     } else {
@@ -1343,7 +1424,11 @@
     }
   });
 
-  btnTraducir.addEventListener("click", traducir);
+  btnTraducir.addEventListener("click", function () {
+    hablarAlTraducir = false;
+    modoConversacion = false;
+    traducir();
+  });
 
   if (docArchivo && docTexto && docSalida && btnDocTraducir) {
     docArchivo.addEventListener("change", function () {
@@ -1509,6 +1594,7 @@
     origen.value = texto;
     seccionSalida.hidden = true;
     ultimaTraduccion = null;
+    hablarAlTraducir = false;
     traducir();
   }
 
@@ -1755,9 +1841,11 @@
       mostrarError("Reconocimiento de voz no disponible en este navegador.");
       return;
     }
+    modoConversacion = true;
     try {
       reconocedor.start();
     } catch (e) {
+      modoConversacion = false;
       mostrarError("No se pudo iniciar el micrófono: " + e.message);
     }
   }

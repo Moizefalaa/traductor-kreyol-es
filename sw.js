@@ -1,13 +1,13 @@
-var CACHE = "kreol-es-v36";
+var CACHE = "kreol-es-v37";
 var ARCHIVOS = [
   "./",
   "./index.html",
-  "./styles.css?v=36",
-  "./app.js?v=36",
-  "./textos-chile.json?v=36",
-  "./vendor/pdf.min.js?v=36",
-  "./vendor/pdf.worker.min.js?v=36",
-  "./vendor/mammoth.browser.min.js?v=36",
+  "./styles.css?v=37",
+  "./app.js?v=37",
+  "./textos-chile.json?v=37",
+  "./vendor/pdf.min.js?v=37",
+  "./vendor/pdf.worker.min.js?v=37",
+  "./vendor/mammoth.browser.min.js?v=37",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png"
