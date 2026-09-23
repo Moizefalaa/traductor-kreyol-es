@@ -2,20 +2,26 @@
   "use strict";
 
   var CORE = window.KreyolCore;
+  var STORE = window.KreyolStore;
   var aEspanolLatino = CORE.aEspanolLatino;
   var prepararFuenteKreyol = CORE.prepararFuenteKreyol;
   var aplicarGlosario = CORE.aplicarGlosario;
   var dividirEnOraciones = CORE.dividirEnOraciones;
+  var cargarHistorial = STORE.cargarHistorial;
+  var guardarHistorial = STORE.guardarHistorial;
+  var cargarFeedback = STORE.cargarFeedback;
+  var guardarFeedback = STORE.guardarFeedback;
+  var cargarChileUsuario = STORE.cargarChileUsuario;
+  var guardarChileUsuario = STORE.guardarChileUsuario;
+  var cargarTema = STORE.cargarTema;
+  var cargarPaleta = STORE.cargarPaleta;
+  var cargarCacheTraduccion = STORE.cargarCacheTraduccion;
+  var persistirCacheTraduccion = STORE.persistirCacheTraduccion;
+  var leerCacheTraduccion = STORE.leerCacheTraduccion;
+  var guardarCacheTraduccion = STORE.guardarCacheTraduccion;
 
-  var CLAVE_HISTORIAL = "kreolEs_historial_v1";
-  var CLAVE_DIRECCION = "kreolEs_direccion_v1";
-  var CLAVE_VOZ = "kreolEs_voz_v1";
-  var CLAVE_TEMA = "kreolEs_tema_v1";
-  var CLAVE_PALETA = "kreolEs_paleta_v1";
-  var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
-  var CLAVE_CHILE_USER = "kreolEs_chile_user_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v43";
+  var VERSION = "v44";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -112,7 +118,7 @@
   var modoConversacion = false;
   var hablarAlTraducir = false;
 
-  var direccion = localStorage.getItem(CLAVE_DIRECCION) === "es-ht" ? "es-ht" : "ht-es";
+  var direccion = STORE.cargarDireccion();
 
   // Los datos viven en core.js
   var FRASES_RAPIDAS = CORE.FRASES_RAPIDAS;
@@ -126,23 +132,6 @@
 
   function idiomaOrigen() { return esSalidaEspañol() ? "ht" : "es"; }
   function idiomaDestino() { return esSalidaEspañol() ? "es" : "ht"; }
-
-  function cargarHistorial() {
-    try {
-      var raw = localStorage.getItem(CLAVE_HISTORIAL);
-      return raw ? JSON.parse(raw) : [];
-    } catch (e) {
-      return [];
-    }
-  }
-
-  function guardarHistorial(items) {
-    try {
-      localStorage.setItem(CLAVE_HISTORIAL, JSON.stringify(items));
-    } catch (e) {
-      console.warn("No se pudo guardar el historial", e);
-    }
-  }
 
   function formatearFecha(iso) {
     var d = new Date(iso);
@@ -284,51 +273,6 @@
       contadorCaracteres.textContent = n + " caracteres";
       contadorCaracteres.classList.remove("limite");
     }
-  }
-
-  // --- Caché de traducciones (evita repetir llamadas a las APIs) ---
-  var CLAVE_CACHE_TRAD = "kreolEs_cache_trad_v1";
-  var MAX_CACHE_TRAD = 300;
-  var cacheTraduccion = null;
-  var cacheTraduccionTemporizador = null;
-
-  function cargarCacheTraduccion() {
-    if (cacheTraduccion) return cacheTraduccion;
-    cacheTraduccion = new Map();
-    try {
-      var raw = localStorage.getItem(CLAVE_CACHE_TRAD);
-      if (raw) {
-        JSON.parse(raw).forEach(function (par) {
-          if (Array.isArray(par) && par.length === 2) cacheTraduccion.set(par[0], par[1]);
-        });
-      }
-    } catch (e) {}
-    return cacheTraduccion;
-  }
-
-  function persistirCacheTraduccion() {
-    if (cacheTraduccionTemporizador) return;
-    cacheTraduccionTemporizador = setTimeout(function () {
-      cacheTraduccionTemporizador = null;
-      try {
-        localStorage.setItem(CLAVE_CACHE_TRAD, JSON.stringify(Array.from(cargarCacheTraduccion().entries())));
-      } catch (e) {}
-    }, 1000);
-  }
-
-  function leerCacheTraduccion(clave) {
-    var m = cargarCacheTraduccion();
-    return m.has(clave) ? m.get(clave) : null;
-  }
-
-  function guardarCacheTraduccion(clave, valor) {
-    var m = cargarCacheTraduccion();
-    if (m.has(clave)) m.delete(clave);
-    m.set(clave, valor);
-    while (m.size > MAX_CACHE_TRAD) {
-      m.delete(m.keys().next().value);
-    }
-    persistirCacheTraduccion();
   }
 
   // --- Motores de traducción en orden de preferencia ---
@@ -650,14 +594,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=43");
+      await cargarScript("vendor/pdf.min.js?v=44");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=43";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=44";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -682,7 +626,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=43").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=44").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }
@@ -812,7 +756,7 @@
 
   function poblarSelectVoz() {
     var voces = cargarVocesSistema();
-    var eleccion = localStorage.getItem(CLAVE_VOZ) || "auto";
+    var eleccion = STORE.cargarVoz();
     selectVoz.innerHTML = "";
     var opciones = [["auto", "Auto (mejor voz disponible)"], ["google", "Voz en línea (Google)"]];
 
@@ -1006,7 +950,7 @@
     idDocumento++;
     hablarAlTraducir = false;
     modoConversacion = false;
-    localStorage.setItem(CLAVE_DIRECCION, nueva);
+    STORE.guardarDireccion(nueva);
     actualizarEtiquetas();
     seccionSalida.hidden = true;
     ultimaTraduccion = null;
@@ -1156,7 +1100,7 @@
   });
 
   selectVoz.addEventListener("change", function () {
-    localStorage.setItem(CLAVE_VOZ, selectVoz.value);
+    STORE.guardarVoz(selectVoz.value);
   });
 
   btnProbarVoz.addEventListener("click", function () {
@@ -1417,22 +1361,14 @@
     abrirModal(modalEmergencia);
   });
 
-  function cargarTema() {
-    try { return localStorage.getItem(CLAVE_TEMA) || "claro"; } catch (e) { return "claro"; }
-  }
-
-  function cargarPaleta() {
-    try { return localStorage.getItem(CLAVE_PALETA) || "haiti"; } catch (e) { return "haiti"; }
-  }
-
   function aplicarTema(t) {
     document.documentElement.setAttribute("data-theme", t);
-    try { localStorage.setItem(CLAVE_TEMA, t); } catch (e) {}
+    STORE.guardarTema(t);
   }
 
   function aplicarPaleta(p) {
     document.documentElement.setAttribute("data-paleta", p);
-    try { localStorage.setItem(CLAVE_PALETA, p); } catch (e) {}
+    STORE.guardarPaleta(p);
   }
 
   function marcarOpcion(contenedor, atributo, valor) {
@@ -1752,16 +1688,6 @@
   if (versionEl) versionEl.textContent = "Versión de la app: " + VERSION;
 
   // --- Correcciones sugeridas (feedback de traducciones incorrectas) ---
-  function cargarFeedback() {
-    try {
-      var raw = localStorage.getItem(CLAVE_FEEDBACK);
-      var arr = raw ? JSON.parse(raw) : [];
-      return Array.isArray(arr) ? arr : [];
-    } catch (e) { return []; }
-  }
-  function guardarFeedback(lista) {
-    try { localStorage.setItem(CLAVE_FEEDBACK, JSON.stringify(lista)); } catch (e) {}
-  }
   function renderFeedback() {
     var items = cargarFeedback();
     listaFeedback.innerHTML = "";
@@ -1881,17 +1807,6 @@
   // ---- Lecturas escolares (Chile) ----
   var TEXTOS_CHILE_URL = "textos-chile.json?v=" + VERSION.replace("v", "");
   var chileData = { grados: [] };
-
-  function cargarChileUsuario() {
-    try {
-      var raw = localStorage.getItem(CLAVE_CHILE_USER);
-      return raw ? JSON.parse(raw) : {};
-    } catch (e) { return {}; }
-  }
-
-  function guardarChileUsuario(map) {
-    try { localStorage.setItem(CLAVE_CHILE_USER, JSON.stringify(map)); } catch (e) {}
-  }
 
   function poblarGrados() {
     selGrado.innerHTML = "";
