@@ -1,6 +1,12 @@
 (function () {
   "use strict";
 
+  var CORE = window.KreyolCore;
+  var aEspanolLatino = CORE.aEspanolLatino;
+  var prepararFuenteKreyol = CORE.prepararFuenteKreyol;
+  var aplicarGlosario = CORE.aplicarGlosario;
+  var dividirEnOraciones = CORE.dividirEnOraciones;
+
   var CLAVE_HISTORIAL = "kreolEs_historial_v1";
   var CLAVE_DIRECCION = "kreolEs_direccion_v1";
   var CLAVE_VOZ = "kreolEs_voz_v1";
@@ -9,7 +15,7 @@
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var CLAVE_CHILE_USER = "kreolEs_chile_user_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v38";
+  var VERSION = "v39";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -354,37 +360,6 @@
     { ht: "Èske yo bezwen lajan?", es: "¿Necesitan dinero?" },
   ];
 
-  // Glosario aplicado en tiempo de traducción para corregir errores sistemáticos
-  // del motor (kreyòl -> español). tipo "fuente": reescribe la fuente antes del motor.
-  // tipo "salida": corrige la traducción cuando la fuente contiene el lema indicado.
-  var GLOSARIO = [
-    {
-      tipo: "salida",
-      fuente: /\bfi?g\b/i,
-      salida: { de: /\bhigo(s)?\b/gi, a: function (m, p) { return p ? "plátanos" : "plátano"; } }
-    },
-    {
-      tipo: "salida",
-      fuente: /\beg\b/i,
-      salida: { de: /\boveja(s)?\b/gi, a: function (m, p) { return p ? "águilas" : "águila"; } }
-    },
-    {
-      tipo: "salida",
-      fuente: /\bofiyamezi\b/i,
-      salida: { de: /\bofiyamezi\b/gi, a: "poco a poco" }
-    },
-    {
-      tipo: "fuente",
-      fuente: /\benpi\b/gi,
-      salida: { a: "epi" }
-    },
-    {
-      tipo: "salida",
-      fuente: /\bgadyen bi\b/i,
-      salida: { de: /\bcorredor\b/gi, a: "portero" }
-    }
-  ];
-
   var VOCABULARIO = [
     {
       cat: "Cortesía",
@@ -551,16 +526,6 @@
   var MAX_HISTORIAL = 200;
   var MAX_FEEDBACK = 500;
 
-  function limitarHistorial(items) {
-    if (items.length <= MAX_HISTORIAL) return items;
-    var favoritos = items.filter(function (i) { return i.favorito; });
-    var resto = items.filter(function (i) { return !i.favorito; });
-    var mantener = Math.max(0, MAX_HISTORIAL - favoritos.length);
-    var recortado = favoritos.concat(resto.slice(resto.length - mantener));
-    recortado.sort(function (a, b) { return (a.fecha < b.fecha) ? -1 : 1; });
-    return recortado;
-  }
-
   function agregarTraduccion(origenTexto, destinoTexto, normalizado) {
     var items = cargarHistorial();
     var entrada = {
@@ -574,39 +539,9 @@
       idiomaDestino: idiomaDestino()
     };
     items.push(entrada);
-    guardarHistorial(limitarHistorial(items));
+    guardarHistorial(CORE.limitarHistorial(items, MAX_HISTORIAL));
     renderHistorial();
     return entrada;
-  }
-
-  function aEspanolLatino(texto) {
-    if (!texto) return texto;
-    var pares = [
-      [/\bvosotros\b/gi, "ustedes"],
-      [/\bvosotras\b/gi, "ustedes"],
-      [/\bos\b/gi, "les"],
-      [/\bhabéis\b/gi, "han"],
-      [/\bestáis\b/gi, "están"],
-      [/\bsois\b/gi, "son"],
-      [/\btenéis\b/gi, "tienen"],
-      [/\bhacéis\b/gi, "hacen"],
-      [/\bqueréis\b/gi, "quieren"],
-      [/\bpodéis\b/gi, "pueden"],
-      [/\bdecís\b/gi, "dicen"],
-      [/\bvais\b/gi, "van"],
-      [/\bcoméis\b/gi, "comen"],
-      [/\bvenís\b/gi, "vienen"],
-      [/\bsabéis\b/gi, "saben"]
-    ];
-    var resultado = texto;
-    var cambio = false;
-    pares.forEach(function (par) {
-      if (par[0].test(resultado)) {
-        resultado = resultado.replace(par[0], par[1]);
-        cambio = true;
-      }
-    });
-    return { texto: resultado, normalizado: cambio };
   }
 
   function mostrarError(mensaje) {
@@ -638,41 +573,6 @@
       contadorCaracteres.textContent = n + " caracteres";
       contadorCaracteres.classList.remove("limite");
     }
-  }
-
-  function normalizarVariantesKreyol(texto) {
-    var t = " " + texto + " ";
-    var cliticos = {
-      "m'": "mwen", "w'": "ou", "l'": "li", "y'": "yo", "t'": "te",
-      "p'": "pa", "s'": "sa", "d'": "de", "k'": "ki", "n'": "nou"
-    };
-    Object.keys(cliticos).forEach(function (c) {
-      var re = new RegExp("(^|\\s)(" + c.replace("'", "\\'") + ")", "gi");
-      t = t.replace(re, function (m, pre) { return pre + cliticos[c] + " "; });
-    });
-    t = t.replace(/\bsh/gi, "ch");
-    t = t.replace(/\s+([.,!?;:])/g, "$1");
-    t = t.replace(/\s{2,}/g, " ");
-    return t.trim();
-  }
-
-  function prepararFuenteKreyol(texto) {
-    var t = normalizarVariantesKreyol(texto);
-    GLOSARIO.forEach(function (r) {
-      if (r.tipo === "fuente") t = t.replace(r.fuente, r.salida.a);
-    });
-    return t;
-  }
-
-  function aplicarGlosario(fuente, traduccion) {
-    if (!fuente || !traduccion) return traduccion;
-    var res = traduccion;
-    GLOSARIO.forEach(function (r) {
-      if (r.tipo !== "salida") return;
-      if (!r.fuente.test(fuente)) return;
-      res = res.replace(r.salida.de, r.salida.a);
-    });
-    return res;
   }
 
   // --- Caché de traducciones (evita repetir llamadas a las APIs) ---
@@ -807,44 +707,15 @@
       });
   }
 
-  function normalizarClave(texto) {
-    return (texto || "")
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z0-9 ]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-  }
-
-  function dividirEnOraciones(texto) {
-    var limpio = (texto || "").replace(/\s+/g, " ").trim();
-    if (!limpio) return [];
-    return (limpio.match(/[^.!?…]+[.!?…]+|[^.!?…]+$/g) || [limpio])
-      .map(function (t) { return t.trim(); })
-      .filter(Boolean);
-  }
-
-  function construirDiccionario() {
-    var d = {};
-    function agregar(ht, es) {
-      if (!ht || !es) return;
-      d[normalizarClave(ht)] = { ht: ht, es: es };
-      d[normalizarClave(es)] = { ht: ht, es: es };
-    }
-    FRASES_RAPIDAS.forEach(function (g) { g.frases.forEach(function (f) { agregar(f.ht, f.es); }); });
-    FRASES_EMERGENCIA.forEach(function (f) { agregar(f.ht, f.es); });
-    CORRECCIONES.forEach(function (c) { agregar(c.ht, c.es); });
-    VOCABULARIO.forEach(function (g) { g.items.forEach(function (i) { agregar(i.ht, i.es); }); });
-    return d;
-  }
-
-  var DICCIONARIO = construirDiccionario();
+  var DICCIONARIO = CORE.construirDiccionario({
+    frases: FRASES_RAPIDAS,
+    emergencia: FRASES_EMERGENCIA,
+    correcciones: CORRECCIONES,
+    vocabulario: VOCABULARIO
+  });
 
   function buscarEnDiccionario(texto) {
-    var par = DICCIONARIO[normalizarClave(texto)];
-    if (!par) return null;
-    return esSalidaEspañol() ? par.es : par.ht;
+    return CORE.buscarEnDiccionario(DICCIONARIO, texto, esSalidaEspañol());
   }
 
   function mostrarResultado(traducido) {
@@ -1043,14 +914,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=38");
+      await cargarScript("vendor/pdf.min.js?v=39");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=38";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=39";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -1075,7 +946,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=38").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=39").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }
@@ -1935,7 +1806,7 @@
         agregados++;
       }
     });
-    guardarHistorial(limitarHistorial(actual));
+    guardarHistorial(CORE.limitarHistorial(actual, MAX_HISTORIAL));
     renderHistorial();
     if (Array.isArray(datos.correccionesSugeridas)) {
       var fb = cargarFeedback();

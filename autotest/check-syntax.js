@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 
 const RAIZ = path.join(__dirname, "..");
-const archivos = ["app.js", "sw.js"];
+const archivos = ["app.js", "core.js", "sw.js"];
 
 fs.readdirSync(__dirname).forEach(function (f) {
   if (f.endsWith(".js")) archivos.push(path.join("autotest", f));
