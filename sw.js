@@ -1,13 +1,13 @@
-var CACHE = "kreol-es-v35";
+var CACHE = "kreol-es-v36";
 var ARCHIVOS = [
   "./",
   "./index.html",
-  "./styles.css?v=35",
-  "./app.js?v=35",
-  "./textos-chile.json?v=35",
-  "./vendor/pdf.min.js?v=35",
-  "./vendor/pdf.worker.min.js?v=35",
-  "./vendor/mammoth.browser.min.js?v=35",
+  "./styles.css?v=36",
+  "./app.js?v=36",
+  "./textos-chile.json?v=36",
+  "./vendor/pdf.min.js?v=36",
+  "./vendor/pdf.worker.min.js?v=36",
+  "./vendor/mammoth.browser.min.js?v=36",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png"
@@ -16,7 +16,9 @@ var ARCHIVOS = [
 self.addEventListener("install", function (evento) {
   evento.waitUntil(
     caches.open(CACHE).then(function (cache) {
-      return cache.addAll(ARCHIVOS);
+      // Best-effort: si un recurso falla (404, timeout), igual se instala el SW
+      // con los que sí se pudieron cachear. Antes, un solo fallo rompía todo.
+      return Promise.allSettled(ARCHIVOS.map(function (url) { return cache.add(url); }));
     }).then(function () {
       return self.skipWaiting();
     })

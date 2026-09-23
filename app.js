@@ -9,7 +9,7 @@
   var CLAVE_FEEDBACK = "kreolEs_feedback_v1";
   var CLAVE_CHILE_USER = "kreolEs_chile_user_v1";
   var SCHEMA_VERSION = 1;
-  var VERSION = "v35";
+  var VERSION = "v36";
   var GOOGLE_TTS = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&ttsspeed=1&q=";
 
   var origen = document.getElementById("textoOrigen");
@@ -89,6 +89,9 @@
   var botonSonando = null;
   var colaAudio = [];
   var catFrasesActual = 0;
+  var idTraduccion = 0;
+  var idDocumento = 0;
+  var fallbackReconocimientoHt = null;
 
   var direccion = localStorage.getItem(CLAVE_DIRECCION) === "es-ht" ? "es-ht" : "ht-es";
 
@@ -798,6 +801,7 @@
       return;
     }
 
+    var miId = ++idTraduccion;
     btnTraducir.disabled = true;
     btnTraducir.textContent = "Traduciendo…";
     limpiarError();
@@ -818,43 +822,63 @@
       return;
     }
 
-    if (traducirTextoLargo()) return;
+    if (traducirTextoLargo(miId)) return;
 
     traducirTextoMotor(texto)
-      .then(mostrarResultado)
+      .then(function (t) { if (miId === idTraduccion) mostrarResultado(t); })
       .catch(function (err) {
-        mostrarError("No se pudo traducir: " + err.message);
+        if (miId === idTraduccion) mostrarError("No se pudo traducir: " + err.message);
       })
       .finally(function () {
-        btnTraducir.disabled = false;
-        btnTraducir.textContent = "Traducir";
+        if (miId === idTraduccion) {
+          btnTraducir.disabled = false;
+          btnTraducir.textContent = "Traducir";
+        }
       });
   }
 
-  function traducirTextoLargo() {
+  function traducirTextoLargo(miId) {
     var texto = origen.value.trim();
     var oraciones = dividirEnOraciones(texto);
     if (oraciones.length <= 1) return false;
 
-    var promesas = oraciones.map(function (oracion) {
-      var local = buscarEnDiccionario(oracion);
-      if (local) return Promise.resolve(local);
-      if (!navigator.onLine) {
-        return Promise.reject(new Error("Sin conexión: la traducción en línea no está disponible."));
-      }
-      return traducirTextoMotor(oracion);
-    });
-
-    Promise.all(promesas)
-      .then(function (traducidas) { mostrarResultado(traducidas.join(" ")); })
+    traducirLote(oraciones, 4, miId)
+      .then(function (traducidas) {
+        if (miId === idTraduccion) mostrarResultado(traducidas.join(" "));
+      })
       .catch(function (err) {
-        mostrarError("No se pudo traducir el texto: " + err.message);
+        if (miId === idTraduccion) mostrarError("No se pudo traducir el texto: " + err.message);
       })
       .finally(function () {
-        btnTraducir.disabled = false;
-        btnTraducir.textContent = "Traducir";
+        if (miId === idTraduccion) {
+          btnTraducir.disabled = false;
+          btnTraducir.textContent = "Traducir";
+        }
       });
     return true;
+  }
+
+  // Traduce oraciones con concurrencia limitada para no saturar las APIs
+  // gratuitas (evita ráfagas de peticiones simultáneas y errores HTTP 429).
+  // Se detiene solo si la petición quedó obsoleta (miId !== idTraduccion).
+  function traducirLote(oraciones, limite, miId) {
+    var resultados = new Array(oraciones.length);
+    var indice = 0;
+    function trabajador() {
+      if (indice >= oraciones.length || miId !== idTraduccion) return Promise.resolve();
+      var i = indice++;
+      var oracion = oraciones[i];
+      var local = buscarEnDiccionario(oracion);
+      var p = local ? Promise.resolve(local) : traducirTextoMotor(oracion);
+      return p.then(function (t) {
+        resultados[i] = t;
+        return trabajador();
+      });
+    }
+    var n = Math.max(1, Math.min(limite || 4, oraciones.length));
+    var arranques = [];
+    for (var k = 0; k < n; k++) arranques.push(trabajador());
+    return Promise.all(arranques).then(function () { return resultados; });
   }
 
   function traducirUnaFrase(texto) {
@@ -889,6 +913,7 @@
       mostrarError("Pega o extrae el texto del documento antes de traducir.");
       return;
     }
+    var miId = ++idDocumento;
     btnDocTraducir.disabled = true;
     btnDocTraducir.textContent = "Traduciendo…";
     docSalida.innerHTML = "";
@@ -896,21 +921,29 @@
 
     var oraciones = dividirEnOraciones(texto);
     var indice = 0;
-    var pendientes = oraciones.length;
 
-    function procesarSiguiente() {
-      if (indice >= oraciones.length) {
+    function terminar() {
+      if (miId === idDocumento) {
         btnDocTraducir.disabled = false;
         btnDocTraducir.textContent = "Traducir documento";
+      }
+    }
+
+    function procesarSiguiente() {
+      if (miId !== idDocumento) return;
+      if (indice >= oraciones.length) {
+        terminar();
         return;
       }
       var oracion = oraciones[indice++];
       traducirUnaFrase(oracion)
-        .then(function (traducida) { agregarFilaDoc(oracion, traducida, false); })
-        .catch(function (err) { agregarFilaDoc(oracion, "[no traducido: " + err.message + "]", true); })
-        .then(function () {
-          if (--pendientes >= 0) procesarSiguiente();
-        });
+        .then(function (traducida) {
+          if (miId === idDocumento) agregarFilaDoc(oracion, traducida, false);
+        })
+        .catch(function (err) {
+          if (miId === idDocumento) agregarFilaDoc(oracion, "[no traducido: " + err.message + "]", true);
+        })
+        .then(procesarSiguiente);
     }
     procesarSiguiente();
   }
@@ -934,14 +967,14 @@
 
   async function extraerTextoPdf(archivo) {
     try {
-      await cargarScript("vendor/pdf.min.js?v=35");
+      await cargarScript("vendor/pdf.min.js?v=36");
     } catch (e) { /* sigue y reporta abajo */ }
     if (!window.pdfjsLib) {
       throw new Error("No se pudo cargar el lector de PDF (¿sin conexión?). Pega el texto manualmente.");
     }
     try {
       if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=35";
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = "vendor/pdf.worker.min.js?v=36";
       }
     } catch (e) { /* dejar que falle al usar */ }
     var buf = await archivo.arrayBuffer();
@@ -966,7 +999,7 @@
   }
 
   function extraerTextoWord(archivo) {
-    return cargarScript("vendor/mammoth.browser.min.js?v=35").then(function () {
+    return cargarScript("vendor/mammoth.browser.min.js?v=36").then(function () {
       if (!window.mammoth) {
         throw new Error("No se pudo cargar el lector de Word (¿sin conexión?). Pega el texto manualmente.");
       }
@@ -980,6 +1013,11 @@
     });
   }
 
+  function elegirLangReconocimiento() {
+    if (!esSalidaEspañol()) return "es-ES";
+    return fallbackReconocimientoHt || "ht-HT";
+  }
+
   function configurarVoz() {
     var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) {
@@ -988,7 +1026,7 @@
       return;
     }
     reconocedor = new SR();
-    reconocedor.lang = esSalidaEspañol() ? "ht-HT" : "es-ES";
+    reconocedor.lang = elegirLangReconocimiento();
     reconocedor.interimResults = false;
     reconocedor.maxAlternatives = 1;
 
@@ -1010,6 +1048,14 @@
     };
 
     reconocedor.onerror = function (evento) {
+      // Web Speech no tiene modelo de criollo haitiano. Si el dispositivo lo
+      // rechaza, caemos a francés (pronunciación parecida) en vez de fallar.
+      if (evento.error === "language-not-supported" && esSalidaEspañol() && fallbackReconocimientoHt !== "fr-FR") {
+        fallbackReconocimientoHt = "fr-FR";
+        reconocedor.lang = fallbackReconocimientoHt;
+        mostrarError("Este teléfono no tiene dictado en criollo. Usaremos francés (sonido parecido): toca de nuevo «Escuchar».");
+        return;
+      }
       var mensajes = {
         "no-speech": "No se detectó voz. Intenta de nuevo.",
         "audio-capture": "No se encontró micrófono.",
@@ -1271,6 +1317,8 @@
       try { reconocedor.stop(); } catch (e) {}
     }
     direccion = nueva;
+    idTraduccion++;
+    idDocumento++;
     localStorage.setItem(CLAVE_DIRECCION, nueva);
     actualizarEtiquetas();
     origen.value = "";
