@@ -86,3 +86,51 @@ test("construirDiccionario tolera datos vacíos", () => {
   const dic = core.construirDiccionario({});
   assert.equal(core.buscarEnDiccionario(dic, "x", true), null);
 });
+
+function cadaItem(datos, cb) {
+  (datos.frases || []).forEach((g) => g.frases.forEach((f) => cb(f)));
+  (datos.emergencia || []).forEach((f) => cb(f));
+  (datos.correcciones || []).forEach((c) => cb(c));
+  (datos.vocabulario || []).forEach((g) => g.items.forEach((i) => cb(i)));
+}
+
+const DATOS_REALES = {
+  frases: core.FRASES_RAPIDAS,
+  emergencia: core.FRASES_EMERGENCIA,
+  correcciones: core.CORRECCIONES,
+  vocabulario: core.VOCABULARIO,
+};
+
+test("datos: todas las entradas tienen ht y es", () => {
+  const faltantes = [];
+  cadaItem(DATOS_REALES, (it) => {
+    if (!it || !it.ht || !it.es) faltantes.push(it);
+  });
+  assert.deepEqual(faltantes, []);
+});
+
+test("datos: no hay colisiones ambiguas en el diccionario", () => {
+  // Una colisión es ambigua si dos entradas comparten clave pero NI el ht NI el
+  // es coinciden: serían dos significados distintos pisándose. Los sinónimos y
+  // las variantes con/sin punto comparten al menos un lado, y son aceptables.
+  const ambiguas = core.detectarColisiones(DATOS_REALES).filter((c) => {
+    const mismoEs = core.normalizarClave(c.antes.es) === core.normalizarClave(c.ahora.es);
+    const mismoHt = core.normalizarClave(c.antes.ht) === core.normalizarClave(c.ahora.ht);
+    return !mismoEs && !mismoHt;
+  });
+  assert.deepEqual(ambiguas, []);
+});
+
+test("detectarColisiones: detecta claves compartidas", () => {
+  const datos = {
+    frases: [{ cat: "x", frases: [{ ht: "Bonjou", es: "Buenos días" }] }],
+    vocabulario: [{ cat: "y", items: [{ ht: "Bonjou", es: "Hola" }] }],
+  };
+  const col = core.detectarColisiones(datos);
+  assert.equal(col.length, 1);
+  assert.equal(col[0].clave, "bonjou");
+  assert.deepEqual(
+    core.detectarColisiones({ frases: [{ cat: "x", frases: [{ ht: "a", es: "b" }] }] }),
+    []
+  );
+});
